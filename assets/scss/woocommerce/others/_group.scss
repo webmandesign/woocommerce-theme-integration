@@ -1,0 +1,64 @@
+/* FILE: woocommerce/others/_group.scss */
+
+.woocommerce-grouped-product-list {
+
+	&,
+	td {
+		padding: 0;
+		border-width: 0;
+	}
+
+	&-item {
+		display: grid;
+		grid-column-gap: 1em;
+		grid-template-areas:
+			'quantity label'
+			'quantity price';
+		grid-template-columns: 4em auto;
+
+		&:not(:first-child) {
+			margin-top: 1em;
+		}
+
+		&__label {
+			grid-area: label;
+			width: 100%;
+
+			a {
+				font-size: 1.2em;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: var(--letter_spacing);
+				color: var(--color_content_headings);
+			}
+
+		}
+
+		&__quantity {
+			grid-area: quantity;
+		}
+
+		&__price {
+			grid-area: price;
+
+			ins {
+				padding: 0;
+				text-decoration: none;
+			}
+
+		}
+
+		label {
+			padding: 0;
+		}
+
+	}
+
+	& &-item .stock {
+		margin-top: 0;
+		font-size: .8em;
+		font-weight: 400;
+		text-align: inherit;
+	}
+
+}

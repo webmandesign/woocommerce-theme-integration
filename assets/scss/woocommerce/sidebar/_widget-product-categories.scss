@@ -1,0 +1,34 @@
+/* FILE: woocommerce/sidebar/_widget-product-categories.scss */
+
+.widget_product_categories {
+
+	ul {
+		@extend %widget_list_items;
+
+		.sidebar & {
+			@extend %widget_list_items_menu;
+		}
+
+	}
+
+}
+
+.widget .current-cat {
+
+	> a {
+
+		&,
+		.sidebar & {
+			font-weight: 400;
+
+			&::before {
+				content: '\2014'; // &mdash;
+				margin-#{$right}: .25em;
+				speak: none;
+			}
+
+		}
+
+	}
+
+}

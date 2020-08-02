@@ -1,0 +1,139 @@
+/* FILE: woocommerce/single/_reviews.scss */
+
+.woocommerce-Tabs-panel--reviews {
+	max-width: var(--layout_width_content);
+}
+
+.woocommerce-Reviews {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	> div {
+
+		&:not(:first-child) {
+			margin-top: 2rem;
+		}
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			width: calc( 50% - 1.5em );
+
+			&:not(:first-child) {
+				margin-top: 0;
+			}
+
+		}
+
+	}
+
+	.clear {
+		display: none;
+	}
+
+	&-title,
+	.comment-reply-title {
+		@extend %widget_heading;
+		line-height: 1.25;
+		text-transform: uppercase;
+		letter-spacing: var(--letter_spacing);
+
+		span {
+			font-weight: 400;
+		}
+
+	}
+
+	.avatar {
+		float: $left;
+		width: 2.5em;
+		margin-bottom: .5em;
+		margin-#{$right}: 1em;
+		border-radius: 10em;
+	}
+
+	.star-rating {
+		margin-bottom: 0;
+	}
+
+	.meta {
+		margin-bottom: .5em;
+		font-size: .8em;
+	}
+
+	.comment, // This is for backwards compatibility.
+	.review {
+		@extend %shaded_background;
+		position: relative;
+		padding: 2rem;
+
+		@include media( map_get( $breakpoint, 'xl' ) ) {
+			padding: 3rem;
+		}
+
+		&:not(:first-child) {
+			margin-top: 2em;
+		}
+
+	}
+
+	.comment {
+
+		&list {
+			max-height: 18em;
+			max-height: 50vh;
+			padding: 0 0 1em;
+			padding-#{$right}: 1em;
+			margin-#{$left}: 0;
+			list-style: none;
+			overflow-y: auto;
+
+			@include media( ( map_get( $breakpoint, 's' ), 'max-height' ) ) {
+				max-height: 75vh;
+			}
+
+		}
+
+		&-respond {
+			padding-top: 0;
+			border-top-width: 0;
+		}
+
+		&-reply-title {
+			@extend %widget_heading;
+			display: block;
+			font-family: var(--typography_font_headings);
+			color: var(--color_content_headings);
+		}
+
+		&-form {
+			margin: 0;
+
+			&-rating {
+				padding: $form_field_padding_vertical 0;
+				margin-bottom: $golden +em;
+				border-bottom: 1px solid;
+				overflow: hidden;
+
+				label:first-child {
+					float: $left;
+					padding: 0;
+					margin: 0;
+					margin-#{$right}: 1em;
+					font-size: .8em;
+				}
+
+				.stars {
+					margin: 0;
+				}
+
+			}
+
+		}
+
+	}
+
+	.description {
+		margin-top: 1rem;
+	}
+
+}

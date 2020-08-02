@@ -1,0 +1,61 @@
+/* FILE: woocommerce/form/_login.scss */
+
+.woocommerce-form-login {
+
+	.form-row {
+
+		&::after {
+			content: '';
+			clear: both;
+			display: table;
+			table-layout: fixed;
+		}
+
+	}
+
+	.button {
+		float: $right;
+	}
+
+	.clear {
+		display: none;
+	}
+
+}
+
+.customer-login {
+
+	&:not(.customer-registration) {
+		max-width: var(--layout_width_entry_content);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h2 {
+		@extend %widget_heading;
+	}
+
+	.col-2 {
+		margin-top: 2em;
+	}
+
+	@include media( map_get( $breakpoint, 'l' ) ) {
+
+		.col2-set {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.col-1,
+		.col-2 {
+			width: calc( 50% - 2em );
+		}
+
+		.col-2 {
+			margin-top: 0;
+		}
+
+	}
+
+}

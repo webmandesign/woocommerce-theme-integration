@@ -1,0 +1,64 @@
+/* FILE: woocommerce/single/_tabs.scss */
+
+.wc-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: calc( 100vw - var(--scrollbar_width) );
+	margin: var(--white_space) 0 0;
+	margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
+	list-style: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+
+	.tabs-count-1 & {
+		display: none;
+	}
+
+	a {
+		display: block;
+		padding: 1em 2em;
+		margin-bottom: -1px;
+		font-size: .8em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		letter-spacing: var(--letter_spacing);
+		color: var(--color_content_headings);
+		border-bottom: 1px solid transparent;
+		transition: border .3s;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: currentColor;
+		}
+
+	}
+
+	.active a {
+		font-weight: 400;
+		border-color: currentColor;
+	}
+
+}
+
+.woocommerce-Tabs-panel {
+	max-width: var(--layout_width_entry_content);
+	margin: 3rem auto var(--white_space);
+
+	> h2:first-child {
+		@extend %widget_heading;
+
+		.woocommerce-tabs:not(.tabs-count-1) & {
+			@extend %screen_reader_hiding;
+		}
+
+	}
+
+	.woocommerce-tabs:last-child & {
+		margin-bottom: 0;
+	}
+
+}

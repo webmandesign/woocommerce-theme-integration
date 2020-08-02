@@ -1,0 +1,16 @@
+/* FILE: woocommerce/others/_stock.scss */
+
+.stock {
+
+	&.out-of-stock,
+	&.available-on-backorder {
+		font-weight: 700;
+	}
+
+	&.out-of-stock {
+		@extend %shaded_background;
+		position: relative;
+		padding: 1em 2em;
+	}
+
+}

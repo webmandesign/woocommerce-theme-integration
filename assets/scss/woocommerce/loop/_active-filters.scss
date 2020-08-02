@@ -1,0 +1,9 @@
+/* FILE: woocommerce/loop/_active-filters.scss */
+
+.products-active-filters {
+
+	.widgettitle {
+		@extend %screen_reader_hiding;
+	}
+
+}

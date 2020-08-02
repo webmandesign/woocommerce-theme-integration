@@ -1,0 +1,42 @@
+/* FILE: woocommerce/page/_checkout-order-received.scss */
+
+.woocommerce-order {
+	max-width: var(--layout_width_entry_content);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.woocommerce-order-details,
+.woocommerce-customer-details {
+	margin-top: calc( var(--white_space) / 2 );
+
+	h2 {
+		@extend %widget_heading;
+	}
+
+}
+
+.woocommerce-order-details {
+	@extend %shaded_background;
+	position: relative;
+	padding: 2em;
+}
+
+.woocommerce {
+
+	mark {
+		padding: 0;
+		margin: 0;
+		font-weight: 700;
+		background: none;
+	}
+
+	.addresses {
+
+		div + div {
+			margin-top: 2em;
+		}
+
+	}
+
+}

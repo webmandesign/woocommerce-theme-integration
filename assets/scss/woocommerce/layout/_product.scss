@@ -1,0 +1,9 @@
+/* FILE: woocommerce/layout/_product.scss */
+
+.site-main {
+
+	.single-product & {
+		max-width: none;
+	}
+
+}

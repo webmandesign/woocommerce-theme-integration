@@ -1,0 +1,9 @@
+/* FILE: woocommerce/sidebar/_widget-layered-nav.scss */
+
+.woocommerce-widget-layered-nav {
+
+	ul {
+		@extend %widget_list_items;
+	}
+
+}

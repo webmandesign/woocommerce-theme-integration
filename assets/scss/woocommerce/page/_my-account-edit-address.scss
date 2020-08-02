@@ -1,0 +1,15 @@
+/* FILE: woocommerce/page/_my-account-edit-address.scss */
+
+.woocommerce-Address-title {
+	display: flex;
+	justify-content: space-between;
+
+	h3 {
+		@extend %widget_heading;
+	}
+
+}
+
+.woocommerce-address-fields__field-wrapper {
+	margin-bottom: 2em;
+}

@@ -1,0 +1,5 @@
+/* FILE: woocommerce/sidebar/_widget-products.scss */
+
+.product_list_widget {
+	@extend %widget_list_products;
+}

@@ -1,0 +1,22 @@
+/* FILE: woocommerce-rtl.scss */
+
+//
+// WooCommerce plugin styles, RTL.
+//
+// @package  WooCommerce Theme Integration
+// @copyright  WebMan Design, Oliver Juhas
+//
+
+$left: right;
+$right: left;
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+@import 'tools/_index';
+@import 'setup/_index';
+
+@import 'woocommerce/_index';
+

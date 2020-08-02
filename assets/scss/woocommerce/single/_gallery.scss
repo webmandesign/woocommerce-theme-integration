@@ -1,0 +1,126 @@
+/* FILE: woocommerce/single/_gallery.scss */
+
+.woocommerce-product-gallery {
+	position: relative;
+
+	@include media( map_get( $breakpoint, 'm' ) ) {
+		width: 50%;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&__trigger {
+		position: absolute;
+		#{$right}: 0;
+		bottom: 100%;
+		width: 2em;
+		height: 2em;
+		text-align: $left;
+		text-indent: -999em;
+		overflow: hidden;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 2em;
+			height: 2px;
+			#{$left}: 0em;
+			top: calc( 50% - 1px );
+			background: currentColor;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+		}
+
+	}
+
+	// Gallery layouts.
+
+		// has-gallery-layout-wide-columns-1
+		// has-gallery-layout-wide-columns-2
+		// has-gallery-layout-wide-thumbnails
+		// has-gallery-layout-narrow-columns-1
+		// has-gallery-layout-narrow-columns-2
+		// has-gallery-layout-narrow-thumbnails
+
+		body[class*="has-gallery-layout-wide"] & {
+			@include media( map_get( $breakpoint, 'm' ) ) {
+				width: calc( 50vw - ( var(--scrollbar_width) / 2 ) );
+				padding-#{$left}: 6vw;
+				margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
+				text-align: $right;
+			}
+
+			img {
+				max-width: 1920 / 2 +px;
+			}
+
+		}
+
+		.has-gallery-layout-wide-columns-1 &,
+		.has-gallery-layout-wide-columns-2 &,
+		.has-gallery-layout-narrow-columns-1 &,
+		.has-gallery-layout-narrow-columns-2 & {
+			margin-top: -2em;
+
+			&__image {
+				margin-top: 2em;
+			}
+
+		}
+
+		.has-gallery-layout-wide-columns-2 &,
+		.has-gallery-layout-narrow-columns-2 & {
+
+			&__wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			&__image {
+				width: calc( 50% - 1em );
+
+				@include media( map_get( $breakpoint, 'm' ) ) {
+					margin-#{$left}: auto;
+				}
+
+				&:nth-child(2n) {
+					margin-#{$left}: 2em;
+				}
+
+				&:first-child:last-child {
+					width: 100%;
+					margin-#{$left}: auto;
+				}
+
+			}
+
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+
+		}
+
+}
+
+.flex-control-thumbs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	padding: 1px;
+	margin: 0;
+	list-style: none;
+
+	li {
+		width: 25%;
+		padding: 1px;
+	}
+
+}

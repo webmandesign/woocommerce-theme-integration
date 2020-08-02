@@ -1,0 +1,52 @@
+/* FILE: woocommerce/blocks/_product-categories.scss */
+
+.wc-block-product-categories {
+
+	ul {
+		@extend %widget_list_items;
+		clear: both;
+		max-width: 100%;
+	}
+
+	li {
+
+		&::before {
+			display: none;
+		}
+
+	}
+
+	a {
+		font-size: .9em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: var(--letter_spacing);
+		color: inherit;
+	}
+
+	&-list-item-count {
+		float: $right;
+		font-size: .8em;
+	}
+
+	&__button {
+
+		&:not(:disabled):not([aria-disabled=true]):hover,
+		&:focus:enabled {
+			background: var(--color_button_background);
+			color: var(--color_button_text);
+			box-shadow: none;
+		}
+
+		&:focus:enabled {
+			outline: 2px dashed var(--color_accent);
+			outline-offset: 1px;
+		}
+
+	}
+
+}
+
+.wc-block-product-categories-list--has-images .wc-block-product-categories-list-item ul {
+	margin-#{$left}: -50px;
+}

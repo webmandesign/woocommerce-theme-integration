@@ -1,0 +1,88 @@
+/* FILE: woocommerce/others/_variations.scss */
+
+// Single product page:
+.variations {
+	position: relative;
+	border-width: 0;
+	margin-bottom: 2em;
+
+	tr,
+	th,
+	td {
+		display: block;
+	}
+
+	tr:not(:first-child) {
+		margin-top: 1em;
+	}
+
+	th,
+	td {
+		padding: 0;
+		border-width: 0;
+	}
+
+	.label {
+		font-size: .8em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: var(--letter_spacing);
+		color: var(--color_content_headings);
+	}
+
+	select {
+		width: 100%;
+	}
+
+}
+
+.reset_variations {
+	position: absolute;
+	#{$right}: 0;
+	bottom: 100%;
+	font-size: .8em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: var(--letter_spacing);
+
+	&::before {
+		content: '\00d7\00a0'; // &times;&nbsp;
+	}
+
+}
+
+.woocommerce-variation {
+
+	&-description,
+	&-price,
+	&-availability {
+
+		&:not(:empty) {
+			margin-bottom: 1rem;
+		}
+
+	}
+
+	&-description {
+		font-size: .8em;
+	}
+
+}
+
+.single_variation_wrap {
+	width: 100%;
+}
+
+// Shop table:
+dl.variation {
+	margin: 0;
+	font-size: .8em;
+	font-weight: 400;
+
+	dt,
+	dd {
+		display: inline-block;
+		margin: 0;
+	}
+
+}

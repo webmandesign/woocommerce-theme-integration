@@ -1,0 +1,20 @@
+/* FILE: woocommerce/sidebar/_widget-rating-filter.scss */
+
+.widget_rating_filter {
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+
+	}
+
+}

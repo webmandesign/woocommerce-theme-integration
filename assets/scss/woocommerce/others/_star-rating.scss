@@ -1,0 +1,170 @@
+/* FILE: woocommerce/others/_star-rating.scss */
+
+.star-rating {
+	position: relative;
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: 400;
+	line-height: 1;
+	text-align: $left;
+	overflow: hidden;
+
+	span,
+	span::before {
+		float: $left;
+		position: absolute;
+		#{$left}: 0;
+		top: 0;
+	}
+
+	&::before {
+		content: '\2606\2606\2606\2606\2606'; // WHITE STAR
+		color: currentColor;
+	}
+
+	span {
+		height: 1em;
+		padding-top: 1.5em; // Move the text away accessibly.
+		overflow: hidden;
+
+		&::before {
+			content: '\2605\2605\2605\2605\2605'; // BLACK STAR
+			float: none;
+			color: var(--color_accent);
+		}
+
+	}
+
+	.products & {
+		position: absolute;
+		#{$right}: 0;
+		top: 0;
+		margin: .5rem 0;
+		font-size: 1em;
+	}
+
+}
+
+// In product summary.
+.summary-content .woocommerce-product-rating {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	font-size: 1.25em;
+
+	.star-rating {
+		margin-#{$right}: .5em;
+	}
+
+	.woocommerce-review-link {
+		font-size: .8rem;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&:hover .woocommerce-review-link,
+	.woocommerce-review-link:active,
+	.woocommerce-review-link:focus,
+	.woocommerce-review-link:hover {
+		opacity: 1;
+	}
+
+}
+
+.summary-purchase .woocommerce-product-rating {
+	display: block;
+	position: relative;
+	margin-bottom: 1rem;
+	line-height: 1.25;
+	text-align: center;
+
+	.star-rating {
+		margin-#{$right}: 0;
+	}
+
+	.woocommerce-review-link {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+
+	.woocommerce-review-link,
+	&:hover .woocommerce-review-link,
+	.woocommerce-review-link:active,
+	.woocommerce-review-link:focus,
+	.woocommerce-review-link:hover {
+		opacity: 0;
+	}
+
+}
+
+// In review form.
+p.stars {
+	float: $right;
+	display: inline-block;
+	margin: 0;
+	line-height: 1;
+	font-size: 1.5em;
+	color: var(--color_accent);
+
+	> span {
+		overflow: hidden;
+	}
+
+	a {
+		float: $left;
+		position: relative;
+		display: block;
+		width: 1em;
+		height: 1em;
+		font-weight: 400;
+		text-decoration: none;
+		text-align: $left;
+		text-indent: -999em;
+
+		&::before {
+			content: '\2606'; // WHITE STAR
+			position: absolute;
+			width: 100%;
+			#{$left}: 0;
+			top: 0;
+			line-height: 1;
+			text-align: center;
+			text-indent: 0;
+
+		}
+
+		&:hover ~ a::before {
+			content: '\2606'; // WHITE STAR
+		}
+
+	}
+
+	&:hover a::before {
+		content: '\2605'; // BLACK STAR
+	}
+
+	&.selected {
+
+		a.active {
+
+			&::before {
+				content: '\2605'; // BLACK STAR
+			}
+
+			~ a::before {
+				content: '\2606'; // WHITE STAR
+			}
+
+		}
+
+		a:not(.active)::before {
+			content: '\2605'; // BLACK STAR
+		}
+
+	}
+
+}

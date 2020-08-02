@@ -1,0 +1,60 @@
+/* FILE: woocommerce/form/_coupon.scss */
+
+.woocommerce-form-coupon {
+
+	.button {
+		width: 100%;
+	}
+
+}
+
+.coupon {
+
+	.shop_table & {
+		margin-bottom: 1em;
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			float: $left;
+			margin-bottom: 0;
+		}
+
+		label {
+			@extend %screen_reader_hiding;
+		}
+
+		.input-text {
+			width: 100%;
+
+			@include media( map_get( $breakpoint, 'm' ) ) {
+				width: auto;
+			}
+
+		}
+
+		.button[type="submit"] {
+			float: none;
+			width: 100%;
+
+			@include media( map_get( $breakpoint, 'm' ) ) {
+				float: $right;
+				width: auto;
+				margin-#{$left}: .25em;
+			}
+
+		}
+
+		&-description {
+			margin-top: .5rem;
+			font-size: .8em;
+		}
+
+	}
+
+}
+
+.woocommerce-remove-coupon {
+	margin-#{$left}: .5em;
+	font-size: .8em;
+	font-weight: 400;
+	text-transform: uppercase;
+}

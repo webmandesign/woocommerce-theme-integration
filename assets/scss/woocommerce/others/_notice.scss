@@ -1,0 +1,49 @@
+/* FILE: woocommerce/others/_notice.scss */
+
+.woocommerce-notice,
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-noreviews {
+	@extend %shaded_background;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 1em 2em;
+	margin: 0 0 ( $golden +em );
+	list-style: none;
+	overflow: hidden;
+
+	&:last-child {
+		margin-bottom: 3em;
+	}
+
+	.button {
+		margin-#{$right}: 1em;
+	}
+
+}
+
+.woocommerce-notice--error,
+.woocommerce-error {
+	display: block;
+
+	&::before {
+		background: var(--color_accent);
+	}
+
+}
+
+.woocommerce-NoticeGroup {
+	margin-bottom: $golden +em;
+}
+
+.woocommerce-info {
+
+	.woocommerce-form-login-toggle &,
+	.woocommerce-form-coupon-toggle & {
+		margin-bottom: $golden +rem;
+	}
+
+}

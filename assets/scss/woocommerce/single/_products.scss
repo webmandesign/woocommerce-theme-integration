@@ -1,0 +1,15 @@
+/* FILE: woocommerce/single/_products.scss */
+
+.upsells,
+.related {
+
+	h2 {
+		@extend %widget_heading;
+		text-align: center;
+	}
+
+	.products {
+		margin-top: 0;
+	}
+
+}

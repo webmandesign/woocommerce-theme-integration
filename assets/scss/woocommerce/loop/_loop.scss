@@ -1,0 +1,22 @@
+/* FILE: woocommerce/loop/_loop.scss */
+
+// Unfortunately, in some cases also a DIV wrapper has a class of `.products`...
+ul.products {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2em calc( var(--posts_list_gap) / 2 * -1 );
+	list-style: none;
+}
+
+// Columns.
+
+	.products .product {
+		@extend %posts_list_columns_1;
+	}
+
+	@for $i from 2 through 6 {
+		.products.columns-#{$i} .product {
+			@extend %posts_list_columns_#{$i};
+		}
+	}
