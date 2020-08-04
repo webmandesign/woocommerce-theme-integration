@@ -2,7 +2,7 @@
 /**
  * Widgets.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -26,7 +26,7 @@ class Widgets {
 
 		// Processing
 
-			// Removing
+			// Removing hooks
 
 				remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar' );
 

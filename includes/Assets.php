@@ -2,7 +2,7 @@
 /**
  * Assets.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -65,12 +65,12 @@ class Assets {
 
 			// Scripts:
 
+				// Adds class of tabs count on tabs wrapper.
 				wp_add_inline_script(
 					'wc-single-product',
 					"( function( $ ) {
 						'use strict';
 
-						// Add class of tabs count on tab selector wrapper.
 						$( '.woocommerce-tabs' )
 							.addClass( function() {
 								return 'tabs-count-' + $( this ).find( '.tabs li' ).length;

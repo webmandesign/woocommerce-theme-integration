@@ -2,7 +2,7 @@
 /**
  * Wrappers.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -28,7 +28,7 @@ class Wrappers {
 
 		// Processing
 
-			// Removing
+			// Removing hooks
 
 				remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
 				remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );

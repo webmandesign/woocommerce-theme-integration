@@ -1,6 +1,7 @@
 /* FILE: woocommerce/page/_header.scss */
 
 .woocommerce-products-header {
+	margin-bottom: var(--white_space);
 
 	.no-widgets-in-sidebar & {
 		max-width: var(--layout_width_entry_content);

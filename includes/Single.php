@@ -2,7 +2,7 @@
 /**
  * Single product page.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -29,7 +29,7 @@ class Single {
 
 		// Processing
 
-			// Removing
+			// Removing hooks
 
 				remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 

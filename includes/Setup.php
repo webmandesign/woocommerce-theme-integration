@@ -2,7 +2,7 @@
 /**
  * Setup.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -28,7 +28,7 @@ class Setup {
 
 		// Processing
 
-			// Removing
+			// Removing hooks
 
 				remove_action( 'wp_footer', 'woocommerce_demo_store' );
 

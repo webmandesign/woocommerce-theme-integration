@@ -4,7 +4,7 @@
  *
  * @link  https://www.php-fig.org/psr/psr-4/
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -36,7 +36,6 @@ class WCTI_Autoload {
 	 */
 	private static $allowed_files = array(
 		'/Assets.php',
-		'/Blocks.php',
 		'/Hook.php',
 		'/Loader.php',
 		'/Loop.php',
@@ -100,4 +99,3 @@ class WCTI_Autoload {
 }
 
 spl_autoload_register( 'WCTI_Autoload::register' );
-

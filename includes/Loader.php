@@ -2,7 +2,7 @@
 /**
  * Loader.
  *
- * @package  WooCommerce Theme Integration
+ * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -43,38 +43,37 @@ class Loader {
 
 		// Requirements check
 
-			// WooCommerce need to be active.
+			// Why bother if WooCommerce is not active.
 			if ( ! class_exists( 'WooCommerce' ) ) {
 				return;
 			}
 
-			// Is the theme already compatible with WooCommerce?
-			if ( current_theme_supports( 'woocommerce' ) ) {
-				add_action( 'admin_notices', function() {
+			// Should we load this plugin functionality?
+			$can_load = true;
 
-					// Output
-
+				// Is the theme already compatible with WooCommerce?
+				if ( current_theme_supports( 'woocommerce' ) ) {
+					add_action( 'admin_notices', function() {
 						printf(
 							'<div class="error"><p>%s</p></div>',
 							esc_html__( 'Your theme seems to claim WooCommerce integration already. The WooCommerce Theme Integration plugin is not needed.', 'woocommerce-theme-integration' )
 						);
+					} );
+					$can_load = false;
+				}
 
-				} );
-				return;
-			}
-
-			// Is the theme by WebMan Design?
-			if ( false === strpos( wp_get_theme( WCTI_THEME_SLUG )->get( 'AuthorURI' ), 'webmandesign' ) ) {
-				add_action( 'admin_notices', function() {
-
-					// Output
-
+				// Is the theme by WebMan Design?
+				if ( false === strpos( wp_get_theme( WCTI_THEME_SLUG )->get( 'AuthorURI' ), 'webmandesign' ) ) {
+					add_action( 'admin_notices', function() {
 						printf(
 							'<div class="error"><p>%s</p></div>',
-							esc_html__( 'Sorry, this plugin will not work with your theme. Please check WordPress themes by WebManDesign.eu.', 'woocommerce-theme-integration' )
+							esc_html__( 'Sorry, the WooCommerce Theme Integration plugin will not work with your theme. Please check WordPress themes by WebManDesign.eu.', 'woocommerce-theme-integration' )
 						);
+					} );
+					$can_load = false;
+				}
 
-				} );
+			if ( ! $can_load ) {
 				return;
 			}
 
