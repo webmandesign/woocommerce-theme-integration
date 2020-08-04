@@ -37,13 +37,6 @@
 
 	}
 
-// Headings.
-
-	%widget_heading {
-		font-size: 1em;
-		margin-bottom: 2rem;
-	}
-
 // Loop.
 
 	// Post list columns.
@@ -137,115 +130,6 @@
 
 // Widgets.
 
-	%widget_calendar {
-		text-align: inherit;
-
-		caption {
-			font-size: .8em;
-			font-weight: 700;
-			font-style: normal;
-			text-transform: uppercase;
-			letter-spacing: var(--letter_spacing);
-			caption-side: top;
-		}
-
-		table {
-			margin: 0;
-			font-family: inherit;
-			text-align: center;
-			border-collapse: separate;
-			border-width: 0;
-
-			caption {
-				color: inherit;
-			}
-
-		}
-
-		tr {
-
-			th,
-			td {
-				width: auto;
-				height: 2em;
-				padding: 0;
-				text-align: center;
-				vertical-align: middle;
-			}
-
-		}
-
-		thead {
-
-			th {
-				font-size: .8em;
-				font-weight: 700;
-				background: var(--color_content_headings);
-				color: var(--color_content_background);
-				border-width: 0;
-			}
-
-		}
-
-		tbody {
-
-			a {
-				display: block;
-				width: 100%;
-				height: 100%;
-				text-decoration: none;
-				line-height: 2;
-				background: var(--color_button_background);
-				color: var(--color_button_text);
-				transition: background .3s;
-
-				&:hover,
-				&:focus {
-					background: var(--color_button_hover_background);
-				}
-
-				&:focus {
-					outline-color: var(--color_accent);
-				}
-
-			}
-
-		}
-
-		tfoot {
-
-			a {
-				color: inherit;
-			}
-
-		}
-
-		.pad {
-			visibility: hidden;
-		}
-
-		.wp-calendar-nav {
-			margin-top: .5rem;
-			font-size: .8em;
-			font-weight: 700;
-			text-align: inherit;
-			text-transform: uppercase;
-			letter-spacing: var(--letter_spacing);
-
-			a {
-				text-decoration: none;
-
-				&:hover,
-				&:focus {
-					text-decoration: underline;
-				}
-
-			}
-
-		}
-
-	}
-
 	%widget_list_items {
 		margin: 0;
 		list-style: none;
@@ -320,7 +204,6 @@
 			font-weight: 600;
 			text-transform: uppercase;
 			letter-spacing: var(--letter_spacing);
-			color: var(--color_content_headings);
 		}
 
 	}

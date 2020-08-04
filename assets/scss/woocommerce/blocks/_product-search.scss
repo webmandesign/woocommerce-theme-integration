@@ -7,26 +7,4 @@
 		margin-#{$right}: .5em;
 	}
 
-	& .wc-block-product-search__button {
-		padding-left: 1em;
-		padding-right: 1em;
-		border: 1px solid transparent;
-		border-radius: 0;
-
-		&,
-		&:not(:disabled):not([aria-disabled=true]):hover,
-		&:not(:disabled):not([aria-disabled=true]):active,
-		&:focus:enabled {
-			background: var(--color_button_background);
-			color: var(--color_button_text);
-		}
-
-		&:focus:enabled {
-			outline: 2px dashed var(--color_accent);
-			outline-offset: 1px;
-			box-shadow: none;
-		}
-
-	}
-
 }

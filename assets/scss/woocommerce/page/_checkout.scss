@@ -2,10 +2,6 @@
 
 .woocommerce .woocommerce-checkout {
 
-	h3 {
-		@extend %widget_heading;
-	}
-
 	@include media( map_get( $breakpoint, 'l' ) ) {
 
 		&::after {

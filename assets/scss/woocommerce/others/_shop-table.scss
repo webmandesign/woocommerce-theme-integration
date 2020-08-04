@@ -27,28 +27,23 @@
 	}
 
 	thead {
-		background: var(--color_content_headings);
-		color: var(--color_content_background);
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
+		border-bottom-width: 4px;
+		border-bottom-style: double;
 	}
 
 	.remove {
 		display: inline-block;
 		width: 2em;
 		height: 2em;
-		line-height: 1.8em;
+		font-weight: 700;
+		line-height: calc( 2em - 2px );
 		text-align: center;
 		text-decoration: none;
-		font-weight: 700;
-		color: var(--color_accent);
 		border: 1px solid;
-		border-radius: 2em;
 
 		&:hover,
 		&:focus {
-			background: var(--color_button_background);
-			color: var(--color_button_text);
+			text-decoration: none;
 		}
 
 	}
@@ -73,8 +68,8 @@
 	.actions {
 		padding: 2em 0;
 		color: var(--color_content_headings);
-		border-top-width: 2px;
-		border-top-style: solid;
+		border-top-width: 4px;
+		border-top-style: double;
 		overflow: hidden;
 
 		[type="submit"] {

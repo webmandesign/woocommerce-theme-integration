@@ -10,8 +10,6 @@
 
 namespace WebManDesign\WCTI;
 
-use WebManDesign\WCTI\Assets as _Assets;
-
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
@@ -30,7 +28,9 @@ class Assets {
 
 			// Actions
 
-				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue', 100 );
+				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue' );
+
+				add_action( 'woocommerce_product_after_tabs', __CLASS__ . '::print', 0 );
 
 			// Filters
 
@@ -80,5 +80,37 @@ class Assets {
 				);
 
 	} // /enqueue
+
+	/**
+	 * Print styles in page content.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @return  void
+	 */
+	public static function print() {
+
+		// Variables
+
+			$print_styles_callable = WCTI_THEME_NAMESPACE . '\Assets\Factory::print_styles';
+
+
+		// Requirements check
+
+			if ( ! is_callable( $print_styles_callable ) ) {
+				return;
+			}
+
+
+		// Processing
+
+			if ( doing_action( 'woocommerce_product_after_tabs' ) ) {
+				call_user_func(
+					$print_styles_callable,
+					WCTI_THEME_SLUG . '-comments'
+				);
+			}
+
+	} // /print
 
 }

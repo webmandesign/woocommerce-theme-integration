@@ -9,11 +9,6 @@
 .woocommerce-order-details,
 .woocommerce-customer-details {
 	margin-top: calc( var(--white_space) / 2 );
-
-	h2 {
-		@extend %widget_heading;
-	}
-
 }
 
 .woocommerce-order-details {

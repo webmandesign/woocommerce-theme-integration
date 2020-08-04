@@ -1,50 +1,11 @@
 /* FILE: woocommerce/page/_header.scss */
 
 .woocommerce-products-header {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	width: calc( 100vw - var(--scrollbar_width) );
-	padding: var(--white_space) 6vw 0;
-	margin-top: var(--content_padding_negative);
-	margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
-	margin-bottom: var(--white_space);
-	text-align: center;
 
-	.has-widgets-in-sidebar & {
-		@include media( map_get( $breakpoint, 'l' ) ) {
-			margin-#{$left}: calc( ( 50% / ( 1 - var(--sidebar_width) ) ) - 50vw + ( var(--scrollbar_width) / 2 ) );
-		}
-	}
-
-	.page-title,
-	.page-description,
-	.term-description {
+	.no-widgets-in-sidebar & {
 		max-width: var(--layout_width_entry_content);
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	.page-title {
-		margin-bottom: 0;
-	}
-
-	.page-number {
-		font-size: 1.2rem;
-		font-weight: 400;
-		text-transform: none;
-		white-space: nowrap;
-	}
-
-	.page-description,
-	.term-description {
-		margin-top: 2em;
-		font-size: 1.2em;
-		color: var(--color_content_headings);
-	}
-
-	.breadcrumbs-section {
-		order: -1;
 	}
 
 }

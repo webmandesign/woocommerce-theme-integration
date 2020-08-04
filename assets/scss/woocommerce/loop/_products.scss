@@ -4,63 +4,44 @@
 ul.products {
 
 	.product {
-		flex: 0 1 auto;
-		display: flex;
-		flex-direction: column;
+		position: relative;
 		width: calc( 100% - var(--posts_list_gap) );
 		margin: var(--posts_list_gap) calc( var(--posts_list_gap) / 2 );
+	}
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
-			margin-top: calc( var(--posts_list_gap) / 2 );
-			margin-bottom: calc( var(--posts_list_gap) / 2 );
-		}
+	.woocommerce-LoopProduct-link {
+		display: block;
+		color: inherit;
 
-		.has-posts-list-cascade & {
-			justify-content: center;
+		&::after {
+			content: '';
+			clear: both;
+			display: table;
+			table-layout: fixed;
 		}
 
 	}
 
 	a {
 		text-decoration: none;
-
-		&:first-child {
-			display: block;
-		}
-
-	}
-
-	.woocommerce-LoopProduct-link {
-		color: inherit;
 	}
 
 	img {
+		display: block;
+		margin: 0 auto ( $golden +em );
 		vertical-align: top;
 	}
 
-	.description {
-		position: relative;
-		padding: 2em 0 0;
-
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			display: flex;
-			justify-content: space-between;
-		}
-
-	}
-
 	h3 {
+		display: inline;
 		margin: 0;
-		font-size: var(--typography_heading_size_posts);
-
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			margin-#{$right}: .5rem;
-		}
-
+		margin-#{$right}: .5rem;
+		font-size: 1.25em;
 	}
 
 	.button,
 	.added_to_cart {
+		display: block;
 		padding: 0;
 		margin: 0;
 		text-align: inherit;
@@ -80,7 +61,7 @@ ul.products {
 	}
 
 	.button {
-		margin-top: 1em;
+		margin-top: .5em;
 
 		&::before {
 			content: '+ ';
@@ -110,19 +91,6 @@ ul.products {
 
 		}
 
-	}
-
-}
-
-// In default WordPress search results.
-.posts .product {
-
-	.entry-header {
-		margin-bottom: 0;
-	}
-
-	.entry-summary {
-		display: none;
 	}
 
 }

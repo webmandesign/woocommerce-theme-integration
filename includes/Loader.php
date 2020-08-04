@@ -64,7 +64,7 @@ class Loader {
 			}
 
 			// Is the theme by WebMan Design?
-			if ( false === strpos( wp_get_theme( WCTI_THEME )->get( 'AuthorURI' ), 'webmandesign' ) ) {
+			if ( false === strpos( wp_get_theme( WCTI_THEME_SLUG )->get( 'AuthorURI' ), 'webmandesign' ) ) {
 				add_action( 'admin_notices', function() {
 
 					// Output
@@ -84,7 +84,6 @@ class Loader {
 			Setup::init();
 
 			Assets::init();
-			Blocks::init();
 			Loop::init();
 			Pages::init();
 			Single::init();

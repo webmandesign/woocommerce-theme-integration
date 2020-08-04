@@ -4,7 +4,7 @@
 	position: relative;
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
-		width: 50%;
+		width: calc( 50% - 1em );
 	}
 
 	img {
@@ -39,81 +39,12 @@
 
 	}
 
-	// Gallery layouts.
-
-		// has-gallery-layout-wide-columns-1
-		// has-gallery-layout-wide-columns-2
-		// has-gallery-layout-wide-thumbnails
-		// has-gallery-layout-narrow-columns-1
-		// has-gallery-layout-narrow-columns-2
-		// has-gallery-layout-narrow-thumbnails
-
-		body[class*="has-gallery-layout-wide"] & {
-			@include media( map_get( $breakpoint, 'm' ) ) {
-				width: calc( 50vw - ( var(--scrollbar_width) / 2 ) );
-				padding-#{$left}: 6vw;
-				margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
-				text-align: $right;
-			}
-
-			img {
-				max-width: 1920 / 2 +px;
-			}
-
-		}
-
-		.has-gallery-layout-wide-columns-1 &,
-		.has-gallery-layout-wide-columns-2 &,
-		.has-gallery-layout-narrow-columns-1 &,
-		.has-gallery-layout-narrow-columns-2 & {
-			margin-top: -2em;
-
-			&__image {
-				margin-top: 2em;
-			}
-
-		}
-
-		.has-gallery-layout-wide-columns-2 &,
-		.has-gallery-layout-narrow-columns-2 & {
-
-			&__wrapper {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-			}
-
-			&__image {
-				width: calc( 50% - 1em );
-
-				@include media( map_get( $breakpoint, 'm' ) ) {
-					margin-#{$left}: auto;
-				}
-
-				&:nth-child(2n) {
-					margin-#{$left}: 2em;
-				}
-
-				&:first-child:last-child {
-					width: 100%;
-					margin-#{$left}: auto;
-				}
-
-			}
-
-			img {
-				height: 100%;
-				object-fit: cover;
-			}
-
-		}
-
 }
 
 .flex-control-thumbs {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: center;
 	padding: 1px;
 	margin: 0;
 	list-style: none;

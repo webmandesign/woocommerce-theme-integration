@@ -4,9 +4,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: calc( 100vw - var(--scrollbar_width) );
 	margin: var(--white_space) 0 0;
-	margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
 	list-style: none;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -46,10 +44,9 @@
 
 .woocommerce-Tabs-panel {
 	max-width: var(--layout_width_entry_content);
-	margin: 3rem auto var(--white_space);
+	margin: 3em auto var(--white_space);
 
 	> h2:first-child {
-		@extend %widget_heading;
 
 		.woocommerce-tabs:not(.tabs-count-1) & {
 			@extend %screen_reader_hiding;

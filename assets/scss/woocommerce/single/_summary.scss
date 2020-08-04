@@ -4,18 +4,8 @@
 	margin-top: 2em;
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
-		width: calc( 50% - 3em );
+		width: calc( 50% - 1em );
 		margin-top: 0;
-	}
-
-	.has-sticky-product-summary & {
-		@include media(
-			( map_get( $breakpoint, 'xl' ), 'min-width' ),
-			( map_get( $breakpoint, 's' ), 'min-height' )
-		) {
-			position: sticky;
-			top: -2em;
-		}
 	}
 
 	&-section {
@@ -33,7 +23,6 @@
 			+ .single_add_to_cart_button {
 				display: inline-block;
 				width: auto;
-				padding: ( $form_field_padding_vertical / $button_font_size ) 12%;
 				margin: 0;
 				vertical-align: top;
 			}
@@ -70,16 +59,4 @@
 
 .product-description-link {
 	font-weight: 700;
-}
-
-.product-rating-sale-container {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-bottom: 1em;
-
-	&:empty {
-		display: none;
-	}
-
 }

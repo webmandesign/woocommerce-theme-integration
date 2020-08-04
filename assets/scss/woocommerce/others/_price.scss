@@ -9,16 +9,12 @@
 	}
 
 	.products & {
-
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			text-align: $right;
-		}
-
+		float: $right;
 	}
 
 	.summary-content & {
-		margin-top: -$golden + $golden_minor +rem;
-		font-size: 1.44em;
+		margin-top: ( -$golden +rem );
+		font-size: $golden +em;
 		color: var(--color_content_headings);
 
 		del {
@@ -26,7 +22,7 @@
 		}
 
 		&-range {
-			font-size: 1.2rem;
+			font-size: 1.25rem;
 		}
 
 	}

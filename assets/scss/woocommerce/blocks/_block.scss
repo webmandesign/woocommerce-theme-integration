@@ -26,7 +26,7 @@
 
 // Price display.
 .wc-block-featured-product__price {
-	font-size: calc( var(--typography_heading_size_multiplier) * var(--typography_heading_size_2) );
+	font-size: $golden +em;
 	font-weight: 700;
 
 	del {

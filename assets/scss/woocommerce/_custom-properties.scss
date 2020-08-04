@@ -3,7 +3,9 @@
 //
 // Custom properties (CSS variables).
 //
-// @package    Eimear
+// All of these are loaded early enough to be overridden by theme.
+//
+// @package    WooCommerce Theme Integration
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since  1.0.0
@@ -11,31 +13,32 @@
 
 :root {
 
+	// Colors.
+
+		--color_accent: #f00;
+		--color_content_background: #fff;
+		--color_content_headings: #111;
+
+	// Typography.
+
+		--typography_font_headings: sans-serif;
+
 	// Spacing and size.
 
 		// Unit is required in `calc()`.
 		// A non-zero value is required for minification process not to strip the unit.
 		--zero: 0.001px;
 
-		--scrollbar_width: var(--zero);
+		--layout_width_content: 1280px;
+		--layout_width_entry_content: 640px;
+
+		--white_space: 100px;
 
 		--posts_list_gap: 2em;
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			--posts_list_gap: 3em;
-		}
-		@include media( map_get( $breakpoint, 'xxl' ) ) {
-			--posts_list_gap: 4em;
-		}
-
-		--content_padding:          calc(  1 * var(--white_space) );
-		--content_padding_negative: calc( -1 * var(--white_space) );
-
-		--sidebar_width: .33;
 
 		--letter_spacing: .05em;
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			--letter_spacing: .075em;
-		}
+
+		--scrollbar_width: var(--zero);
 
 	// Others.
 

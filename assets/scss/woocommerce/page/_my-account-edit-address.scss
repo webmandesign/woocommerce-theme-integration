@@ -3,11 +3,6 @@
 .woocommerce-Address-title {
 	display: flex;
 	justify-content: space-between;
-
-	h3 {
-		@extend %widget_heading;
-	}
-
 }
 
 .woocommerce-address-fields__field-wrapper {

@@ -28,7 +28,7 @@ class Hook {
 
 		// Output
 
-			return apply_filters( 'WCTI/Hook/get_name', WCTI_THEME . '/' . $hook, $hook );
+			return apply_filters( 'WCTI/Hook/get_name', WCTI_THEME_SLUG . '/' . $hook, $hook );
 
 	} // /get_name
 

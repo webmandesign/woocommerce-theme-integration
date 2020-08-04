@@ -1,15 +1,7 @@
 /* FILE: woocommerce/page/_cart.scss */
 
-.cart-table-title {
-	@extend %widget_heading;
-}
-
 .cart-collaterals {
 	margin-top: calc( var(--white_space) / 2 );
-
-	h2 {
-		@extend %widget_heading;
-	}
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
 
@@ -67,7 +59,7 @@
 
 	.checkout-button {
 		display: block;
-		padding: $form_field_padding_vertical 1em;
+		padding: .8em 1em;
 	}
 
 	.continue-shopping {
@@ -87,7 +79,7 @@
 
 	td {
 		line-height: 1;
-		font-size: var(--typography_heading_size_5);
+		font-size: 1.25em;
 	}
 
 	small {
@@ -118,7 +110,7 @@
 
 		&-button {
 			display: block;
-			padding: $form_field_padding_vertical 1em;
+			padding: .8em 1em;
 			font-size: .8em;
 			font-weight: 700;
 			text-transform: uppercase;

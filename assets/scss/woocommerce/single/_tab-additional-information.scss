@@ -1,38 +1,16 @@
 /* FILE: woocommerce/single/_additional-information.scss */
 
 .woocommerce-product-attributes {
-	text-align: center;
+	border-width: 0;
 
-	&,
-	td,
+	tr:not(:last-child) {
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+	}
+
 	th,
-	tr,
-	tbody {
-		display: block;
-	}
-
-	&,
-	td,
-	th {
-		padding: 0;
+	td {
 		border-width: 0;
-	}
-
-	tr {
-
-		&:not(:first-child) {
-			margin-top: 2em;
-		}
-
-	}
-
-	th {
-		margin-bottom: .5rem;
-		font-size: .8em;
-		text-align: inherit;
-		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
-		color: var(--color_content_headings);
 	}
 
 }

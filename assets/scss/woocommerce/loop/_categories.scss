@@ -5,33 +5,25 @@ ul.products {
 
 	.product-category {
 
-		.description {
-			display: block;
-		}
-
 		.category-label {
 			margin-bottom: 0;
-			text-transform: uppercase;
 			font-size: .8em;
+			text-transform: uppercase;
+			letter-spacing: var(--letter_spacing);
 		}
 
 		.count {
 			padding: 0;
 			margin: 0;
-			font-size: $golden_major +em;
 			font-weight: 400;
 			background: none;
-			vertical-align: super;
 		}
 
+		.button::before,
 		.button::after {
 			display: none;
 		}
 
-	}
-
-	&-categories {
-		margin-bottom: calc( var(--white_space) / 2 );
 	}
 
 }

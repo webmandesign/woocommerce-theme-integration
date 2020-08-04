@@ -16,7 +16,7 @@
 		}
 
 		@include media( map_get( $breakpoint, 'l' ) ) {
-			width: calc( 50% - 1.5em );
+			width: calc( 50% - 1em );
 
 			&:not(:first-child) {
 				margin-top: 0;
@@ -32,10 +32,6 @@
 
 	&-title,
 	.comment-reply-title {
-		@extend %widget_heading;
-		line-height: 1.25;
-		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
 
 		span {
 			font-weight: 400;
@@ -48,7 +44,7 @@
 		width: 2.5em;
 		margin-bottom: .5em;
 		margin-#{$right}: 1em;
-		border-radius: 10em;
+		border-radius: 2.5em;
 	}
 
 	.star-rating {
@@ -65,10 +61,6 @@
 		@extend %shaded_background;
 		position: relative;
 		padding: 2rem;
-
-		@include media( map_get( $breakpoint, 'xl' ) ) {
-			padding: 3rem;
-		}
 
 		&:not(:first-child) {
 			margin-top: 2em;
@@ -99,9 +91,11 @@
 		}
 
 		&-reply-title {
-			@extend %widget_heading;
 			display: block;
 			font-family: var(--typography_font_headings);
+			font-size: 1.25em;
+			font-weight: 700;
+			line-height: 1.25;
 			color: var(--color_content_headings);
 		}
 
@@ -109,9 +103,7 @@
 			margin: 0;
 
 			&-rating {
-				padding: $form_field_padding_vertical 0;
 				margin-bottom: $golden +em;
-				border-bottom: 1px solid;
 				overflow: hidden;
 
 				label:first-child {

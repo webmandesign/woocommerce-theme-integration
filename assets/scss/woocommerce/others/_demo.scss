@@ -1,17 +1,17 @@
 /* FILE: woocommerce/others/_demo.scss */
 
 .woocommerce-store-notice {
+	@extend %shaded_background;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	width: 100%;
-	padding: 1rem 6vw;
+	padding: 1rem 6%;
 	margin: 0;
 	text-align: center;
 	z-index: 100;
-	background: var(--color_button_background);
-	color: var(--color_button_text);
 
 	&__dismiss-link {
 		margin-#{$left}: 1rem;

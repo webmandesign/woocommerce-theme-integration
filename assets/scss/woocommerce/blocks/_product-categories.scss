@@ -31,13 +31,6 @@
 
 	&__button {
 
-		&:not(:disabled):not([aria-disabled=true]):hover,
-		&:focus:enabled {
-			background: var(--color_button_background);
-			color: var(--color_button_text);
-			box-shadow: none;
-		}
-
 		&:focus:enabled {
 			outline: 2px dashed var(--color_accent);
 			outline-offset: 1px;

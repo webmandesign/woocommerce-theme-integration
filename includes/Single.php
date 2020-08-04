@@ -35,9 +35,6 @@ class Single {
 
 				remove_action( 'woocommerce_before_single_product', 'woocommerce_output_all_notices' );
 
-				remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash' );
-
-				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating' );
 				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 
 			// Actions
@@ -45,7 +42,6 @@ class Single {
 				add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', -5 );
 
 				add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
-				add_action( 'woocommerce_single_product_summary', __CLASS__ . '::rating_and_sale', 15 );
 				add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 18 );
 
 			// Filters
@@ -304,23 +300,5 @@ class Single {
 				return $bool;
 
 	} // /sidebar_disable
-
-	/**
-	 * Wrap star rating and sale badge.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return  void
-	 */
-	public static function rating_and_sale() {
-
-			// Output
-
-				echo '<div class="product-rating-sale-container">';
-				woocommerce_show_product_sale_flash();
-				woocommerce_template_single_rating();
-				echo '</div>';
-
-	} // /rating_and_sale
 
 }

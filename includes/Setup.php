@@ -65,8 +65,8 @@ class Setup {
 
 			add_theme_support( 'woocommerce', array(
 				'thumbnail_image_width'         => 480,
-				'single_image_width'            => 640, // @TODO
-				'gallery_thumbnail_image_width' => 240,
+				'single_image_width'            => 800,
+				'gallery_thumbnail_image_width' => 200,
 
 				'product_grid' => array(
 

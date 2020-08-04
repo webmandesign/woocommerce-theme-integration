@@ -31,8 +31,6 @@ class Loop {
 				remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 				remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
-				remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash' );
-
 				remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination' );
 
 				remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title' );
@@ -41,19 +39,15 @@ class Loop {
 			// Actions
 
 				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::products_sorting' );
-				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::active_filters',  20 );
 				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::shop_loop_title', 100 );
 
 				add_action( 'woocommerce_shop_loop_item_title', __CLASS__ . '::loop_product_title' );
 				add_action( 'woocommerce_shop_loop_subcategory_title', __CLASS__ . '::loop_category_title' );
 
-				add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 5 );
-
 				add_action( 'woocommerce_before_subcategory_title', __CLASS__ . '::category_label', 95 );
 
 				add_action( 'woocommerce_after_subcategory', __CLASS__ . '::category_button', 20 );
 
-				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::active_filters', -10 );
 				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::products_sorting', 5 );
 				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::pagination' );
 
@@ -126,35 +120,6 @@ class Loop {
 			echo '</div>';
 
 	} // /products_sorting
-
-	/**
-	 * Active filters.
-	 *
-	 * @since  1.0.0
-	 *
-	 * @return  void
-	 */
-	public static function active_filters() {
-
-		// Variables
-
-			$widget = 'WC_Widget_Layered_Nav_Filters';
-
-
-		// Requirements check
-
-			if ( ! class_exists( $widget ) ) {
-				return;
-			}
-
-
-		// Output
-
-			echo '<div class="products-active-filters">';
-				the_widget( $widget );
-			echo '</div>';
-
-	} // /active_filters
 
 	/**
 	 * Pagination.

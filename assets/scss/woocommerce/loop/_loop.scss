@@ -5,7 +5,7 @@ ul.products {
 	clear: both;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 2em calc( var(--posts_list_gap) / 2 * -1 );
+	margin: calc( -1 * var(--posts_list_gap) ) calc( var(--posts_list_gap) / 2 * -1 );
 	list-style: none;
 }
 
