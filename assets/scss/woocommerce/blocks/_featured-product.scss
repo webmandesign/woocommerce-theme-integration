@@ -1,0 +1,25 @@
+/* FILE: woocommerce/blocks/_featured-product.scss */
+
+.wc-block-featured-product {
+	position: relative;
+	padding: 2em;
+
+	.wc-block-featured-product__title,
+	.wc-block-featured-product__description,
+	.wc-block-featured-product__price,
+	.wc-block-featured-product__link {
+		max-width: calc( var(--layout_width_entry_content) * #{ $golden_major } );
+		padding: 0;
+		margin: 10px 0;
+	}
+
+	.wc-block-featured-product__description {
+
+		&,
+		p {
+			line-height: inherit;
+		}
+
+	}
+
+}
