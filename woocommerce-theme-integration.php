@@ -3,7 +3,7 @@
  * Plugin Name:  WooCommerce Theme Integration by WebMan
  * Plugin URI:   https://github.com/webmandesign/woocommerce-theme-integration
  * Description:  Provides deeper integration for WooCommerce in themes.
- * Version:      1.1.0
+ * Version:      1.2.0
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
  * License:      GNU General Public License v3
@@ -31,7 +31,6 @@ defined( 'ABSPATH' ) || exit;
 // Constants:
 
 	define( 'WCTI_FILE', __FILE__ );
-	define( 'WCTI_VERSION', get_plugin_data( WCTI_FILE, false, false )['Version'] );
 	define( 'WCTI_PATH', plugin_dir_path( WCTI_FILE ) ); // Trailing slashed.
 	define( 'WCTI_URL', plugin_dir_url( WCTI_FILE ) ); // Trailing slashed.
 	define( 'WCTI_THEME_SLUG', get_template() );

@@ -1,5 +1,17 @@
 # WooCommerce Theme Integration Changelog
 
+## 1.2.0, 20201215
+
+### Update
+- All JavaScript is now vanilla (no jQuery)
+- Calling `get_plugin_data` only when needed
+
+### File updates
+	changelog.md
+	woocommerce-theme-integration.php
+	includes/Assets.php
+
+
 ## 1.1.0, 20201119
 
 ### Add

@@ -5,7 +5,8 @@
  * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.0
  */
 
 namespace WebManDesign\WCTI;
@@ -41,7 +42,8 @@ class Assets {
 	/**
 	 * Enqueue styles and scripts.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.0
 	 *
 	 * @return  void
 	 */
@@ -55,7 +57,7 @@ class Assets {
 					'woocommerce-theme-integration',
 					WCTI_URL . 'assets/css/woocommerce.css',
 					array(),
-					'v' . WCTI_VERSION
+					'v' . get_plugin_data( WCTI_FILE, false, false )['Version'] )
 				);
 				wp_style_add_data(
 					'woocommerce-theme-integration',
@@ -68,15 +70,20 @@ class Assets {
 				// Adds class of tabs count on tabs wrapper.
 				wp_add_inline_script(
 					'wc-single-product',
-					"( function( $ ) {
+					"( function() {
 						'use strict';
 
-						$( '.woocommerce-tabs' )
-							.addClass( function() {
-								return 'tabs-count-' + $( this ).find( '.tabs li' ).length;
-							} );
+						var
+							wcTabs = document.getElementsByClassName( 'woocommerce-tabs' );
 
-					} )( jQuery );"
+						if ( wcTabs.length ) {
+							var
+								wcTabsCount = wcTabs[0].querySelectorAll( '.tabs li' ).length;
+
+							wcTabs[0].classList.add( 'tabs-count-' + wcTabsCount );
+						}
+
+					} )();"
 				);
 
 	} // /enqueue
