@@ -1,5 +1,16 @@
 # WooCommerce Theme Integration Changelog
 
+## 1.2.1, 20201226
+
+### Fix
+- PHP error introduced in previous version
+
+### File updates
+	changelog.md
+	woocommerce-theme-integration.php
+	includes/Assets.php
+
+
 ## 1.2.0, 20201215
 
 ### Update
