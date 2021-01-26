@@ -1,5 +1,16 @@
 # WooCommerce Theme Integration Changelog
 
+## 1.2.2, 20210126
+
+### Update
+- Preventing PHP error related to PHP7+ type hinting and plugins such as WPML
+
+### File updates
+	changelog.md
+	woocommerce-theme-integration.php
+	includes/Loop.php
+
+
 ## 1.2.1, 20201226
 
 ### Fix

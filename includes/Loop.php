@@ -5,7 +5,8 @@
  * @package    WooCommerce Theme Integration
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.2
  */
 
 namespace WebManDesign\WCTI;
@@ -259,14 +260,15 @@ class Loop {
 	/**
 	 * Price in product title in global search.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.2
 	 *
-	 * @param  string $title The post title.
-	 * @param  int    $id    The post ID.
+	 * @param  string   $title The post title.
+	 * @param  int/null $id    The post ID.
 	 *
 	 * @return  string
 	 */
-	public static function search_results_product_title( string $title, int $id = 0 ): string {
+	public static function search_results_product_title( string $title, $id = 0 ): string {
 
 		// Requirements check
 
