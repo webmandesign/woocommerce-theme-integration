@@ -2,7 +2,7 @@
 /**
  * Pages.
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -162,11 +162,11 @@ class Pages {
 
 			echo
 				'<h2 class="cart-table-title">'
-				. esc_html__( 'Cart content', 'woocommerce-theme-integration' )
+				. esc_html__( 'Cart content', 'wc-theme-integration' )
 				. '<small class="cart-table-products-count"> '
 				. sprintf(
 					/* translators: %d: number of shopping cart items. */
-					esc_html( _nx( '(%d item)', '(%d items)', absint( wp_strip_all_tags( WC()->cart->get_cart_contents_count() ) ), 'Shopping cart items count.', 'woocommerce-theme-integration' ) ),
+					esc_html( _nx( '(%d item)', '(%d items)', absint( wp_strip_all_tags( WC()->cart->get_cart_contents_count() ) ), 'Shopping cart items count.', 'wc-theme-integration' ) ),
 					absint( wp_strip_all_tags( WC()->cart->get_cart_contents_count() ) )
 				)
 				. '</small>'
@@ -185,7 +185,7 @@ class Pages {
 
 		// Output
 
-			echo '<p class="description coupon-description">' . esc_html__( 'Use your discount coupon code here', 'woocommerce-theme-integration' ) . '</p>';
+			echo '<p class="description coupon-description">' . esc_html__( 'Use your discount coupon code here', 'wc-theme-integration' ) . '</p>';
 
 	} // /coupon_description
 
@@ -237,7 +237,7 @@ class Pages {
 
 		// Output
 
-			echo '<a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" class="continue-shopping">' . esc_html__( 'Continue Shopping', 'woocommerce-theme-integration' ) . '</a>';
+			echo '<a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" class="continue-shopping">' . esc_html__( 'Continue Shopping', 'wc-theme-integration' ) . '</a>';
 
 	} // /button_continue_shopping
 
@@ -252,7 +252,7 @@ class Pages {
 
 		// Output
 
-			echo '<h2 class="screen-reader-text">' . esc_html__( 'Checkout', 'woocommerce-theme-integration' ) . '</h2>';
+			echo '<h2 class="screen-reader-text">' . esc_html__( 'Checkout', 'wc-theme-integration' ) . '</h2>';
 
 	} // /checkout_title
 

@@ -1,28 +1,25 @@
 <?php
 /**
- * Plugin Name:  WooCommerce Theme Integration by WebMan
- * Plugin URI:   https://www.webmandesign.eu/portfolio/woocommerce-theme-integration-wordpress-plugin/
+ * Plugin Name:  Theme Integration for WooCommerce
+ * Plugin URI:   https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
  * Description:  Provides deeper integration for WooCommerce in WebMan Design accessibility ready themes.
- * Version:      1.2.3
+ * Version:      1.2.4
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
  * License:      GNU General Public License v3
  * License URI:  http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:  woocommerce-theme-integration
+ * Text Domain:  wc-theme-integration
  * Domain Path:  /languages
  *
- * GitHub Plugin URI:  https://github.com/webmandesign/woocommerce-theme-integration
- *
- * Update using GitHub Updater plugin.
- * @link  https://github.com/afragen/github-updater/releases
+ * GitHub Plugin URI:  https://github.com/webmandesign/wc-theme-integration
  *
  * @copyright  WebMan Design, Oliver Juhas
  * @license    GPL-3.0, https://www.gnu.org/licenses/gpl-3.0.html
  *
- * @link  https://github.com/webmandesign/woocommerce-theme-integration
+ * @link  https://github.com/webmandesign/wc-theme-integration
  * @link  https://www.webmandesign.eu
  *
- * @package  WooCommerce Theme Integration
+ * @package  Theme Integration for WooCommerce
  */
 
 // Exit if accessed directly.

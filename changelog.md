@@ -1,4 +1,13 @@
-# WooCommerce Theme Integration Changelog
+# Theme Integration for WooCommerce Changelog
+
+## 1.2.4, 20210311
+
+### Update
+- Plugin name for WPORG repository
+
+### File updates
+	*.*
+
 
 ## 1.2.3, 20210311
 
@@ -12,7 +21,7 @@
 ### File updates
 	changelog.md
 	readme.txt
-	woocommerce-theme-integration.php
+	wc-theme-integration.php
 	assets/scss/woocommerce.scss
 
 
@@ -23,7 +32,7 @@
 
 ### File updates
 	changelog.md
-	woocommerce-theme-integration.php
+	wc-theme-integration.php
 	includes/Loop.php
 
 
@@ -34,7 +43,7 @@
 
 ### File updates
 	changelog.md
-	woocommerce-theme-integration.php
+	wc-theme-integration.php
 	includes/Assets.php
 
 
@@ -46,7 +55,7 @@
 
 ### File updates
 	changelog.md
-	woocommerce-theme-integration.php
+	wc-theme-integration.php
 	includes/Assets.php
 
 
@@ -64,7 +73,7 @@
 
 ### File updates
 	changelog.md
-	woocommerce-theme-integration.php
+	wc-theme-integration.php
 	assets/scss/woocommerce.scss
 
 

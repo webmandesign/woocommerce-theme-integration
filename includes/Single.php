@@ -2,7 +2,7 @@
 /**
  * Single product page.
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -78,8 +78,8 @@ class Single {
 
 		// Processing
 
-			$args['prev_text'] = esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'woocommerce-theme-integration' ) . '<span class="screen-reader-text"> ' . esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'woocommerce-theme-integration' ) . '</span>';
-			$args['next_text'] = '<span class="screen-reader-text">' . esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'woocommerce-theme-integration' ) . ' </span>' . esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'woocommerce-theme-integration' );
+			$args['prev_text'] = esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'wc-theme-integration' ) . '<span class="screen-reader-text"> ' . esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'wc-theme-integration' ) . '</span>';
+			$args['next_text'] = '<span class="screen-reader-text">' . esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'wc-theme-integration' ) . ' </span>' . esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'wc-theme-integration' );
 			$args['type']      = 'plain';
 
 
@@ -214,7 +214,7 @@ class Single {
 				$excerpt === $post->post_excerpt
 				&& ( $post->post_content || $product->has_attributes() )
 			) {
-				$excerpt .= '<div class="product-description-link-container"><a class="product-description-link" href="#product-more-info">' . esc_html__( 'More details&hellip;', 'woocommerce-theme-integration' ) . '</a></div>';
+				$excerpt .= '<div class="product-description-link-container"><a class="product-description-link" href="#product-more-info">' . esc_html__( 'More details&hellip;', 'wc-theme-integration' ) . '</a></div>';
 
 				add_action( 'woocommerce_after_single_product_summary', function() {
 					echo PHP_EOL . '<a name="product-more-info"></a>' . PHP_EOL;

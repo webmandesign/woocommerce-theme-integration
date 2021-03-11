@@ -2,7 +2,7 @@
 /**
  * Action and filter hooks.
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0

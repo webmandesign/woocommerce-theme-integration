@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Theme Integration\n"
+"Project-Id-Version: Theme Integration for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "POT-Creation-Date: 2020-08-04 23:01+0200\n"
 "PO-Revision-Date: 2015-05-12 20:39+0100\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: includes/Compatibility.php:70
 #, php-format
 msgid ""
-"The WooCommerce Theme Integration plugin requires at least WordPress "
+"The Theme Integration for WooCommerce plugin requires at least WordPress "
 "version %1$s. You are running version %2$s."
 msgstr ""
 
@@ -32,7 +32,7 @@ msgstr ""
 #: includes/Compatibility.php:79
 #, php-format
 msgid ""
-"The WooCommerce Theme Integration plugin requires at least PHP version "
+"The Theme Integration for WooCommerce plugin requires at least PHP version "
 "%1$s. You are running version %2$s."
 msgstr ""
 
@@ -48,7 +48,7 @@ msgstr ""
 
 #: includes/Loader.php:74
 msgid ""
-"Sorry, the WooCommerce Theme Integration plugin will not work with your "
+"Sorry, the Theme Integration for WooCommerce plugin will not work with your "
 "theme. Please check WordPress themes by WebManDesign.eu."
 msgstr ""
 

@@ -2,7 +2,7 @@
 /**
  * Assets.
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
@@ -54,13 +54,13 @@ class Assets {
 			// Styles:
 
 				wp_enqueue_style(
-					'woocommerce-theme-integration',
+					'wc-theme-integration',
 					WCTI_URL . 'assets/css/woocommerce.css',
 					array(),
 					'v' . get_plugin_data( WCTI_FILE, false, false )['Version']
 				);
 				wp_style_add_data(
-					'woocommerce-theme-integration',
+					'wc-theme-integration',
 					'rtl',
 					'replace'
 				);

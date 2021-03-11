@@ -4,7 +4,7 @@
  *
  * @link  https://www.php-fig.org/psr/psr-4/
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0

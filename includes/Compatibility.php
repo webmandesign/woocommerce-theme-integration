@@ -2,7 +2,7 @@
 /**
  * WordPress and PHP compatibility.
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -67,7 +67,7 @@ class WCTI_Compatibility {
 			if ( version_compare( $GLOBALS['wp_version'], WCTI_VERSION_WP, '<' ) ) {
 				$output[] = sprintf(
 					/* translators: 1: required WP version number, 2: available WP version number */
-					__( 'The WooCommerce Theme Integration plugin requires at least WordPress version %1$s. You are running version %2$s.', 'woocommerce-theme-integration' ),
+					__( 'The Theme Integration for WooCommerce plugin requires at least WordPress version %1$s. You are running version %2$s.', 'wc-theme-integration' ),
 					WCTI_VERSION_WP,
 					$GLOBALS['wp_version']
 				);
@@ -76,14 +76,14 @@ class WCTI_Compatibility {
 			if ( version_compare( PHP_VERSION, WCTI_VERSION_PHP, '<' ) ) {
 				$output[] = sprintf(
 					/* translators: 1: required PHP version number, 2: available PHP version number */
-					__( 'The WooCommerce Theme Integration plugin requires at least PHP version %1$s. You are running version %2$s.', 'woocommerce-theme-integration' ),
+					__( 'The Theme Integration for WooCommerce plugin requires at least PHP version %1$s. You are running version %2$s.', 'wc-theme-integration' ),
 					WCTI_VERSION_PHP,
 					PHP_VERSION
 				);
 			}
 
 			if ( ! empty( $output ) ) {
-				$output[] = __( 'Please upgrade and try again.', 'woocommerce-theme-integration' );
+				$output[] = __( 'Please upgrade and try again.', 'wc-theme-integration' );
 			}
 
 

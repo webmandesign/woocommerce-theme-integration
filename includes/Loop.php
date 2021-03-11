@@ -2,7 +2,7 @@
 /**
  * WooCommerce loop (products lists).
  *
- * @package    WooCommerce Theme Integration
+ * @package    Theme Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
@@ -71,7 +71,7 @@ class Loop {
 
 		// Output
 
-			echo '<p class="category-label">' . esc_html__( 'Shop category', 'woocommerce-theme-integration' ) . '</p>';
+			echo '<p class="category-label">' . esc_html__( 'Shop category', 'wc-theme-integration' ) . '</p>';
 
 	} // /category_label
 
@@ -100,7 +100,7 @@ class Loop {
 
 		// Output
 
-			echo '<a href="' . esc_url( $term_link ) . '" class="button">' . esc_html__( 'Shop now &rarr;', 'woocommerce-theme-integration' ) . '</a>';
+			echo '<a href="' . esc_url( $term_link ) . '" class="button">' . esc_html__( 'Shop now &rarr;', 'wc-theme-integration' ) . '</a>';
 
 	} // /category_button
 
@@ -145,7 +145,7 @@ class Loop {
 
 			$pagination = str_replace(
 				'<nav class="woocommerce-pagination',
-				'<nav aria-label="' . esc_attr__( 'Products Navigation', 'woocommerce-theme-integration' ) . '" data-current="' . esc_attr( wc_get_loop_prop( 'current_page' ) ) . '" data-total="' . esc_attr( wc_get_loop_prop( 'total_pages' ) ) . '" class="pagination woocommerce-pagination',
+				'<nav aria-label="' . esc_attr__( 'Products Navigation', 'wc-theme-integration' ) . '" data-current="' . esc_attr( wc_get_loop_prop( 'current_page' ) ) . '" data-total="' . esc_attr( wc_get_loop_prop( 'total_pages' ) ) . '" class="pagination woocommerce-pagination',
 				ob_get_clean()
 			);
 
@@ -172,16 +172,16 @@ class Loop {
 			$args['type'] = 'plain';
 
 			$args['prev_text'] =
-				esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'woocommerce-theme-integration' )
+				esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'wc-theme-integration' )
 				. '<span class="screen-reader-text"> '
-				. esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'woocommerce-theme-integration' )
+				. esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'wc-theme-integration' )
 				. '</span>';
 
 			$args['next_text'] =
 				'<span class="screen-reader-text">'
-				. esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'woocommerce-theme-integration' )
+				. esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'wc-theme-integration' )
 				. ' </span>'
-				. esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'woocommerce-theme-integration' );
+				. esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'wc-theme-integration' );
 
 
 		// Output
@@ -203,7 +203,7 @@ class Loop {
 
 		// Output
 
-			echo '<h2 class="screen-reader-text">' . esc_html__( 'List of products', 'woocommerce-theme-integration' ) . '</h2>';
+			echo '<h2 class="screen-reader-text">' . esc_html__( 'List of products', 'wc-theme-integration' ) . '</h2>';
 
 	} // /shop_loop_title
 
