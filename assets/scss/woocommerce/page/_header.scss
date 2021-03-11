@@ -1,10 +1,10 @@
 /* FILE: woocommerce/page/_header.scss */
 
 .woocommerce-products-header {
+	max-width: var(--layout_width_entry_content);
 	margin-bottom: var(--white_space);
 
 	.no-widgets-in-sidebar & {
-		max-width: var(--layout_width_entry_content);
 		margin-left: auto;
 		margin-right: auto;
 	}

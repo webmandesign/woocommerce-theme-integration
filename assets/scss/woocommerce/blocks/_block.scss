@@ -23,21 +23,3 @@
 	}
 
 }
-
-// Price display.
-.wc-block-featured-product__price {
-	font-size: $golden +em;
-	font-weight: 700;
-
-	del {
-		font-size: $golden_major +em;
-		font-weight: 400;
-	}
-
-	ins {
-		padding: 0;
-		margin: 0;
-		text-decoration: none;
-	}
-
-}

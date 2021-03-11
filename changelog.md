@@ -1,5 +1,21 @@
 # WooCommerce Theme Integration Changelog
 
+## 1.2.3, 20210311
+
+### Add
+- Shop page title styles
+- Fallback values to CSS variables
+
+### Fix
+- WooCommerce blocks styles
+
+### File updates
+	changelog.md
+	readme.txt
+	woocommerce-theme-integration.php
+	assets/scss/woocommerce.scss
+
+
 ## 1.2.2, 20210126
 
 ### Update

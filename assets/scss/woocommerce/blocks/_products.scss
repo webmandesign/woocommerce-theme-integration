@@ -13,7 +13,7 @@
 
 			&,
 			&:last-child {
-				margin: calc( -1 * var(--posts_list_gap) ) calc( var(--posts_list_gap) / 2 * -1 );
+				margin: calc( var(--posts_list_gap) * -1 ) calc( var(--posts_list_gap) / 2 * -1 );
 			}
 
 		}
@@ -43,7 +43,8 @@
 			margin: 0;
 			margin-#{$right}: .5rem;
 			font-family: var(--typography_font_headings);
-			font-size: 1.25em;
+			font-size: var(--typography_heading_size_posts);
+			font-weight: 300;
 			color: var(--color_content_headings);
 		}
 
@@ -70,10 +71,32 @@
 			margin: .5em 0 0;
 		}
 
-		&-add-to-cart {
+		.wp-block-button {
 
-			a.loading::after,
-			a.added::after {
+			.wp-block-button__link,
+			.added_to_cart {
+				display: block;
+				padding: 0;
+				margin: 0;
+				font-size: .8em;
+				text-align: inherit;
+				text-decoration: none;
+
+				&,
+				&:hover,
+				&:focus,
+				&:active,
+				&:visited {
+					background: none;
+					color: var(--color_accent);
+					border: 0;
+					box-shadow: none;
+				}
+
+			}
+
+			.wp-block-button__link.loading::after,
+			.wp-block-button__link.added::after {
 				position: static;
 				left: auto;
 				right: auto;
@@ -84,32 +107,12 @@
 				animation: none;
 			}
 
-			a.loading::after {
+			.wp-block-button__link.loading::after {
 				content: '\2026'; // &hellip;
 			}
 
-			a.added::after {
+			.wp-block-button__link.added::after {
 				content: ' \002713'; // check mark
-			}
-
-		}
-
-		.wp-block-button__link,
-		.added_to_cart {
-			display: block;
-			padding: 0;
-			margin: 0;
-			text-align: inherit;
-			text-decoration: none;
-
-			&,
-			&:hover,
-			&:focus,
-			&:active {
-				background: none !important;
-				color: var(--color_accent) !important;
-				border: 0 !important;
-				box-shadow: none !important;
 			}
 
 		}

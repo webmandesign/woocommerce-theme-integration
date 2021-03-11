@@ -36,7 +36,8 @@ ul.products {
 		display: inline;
 		margin: 0;
 		margin-#{$right}: .5rem;
-		font-size: 1.25em;
+		font-size: var(--typography_heading_size_posts);
+		font-weight: 300;
 	}
 
 	.button,
@@ -44,6 +45,7 @@ ul.products {
 		display: block;
 		padding: 0;
 		margin: 0;
+		font-size: .8em;
 		text-align: inherit;
 		text-decoration: none;
 		white-space: nowrap;
@@ -51,7 +53,8 @@ ul.products {
 		&,
 		&:hover,
 		&:focus,
-		&:active {
+		&:active,
+		&:visited {
 			background: none;
 			color: var(--color_accent);
 			border: 0;
