@@ -8,7 +8,7 @@
 	.wc-block-featured-product__description,
 	.wc-block-featured-product__price,
 	.wc-block-featured-product__link {
-		max-width: calc( var(--layout_width_entry_content) * #{ $golden_major } );
+		max-width: calc( var(--layout_width_entry_content) * #{ $ratio_maj } );
 		padding: 0;
 		margin: 10px 0;
 	}
@@ -23,11 +23,11 @@
 	}
 
 	&__price {
-		font-size: $golden +em;
+		font-size: $ratio +em;
 		font-weight: 700;
 
 		del {
-			font-size: $golden_major +em;
+			font-size: $ratio_maj +em;
 			font-weight: 400;
 		}
 

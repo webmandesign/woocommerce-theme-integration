@@ -2,10 +2,11 @@
 /**
  * Loader.
  *
- * @package    Theme Integration for WooCommerce
+ * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.3.0
  */
 
 namespace WebManDesign\WCTI;
@@ -35,7 +36,8 @@ class Loader {
 	/**
 	 * After setup theme.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.3.0
 	 *
 	 * @return  void
 	 */
@@ -56,7 +58,7 @@ class Loader {
 					add_action( 'admin_notices', function() {
 						printf(
 							'<div class="error"><p>%s</p></div>',
-							esc_html__( 'Your theme seems to claim WooCommerce integration already. The Theme Integration for WooCommerce plugin is not needed.', 'wc-theme-integration' )
+							esc_html__( 'Your theme seems to claim WooCommerce integration already. The Integration for WooCommerce plugin is not needed.', 'wc-theme-integration' )
 						);
 					} );
 					$can_load = false;
@@ -67,7 +69,7 @@ class Loader {
 					add_action( 'admin_notices', function() {
 						printf(
 							'<div class="error"><p>%s</p></div>',
-							esc_html__( 'Sorry, the Theme Integration for WooCommerce plugin will not work with your theme. Please check WordPress themes by WebManDesign.eu.', 'wc-theme-integration' )
+							esc_html__( 'Sorry, the Integration for WooCommerce plugin will not work with your theme. Please check WordPress themes by WebManDesign.eu.', 'wc-theme-integration' )
 						);
 					} );
 					$can_load = false;
@@ -84,6 +86,7 @@ class Loader {
 
 			Assets::init();
 			Loop::init();
+			Options::init();
 			Pages::init();
 			Single::init();
 			Widgets::init();

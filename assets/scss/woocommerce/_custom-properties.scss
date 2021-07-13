@@ -5,10 +5,11 @@
 //
 // All of these are loaded early enough to be overridden by theme.
 //
-// @package    Theme Integration for WooCommerce
+// @package    Integration for WooCommerce
 // @copyright  WebMan Design, Oliver Juhas
 //
-// @since  1.0.0
+// @since    1.0.0
+// @version  1.2.5
 //
 
 :root {
@@ -20,14 +21,18 @@
 		--color_button_background: var( --color_button_background, #f00 );
 		--color_button_text: var( --color_button_text, #fff );
 
-		--color_content_background: var( --color_content_background, #fff );
-		--color_content_headings: var( --color_content_headings, #111 );
+		--color_body_background: var( --color_body_background, --color_content_background );
+		--color_body_headings: var( --color_body_headings, --color_content_headings );
+
+		--color_content_background: var( --color_body_background, #fff );
+		--color_content_headings: var( --color_body_headings, #111 );
 
 	// Typography.
 
-		--typography_font_headings: var( --typography_font_headings, sans-serif );
+		--typography_font_secondary: var( --typography_font_secondary, --typography_font_headings );
+		--typography_font_headings: var( --typography_font_secondary, sans-serif );
 
-		--typography_heading_size_posts: var( --typography_heading_size_posts, 1.25em );
+		--typography_heading_size_products: var( --typography_heading_size_posts, 1.25em );
 
 	// Spacing and size.
 
@@ -39,6 +44,8 @@
 		--layout_width_entry_content: var( --layout_width_entry_content, 640px );
 
 		--white_space: var( --white_space, 100px );
+
+		--content_padding: var( --content_padding, --white_space );
 
 		--posts_list_gap: var( --posts_list_gap, 2em );
 

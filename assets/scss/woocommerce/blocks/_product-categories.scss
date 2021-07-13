@@ -36,6 +36,7 @@
 			background: var(--color_button_background);
 			color: var(--color_button_text);
 			box-shadow: none;
+			animation: none;
 		}
 
 		&:focus:enabled {

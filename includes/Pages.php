@@ -2,10 +2,11 @@
 /**
  * Pages.
  *
- * @package    Theme Integration for WooCommerce
+ * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.2.5
  */
 
 namespace WebManDesign\WCTI;
@@ -21,7 +22,8 @@ class Pages {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.2.5
 	 *
 	 * @return  void
 	 */
@@ -41,6 +43,8 @@ class Pages {
 
 				add_action( 'woocommerce_before_shipping_calculator', __CLASS__ . '::shipping_calculator_wrapper' );
 
+				add_action( 'woocommerce_archive_description', __CLASS__ . '::page_header', 999 );
+
 			// Filters
 
 				add_filter( 'single_post_title', __CLASS__ . '::page_endpoint_title' );
@@ -54,6 +58,8 @@ class Pages {
 
 				add_filter( 'woocommerce_cross_sells_columns', __CLASS__ . '::cross_sells_columns' );
 				add_filter( 'woocommerce_cross_sells_total',   __CLASS__ . '::cross_sells_columns' );
+
+				add_filter( 'woocommerce_show_page_title', __CLASS__ . '::page_header', -10 );
 
 	} // /init
 
@@ -255,5 +261,65 @@ class Pages {
 			echo '<h2 class="screen-reader-text">' . esc_html__( 'Checkout', 'wc-theme-integration' ) . '</h2>';
 
 	} // /checkout_title
+
+	/**
+	 * Page header markup for theme compatibility.
+	 *
+	 * This is actually a hack as we are also hooking onto a filter, but works.
+	 *
+	 * @link  https://github.com/woocommerce/woocommerce/blob/trunk/templates/archive-product.php#L33
+	 *
+	 * @since  1.2.5
+	 *
+	 * @return  void
+	 */
+	public static function page_header() {
+
+		// Output
+
+			if ( doing_filter( 'woocommerce_show_page_title' ) ) {
+
+				$class     = '';
+				$shop_page = get_post( wc_get_page_id( 'shop' ) );
+
+				if (
+					(
+						! is_search()
+						&& is_post_type_archive( 'product' )
+						&& in_array( absint( get_query_var( 'paged' ) ), array( 0, 1 ), true )
+						&& $shop_page
+						&& wc_format_content( wp_kses_post( $shop_page->post_content ) )
+					)
+					|| (
+						is_product_taxonomy()
+						&& 0 === absint( get_query_var( 'paged' ) )
+						&& $term = get_queried_object()
+						&& ! empty( $term->description )
+					)
+				) {
+					$class .= ' has-page-summary';
+				}
+
+
+				// Page header markup opening:
+				echo '<div id="page-header" class="page-header' . esc_attr( $class ) . '">';
+				echo '<div class="page-header-content">';
+				do_action( Hook::get_name( 'page_header/top' ) );
+				echo '<div class="page-header-text' . esc_attr( $class ) . '">' . PHP_EOL;
+
+				// This has to be here due to filter hook.
+				return true;
+
+			} elseif ( doing_action( 'woocommerce_archive_description' ) ) {
+
+				// Page header markup closing:
+				echo PHP_EOL . '</div>'; // /.page-header-text
+				do_action( Hook::get_name( 'page_header/bottom' ) );
+				echo '</div>'; // /.page-header-content
+				echo '</div>' . PHP_EOL; // /#page-header
+
+			}
+
+	} // /page_header
 
 }

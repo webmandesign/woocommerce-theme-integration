@@ -8,7 +8,7 @@
 	.wc-block-featured-category__description,
 	.wc-block-featured-category__price,
 	.wc-block-featured-category__link {
-		max-width: calc( var(--layout_width_entry_content) * #{ $golden_major } );
+		max-width: calc( var(--layout_width_entry_content) * #{ $ratio_maj } );
 		padding: 0;
 		margin: 10px 0;
 	}

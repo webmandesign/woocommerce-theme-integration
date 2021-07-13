@@ -2,10 +2,11 @@
 /**
  * Setup.
  *
- * @package    Theme Integration for WooCommerce
+ * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.3.0
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +21,8 @@ class Setup {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.3.0
 	 *
 	 * @return  void
 	 */
@@ -32,15 +34,13 @@ class Setup {
 
 				remove_action( 'wp_footer', 'woocommerce_demo_store' );
 
-				remove_action( Hook::get_name( 'search_form' ), 'get_search_form' );
-
 			// Actions
 
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme', 30 );
 
 				add_action( 'tha_content_top', __CLASS__ . '::demo_store', 5 );
 
-				add_action( Hook::get_name( 'search_form' ), 'get_product_search_form' );
+				add_action( 'wp', __CLASS__ . '::replace_theme_search' );
 
 			// Filters
 
@@ -177,5 +177,23 @@ class Setup {
 			woocommerce_demo_store();
 
 	} // /demo_store
+
+	/**
+	 * Replace theme search.
+	 *
+	 * @since  1.3.0
+	 *
+	 * @return  void
+	 */
+	public static function replace_theme_search() {
+
+		// Processing
+
+			if ( get_theme_mod( Options::$id['replace_theme_search'], true ) ) {
+				remove_action( Hook::get_name( 'search_form' ), 'get_search_form' );
+				add_action( Hook::get_name( 'search_form' ), 'get_product_search_form' );
+			}
+
+	} // /replace_theme_search
 
 }

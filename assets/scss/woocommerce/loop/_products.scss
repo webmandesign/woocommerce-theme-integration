@@ -28,7 +28,7 @@ ul.products {
 
 	img {
 		display: block;
-		margin: 0 auto ( $golden +em );
+		margin: 0 auto ( $ratio +em );
 		vertical-align: top;
 	}
 
@@ -36,8 +36,8 @@ ul.products {
 		display: inline;
 		margin: 0;
 		margin-#{$right}: .5rem;
-		font-size: var(--typography_heading_size_posts);
-		font-weight: 300;
+		font-size: var(--typography_heading_size_products);
+		font-weight: 700;
 	}
 
 	.button,
@@ -59,6 +59,7 @@ ul.products {
 			color: var(--color_accent);
 			border: 0;
 			box-shadow: none;
+			animation: none;
 		}
 
 	}

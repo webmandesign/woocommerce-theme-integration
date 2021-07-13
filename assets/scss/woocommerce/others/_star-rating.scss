@@ -42,7 +42,7 @@
 	display: flex;
 	align-items: flex-end;
 	flex-wrap: wrap;
-	margin: ( -$golden +rem ) 0 ( $golden +rem );
+	margin: ( -$ratio +rem ) 0 ( $ratio +rem );
 	font-size: 1.25em;
 
 	.star-rating {

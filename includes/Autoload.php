@@ -4,10 +4,11 @@
  *
  * @link  https://www.php-fig.org/psr/psr-4/
  *
- * @package    Theme Integration for WooCommerce
+ * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.3.0
  */
 
 // Exit if accessed directly.
@@ -39,6 +40,7 @@ class WCTI_Autoload {
 		'/Hook.php',
 		'/Loader.php',
 		'/Loop.php',
+		'/Options.php',
 		'/Pages.php',
 		'/Setup.php',
 		'/Single.php',

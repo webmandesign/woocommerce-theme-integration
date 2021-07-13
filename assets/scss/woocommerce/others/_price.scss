@@ -8,13 +8,17 @@
 		text-decoration: none;
 	}
 
+	del + ins {
+		margin-#{$left}: $ratio_min +em;
+	}
+
 	.products & {
 		float: $right;
 	}
 
 	.summary-content & {
-		margin-top: ( -$golden +rem );
-		font-size: $golden +em;
+		margin-top: ( -$ratio +rem );
+		font-size: $ratio +em;
 		color: var(--color_content_headings);
 
 		del {

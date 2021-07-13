@@ -1,11 +1,11 @@
-=== Theme Integration for WooCommerce ===
+=== Integration for WooCommerce ===
 Contributors:      webmandesign
 Donate link:       https://www.webmandesign.eu
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
-Tested up to:      5.7
-Stable tag:        1.2.4
+Tested up to:      5.8
+Stable tag:        1.3.0
 License:           GNU General Public License v3
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -35,6 +35,10 @@ I'm sorry, but this plugin was created for [WebMan design accessibility ready th
 
 If you are using one of the compatible themes (all themes since Cindy), the plugin also requires WooCommerce plugin to be active.
 
+= Search returns only products. =
+
+This plugin replaces theme's default generic search form with WooCommerce products search form. If you would still like to use the default search form, disable the *"Replace theme search"* option in **Appearance → Customize → WooCommerce → Product Catalog**.
+
 
 == Changelog ==
 
@@ -43,5 +47,5 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
-= 1.2.3 =
-Fixing and improving styles.
+= 1.3.0 =
+Adding customizer option to control theme search form replacement.

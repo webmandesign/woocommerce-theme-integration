@@ -2,7 +2,7 @@
 /**
  * Widgets.
  *
- * @package    Theme Integration for WooCommerce
+ * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0

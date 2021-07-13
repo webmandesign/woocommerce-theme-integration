@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Theme Integration for WooCommerce\n"
+"Project-Id-Version: Integration for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2020-08-04 23:01+0200\n"
-"PO-Revision-Date: 2020-08-04 23:04+0200\n"
+"POT-Creation-Date: 2021-07-13 11:03+0200\n"
+"PO-Revision-Date: 2021-07-13 11:06+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -23,84 +23,96 @@ msgstr ""
 #: includes/Compatibility.php:70
 #, php-format
 msgid ""
-"The Theme Integration for WooCommerce plugin requires at least WordPress version "
+"The Integration for WooCommerce plugin requires at least WordPress version "
 "%1$s. You are running version %2$s."
 msgstr ""
-"Plugin Theme Integration for WooCommerce vyžaduje WordPress aspoň vo verzii %1$s "
-"a vy používate verziu %2$s."
+"Plugin Integration for WooCommerce vyžaduje WordPress aspoň vo verzii %1$s a "
+"vy používate verziu %2$s."
 
 #. translators: 1: required PHP version number, 2: available PHP version number
 #: includes/Compatibility.php:79
 #, php-format
 msgid ""
-"The Theme Integration for WooCommerce plugin requires at least PHP version %1$s. "
+"The Integration for WooCommerce plugin requires at least PHP version %1$s. "
 "You are running version %2$s."
 msgstr ""
-"Plugin Theme Integration for WooCommerce vyžaduje PHP aspoň vo verzii %1$s a vy "
+"Plugin Integration for WooCommerce vyžaduje PHP aspoň vo verzii %1$s a vy "
 "používate verziu %2$s."
 
 #: includes/Compatibility.php:86
 msgid "Please upgrade and try again."
 msgstr "Aktualizujte a skúste to znova."
 
-#: includes/Loader.php:59
+#: includes/Loader.php:61
 msgid ""
-"Your theme seems to claim WooCommerce integration already. The WooCommerce "
-"Theme Integration plugin is not needed."
+"Your theme seems to claim WooCommerce integration already. The Integration "
+"for WooCommerce plugin is not needed."
 msgstr ""
 "Zdá sa, že vaša téma už obsahuje integráciu s pluginom WooCommerce. Plugin "
-"Theme Integration for WooCommerce nie je potrebné použiť."
+"Integrácia pre WooCommerce nie je potrebné použiť."
 
-#: includes/Loader.php:74
+#: includes/Loader.php:72
 msgid ""
-"Sorry, the Theme Integration for WooCommerce plugin will not work with your "
-"theme. Please check WordPress themes by WebManDesign.eu."
+"Sorry, the Integration for WooCommerce plugin will not work with your theme. "
+"Please check WordPress themes by WebManDesign.eu."
 msgstr ""
-"Ospravedlňujeme sa, plugin Theme Integration for WooCommerce nebude fungovať s "
+"Ospravedlňujeme sa, plugin Integration for WooCommerce nebude fungovať s "
 "vašou témou. Skúste použiť WordPress tému od WebManDesign.eu."
 
-#: includes/Loop.php:73
+#: includes/Loop.php:74
 msgid "Shop category"
 msgstr "Kategória produktov"
 
-#: includes/Loop.php:102
+#: includes/Loop.php:103
 msgid "Shop now &rarr;"
 msgstr "Nakupovať &rarr;"
 
-#: includes/Loop.php:147
+#: includes/Loop.php:148
 msgid "Products Navigation"
 msgstr "Navigácia produktov"
 
-#: includes/Loop.php:174 includes/Single.php:81
+#: includes/Loop.php:175 includes/Single.php:81
 msgctxt "Pagination text (visible): previous."
 msgid "&laquo;"
 msgstr "&laquo;"
 
-#: includes/Loop.php:176 includes/Single.php:81
+#: includes/Loop.php:177 includes/Single.php:81
 msgctxt "Pagination text (hidden): previous."
 msgid "Previous page"
 msgstr "Predchádzajúca stránka"
 
-#: includes/Loop.php:181 includes/Single.php:82
+#: includes/Loop.php:182 includes/Single.php:82
 msgctxt "Pagination text (hidden): next."
 msgid "Next page"
 msgstr "Nasledujúca stránka"
 
-#: includes/Loop.php:183 includes/Single.php:82
+#: includes/Loop.php:184 includes/Single.php:82
 msgctxt "Pagination text (visible): next."
 msgid "&raquo;"
 msgstr "&raquo;"
 
-#: includes/Loop.php:205
+#: includes/Loop.php:206
 msgid "List of products"
 msgstr "Zoznam produktov"
 
-#: includes/Pages.php:165
+#: includes/Options.php:75
+msgid "Replace theme search"
+msgstr "Nahradiť vyhľadávanie témy"
+
+#: includes/Options.php:76
+msgid ""
+"Replaces default search form in the theme with WooCommerce product search "
+"form."
+msgstr ""
+"Nahrádza pôvodný formulár vyhľadávania v téme formulárom vyhľadávania "
+"produktov WooCommerce."
+
+#: includes/Pages.php:171
 msgid "Cart content"
 msgstr "Obsah košíka"
 
 #. translators: %d: number of shopping cart items.
-#: includes/Pages.php:169
+#: includes/Pages.php:175
 #, php-format
 msgctxt "Shopping cart items count."
 msgid "(%d item)"
@@ -109,15 +121,15 @@ msgstr[0] "(%d položka)"
 msgstr[1] "(%d položky)"
 msgstr[2] "(%d položiek)"
 
-#: includes/Pages.php:188
+#: includes/Pages.php:194
 msgid "Use your discount coupon code here"
 msgstr "Použite svoj zľavový kupón"
 
-#: includes/Pages.php:240
+#: includes/Pages.php:246
 msgid "Continue Shopping"
 msgstr "Pokračovať v nákupe"
 
-#: includes/Pages.php:255
+#: includes/Pages.php:261
 msgid "Checkout"
 msgstr "Pokladňa"
 

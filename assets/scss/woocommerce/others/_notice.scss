@@ -11,7 +11,7 @@
 	justify-content: space-between;
 	position: relative;
 	padding: 1em 2em;
-	margin: 0 0 ( $golden +em );
+	margin: 0 0 ( $ratio +em );
 	list-style: none;
 	overflow: hidden;
 
@@ -21,6 +21,18 @@
 
 	.button {
 		margin-#{$right}: 1em;
+	}
+
+	> li {
+
+		&:not(:only-child) {
+			list-style: disc inside;
+		}
+
+		+ li {
+			margin-top: $ratio_maj +em;
+		}
+
 	}
 
 }
@@ -53,7 +65,7 @@
 
 	.woocommerce-form-login-toggle &,
 	.woocommerce-form-coupon-toggle & {
-		margin-bottom: $golden +rem;
+		margin-bottom: $ratio +rem;
 	}
 
 }

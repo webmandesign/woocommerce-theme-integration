@@ -1,4 +1,29 @@
-# Theme Integration for WooCommerce Changelog
+# Integration for WooCommerce Changelog
+
+## 1.3.0, 20210713
+
+### Add
+- Customizer option to control theme search form replacement
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Autoload.php
+	includes/Loader.php
+	includes/Options.php
+	includes/Setup.php
+	languages/*.*
+
+
+## 1.2.5, 20210311
+
+### Update
+- Plugin name for WPORG repository
+
+### File updates
+	*.*
+
 
 ## 1.2.4, 20210311
 
