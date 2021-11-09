@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.3.1, 20211108
+
+### Update
+- Improving and fixing styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+
+
 ## 1.3.0, 20210713
 
 ### Add

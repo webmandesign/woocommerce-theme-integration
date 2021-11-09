@@ -2,22 +2,47 @@
 
 .add_to_cart_inline {
 	display: inline-block;
-	text-align: center;
 
 	.amount {
 		font-size: 1.25em;
 		font-weight: 700;
 	}
 
-	del {
-		margin-#{$right}: .25em;
-		font-weight: 400;
+	ins {
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
 	}
 
-	.button,
+	del {
+		margin-#{$right}: $ratio_min +em;
+		font-size: .8em;
+		font-weight: 400;
+
+		.amount {
+			font-weight: inherit;
+		}
+
+	}
+
+	.button {
+		margin-#{$left}: $ratio +em;
+	}
+
 	.added_to_cart {
-		display: block;
-		margin-top: .5em;
+		margin-#{$left}: 1em;
+	}
+
+	&.is-stacked,
+	&.is-stacked-up {
+
+		.button,
+		.added_to_cart {
+			display: block;
+			margin-#{$left}: 0;
+			margin-top: $ratio_maj +em;
+		}
+
 	}
 
 }

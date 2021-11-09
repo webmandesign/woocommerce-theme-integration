@@ -10,10 +10,15 @@
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
-	padding: 1em 2em;
+	padding: 1em;
 	margin: 0 0 ( $ratio +em );
 	list-style: none;
 	overflow: hidden;
+
+	@include media( map_get( $breakpoint, 'l' ) ) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 
 	&:last-child {
 		margin-bottom: 2em;
@@ -74,6 +79,11 @@
 
 	&:empty {
 		display: none;
+
+		.woocommerce & + * {
+			margin-top: 0;
+		}
+
 	}
 
 	.single-product & {

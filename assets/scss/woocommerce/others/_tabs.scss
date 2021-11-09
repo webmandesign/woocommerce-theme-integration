@@ -1,10 +1,11 @@
-/* FILE: woocommerce/single/_tabs.scss */
+/* FILE: woocommerce/others/_tabs.scss */
 
 .wc-tabs {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: var(--white_space) 0 0;
+	font-weight: 700;
 	list-style: none;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -18,7 +19,6 @@
 		padding: 1em 2em;
 		margin-bottom: -1px;
 		font-size: .8em;
-		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
 		text-align: center;
@@ -35,9 +35,13 @@
 
 	}
 
-	.active a {
+	.active {
 		font-weight: 400;
-		border-color: currentColor;
+
+		a {
+			border-color: currentColor;
+		}
+
 	}
 
 }

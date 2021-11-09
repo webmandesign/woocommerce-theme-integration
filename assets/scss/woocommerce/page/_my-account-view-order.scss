@@ -1,7 +1,7 @@
 /* FILE: woocommerce/page/_my-account-view-order.scss */
 
 .woocommerce-OrderUpdate,
-.woocommerce .note {
+#{$selector_wc} .note {
 
 	&:not(:first-child) {
 		margin-top: 1em;
