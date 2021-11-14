@@ -1,7 +1,7 @@
 /* FILE: woocommerce/page/_cart.scss */
 
 .cart-collaterals {
-	margin-top: calc( var(--white_space) / 2 );
+	margin-top: 2em;
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
 
@@ -20,6 +20,18 @@
 		.cart_totals {
 			float: $right;
 			width: 48%;
+
+			&:only-child {
+				float: none;
+				width: 100%;
+			}
+
+			> * {
+				max-width: var(--layout_width_entry_content);
+				margin-left: auto;
+				margin-right: auto;
+			}
+
 		}
 
 	}
@@ -46,7 +58,12 @@
 .cart_totals {
 	@extend %shaded_background;
 	position: relative;
-	padding: 2em;
+	padding: 2em 1em;
+
+	@include media( map_get( $breakpoint, 'm' ) ) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 
 	h2 {
 		margin-bottom: calc( var(--white_space) / 2 );

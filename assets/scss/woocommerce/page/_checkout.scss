@@ -32,9 +32,15 @@
 	}
 
 	> .col2-set {
-		padding: 2em;
+		padding: 2em 1em;
 		border-width: 2px;
 		border-style: dashed;
+
+		@include media( map_get( $breakpoint, 'm' ) ) {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+
 	}
 
 }
@@ -62,12 +68,22 @@
 .woocommerce-checkout-review-order {
 	@extend %shaded_background;
 	position: relative;
-	padding: 2em;
+	padding: 2em 1em;
+
+	@include media( map_get( $breakpoint, 'm' ) ) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 
 	.order-total {
 		border-top-width: 6px;
 		border-top-style: double;
 		color: var(--color_content_headings);
+
+		.has-text-color & {
+			color: inherit;
+		}
+
 	}
 
 	&-table {

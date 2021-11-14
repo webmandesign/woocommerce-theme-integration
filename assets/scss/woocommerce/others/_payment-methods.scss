@@ -23,6 +23,7 @@
 			color: var(--color_content_headings);
 			border: 2px solid;
 
+			.has-text-color &,
 			a {
 				color: inherit;
 			}

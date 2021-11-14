@@ -11,7 +11,17 @@
 
 	th,
 	td {
-		padding: 1rem;
+		padding: .25rem;
+
+		@include media( map_get( $breakpoint, 'm' ) ) {
+			padding: .5rem;
+		}
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			padding-top: .75rem;
+			padding-bottom: .75rem;
+		}
+
 	}
 
 	th {
@@ -19,6 +29,11 @@
 		text-transform: uppercase;
 		letter-spacing: var(--letter_spacing);
 		color: var(--color_content_headings);
+
+		.has-text-color & {
+			color: inherit;
+		}
+
 	}
 
 	tr:not(:last-child) {
@@ -66,11 +81,15 @@
 	}
 
 	.actions {
-		padding: 2em 0;
+		padding: 1em 0;
 		color: var(--color_content_headings);
 		border-top-width: 4px;
 		border-top-style: double;
 		overflow: hidden;
+
+		.has-text-color & {
+			color: inherit;
+		}
 
 		[type="submit"] {
 			float: $right;

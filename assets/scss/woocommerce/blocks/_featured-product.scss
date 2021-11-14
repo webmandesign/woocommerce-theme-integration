@@ -2,7 +2,12 @@
 
 .wc-block-featured-product {
 	position: relative;
-	padding: 2em;
+	padding: 2em 1em;
+
+	@include media( map_get( $breakpoint, 'm' ) ) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 
 	.wc-block-featured-product__title,
 	.wc-block-featured-product__description,
