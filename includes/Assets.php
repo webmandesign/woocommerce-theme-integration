@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.1
+ * @version  1.3.3
  */
 
 namespace WebManDesign\WCTI;
@@ -43,7 +43,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.1
+	 * @version  1.3.3
 	 *
 	 * @return  void
 	 */
@@ -57,7 +57,7 @@ class Assets {
 					'wc-theme-integration',
 					WCTI_URL . 'assets/css/woocommerce.css',
 					array(),
-					'v' . get_plugin_data( WCTI_FILE, false, false )['Version']
+					'v' . WCTI_VERSION
 				);
 				wp_style_add_data(
 					'wc-theme-integration',

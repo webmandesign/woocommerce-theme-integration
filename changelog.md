@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.3.3, 20211117
+
+### Fix
+- Preventing PHP error
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Assets.php
+
+
 ## 1.3.2, 20211114
 
 ### Update
