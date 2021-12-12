@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.3.4, 20211212
+
+### Fix
+- Password reset styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+
+
 ## 1.3.3, 20211117
 
 ### Fix

@@ -5,7 +5,7 @@ Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
 Tested up to:      5.8
-Stable tag:        1.3.3
+Stable tag:        1.3.4
 License:           GNU General Public License v3
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -47,5 +47,5 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
-= 1.3.0 =
-Adding customizer option to control theme search form replacement.
+= 1.3.4 =
+Fixing password reset styles.
