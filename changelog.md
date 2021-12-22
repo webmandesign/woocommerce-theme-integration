@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.3.5, 20211222
+
+### Fix
+- Checkout payment methods styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+
+
 ## 1.3.4, 20211212
 
 ### Fix

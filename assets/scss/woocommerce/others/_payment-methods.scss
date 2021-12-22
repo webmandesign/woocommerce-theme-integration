@@ -11,35 +11,6 @@
 			margin-top: 1px;
 		}
 
-		.input-radio {
-			display: none;
-		}
-
-		label {
-			display: block;
-			padding: .8em 1em;
-			margin: 0;
-			font-weight: 700;
-			color: var(--color_content_headings);
-			border: 2px solid;
-
-			.has-text-color &,
-			a {
-				color: inherit;
-			}
-
-		}
-
-		:checked + label {
-			background: var(--color_content_headings);
-			color: var(--color_content_background);
-
-			&::before {
-				content: '\002713\00a0'; // check mark + &nbsp;
-			}
-
-		}
-
 	}
 
 	.payment_box {
@@ -52,6 +23,39 @@
 		margin-#{$left}: .5em;
 		font-size: .8em;
 		font-weight: 400;
+	}
+
+}
+
+.wc_payment_method > {
+
+	.input-radio {
+		display: none;
+	}
+
+	label {
+		display: block;
+		padding: .8em 1em;
+		margin: 0;
+		font-weight: 700;
+		color: var(--color_content_headings);
+		border: 2px solid;
+
+		.has-text-color &,
+		a {
+			color: inherit;
+		}
+
+	}
+
+	:checked + label {
+		background: var(--color_content_headings);
+		color: var(--color_content_background);
+
+		&::before {
+			content: '\002713\00a0'; // check mark + &nbsp;
+		}
+
 	}
 
 }
