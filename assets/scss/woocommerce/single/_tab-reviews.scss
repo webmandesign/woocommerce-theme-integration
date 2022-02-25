@@ -30,6 +30,10 @@
 		display: none;
 	}
 
+	&-title {
+		font-size: $ratio +em;
+	}
+
 	&-title,
 	.comment-reply-title {
 

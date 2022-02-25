@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.3.6, 20220225
+
+### Fix
+- Product reviews styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+
+
 ## 1.3.5, 20211222
 
 ### Fix
