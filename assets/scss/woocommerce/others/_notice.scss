@@ -11,7 +11,7 @@
 	justify-content: space-between;
 	position: relative;
 	padding: 1em;
-	margin: 0 0 ( $ratio +em );
+	margin: 0 0 ( $ratio + em );
 	list-style: none;
 	overflow: hidden;
 
@@ -35,7 +35,7 @@
 		}
 
 		+ li {
-			margin-top: $ratio_maj +em;
+			margin-top: $ratio_maj + em;
 		}
 
 	}
@@ -70,7 +70,7 @@
 
 	.woocommerce-form-login-toggle &,
 	.woocommerce-form-coupon-toggle & {
-		margin-bottom: $ratio +rem;
+		margin-bottom: $ratio + rem;
 	}
 
 }

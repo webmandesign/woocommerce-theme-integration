@@ -2,6 +2,10 @@
 
 #{$selector_wc} {
 
+	.button {
+		text-align: center;
+	}
+
 	.button.alt {
 		display: block;
 		width: 100%;
@@ -9,7 +13,6 @@
 		padding-right: 12%;
 		margin-top: 2em;
 	}
-
 }
 
 .products .product .button.product_type_external {

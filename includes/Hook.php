@@ -5,7 +5,8 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -16,9 +17,10 @@ defined( 'ABSPATH' ) || exit;
 class Hook {
 
 	/**
-	 * Initialization.
+	 * Get theme hook name.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.4.0
 	 *
 	 * @param  string $hook
 	 *
@@ -28,7 +30,7 @@ class Hook {
 
 		// Output
 
-			return apply_filters( 'WCTI/Hook/get_name', WCTI_THEME_SLUG . '/' . $hook, $hook );
+			return apply_filters( 'WCTI/Hook/get_name', str_replace( '-', '_', WCTI_THEME_SLUG ) . '/' . $hook, $hook );
 
 	} // /get_name
 

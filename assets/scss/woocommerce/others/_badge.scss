@@ -1,7 +1,7 @@
 /* FILE: woocommerce/main/_badge.scss */
 
 .onsale {
-	padding: ( .5em / .8 ) ( 1em / .8 );
+	padding: math.div( .5em, .8 ) math.div( 1em, .8 );
 	font-size: .8em;
 	font-weight: 600;
 	text-transform: uppercase;

@@ -5,7 +5,7 @@
 	$slider_hangle_size: 1;
 
 	position: relative;
-	height: $slider_range_height +em;
+	height: $slider_range_height + em;
 	margin-bottom: 2em;
 
 	&::before,
@@ -17,7 +17,7 @@
 		top: 0;
 		background: currentColor;
 		border-width: 0;
-		border-radius: $slider_hangle_size +em;
+		border-radius: $slider_hangle_size + em;
 	}
 
 	&::before {
@@ -59,11 +59,11 @@
 
 		&-handle {
 			position: absolute;
-			width: $slider_hangle_size +em;
-			height: $slider_hangle_size +em;
+			width: $slider_hangle_size + em;
+			height: $slider_hangle_size + em;
 			top: 50%;
 			background: currentColor;
-			border-radius: $slider_hangle_size +em;
+			border-radius: $slider_hangle_size + em;
 			outline: none;
 			cursor: ew-resize;
 			opacity: 1;
@@ -71,7 +71,7 @@
 			transform: translateY( -50% );
 
 			&:last-child {
-				margin-#{$left}: -$slider_hangle_size +em;
+				margin-#{$left}: -$slider_hangle_size + em;
 			}
 
 			&:hover,

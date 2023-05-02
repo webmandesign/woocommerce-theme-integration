@@ -1,5 +1,18 @@
 /* FILE: woocommerce/page/_cart.scss */
 
+.woocommerce-cart-form,
+.cross-sells,
+.cart-collaterals {
+
+	h2 {
+		margin-bottom: 1rem;
+		font-size: 1em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: var(--letter_spacing);
+	}
+}
+
 .cart-collaterals {
 	margin-top: 2em;
 
@@ -31,11 +44,8 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
-
 		}
-
 	}
-
 }
 
 .cross-sells {
@@ -45,14 +55,13 @@
 
 		h2 {
 			margin-top: 2rem;
+			margin-bottom: 2rem;
 		}
-
 	}
 
 	ul.products {
 		margin-bottom: 0;
 	}
-
 }
 
 .cart_totals {
@@ -86,9 +95,7 @@
 		&::before {
 			content: '\21A9\00a0'; // leftwards arrow with hook + &nbsp;
 		}
-
 	}
-
 }
 
 .order-total {
@@ -104,7 +111,6 @@
 		font-size: .8em;
 		font-weight: 400;
 	}
-
 }
 
 .shipping {
@@ -114,7 +120,6 @@
 		> p {
 			clear: both;
 		}
-
 	}
 
 	.shipping-calculator {
@@ -135,7 +140,6 @@
 			text-decoration: none;
 			color: inherit;
 		}
-
 	}
 
 	ul {
@@ -152,8 +156,10 @@
 			margin-#{$left}: .25em;
 		}
 
+		[type="hidden"] + label {
+			margin-#{$left}: 0;
+		}
 	}
-
 }
 
 .woocommerce-shipping-calculator {
@@ -175,7 +181,6 @@
 		.button {
 			width: 100%;
 		}
-
 	}
 
 	> p {
@@ -186,7 +191,6 @@
 	input[type="text"] {
 		width: 100%;
 	}
-
 }
 
 .cart-empty {
@@ -203,11 +207,8 @@
 			&:last-child {
 				margin-bottom: 1em;
 			}
-
 		}
-
 	}
-
 }
 
 .return-to-shop {
@@ -216,5 +217,4 @@
 	.button::before {
 		content: '\21A9\00a0'; // leftwards arrow with hook + &nbsp;
 	}
-
 }

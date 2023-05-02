@@ -1,10 +1,10 @@
 /* FILE: woocommerce/page/_my-account-downloads.scss */
 
-.woocommerce-order-downloads {
+.woocommerce-MyAccount-content > .woocommerce-order-downloads {
+	max-width: 100%;
+}
 
-	.button.alt {
-		padding: .25em .5em;
-		margin: 0;
-	}
-
+.woocommerce .download-file .button.alt {
+	padding: .25em .5em;
+	margin: 0;
 }

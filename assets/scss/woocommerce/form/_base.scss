@@ -4,17 +4,22 @@
 
 	fieldset {
 		margin: 2em 0;
+
+		+ .clear + * {
+			margin-top: 0;
+		}
 	}
 
 	.form-row {
 		clear: both;
 		width: 100%;
+		margin-top: 1em;
 		margin-bottom: 1em;
 
-		&:last-child,
-		&:last-of-type {
-			margin-bottom: 0;
-		}
+		// &:last-child,
+		// &:last-of-type {
+		// 	margin-bottom: 0;
+		// }
 
 		&-first,
 		&-last {
@@ -52,11 +57,16 @@
 				line-height: 1.25;
 			}
 
+			+ .select2  {
+				margin-top: 0;
+				line-height: inherit;
+			}
+
 		}
 
 		label:not(.woocommerce-form__label-for-checkbox) {
 			display: block;
-			margin: 0;
+			margin: 0 0 ( $ratio_min + em );
 		}
 
 	}

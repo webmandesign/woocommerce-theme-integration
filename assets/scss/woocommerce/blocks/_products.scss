@@ -34,7 +34,7 @@
 
 		.wc-block-grid__product-image {
 			display: block;
-			margin: 0 auto ( $ratio +em );
+			margin: 0 auto ( $ratio + em );
 			vertical-align: top;
 		}
 
@@ -52,7 +52,7 @@
 			position: absolute;
 			#{$left}: 0;
 			top: 0;
-			padding: ( .5em / .8 ) ( 1em / .8 );
+			padding: math.div( .5em, .8 ) math.div( 1em, .8 );
 			font-size: .8em;
 			font-weight: 600;
 			text-transform: uppercase;

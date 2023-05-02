@@ -9,7 +9,7 @@
 	}
 
 	del + ins {
-		margin-#{$left}: $ratio_min +em;
+		margin-#{$left}: $ratio_min + em;
 	}
 
 	.products & {
@@ -17,8 +17,8 @@
 	}
 
 	.summary-content & {
-		margin-top: ( -$ratio +rem );
-		font-size: $ratio +em;
+		margin-top: ( -$ratio + rem );
+		font-size: $ratio + em;
 		color: var(--color_content_headings);
 
 		del {

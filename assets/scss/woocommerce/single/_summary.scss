@@ -26,9 +26,7 @@
 				margin: 0;
 				vertical-align: top;
 			}
-
 		}
-
 	}
 
 	&-content {
@@ -43,18 +41,20 @@
 		.woocommerce-notices-wrapper {
 			width: 100%;
 		}
-
 	}
 
+	.product_title {
+		margin: 0 0 2rem;
+	}
 }
 
 .woocommerce-product-details__short-description {
+	margin-top: 2em;
 	margin-bottom: 2em;
 
 	p:not(:last-child) {
 		margin-bottom: 1em;
 	}
-
 }
 
 .product-description-link {

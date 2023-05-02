@@ -1,5 +1,18 @@
 /* FILE: woocommerce/page/_header.scss */
 
-.search-results .woocommerce-products-header .term-description {
-	display: none;
+.woocommerce-products-header {
+	margin-bottom: 2rem;
+
+	.page-description,
+	.term-description {
+		margin-top: 2rem;
+	}
+
+	.search-results & {
+
+		.page-description,
+		.term-description {
+			display: none;
+		}
+	}
 }

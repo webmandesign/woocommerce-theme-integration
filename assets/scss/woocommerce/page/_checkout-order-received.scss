@@ -4,9 +4,27 @@
 	max-width: var(--layout_width_entry_content);
 	margin-left: auto;
 	margin-right: auto;
+
+	section {
+		margin-top: 2em;
+	}
+}
+
+.woocommerce-order,
+.woocommerce-order-details,
+.woocommerce-order-downloads,
+.woocommerce-customer-details {
+
+	h2 {
+		font-size: 1em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: var(--letter_spacing);
+	}
 }
 
 .woocommerce-order-details,
+.woocommerce-order-downloads,
 .woocommerce-customer-details {
 	margin-top: calc( var(--white_space) / 2 );
 }

@@ -5,7 +5,8 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -21,7 +22,8 @@ class Single {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.4.0
 	 *
 	 * @return  void
 	 */
@@ -62,6 +64,8 @@ class Single {
 				add_filter( 'woocommerce_output_related_products_args', __CLASS__ . '::products_list_args' );
 
 				add_filter( 'theme_templates', __CLASS__ . '::page_templates', 99, 4 );
+
+				add_filter( Hook::get_name( 'entry/content_wrapper/classes' ), __CLASS__ . '::content_wrapper_classes' );
 
 	} // /init
 
@@ -300,5 +304,31 @@ class Single {
 				return $bool;
 
 	} // /sidebar_disable
+
+	/**
+	 * Product content wrapper classes.
+	 *
+	 * @since  1.4.0
+	 *
+	 * @param  array $classes
+	 *
+	 * @return  array
+	 */
+	public static function content_wrapper_classes( array $classes ): array {
+
+			// Processing
+
+				if ( is_product() ) {
+					$classes = array(
+						'product-content',
+					);
+				}
+
+
+			// Output
+
+				return $classes;
+
+	} // /content_wrapper_classes
 
 }

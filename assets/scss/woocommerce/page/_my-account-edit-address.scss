@@ -1,8 +1,35 @@
 /* FILE: woocommerce/page/_my-account-edit-address.scss */
 
-.woocommerce-Address-title {
-	display: flex;
-	justify-content: space-between;
+.woocommerce-Address {
+
+	&es {
+		margin-top: 2em;
+	}
+
+	&-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h3 {
+			font-size: 1em;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: var(--letter_spacing);
+		}
+	}
+}
+
+.woocommerce .addresses,
+.woocommerce-Address {
+
+	address {
+		margin-top: 1em;
+
+		p {
+			margin: 0;
+		}
+	}
 }
 
 .woocommerce-address-fields__field-wrapper {

@@ -28,7 +28,8 @@ ul.products {
 
 	img {
 		display: block;
-		margin: 0 auto ( $ratio +em );
+		width: 100%;
+		margin: 0 auto ( $ratio + em );
 		vertical-align: top;
 	}
 

@@ -1,6 +1,7 @@
 /* FILE: woocommerce/others/_group.scss */
 
 .woocommerce-grouped-product-list {
+	margin-bottom: 1em;
 
 	&,
 	td {
@@ -27,7 +28,6 @@
 			a {
 				font-weight: 700;
 			}
-
 		}
 
 		&__quantity {
@@ -41,13 +41,11 @@
 				padding: 0;
 				text-decoration: none;
 			}
-
 		}
 
 		label {
 			padding: 0;
 		}
-
 	}
 
 	& &-item .stock {
@@ -56,5 +54,4 @@
 		font-weight: 400;
 		text-align: inherit;
 	}
-
 }

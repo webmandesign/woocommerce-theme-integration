@@ -27,6 +27,9 @@ class Loader {
 
 		// Processing
 
+			// FSE check.
+			Site_Editor::init();
+
 			// Actions
 
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme', 20 );
