@@ -37,7 +37,6 @@
 		.clear {
 			display: none;
 		}
-
 	}
 
 	.ui-slider {
@@ -54,7 +53,6 @@
 			&-max {
 				#{$right}: -1px;
 			}
-
 		}
 
 		&-handle {
@@ -78,9 +76,6 @@
 			&.ui-state-active {
 				box-shadow: 0 0 0 .5em rgba( #000, .1 );
 			}
-
 		}
-
 	}
-
 }

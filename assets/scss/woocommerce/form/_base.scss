@@ -28,7 +28,6 @@
 				clear: none;
 				width: 47%;
 			}
-
 		}
 
 		@include media( map_get( $breakpoint, 'm' ) ) {
@@ -40,7 +39,6 @@
 			&-last {
 				float: $right;
 			}
-
 		}
 
 		[type="text"],
@@ -61,14 +59,11 @@
 				margin-top: 0;
 				line-height: inherit;
 			}
-
 		}
 
 		label:not(.woocommerce-form__label-for-checkbox) {
 			display: block;
 			margin: 0 0 ( $ratio_min + em );
 		}
-
 	}
-
 }

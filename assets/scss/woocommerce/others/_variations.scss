@@ -33,7 +33,6 @@
 	select {
 		width: 100%;
 	}
-
 }
 
 .reset_variations {
@@ -48,7 +47,6 @@
 	&::before {
 		content: '\00d7\00a0'; // &times;&nbsp;
 	}
-
 }
 
 .woocommerce-variation {
@@ -60,13 +58,11 @@
 		&:not(:empty) {
 			margin-bottom: 1rem;
 		}
-
 	}
 
 	&-description {
 		font-size: .8em;
 	}
-
 }
 
 .single_variation_wrap {
@@ -84,5 +80,4 @@ dl.variation {
 		display: inline-block;
 		margin: 0;
 	}
-
 }

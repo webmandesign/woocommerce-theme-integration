@@ -1,5 +1,25 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.0, 20230510
+
+### Added
+- Hybrid theme support
+
+### Fixed
+- Theme hook name functionality
+- Fixing and updating CSS styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+	includes/Autoload.php
+	includes/Hook.php
+	includes/Single.php
+	includes/Site_Editor.php
+
+
 ## 1.3.6, 20220225
 
 ### Fix

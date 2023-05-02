@@ -5,7 +5,6 @@
 	.button {
 		width: 100%;
 	}
-
 }
 
 .coupon {
@@ -28,7 +27,6 @@
 			@include media( map_get( $breakpoint, 'm' ) ) {
 				width: auto;
 			}
-
 		}
 
 		.button[type="submit"] {
@@ -40,16 +38,13 @@
 				width: auto;
 				margin-#{$left}: .25em;
 			}
-
 		}
 
 		&-description {
 			margin-top: .5rem;
 			font-size: .8em;
 		}
-
 	}
-
 }
 
 .woocommerce-remove-coupon {

@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Constants:
 
-	define( 'WCTI_VERSION', '1.3.6' );
+	define( 'WCTI_VERSION', '1.4.0' );
 	define( 'WCTI_FILE', __FILE__ );
 	define( 'WCTI_PATH', plugin_dir_path( WCTI_FILE ) ); // Trailing slashed.
 	define( 'WCTI_URL', plugin_dir_url( WCTI_FILE ) ); // Trailing slashed.

@@ -34,7 +34,6 @@
 			&:focus {
 				border-color: currentColor;
 			}
-
 		}
 
 		.is-active a {
@@ -53,11 +52,8 @@
 				&::before {
 					content: '\00d7\00a0'; // &times;&nbsp;
 				}
-
 			}
-
 		}
-
 	}
 
 	&-content {
@@ -67,7 +63,5 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-
 	}
-
 }

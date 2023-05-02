@@ -33,7 +33,6 @@
 			text-transform: uppercase;
 			letter-spacing: var(--letter_spacing);
 		}
-
 	}
 
 	.product-remove,
@@ -43,7 +42,6 @@
 		&::before {
 			display: none;
 		}
-
 	}
 
 	@include media( ( map_get( $breakpoint, 'l' ), 'max-width' ) ) {
@@ -57,7 +55,6 @@
 			border-top-width: 1px;
 			border-top-style: solid;
 		}
-
 	}
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
@@ -82,9 +79,6 @@
 			&::before {
 				display: none;
 			}
-
 		}
-
 	}
-
 }

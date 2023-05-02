@@ -33,7 +33,6 @@
 		&:focus {
 			border-color: currentColor;
 		}
-
 	}
 
 	.active {
@@ -42,9 +41,7 @@
 		a {
 			border-color: currentColor;
 		}
-
 	}
-
 }
 
 .woocommerce-Tabs-panel {
@@ -56,11 +53,9 @@
 		.woocommerce-tabs:not(.tabs-count-1) & {
 			@extend %screen_reader_hiding;
 		}
-
 	}
 
 	.woocommerce-tabs:last-child & {
 		margin-bottom: 0;
 	}
-
 }

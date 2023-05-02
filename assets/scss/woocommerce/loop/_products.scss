@@ -19,7 +19,6 @@ ul.products {
 			display: table;
 			table-layout: fixed;
 		}
-
 	}
 
 	a {
@@ -62,7 +61,6 @@ ul.products {
 			box-shadow: none;
 			animation: none;
 		}
-
 	}
 
 	.button {
@@ -80,7 +78,6 @@ ul.products {
 		&.added::after {
 			content: ' \002713'; // check mark
 		}
-
 	}
 
 	.added_to_cart {
@@ -93,9 +90,6 @@ ul.products {
 			.rtl & {
 				content: ' \2190'; // &larr;
 			}
-
 		}
-
 	}
-
 }

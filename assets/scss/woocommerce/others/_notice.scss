@@ -37,9 +37,7 @@
 		+ li {
 			margin-top: $ratio_maj + em;
 		}
-
 	}
-
 }
 
 .woocommerce-notice--error,
@@ -49,7 +47,6 @@
 	&::before {
 		background: var(--color_accent);
 	}
-
 }
 
 .woocommerce-NoticeGroup {
@@ -63,7 +60,6 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 }
 
 .woocommerce-info {
@@ -72,7 +68,6 @@
 	.woocommerce-form-coupon-toggle & {
 		margin-bottom: $ratio + rem;
 	}
-
 }
 
 .woocommerce-notices-wrapper {
@@ -83,11 +78,9 @@
 		.woocommerce & + * {
 			margin-top: 0;
 		}
-
 	}
 
 	.single-product & {
 		padding-bottom: 3em;
 	}
-
 }

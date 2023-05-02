@@ -15,7 +15,6 @@
 			&:last-child {
 				margin: calc( var(--posts_list_gap) * -1 ) calc( var(--posts_list_gap) / 2 * -1 );
 			}
-
 		}
 
 		&-link {
@@ -29,7 +28,6 @@
 				display: table;
 				table-layout: fixed;
 			}
-
 		}
 
 		.wc-block-grid__product-image {
@@ -93,7 +91,6 @@
 					box-shadow: none;
 					animation: none;
 				}
-
 			}
 
 			.wp-block-button__link.loading::after,
@@ -123,9 +120,7 @@
 					content: '+ ';
 					speak: none;
 				}
-
 			}
-
 		}
 
 		.added_to_cart {
@@ -136,13 +131,9 @@
 				.rtl & {
 					content: ' \2190'; // &larr;
 				}
-
 			}
-
 		}
-
 	}
-
 }
 
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {

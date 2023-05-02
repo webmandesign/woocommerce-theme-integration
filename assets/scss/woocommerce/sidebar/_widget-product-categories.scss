@@ -8,9 +8,7 @@
 		.sidebar & {
 			@extend %widget_list_items_menu;
 		}
-
 	}
-
 }
 
 .widget .current-cat {
@@ -26,9 +24,6 @@
 				margin-#{$right}: .25em;
 				speak: none;
 			}
-
 		}
-
 	}
-
 }
