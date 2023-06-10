@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -73,7 +73,7 @@ class Single {
 	 * Product comments pagination setup.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  array $args
 	 *
@@ -258,7 +258,7 @@ class Single {
 	 * Removing page templates for products.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  array        $post_templates
 	 * @param  WP_Theme     $wp_theme
@@ -278,7 +278,7 @@ class Single {
 					/**
 					 * Filters the array of page/post templates to unset for Product post.
 					 *
-					 * @since  1.5.0
+					 * @since  1.4.0
 					 *
 					 * @param  array $page_templates
 					 */

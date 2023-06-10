@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -49,7 +49,7 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *

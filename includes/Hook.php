@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +20,7 @@ class Hook {
 	 * Get theme hook name.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  string $hook
 	 *
@@ -33,7 +33,7 @@ class Hook {
 			/**
 			 * Filters the theme hook name.
 			 *
-			 * @since  1.5.0
+			 * @since  1.4.0
 			 *
 			 * @param  string $theme_hook  Actual full theme related hook name.
 			 * @param  string $hook        Partial hook name.

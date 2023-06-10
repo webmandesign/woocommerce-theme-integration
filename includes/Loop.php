@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -160,7 +160,7 @@ class Loop {
 	 * Pagination setup.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  array $args
 	 *

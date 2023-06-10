@@ -18,7 +18,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.4.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -40,7 +40,7 @@ class Site_Editor {
 	/**
 	 * Is Site Editor enabled?
 	 *
-	 * @since   1.5.0
+	 * @since   1.4.0
 	 * @access  public
 	 * @var     bool
 	 */
@@ -50,7 +50,7 @@ class Site_Editor {
 	 * Initialization.
 	 *
 	 * @since    1.4.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @return  void
 	 */
@@ -77,7 +77,7 @@ class Site_Editor {
 	 * @see  WebManDesign\Theme_Slug\Setup\Site_Editor() theme class for more info.
 	 *
 	 * @since    1.4.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @param  string $path
 	 *

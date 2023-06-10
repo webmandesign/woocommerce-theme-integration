@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.0
+ * @version  1.4.0
  */
 
 namespace WebManDesign\WCTI;
@@ -22,7 +22,7 @@ class Setup {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @return  void
 	 */
@@ -149,7 +149,7 @@ class Setup {
 	 * Replace theme search.
 	 *
 	 * @since    1.3.0
-	 * @version  1.5.0
+	 * @version  1.4.0
 	 *
 	 * @return  void
 	 */
