@@ -1,23 +1,25 @@
 /* FILE: woocommerce/main/_badge.scss */
 
 .onsale {
-	padding: math.div( .5em, .8 ) math.div( 1em, .8 );
+	padding: .5rem 1rem;
 	font-size: .8em;
 	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: var(--letter_spacing);
-	background: var(--color_accent);
-	color: var(--color_content_background);
+	letter-spacing: var(--wcti--spacing--letters);
+	background: var(--wcti--color--accent);
+	color: var(--wcti--color--accent-contrast);
 
 	.summary-content & {
 		position: absolute;
 		#{$left}: 0;
 		bottom: 100%;
+		border-radius: var(--wcti--border--radius) var(--wcti--border--radius) 0 0;
 	}
 
 	.products & {
 		position: absolute;
 		#{$left}: 0;
 		top: 0;
+		border-radius: var(--wcti--border--radius) 0 var(--wcti--border--radius) 0;
 	}
 }

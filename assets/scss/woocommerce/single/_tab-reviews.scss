@@ -1,8 +1,4 @@
-/* FILE: woocommerce/single/_reviews.scss */
-
-.woocommerce-Tabs-panel--reviews {
-	max-width: var(--layout_width_content);
-}
+/* FILE: woocommerce/single/_tab-reviews.scss */
 
 .woocommerce-Reviews {
 	display: flex;
@@ -16,9 +12,10 @@
 		}
 
 		@include media( map_get( $breakpoint, 'l' ) ) {
-			width: calc( 50% - 1em );
+			width: calc( var(--wcti--width--review-column-1) - 1em );
 
 			&:not(:first-child) {
+				width: calc( var(--wcti--width--review-column-2) - 1em );
 				margin-top: 0;
 			}
 		}
@@ -54,6 +51,7 @@
 	}
 
 	.meta {
+		margin-top: 0;
 		margin-bottom: .5em;
 		font-size: .8em;
 	}
@@ -63,6 +61,7 @@
 		@extend %shaded_background;
 		position: relative;
 		padding: 2rem;
+		border-radius: var(--wcti--border--radius);
 
 		&:not(:first-child) {
 			margin-top: 2em;
@@ -93,13 +92,13 @@
 		&-reply-title {
 			display: block;
 			margin-bottom: 2rem;
-			font-family: var(--typography_font_headings);
+			font-family: var(--wcti--font-family--headings);
 			font-size: 1em;
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: var(--letter_spacing);
+			letter-spacing: var(--wcti--spacing--letters);
 			line-height: 1.25;
-			color: var(--color_content_headings);
+			color: var(--wcti--color--content-h);
 		}
 
 		&-form {

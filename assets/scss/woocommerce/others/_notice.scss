@@ -13,6 +13,7 @@
 	padding: 1em;
 	margin: 0 0 ( $ratio + em );
 	list-style: none;
+	border-radius: var(--wcti--border--radius);
 	overflow: hidden;
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
@@ -45,7 +46,7 @@
 	display: block;
 
 	&::before {
-		background: var(--color_accent);
+		background: var(--wcti--color--accent);
 	}
 }
 
@@ -56,7 +57,7 @@
 		clear: both;
 		float: none;
 		width: 100%;
-		max-width: var(--layout_width_entry_content);
+		max-width: var(--wcti--width--content);
 		margin-left: auto;
 		margin-right: auto;
 	}

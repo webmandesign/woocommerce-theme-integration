@@ -3,13 +3,7 @@
 .woocommerce-form-login {
 
 	.form-row {
-
-		&::after {
-			content: '';
-			clear: both;
-			display: table;
-			table-layout: fixed;
-		}
+		@extend %clearfix;
 	}
 
 	.button {
@@ -24,7 +18,7 @@
 .customer-login {
 
 	&:not(.customer-registration) {
-		max-width: var(--layout_width_entry_content);
+		max-width: var(--wcti--width--content);
 		margin-left: auto;
 		margin-right: auto;
 	}

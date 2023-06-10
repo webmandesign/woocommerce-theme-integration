@@ -9,14 +9,12 @@
 
 		> li:not(.woocommerce-notice) {
 			padding: 0;
-			margin-top: 1px;
+			margin-top: .15em;
 		}
 	}
 
 	.payment_box {
 		padding: 1em;
-		border-bottom-width: 1px;
-		border-bottom-style: solid;
 	}
 
 	.about_paypal {
@@ -37,8 +35,9 @@
 		padding: .8em 1em;
 		margin: 0;
 		font-weight: 700;
-		color: var(--color_content_headings);
+		color: var(--wcti--color--content-h);
 		border: 2px solid;
+		border-radius: var(--wcti--border--radius);
 
 		.has-text-color &,
 		a {
@@ -47,8 +46,8 @@
 	}
 
 	:checked + label {
-		background: var(--color_content_headings);
-		color: var(--color_content_background);
+		background: var(--wcti--color--content-h);
+		color: var(--wcti--color--content-bg);
 
 		&::before {
 			content: '\002713\00a0'; // check mark + &nbsp;

@@ -5,11 +5,14 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.3.0
+ * @since    1.3.0
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
+
 use WP_Customize_Manager;
+use WP_Customize_Control;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -45,7 +48,8 @@ class Options {
 	/**
 	 * Customizer options.
 	 *
-	 * @since  1.3.0
+	 * @since    1.3.0
+	 * @version  1.5.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -69,11 +73,19 @@ class Options {
 			$wp_customize->add_control(
 				self::$id['replace_theme_search'],
 				array(
-					'type'        => 'checkbox',
-					'section'     => 'woocommerce_product_catalog',
-					'priority'    => 0,
-					'label'       => esc_html__( 'Replace theme search', 'wc-theme-integration' ),
-					'description' => esc_html__( 'Replaces default search form in the theme with WooCommerce product search form.', 'wc-theme-integration' ),
+					'type'            => 'checkbox',
+					'section'         => 'woocommerce_product_catalog',
+					'priority'        => 0,
+					'label'           => esc_html__( 'Replace theme search', 'wc-theme-integration' ),
+					'description'     => esc_html__( 'Replaces default search form in the theme with WooCommerce product search form.', 'wc-theme-integration' ),
+					'active_callback' => function( WP_Customize_Control $control ) {
+
+						if ( Site_Editor::$is_enabled ) {
+							return ! (bool) $control->manager->get_setting( Site_Editor::$theme_mod_id )->value();
+						} else {
+							return true;
+						}
+					}
 				)
 			);
 

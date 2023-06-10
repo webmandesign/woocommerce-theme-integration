@@ -1,7 +1,6 @@
 /* FILE: woocommerce/others/_demo.scss */
 
 .woocommerce-store-notice {
-	@extend %shaded_background;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -11,6 +10,8 @@
 	padding: 1rem 6%;
 	margin: 0;
 	text-align: center;
+	background: var(--wcti--color--accent);
+	color: var(--wcti--color--accent-contrast);
 	z-index: 100;
 
 	&__dismiss-link {
@@ -19,7 +20,7 @@
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
+		letter-spacing: var(--wcti--spacing--letters);
 		color: inherit;
 
 		&::before {

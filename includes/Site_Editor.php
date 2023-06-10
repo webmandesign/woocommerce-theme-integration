@@ -17,7 +17,8 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.4.0
+ * @since    1.4.0
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -37,13 +38,29 @@ class Site_Editor {
 	public static $theme_mod_id = 'layout_site_editing';
 
 	/**
+	 * Is Site Editor enabled?
+	 *
+	 * @since   1.5.0
+	 * @access  public
+	 * @var     bool
+	 */
+	public static $is_enabled = false;
+
+	/**
 	 * Initialization.
 	 *
-	 * @since  1.4.0
+	 * @since    1.4.0
+	 * @version  1.5.0
 	 *
 	 * @return  void
 	 */
 	public static function init() {
+
+		// Variables
+
+			// If the theme contains the method, the theme mod is definitely TRUE by default.
+			self::$is_enabled = (bool) get_theme_mod( self::$theme_mod_id, is_callable( WCTI_THEME_NAMESPACE . '\Setup\Site_Editor::is_enabled' ) );
+
 
 		// Processing
 
@@ -59,7 +76,8 @@ class Site_Editor {
 	 *
 	 * @see  WebManDesign\Theme_Slug\Setup\Site_Editor() theme class for more info.
 	 *
-	 * @since  1.4.0
+	 * @since    1.4.0
+	 * @version  1.5.0
 	 *
 	 * @param  string $path
 	 *
@@ -71,7 +89,7 @@ class Site_Editor {
 
 			if (
 				stripos( $path, 'templates/index.html' )
-				&& ! (bool) get_theme_mod( self::$theme_mod_id, true )
+				&& ! self::$is_enabled
 			) {
 				return '';
 			} else {

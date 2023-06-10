@@ -5,9 +5,10 @@
 
 	h2 {
 		margin-bottom: 2rem;
+		font-size: var(--wcti--font-size--heading--related-products);
 	}
 
 	+ .products {
-		margin-top: var(--white_space);
+		margin-top: var(--wcti--spacing--white);
 	}
 }

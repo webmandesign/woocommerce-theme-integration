@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.2
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -159,7 +159,8 @@ class Loop {
 	/**
 	 * Pagination setup.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.5.0
 	 *
 	 * @param  array $args
 	 *
@@ -172,7 +173,7 @@ class Loop {
 			$args['type'] = 'plain';
 
 			$args['prev_text'] =
-				esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'wc-theme-integration' )
+				esc_html_x( '&larr;', 'Pagination text (visible): previous.', 'wc-theme-integration' )
 				. '<span class="screen-reader-text"> '
 				. esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'wc-theme-integration' )
 				. '</span>';
@@ -181,7 +182,7 @@ class Loop {
 				'<span class="screen-reader-text">'
 				. esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'wc-theme-integration' )
 				. ' </span>'
-				. esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'wc-theme-integration' );
+				. esc_html_x( '&rarr;', 'Pagination text (visible): next.', 'wc-theme-integration' );
 
 
 		// Output

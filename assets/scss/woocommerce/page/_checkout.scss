@@ -7,7 +7,7 @@
 		font-size: 1em;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
+		letter-spacing: var(--wcti--spacing--letters);
 	}
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
@@ -22,11 +22,12 @@
 		> * {
 			float: $right;
 			clear: right;
-			width: 48%;
+			width: calc( var(--wcti--width--checkout-column-2) - 1rem );
 		}
 
 		> .col2-set {
 			float: $left;
+			width: calc( var(--wcti--width--checkout-column-1) - 1rem );
 		}
 
 		> h3 {
@@ -36,13 +37,14 @@
 	}
 
 	&:not(:first-child) {
-		margin-top: calc( var(--white_space) / 2 );
+		margin-top: calc( var(--wcti--spacing--white) / 2 );
 	}
 
 	> .col2-set {
 		padding: 2em 1em;
 		border-width: 2px;
 		border-style: dashed;
+		border-radius: var(--wcti--border--radius);
 
 		@include media( map_get( $breakpoint, 'm' ) ) {
 			padding-left: 2em;
@@ -74,6 +76,7 @@
 	@extend %shaded_background;
 	position: relative;
 	padding: 2em 1em;
+	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
@@ -83,7 +86,7 @@
 	.order-total {
 		border-top-width: 6px;
 		border-top-style: double;
-		color: var(--color_content_headings);
+		color: var(--wcti--color--content-h);
 
 		.has-text-color & {
 			color: inherit;
@@ -108,13 +111,29 @@
 
 .woocommerce-checkout {
 
-	.woocommerce-form-login-toggle,
-	.woocommerce-form-login,
 	.woocommerce-form-coupon-toggle,
 	.woocommerce-form-coupon,
+	.woocommerce-form-login-toggle,
+	.woocommerce-form-login,
 	.woocommerce-notices-wrapper {
-		max-width: var(--layout_width_entry_content);
+		max-width: var(--wcti--width--checkout-coupon);
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	.woocommerce-form-login-toggle,
+	.woocommerce-form-login {
+		max-width: var(--wcti--width--checkout-login);
+	}
+
+	.woocommerce-notices-wrapper {
+		max-width: var(--wcti--width--checkout-notice);
+	}
+}
+
+.woocommerce .checkout-button.alt,
+.woocommerce-checkout .button.alt {
+	display: block;
+	width: 100%;
+	margin-top: 2em;
 }

@@ -1,7 +1,7 @@
 /* FILE: woocommerce/page/_checkout-order-received.scss */
 
 .woocommerce-order {
-	max-width: var(--layout_width_entry_content);
+	max-width: var(--wcti--width--order);
 	margin-left: auto;
 	margin-right: auto;
 
@@ -19,20 +19,21 @@
 		font-size: 1em;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
+		letter-spacing: var(--wcti--spacing--letters);
 	}
 }
 
 .woocommerce-order-details,
 .woocommerce-order-downloads,
 .woocommerce-customer-details {
-	margin-top: calc( var(--white_space) / 2 );
+	margin-top: calc( var(--wcti--spacing--white) / 2 );
 }
 
 .woocommerce-order-details {
 	@extend %shaded_background;
 	position: relative;
 	padding: 2em 1em;
+	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;

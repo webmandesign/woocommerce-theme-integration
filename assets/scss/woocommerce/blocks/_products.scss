@@ -13,21 +13,15 @@
 
 			&,
 			&:last-child {
-				margin: calc( var(--posts_list_gap) * -1 ) calc( var(--posts_list_gap) / 2 * -1 );
+				margin: calc( var(--wcti--spacing--posts-list-gap) * -1 ) calc( var(--wcti--spacing--posts-list-gap) / 2 * -1 );
 			}
 		}
 
 		&-link {
+			@extend %clearfix;
 			display: block;
 			text-decoration: none;
 			color: inherit;
-
-			&::after {
-				content: '';
-				clear: both;
-				display: table;
-				table-layout: fixed;
-			}
 		}
 
 		.wc-block-grid__product-image {
@@ -40,10 +34,10 @@
 			display: inline;
 			margin: 0;
 			margin-#{$right}: .5rem;
-			font-family: var(--typography_font_headings);
-			font-size: var(--typography_heading_size_products);
+			font-family: var(--wcti--font-family--headings);
+			font-size: var(--wcti--font-size--heading--products-product);
 			font-weight: 700;
-			color: var(--color_content_headings);
+			color: var(--wcti--color--content-h);
 		}
 
 		.wc-block-grid__product-onsale {
@@ -54,9 +48,9 @@
 			font-size: .8em;
 			font-weight: 600;
 			text-transform: uppercase;
-			letter-spacing: var(--letter_spacing);
-			background: var(--color_accent);
-			color: var(--color_content_background);
+			letter-spacing: var(--wcti--spacing--letters);
+			background: var(--wcti--color--accent);
+			color: var(--wcti--color--accent-contrast);
 			border: 0;
 			border-radius: 0;
 		}
@@ -86,7 +80,7 @@
 				&:active,
 				&:visited {
 					background: none;
-					color: var(--color_accent);
+					color: var(--wcti--color--accent);
 					border: 0;
 					box-shadow: none;
 					animation: none;
@@ -137,7 +131,7 @@
 }
 
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
-	margin: calc( var(--posts_list_gap) / 2 );
+	margin: calc( var(--wcti--spacing--posts-list-gap) / 2 );
 }
 
 .wc-block-grid.wc-block-grid .wc-block-grid__products {
@@ -146,14 +140,14 @@
 }
 
 .alignfull > .wc-block-grid__products {
-	margin-left: calc( var(--posts_list_gap) / 2 );
-	margin-right: calc( var(--posts_list_gap) / 2 );
+	margin-left: calc( var(--wcti--spacing--posts-list-gap) / 2 );
+	margin-right: calc( var(--wcti--spacing--posts-list-gap) / 2 );
 }
 
 .wc-block-grid.wc-block-grid .wc-block-grid__product {
 	flex: 0 1 auto; // Have to override WooCommerce block default styles.
 	max-width: none;
-	margin: var(--posts_list_gap) calc( var(--posts_list_gap) / 2 );
+	margin: var(--wcti--spacing--posts-list-gap) calc( var(--wcti--spacing--posts-list-gap) / 2 );
 }
 
 .wc-block-grid.wc-block-grid.wc-block-grid.wc-block-grid .wc-block-grid__product {

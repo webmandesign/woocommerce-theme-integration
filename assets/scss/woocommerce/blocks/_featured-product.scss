@@ -13,7 +13,7 @@
 	.wc-block-featured-product__description,
 	.wc-block-featured-product__price,
 	.wc-block-featured-product__link {
-		max-width: calc( var(--layout_width_entry_content) * #{ $ratio_maj } );
+		max-width: calc( var(--wcti--width--content) * #{ $ratio_maj } );
 		padding: 0;
 		margin: 10px 0;
 	}

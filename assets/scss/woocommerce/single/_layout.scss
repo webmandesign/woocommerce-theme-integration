@@ -11,7 +11,7 @@
 		}
 
 		.content-area {
-			padding-bottom: var(--content_padding);
+			padding-bottom: var(--wcti--spacing--content-padding);
 		}
 
 		.woocommerce-Tabs-panel--description {
@@ -22,7 +22,7 @@
 	&.has-content-layout-full-width {
 
 		.content-area {
-			max-width: var(--layout_width_content);
+			max-width: var(--wcti--width--wide);
 		}
 
 		.site-main {
@@ -30,12 +30,12 @@
 		}
 
 		.woocommerce-Tabs-panel--description {
-			width: calc( 100vw - var(--scrollbar_width) );
-			max-width: calc( 100vw - var(--scrollbar_width) );
-			margin-#{$left}: calc( 50% - 50vw + ( var(--scrollbar_width) / 2 ) );
+			width: calc( 100vw - var(--wcti--width--scrollbar) );
+			max-width: calc( 100vw - var(--wcti--width--scrollbar) );
+			margin-#{$left}: calc( 50% - 50vw + ( var(--wcti--width--scrollbar) / 2 ) );
 
 			> h2 {
-				max-width: var(--layout_width_content);
+				max-width: var(--wcti--width--wide);
 				margin-left: auto;
 				margin-right: auto;
 			}

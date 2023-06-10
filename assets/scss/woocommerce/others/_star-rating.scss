@@ -30,11 +30,9 @@
 		&::before {
 			content: '\2605\2605\2605\2605\2605'; // BLACK STAR
 			float: none;
-			color: var(--color_accent);
+			color: var(--wcti--color--accent);
 		}
-
 	}
-
 }
 
 // In product summary.
@@ -61,7 +59,6 @@
 	.woocommerce-review-link:hover {
 		opacity: 1;
 	}
-
 }
 
 // In review form.
@@ -71,7 +68,7 @@ p.stars {
 	margin: 0;
 	line-height: 1;
 	font-size: 1.5em;
-	color: var(--color_accent);
+	color: var(--wcti--color--accent);
 
 	> span {
 		overflow: hidden;
@@ -97,13 +94,11 @@ p.stars {
 			line-height: 1;
 			text-align: center;
 			text-indent: 0;
-
 		}
 
 		&:hover ~ a::before {
 			content: '\2606'; // WHITE STAR
 		}
-
 	}
 
 	&:hover a::before {
@@ -121,13 +116,10 @@ p.stars {
 			~ a::before {
 				content: '\2606'; // WHITE STAR
 			}
-
 		}
 
 		a:not(.active)::before {
 			content: '\2605'; // BLACK STAR
 		}
-
 	}
-
 }

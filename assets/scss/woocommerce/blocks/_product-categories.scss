@@ -19,7 +19,7 @@
 		font-size: .9em;
 		font-weight: 600;
 		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
+		letter-spacing: var(--wcti--spacing--letters);
 		color: inherit;
 	}
 
@@ -32,14 +32,14 @@
 
 		&:not(:disabled):not([aria-disabled=true]):hover,
 		&:focus:enabled {
-			background: var(--color_button_background);
-			color: var(--color_button_text);
+			background: var(--wcti--color--button-bg);
+			color: var(--wcti--color--button-txt);
 			box-shadow: none;
 			animation: none;
 		}
 
 		&:focus:enabled {
-			outline: 2px dashed var(--color_accent);
+			outline: 2px dashed var(--wcti--color--accent);
 			outline-offset: 1px;
 		}
 	}

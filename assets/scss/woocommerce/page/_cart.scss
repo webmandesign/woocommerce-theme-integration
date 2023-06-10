@@ -9,7 +9,7 @@
 		font-size: 1em;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: var(--letter_spacing);
+		letter-spacing: var(--wcti--spacing--letters);
 	}
 }
 
@@ -27,12 +27,12 @@
 
 		.cross-sells {
 			float: $left;
-			width: 48%;
+			width: calc( var(--wcti--width--cart-cross-sells) - 1em );
 		}
 
 		.cart_totals {
 			float: $right;
-			width: 48%;
+			width: calc( var(--wcti--width--cart-totals) - 1em );
 
 			&:only-child {
 				float: none;
@@ -40,7 +40,7 @@
 			}
 
 			> * {
-				max-width: var(--layout_width_entry_content);
+				max-width: var(--wcti--width--cart-totals);
 				margin-left: auto;
 				margin-right: auto;
 			}
@@ -49,7 +49,7 @@
 }
 
 .cross-sells {
-	margin-bottom: calc( var(--white_space) / 2 );
+	margin-bottom: calc( var(--wcti--spacing--white) / 2 );
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
 
@@ -68,6 +68,7 @@
 	@extend %shaded_background;
 	position: relative;
 	padding: 2em 1em;
+	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
@@ -75,16 +76,11 @@
 	}
 
 	h2 {
-		margin-bottom: calc( var(--white_space) / 2 );
+		margin-bottom: calc( var(--wcti--spacing--white) / 2 );
 	}
 
 	.shop_table {
 		margin-bottom: 2em;
-	}
-
-	.checkout-button {
-		display: block;
-		padding: .8em 1em;
 	}
 
 	.continue-shopping {
@@ -135,7 +131,7 @@
 			font-size: .8em;
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: var(--letter_spacing);
+			letter-spacing: var(--wcti--spacing--letters);
 			text-align: center;
 			text-decoration: none;
 			color: inherit;
@@ -196,7 +192,7 @@
 .cart-empty {
 
 	&-container {
-		max-width: var(--layout_width_entry_content);
+		max-width: var(--wcti--width--content);
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;

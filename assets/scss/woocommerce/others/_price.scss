@@ -19,7 +19,7 @@
 	.summary-content & {
 		margin-top: ( -$ratio + rem );
 		font-size: $ratio + em;
-		color: var(--color_content_headings);
+		color: var(--wcti--color--content-h);
 
 		del {
 			font-size: .8em;

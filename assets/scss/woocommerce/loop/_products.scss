@@ -1,24 +1,18 @@
 /* FILE: woocommerce/loop/_products.scss */
 
-// Unfortunately, in some cases also a DIV wrapper has a class of `.products`...
+// Unfortunately, in some cases also a DIV wrapper has a class of `.products` so we need to use `ul` in selector below.
 ul.products {
 
 	.product {
 		position: relative;
-		width: calc( 100% - var(--posts_list_gap) );
-		margin: var(--posts_list_gap) calc( var(--posts_list_gap) / 2 );
+		width: calc( 100% - var(--wcti--spacing--posts-list-gap) );
+		margin: var(--wcti--spacing--posts-list-gap) calc( var(--wcti--spacing--posts-list-gap) / 2 );
 	}
 
 	.woocommerce-LoopProduct-link {
+		@extend %clearfix;
 		display: block;
 		color: inherit;
-
-		&::after {
-			content: '';
-			clear: both;
-			display: table;
-			table-layout: fixed;
-		}
 	}
 
 	a {
@@ -29,6 +23,7 @@ ul.products {
 		display: block;
 		width: 100%;
 		margin: 0 auto ( $ratio + em );
+		border-radius: var(--wcti--border--radius);
 		vertical-align: top;
 	}
 
@@ -36,14 +31,14 @@ ul.products {
 		display: inline;
 		margin: 0;
 		margin-#{$right}: .5rem;
-		font-size: var(--typography_heading_size_products);
+		font-size: var(--wcti--font-size--heading--products-product);
 		font-weight: 700;
 	}
 
 	.button,
 	.added_to_cart {
 		display: block;
-		padding: 0;
+		padding: .25em 0;
 		margin: 0;
 		font-size: .8em;
 		text-align: inherit;
@@ -56,7 +51,7 @@ ul.products {
 		&:active,
 		&:visited {
 			background: none;
-			color: var(--color_accent);
+			color: var(--wcti--color--accent);
 			border: 0;
 			box-shadow: none;
 			animation: none;
@@ -64,7 +59,7 @@ ul.products {
 	}
 
 	.button {
-		margin-top: .5em;
+		margin-top: var(--wcti--margin--products-add-to-cart--top);
 
 		&::before {
 			content: '+ ';

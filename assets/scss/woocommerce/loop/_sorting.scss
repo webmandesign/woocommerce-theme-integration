@@ -6,7 +6,7 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 1em;
-	margin: 2rem 0;
+	margin: var(--wcti--margin--products-sorting);
 
 	* {
 		margin: 0;

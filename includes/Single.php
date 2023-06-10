@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -72,7 +72,8 @@ class Single {
 	/**
 	 * Product comments pagination setup.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.5.0
 	 *
 	 * @param  array $args
 	 *
@@ -82,8 +83,8 @@ class Single {
 
 		// Processing
 
-			$args['prev_text'] = esc_html_x( '&laquo;', 'Pagination text (visible): previous.', 'wc-theme-integration' ) . '<span class="screen-reader-text"> ' . esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'wc-theme-integration' ) . '</span>';
-			$args['next_text'] = '<span class="screen-reader-text">' . esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'wc-theme-integration' ) . ' </span>' . esc_html_x( '&raquo;', 'Pagination text (visible): next.', 'wc-theme-integration' );
+			$args['prev_text'] = esc_html_x( '&larr;', 'Pagination text (visible): previous.', 'wc-theme-integration' ) . '<span class="screen-reader-text"> ' . esc_html_x( 'Previous page', 'Pagination text (hidden): previous.', 'wc-theme-integration' ) . '</span>';
+			$args['next_text'] = '<span class="screen-reader-text">' . esc_html_x( 'Next page', 'Pagination text (hidden): next.', 'wc-theme-integration' ) . ' </span>' . esc_html_x( '&rarr;', 'Pagination text (visible): next.', 'wc-theme-integration' );
 			$args['type']      = 'plain';
 
 
@@ -256,7 +257,8 @@ class Single {
 	/**
 	 * Removing page templates for products.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.5.0
 	 *
 	 * @param  array        $post_templates
 	 * @param  WP_Theme     $wp_theme
@@ -270,8 +272,31 @@ class Single {
 		// Processing
 
 			if ( 'product' === $post_type ) {
-				unset( $post_templates['templates/content-only.php'] );
-				unset( $post_templates['templates/no-intro.php'] );
+
+				$page_templates = array_filter(
+
+					/**
+					 * Filters the array of page/post templates to unset for Product post.
+					 *
+					 * @since  1.5.0
+					 *
+					 * @param  array $page_templates
+					 */
+					(array) apply_filters( 'WCTI/Single/page_templates', array(
+						'templates/content-only.php',
+						'templates/no-intro.php',
+						'templates/custom-content-only.php',
+						'templates/custom-no-intro.php',
+						'templates/custom-content-only.html',
+						'templates/custom-no-intro.html',
+						'custom-content-only',
+						'custom-no-intro',
+					) )
+				);
+
+				foreach ( $page_templates as $template ) {
+					unset( $post_templates[ $template ] );
+				}
 			}
 
 

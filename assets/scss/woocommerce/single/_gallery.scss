@@ -2,14 +2,23 @@
 
 .woocommerce-product-gallery {
 	position: relative;
+	max-width: 100%;
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
-		width: calc( 50% - 1em );
+		width: calc( var(--wcti--width--product-gallery) - 1em );
 	}
 
 	img {
 		width: 100%;
 	}
+
+	&__image {
+		border-radius: var(--wcti--border--radius);
+	}
+
+		.onsale + & &__image {
+			border-top-left-radius: 0;
+		}
 
 	&__trigger {
 		position: absolute;
@@ -27,28 +36,36 @@
 			content: '';
 			position: absolute;
 			width: 2em;
-			height: 2px;
-			#{$left}: 0em;
-			top: calc( 50% - 1px );
+			height: .15rem;
+			#{$left}: 0;
+			top: 50%;
+			margin: math.div( -.15rem, 2 );
 			background: currentColor;
 		}
 
 		&::after {
-			transform: rotate(90deg);
+			transform: rotate( 90deg );
 		}
 	}
 }
 
 .flex-control-thumbs {
+	--wcti--gallery-gap: clamp( .15rem, var(--wcti--border--radius), .5rem );
+
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
-	padding: 1px;
+	gap: var(--wcti--gallery-gap);
+	padding: var(--wcti--gallery-gap) 0 0;
 	margin: 0;
 	list-style: none;
 
 	li {
 		width: 25%;
-		padding: 1px;
+	}
+
+	img {
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: var(--wcti--border--radius);
 	}
 }

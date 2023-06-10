@@ -11,22 +11,22 @@
 			justify-content: center;
 			margin: 0;
 			list-style: none;
-			border-bottom-width: 1px;
+			border-bottom-width: .1rem;
 			border-bottom-style: solid;
 		}
 
 		a {
 			display: block;
 			padding: 1em 2em;
-			margin-bottom: -1px;
+			margin-bottom: -.1rem;
 			font-size: .8em;
 			font-weight: 700;
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
-			letter-spacing: var(--letter_spacing);
-			color: var(--color_content_headings);
-			border-bottom: 1px solid transparent;
+			letter-spacing: var(--wcti--spacing--letters);
+			color: var(--wcti--color--content-h);
+			border-bottom: .2rem solid transparent;
 			transition: border .3s;
 
 			&:hover,
@@ -59,7 +59,7 @@
 	&-content {
 
 		> *:not(table) {
-			max-width: var(--layout_width_entry_content);
+			max-width: var(--wcti--width--my-account-panel);
 			margin-left: auto;
 			margin-right: auto;
 		}

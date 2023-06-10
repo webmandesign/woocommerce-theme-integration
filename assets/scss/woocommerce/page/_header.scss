@@ -1,7 +1,15 @@
 /* FILE: woocommerce/page/_header.scss */
 
 .woocommerce-products-header {
-	margin-bottom: 2rem;
+
+	&,
+	body .is-layout-flow > & {
+		margin-bottom: var(--wcti--margin--page-header--bottom);
+	}
+
+	.page-header-content {
+		max-width: var(--wcti--width--page-header-content);
+	}
 
 	.page-description,
 	.term-description {

@@ -11,5 +11,6 @@
 		@extend %shaded_background;
 		position: relative;
 		padding: 1em 2em;
+		border-radius: var(--wcti--border--radius);
 	}
 }
