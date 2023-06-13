@@ -18,16 +18,18 @@
 	// A non-zero value is required for minification process not to strip the unit.
 	--zero: var( --zero, 0.001px );
 
+	// Core:
 	--wcti--border--radius: 0;
 	--wcti--color--accent: var( --color_accent, #f00 );
-	--wcti--color--content-bg: var( --color_content_background, --color_body_background );
-	--wcti--color--content-h: var( --color_content_headings, --color_body_headings );
 	--wcti--color--button-bg: var( --color_button_background, #f00 );
 	--wcti--color--button-txt: var( --color_button_text, #fff );
+	--wcti--color--content-bg: var( --color_content_background, --color_body_background );
+	--wcti--color--content-h: var( --color_content_headings, --color_body_headings );
 	--wcti--font-family--headings: var( --typography_font_secondary, --typography_font_headings );
-	--wcti--font-size--heading--product-title: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_1, 2em) );
+	--wcti--font-size--h1: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_1, 2.5em) );
+	--wcti--font-size--h2: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_2, 2em) );
+	--wcti--font-size--h3: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_3, 1.5em) );
 	--wcti--font-size--heading--products-product: var( --typography_heading_size_posts, 1.25em );
-	--wcti--font-size--heading--related-products: 1.25em;
 	--wcti--margin--page-header--bottom: 2rem;
 	--wcti--margin--products-add-to-cart--top: .5rem;
 	--wcti--margin--products-sorting: 2rem 0;
@@ -36,20 +38,23 @@
 	--wcti--spacing--letters: var( --letter_spacing, .05em );
 	--wcti--spacing--posts-list-gap: var( --posts_list_gap, 2em );
 	--wcti--spacing--white: var( --white_space, 100px );
-	--wcti--width--content: var( --layout_width_entry_content, 640px );
-	--wcti--width--page-header-content: 100%;
 	--wcti--width--cart-cross-sells: 50%;
 	--wcti--width--cart-totals: 50%;
+	--wcti--width--checkout-column-1: #{ percentage( $ratio_maj ) };
+	--wcti--width--checkout-column-2: #{ percentage( $ratio_min ) };
+	--wcti--width--content: var( --layout_width_entry_content, 640px );
+	--wcti--width--page-header-content: 100%;
 	--wcti--width--product-gallery: 50%;
 	--wcti--width--product-summary: 50%;
 	--wcti--width--review-column-1: #{ percentage( $ratio_maj ) };
 	--wcti--width--review-column-2: #{ percentage( $ratio_min ) };
-	--wcti--width--checkout-column-1: #{ percentage( $ratio_maj ) };
-	--wcti--width--checkout-column-2: #{ percentage( $ratio_min ) };
 	--wcti--width--scrollbar: var( --scrollbar_width, --zero );
 	--wcti--width--wide: var( --layout_width_content, 1280px );
 
+	// Supplemental:
 	--wcti--color--accent-contrast: var(--wcti--color--content-bg);
+	--wcti--font-size--heading--product-title: var(--wcti--font-size--h1);
+	--wcti--font-size--heading--related-products: var(--wcti--font-size--h3);
 	--wcti--width--cart-totals: var(--wcti--width--content);
 	--wcti--width--checkout-coupon: var(--wcti--width--content);
 	--wcti--width--checkout-login: var(--wcti--width--content);
@@ -59,10 +64,12 @@
 	--wcti--width--my-account-panel: var(--wcti--width--content);
 }
 
-.woocommerce-Tabs-panel--reviews {
-	--wcti--width--tab-panel: var(--wcti--width--wide);
-}
+// Modifications:
 
-.woocommerce-MyAccount-content > .woocommerce-order-downloads {
-	--wcti--width--my-account-panel: var(--wcti--width--wide);
-}
+	.woocommerce-Tabs-panel--reviews {
+		--wcti--width--tab-panel: var(--wcti--width--wide);
+	}
+
+	.woocommerce-MyAccount-content > .woocommerce-order-downloads {
+		--wcti--width--my-account-panel: var(--wcti--width--wide);
+	}

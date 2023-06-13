@@ -28,6 +28,7 @@
 			display: block;
 			margin: 0 auto ( $ratio + em );
 			vertical-align: top;
+			border-radius: var(--wcti--border--radius);
 		}
 
 		.wc-block-grid__product-title {
@@ -43,7 +44,9 @@
 		.wc-block-grid__product-onsale {
 			position: absolute;
 			#{$left}: 0;
+			#{$right}: auto;
 			top: 0;
+			bottom: auto;
 			padding: math.div( .5em, .8 ) math.div( 1em, .8 );
 			font-size: .8em;
 			font-weight: 600;
@@ -52,7 +55,7 @@
 			background: var(--wcti--color--accent);
 			color: var(--wcti--color--accent-contrast);
 			border: 0;
-			border-radius: 0;
+			border-radius: var(--wcti--border--radius) 0 var(--wcti--border--radius) 0;
 		}
 
 		.wc-block-grid__product-price {

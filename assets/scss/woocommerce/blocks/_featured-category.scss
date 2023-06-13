@@ -2,11 +2,12 @@
 
 .wc-block-featured-category {
 	position: relative;
-	padding: 2em 1em;
+	padding: 2rem 1rem;
+	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
-		padding-left: 2em;
-		padding-right: 2em;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.wc-block-featured-category__title,
