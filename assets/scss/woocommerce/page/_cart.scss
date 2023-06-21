@@ -27,12 +27,12 @@
 
 		.cross-sells {
 			float: $left;
-			width: calc( var(--wcti--width--cart-cross-sells) - 1em );
+			width: calc( var(--wcti--width--col--cart-cross-sells) - var(--wcti--width--col-gap--cart) );
 		}
 
 		.cart_totals {
 			float: $right;
-			width: calc( var(--wcti--width--cart-totals) - 1em );
+			width: calc( var(--wcti--width--col--cart-totals) - var(--wcti--width--col-gap--cart) );
 
 			&:only-child {
 				float: none;

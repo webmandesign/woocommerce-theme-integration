@@ -1,0 +1,23 @@
+/* FILE: woocommerce/blocks/_cart.scss */
+
+.wc-block-mini-cart {
+
+	&__template-part {
+		font-size: .9em;
+	}
+
+	&__template-part &__title {
+		margin-top: 1rem;
+		font-size: var(--wcti--font-size--heading--mini-cart);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: var(--wcti--spacing--letters);
+	}
+}
+
+.wc-block-cart-item__image {
+
+	img {
+		border-radius: var(--wcti--border--radius);
+	}
+}

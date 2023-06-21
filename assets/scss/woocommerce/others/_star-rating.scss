@@ -1,8 +1,10 @@
 /* FILE: woocommerce/others/_star-rating.scss */
 
-.star-rating {
+.star-rating,
+body .wc-block-components-product-rating__stars[class] {
 	position: relative;
 	display: inline-block;
+	font-family: inherit;
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 1;
@@ -31,6 +33,21 @@
 			content: '\2605\2605\2605\2605\2605'; // BLACK STAR
 			float: none;
 			color: var(--wcti--color--accent);
+		}
+	}
+}
+
+// In block.
+.wc-block-components-checkbox,
+.wc-blocks-components-form-token-field-wrapper {
+
+	.wc-block-components-product-rating {
+		line-height: 1.5;
+
+		&__stars {
+			width: 4.5em;
+			font-size: 1.2em;
+			vertical-align: middle;
 		}
 	}
 }

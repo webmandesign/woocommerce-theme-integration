@@ -12,13 +12,13 @@
 // @version  1.4.0
 //
 
+// Core:
 :root {
 
 	// Unit is required in `calc()`.
 	// A non-zero value is required for minification process not to strip the unit.
 	--zero: var( --zero, 0.001px );
 
-	// Core:
 	--wcti--border--radius: 0;
 	--wcti--color--accent: var( --color_accent, #f00 );
 	--wcti--color--button-bg: var( --color_button_background, #f00 );
@@ -29,29 +29,34 @@
 	--wcti--font-size--h1: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_1, 2.5em) );
 	--wcti--font-size--h2: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_2, 2em) );
 	--wcti--font-size--h3: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_3, 1.5em) );
+	--wcti--font-size--heading--block: 1em;
+	--wcti--font-size--heading--mini-cart: 1em;
 	--wcti--font-size--heading--products-product: var( --typography_heading_size_posts, 1.25em );
-	--wcti--margin--page-header--bottom: 2rem;
-	--wcti--margin--products-add-to-cart--top: .5rem;
-	--wcti--margin--products-sorting: 2rem 0;
 	--wcti--opacity--pseudo-bg: var( --pseudo_background_opacity, .05 );
-	--wcti--spacing--content-padding: var( --content_padding, --white_space );
+	--wcti--spacing--gap--posts-list: var( --posts_list_gap, 2em );
 	--wcti--spacing--letters: var( --letter_spacing, .05em );
-	--wcti--spacing--posts-list-gap: var( --posts_list_gap, 2em );
+	--wcti--spacing--margin--page-header--bottom: 2rem;
+	--wcti--spacing--margin--products-add-to-cart--top: .5rem;
+	--wcti--spacing--margin--products-sorting: 2rem 0;
+	--wcti--spacing--padding--content: var( --content_padding, --white_space );
 	--wcti--spacing--white: var( --white_space, 100px );
-	--wcti--width--cart-cross-sells: 50%;
-	--wcti--width--cart-totals: 50%;
-	--wcti--width--checkout-column-1: #{ percentage( $ratio_maj ) };
-	--wcti--width--checkout-column-2: #{ percentage( $ratio_min ) };
+	--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };
+	--wcti--width--col--cart-totals: #{ percentage( $ratio_min ) };
+	--wcti--width--col--checkout-1: #{ percentage( $ratio_maj ) };
+	--wcti--width--col--checkout-2: #{ percentage( $ratio_min ) };
+	--wcti--width--col--product-gallery: 50%;
+	--wcti--width--col--product-summary: 50%;
+	--wcti--width--col--review-1: #{ percentage( $ratio_maj ) };
+	--wcti--width--col--review-2: #{ percentage( $ratio_min ) };
+	--wcti--width--col-gap: 1rem;
 	--wcti--width--content: var( --layout_width_entry_content, 640px );
 	--wcti--width--page-header-content: 100%;
-	--wcti--width--product-gallery: 50%;
-	--wcti--width--product-summary: 50%;
-	--wcti--width--review-column-1: #{ percentage( $ratio_maj ) };
-	--wcti--width--review-column-2: #{ percentage( $ratio_min ) };
 	--wcti--width--scrollbar: var( --scrollbar_width, --zero );
 	--wcti--width--wide: var( --layout_width_content, 1280px );
+}
 
-	// Supplemental:
+// Supplemental:
+body {
 	--wcti--color--accent-contrast: var(--wcti--color--content-bg);
 	--wcti--font-size--heading--product-title: var(--wcti--font-size--h1);
 	--wcti--font-size--heading--related-products: var(--wcti--font-size--h3);
@@ -59,6 +64,10 @@
 	--wcti--width--checkout-coupon: var(--wcti--width--content);
 	--wcti--width--checkout-login: var(--wcti--width--content);
 	--wcti--width--checkout-notice: var(--wcti--width--content);
+	--wcti--width--col-gap--cart: var(--wcti--width--col-gap);
+	--wcti--width--col-gap--product: var(--wcti--width--col-gap);
+	--wcti--width--col-gap--checkout: var(--wcti--width--col-gap);
+	--wcti--width--col-gap--review: var(--wcti--width--col-gap);
 	--wcti--width--order: var(--wcti--width--content);
 	--wcti--width--tab-panel: var(--wcti--width--content);
 	--wcti--width--my-account-panel: var(--wcti--width--content);

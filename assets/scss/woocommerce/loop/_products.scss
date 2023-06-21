@@ -5,8 +5,8 @@ ul.products {
 
 	.product {
 		position: relative;
-		width: calc( 100% - var(--wcti--spacing--posts-list-gap) );
-		margin: var(--wcti--spacing--posts-list-gap) calc( var(--wcti--spacing--posts-list-gap) / 2 );
+		width: calc( 100% - var(--wcti--spacing--gap--posts-list) );
+		margin: var(--wcti--spacing--gap--posts-list) calc( var(--wcti--spacing--gap--posts-list) / 2 );
 	}
 
 	.woocommerce-LoopProduct-link {
@@ -28,9 +28,7 @@ ul.products {
 	}
 
 	h3 {
-		display: inline;
 		margin: 0;
-		margin-#{$right}: .5rem;
 		font-size: var(--wcti--font-size--heading--products-product);
 		font-weight: 700;
 	}
@@ -59,7 +57,7 @@ ul.products {
 	}
 
 	.button {
-		margin-top: var(--wcti--margin--products-add-to-cart--top);
+		margin-top: var(--wcti--spacing--margin--products-add-to-cart--top);
 
 		&::before {
 			content: '+ ';

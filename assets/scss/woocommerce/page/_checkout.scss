@@ -22,12 +22,12 @@
 		> * {
 			float: $right;
 			clear: right;
-			width: calc( var(--wcti--width--checkout-column-2) - 1rem );
+			width: calc( var(--wcti--width--col--checkout-2) - var(--wcti--width--col-gap--checkout) );
 		}
 
 		> .col2-set {
 			float: $left;
-			width: calc( var(--wcti--width--checkout-column-1) - 1rem );
+			width: calc( var(--wcti--width--col--checkout-1) - var(--wcti--width--col-gap--checkout) );
 		}
 
 		> h3 {

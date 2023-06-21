@@ -1,5 +1,37 @@
 /* FILE: woocommerce/blocks/_block.scss */
 
+.woocommerce .wp-block-heading {
+	margin: 0 0 1rem;
+	font-size: var(--wcti--font-size--heading--block);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: var(--wcti--spacing--letters);
+}
+
+.wc-block-components-checkbox {
+
+	.wc-block-components-checkbox__input[type=checkbox] {
+		padding: 0;
+		background: transparent;
+		border: 2px solid;
+		border-radius: var(--wcti--border--radius);
+
+		&:checked {
+			background: var(--wcti--color--accent);
+			color: var(--wcti--color--accent-contrast);
+			border-color: var(--wcti--color--accent);
+		}
+	}
+
+	.wc-block-components-checkbox__mark {
+		fill: var(--wcti--color--accent-contrast);
+	}
+}
+
+.wc-block-rating-filter__actions button[type=submit]:not(.wp-block-search__button).wc-block-components-filter-submit-button {
+	font-size: .75em;
+}
+
 // Star ratings in various blocks.
 .wc-block-review-list-item__rating > .wc-block-review-list-item__rating__stars,
 .wc-block-grid__product-rating .star-rating {

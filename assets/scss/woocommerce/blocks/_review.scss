@@ -1,0 +1,19 @@
+/* FILE: woocommerce/blocks/_review.scss */
+
+.wc-block-review-list-item {
+
+	&__image {
+
+		img {
+			border-radius: var(--wcti--border--radius);
+		}
+	}
+
+	&__published-date {
+		font-size: .9em;
+	}
+}
+
+.wc-block-grid__products .wc-block-components-product-rating__link {
+	display: none;
+}

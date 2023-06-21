@@ -6,7 +6,7 @@ ul.products {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0;
-	margin: calc( -1 * var(--wcti--spacing--posts-list-gap) ) calc( var(--wcti--spacing--posts-list-gap) / 2 * -1 );
+	margin: calc( -1 * var(--wcti--spacing--gap--posts-list) ) calc( var(--wcti--spacing--gap--posts-list) / 2 * -1 );
 	list-style: none;
 }
 
