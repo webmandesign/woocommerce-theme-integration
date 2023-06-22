@@ -1,13 +1,5 @@
 /* FILE: woocommerce/blocks/_block.scss */
 
-.woocommerce .wp-block-heading {
-	margin: 0 0 1rem;
-	font-size: var(--wcti--font-size--heading--block);
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: var(--wcti--spacing--letters);
-}
-
 .wc-block-components-checkbox {
 
 	.wc-block-components-checkbox__input[type=checkbox] {

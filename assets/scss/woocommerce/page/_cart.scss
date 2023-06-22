@@ -1,18 +1,5 @@
 /* FILE: woocommerce/page/_cart.scss */
 
-.woocommerce-cart-form,
-.cross-sells,
-.cart-collaterals {
-
-	h2 {
-		margin-bottom: 1rem;
-		font-size: 1em;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: var(--wcti--spacing--letters);
-	}
-}
-
 .cart-collaterals {
 	margin-top: 2em;
 
@@ -73,10 +60,6 @@
 	@include media( map_get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
 		padding-right: 2em;
-	}
-
-	h2 {
-		margin-bottom: calc( var(--wcti--spacing--white) / 2 );
 	}
 
 	.shop_table {

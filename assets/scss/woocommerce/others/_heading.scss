@@ -1,0 +1,27 @@
+/* FILE: woocommerce/others/_heading.scss */
+
+.cross-sells h2,
+.cart-collaterals h2,
+.upsells h2,
+.related h2,
+.customer-login h2,
+.woocommerce .wp-block-heading,
+.woocommerce-cart-form h2,
+.woocommerce-order h2,
+.woocommerce-order-details h2,
+.woocommerce-order-downloads h2,
+.woocommerce-view-order .woocommerce-MyAccount-content h2,
+.woocommerce-customer-details h2,
+.woocommerce-Address-title h3,
+.woocommerce-edit-address .woocommerce-MyAccount-content h3,
+.woocommerce-Reviews-title,
+.woocommerce-Reviews .comment-reply-title,
+.woocommerce .woocommerce-checkout h3,
+.wc-block-mini-cart__template-part .wc-block-mini-cart__title {
+	margin-bottom: 1rem;
+	font-size: var(--wcti--font-size--heading--uppercase);
+	font-weight: 700;
+	line-height: 1.25;
+	text-transform: uppercase;
+	letter-spacing: var(--wcti--spacing--letters);
+}

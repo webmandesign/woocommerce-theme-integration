@@ -8,10 +8,15 @@
 
 	&__template-part &__title {
 		margin-top: 1rem;
-		font-size: var(--wcti--font-size--heading--mini-cart);
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: var(--wcti--spacing--letters);
+	}
+
+	&__icon {
+		width: $ratio_min + 1em;
+		height: $ratio_min + 1em;
+	}
+
+	&__badge {
+		font-size: .75em;
 	}
 }
 

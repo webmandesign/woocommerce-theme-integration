@@ -46,7 +46,8 @@
 
 .woocommerce-Tabs-panel {
 	max-width: var(--wcti--width--tab-panel);
-	margin: 3em auto var(--wcti--spacing--padding--content);
+	margin: 3em auto;
+	margin-bottom: var(--wcti--spacing--padding--content);
 
 	> h2:first-child {
 

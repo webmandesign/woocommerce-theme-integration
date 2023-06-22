@@ -25,10 +25,6 @@
 		display: none;
 	}
 
-	&-title {
-		font-size: $ratio + em;
-	}
-
 	&-title,
 	.comment-reply-title {
 		margin-bottom: 2rem;
@@ -93,11 +89,6 @@
 			display: block;
 			margin-bottom: 2rem;
 			font-family: var(--wcti--font-family--headings);
-			font-size: 1em;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: var(--wcti--spacing--letters);
-			line-height: 1.25;
 			color: var(--wcti--color--content-h);
 		}
 
