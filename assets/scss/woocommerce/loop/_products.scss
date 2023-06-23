@@ -5,7 +5,6 @@ ul.products {
 
 	.product {
 		position: relative;
-		width: calc( 100% - var(--wcti--spacing--gap--posts-list) );
 		margin: var(--wcti--spacing--gap--posts-list) calc( var(--wcti--spacing--gap--posts-list) / 2 );
 	}
 

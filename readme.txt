@@ -4,7 +4,7 @@ Donate link:       https://www.webmandesign.eu
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
-Tested up to:      5.9
+Tested up to:      6.2
 Stable tag:        1.4.0
 License:           GNU General Public License v3
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
@@ -47,5 +47,5 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
-= 1.3.6 =
-Fixing styles.
+= 1.4.0 =
+Adding option to set up products list columns on mobile devices, added block and hybrid theme support, updating and fixing CSS styles, fixing bugs.

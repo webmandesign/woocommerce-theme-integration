@@ -1,21 +1,32 @@
 # Integration for WooCommerce Changelog
 
-## 1.4.0, 20230510
+## 1.4.0, 20230623
 
 ### Added
-- Hybrid theme support
+- Block and hybrid theme support
+- Option to set up products list columns on mobile devices
+
+### Updated
+- CSS styles
+- Localization
+- Removing obsolete code
 
 ### Fixed
 - Theme hook name functionality
-- Fixing and updating CSS styles
+- CSS styles
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
 	assets/scss/woocommerce.scss
+	assets/scss/woocommerce/_custom-properties.scss
 	includes/Autoload.php
 	includes/Hook.php
+	includes/Loader.php
+	includes/Loop.php
+	includes/Options.php
+	includes/Setup.php
 	includes/Single.php
 	includes/Site_Editor.php
 

@@ -11,28 +11,13 @@ ul.products {
 }
 
 // Columns.
-body:not(.mobile--has-products-2-columns) {
-
-	.products .product {
-		@extend %posts_list_columns_1;
-	}
-
-	@for $i from 2 through 6 {
-		.products.columns-#{$i} .product {
-			@extend %posts_list_columns_#{$i};
-		}
+@for $i from 1 through 2 {
+	.has-catalog-columns-mobile-#{$i} .products .product {
+		width: calc( #{ percentage( math.div( 1, $i ) ) } - var(--wcti--spacing--gap--posts-list) );
 	}
 }
-
-.mobile--has-products-2-columns {
-
-	.products .product {
-		@extend %posts_list_columns_2;
-	}
-
-	@for $i from 3 through 6 {
-		.products.columns-#{$i} .product {
-			@extend %posts_list_columns_#{$i};
-		}
+@for $i from 2 through 6 {
+	.products.columns-#{$i} .product {
+		@extend %posts_list_columns_#{$i};
 	}
 }

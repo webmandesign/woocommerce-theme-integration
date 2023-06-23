@@ -38,6 +38,8 @@ class Setup {
 
 			// Filters
 
+				add_filter( 'body_class', __CLASS__ . '::body_class' );
+
 				add_filter( 'woocommerce_review_gravatar_size', __CLASS__ . '::review_gravatar_size' );
 
 				add_filter( 'woocommerce_breadcrumb_defaults', __CLASS__ . '::breadcrumb_defaults' );
@@ -166,5 +168,27 @@ class Setup {
 			}
 
 	} // /replace_theme_search
+
+	/**
+	 * HTML body classes.
+	 *
+	 * @since  1.4.0
+	 *
+	 * @param  array $classes
+	 *
+	 * @return  array
+	 */
+	public static function body_class( array $classes ): array {
+
+		// Processing
+
+			$classes[] = 'has-catalog-columns-mobile-' . absint( get_theme_mod( Options::$id['catalog_columns_mobile'], 1 ) );
+
+
+		// Output
+
+			return $classes;
+
+	} // /body_class
 
 }

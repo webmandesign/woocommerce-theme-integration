@@ -67,6 +67,12 @@ body {
 	--wcti--width--order: var(--wcti--width--content);
 	--wcti--width--tab-panel: var(--wcti--width--content);
 	--wcti--width--my-account-panel: var(--wcti--width--content);
+
+	&[class] {
+		@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+			--wcti--spacing--gap--posts-list: 1em;
+		}
+	}
 }
 
 // Modifications:
