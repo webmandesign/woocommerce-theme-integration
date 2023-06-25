@@ -1,4 +1,4 @@
-/* FILE: woocommerce/_custom-properties.scss */
+/* FILE: woocommerce/custom-properties.scss */
 
 //
 // Custom properties (CSS variables).
@@ -9,8 +9,11 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.4.0
+// @version  1.4.1
 //
+
+@import 'tools/_index';
+@import 'setup/_index';
 
 // Core:
 :root {

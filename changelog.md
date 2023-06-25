@@ -1,5 +1,24 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.1, 20230625
+
+### Updated
+- Loading stylesheet in block theme editor
+- Splitting stylesheets
+
+### Fixed
+- CSS styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	includes/Assets.php
+
+
 ## 1.4.0, 20230623
 
 ### Added

@@ -1,24 +1,20 @@
-/* FILE: woocommerce-rtl.scss */
+/* FILE: blocks.scss */
 @use 'sass:math';
 
 //
-// WooCommerce plugin styles, RTL.
+// WooCommerce plugin styles.
 //
 // @package    Integration for WooCommerce
 // @copyright  WebMan Design, Oliver Juhas
 //
+// @since  1.4.1
+//
 
-$left: right;
-$right: left;
-
-body {
-	direction: rtl;
-	unicode-bidi: embed;
-}
+$left: left;
+$right: right;
 
 @import 'tools/_index';
 @import 'setup/_index';
 
-@import 'woocommerce/_index';
+@import 'blocks/_index';
 @import 'extend';
-

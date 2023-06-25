@@ -1,4 +1,4 @@
-/* FILE: woocommerce-rtl.scss */
+/* FILE: blocks-rtl.scss */
 @use 'sass:math';
 
 //
@@ -19,6 +19,6 @@ body {
 @import 'tools/_index';
 @import 'setup/_index';
 
-@import 'woocommerce/_index';
+@import 'blocks/_index';
 @import 'extend';
 

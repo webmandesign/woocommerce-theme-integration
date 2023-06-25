@@ -1,7 +1,5 @@
 /* FILE: woocommerce/__index.scss */
 
-@import 'custom-properties';
-
 @import 'form/_index';
 @import 'others/_index';
 @import 'loop/_index';
@@ -10,6 +8,3 @@
 @import 'sidebar/_index';
 @import 'shortcode/_index';
 @import 'layout/_index';
-@import 'blocks/_index';
-
-@import 'extend';

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.3.3
+ * @version  1.4.1
  */
 
 namespace WebManDesign\WCTI;
@@ -19,7 +19,8 @@ class Assets {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.4.1
 	 *
 	 * @return  void
 	 */
@@ -30,6 +31,7 @@ class Assets {
 			// Actions
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue' );
+				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue' );
 
 				add_action( 'woocommerce_product_after_tabs', __CLASS__ . '::print', 0 );
 
@@ -43,7 +45,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.0.0
-	 * @version  1.3.3
+	 * @version  1.4.1
 	 *
 	 * @return  void
 	 */
@@ -51,7 +53,14 @@ class Assets {
 
 		// Processing
 
-			// Styles:
+			wp_enqueue_style(
+				'wc-theme-integration-custom-properties',
+				WCTI_URL . 'assets/css/custom-properties.css',
+				array(),
+				'v' . WCTI_VERSION
+			);
+
+			if ( ! doing_action( 'enqueue_block_editor_assets' ) ) {
 
 				wp_enqueue_style(
 					'wc-theme-integration',
@@ -64,8 +73,6 @@ class Assets {
 					'rtl',
 					'replace'
 				);
-
-			// Scripts:
 
 				// Adds class of tabs count on tabs wrapper.
 				wp_add_inline_script(
@@ -85,6 +92,28 @@ class Assets {
 
 					} )();"
 				);
+			}
+
+			if (
+				doing_action( 'wp_enqueue_scripts' )
+				|| (
+					doing_action( 'enqueue_block_editor_assets' )
+					&& wp_is_block_theme()
+				)
+			) {
+
+				wp_enqueue_style(
+					'wc-theme-integration-blocks',
+					WCTI_URL . 'assets/css/blocks.css',
+					array(),
+					'v' . WCTI_VERSION
+				);
+				wp_style_add_data(
+					'wc-theme-integration-blocks',
+					'rtl',
+					'replace'
+				);
+			}
 
 	} // /enqueue
 

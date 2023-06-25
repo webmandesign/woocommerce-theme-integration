@@ -1,55 +1,7 @@
 /* FILE: woocommerce/others/_star-rating.scss */
 
-.star-rating,
-body .wc-block-components-product-rating__stars[class] {
-	position: relative;
-	display: inline-block;
-	font-family: inherit;
-	font-size: 1em;
-	font-weight: 400;
-	line-height: 1;
-	text-align: $left;
-	overflow: hidden;
-
-	span,
-	span::before {
-		float: $left;
-		position: absolute;
-		#{$left}: 0;
-		top: 0;
-	}
-
-	&::before {
-		content: '\2606\2606\2606\2606\2606'; // WHITE STAR
-		color: currentColor;
-	}
-
-	span {
-		height: 1em;
-		padding-top: 1.5em; // Move the text away accessibly.
-		overflow: hidden;
-
-		&::before {
-			content: '\2605\2605\2605\2605\2605'; // BLACK STAR
-			float: none;
-			color: var(--wcti--color--accent);
-		}
-	}
-}
-
-// In block.
-.wc-block-components-checkbox,
-.wc-blocks-components-form-token-field-wrapper {
-
-	.wc-block-components-product-rating {
-		line-height: 1.5;
-
-		&__stars {
-			width: 4.5em;
-			font-size: 1.2em;
-			vertical-align: middle;
-		}
-	}
+.star-rating {
+	@extend %star_rating;
 }
 
 // In product summary.
