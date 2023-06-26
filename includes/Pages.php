@@ -6,12 +6,11 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.2.5
+ * @version  1.4.2
  */
 
 namespace WebManDesign\WCTI;
 
-use WebManDesign\WCTI\Hook;
 use WC;
 
 // Exit if accessed directly.

@@ -6,12 +6,11 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.4.2
  */
 
 namespace WebManDesign\WCTI;
 
-use WebManDesign\WCTI\Hook;
 use WP_Theme;
 
 // Exit if accessed directly.
@@ -52,7 +51,7 @@ class Single {
 
 				add_filter( Hook::get_name( 'sidebar/is_disabled' ), __CLASS__ . '::sidebar_disable' );
 
-				add_filter( 'template_include', __CLASS__ . '::product_page_template_load', 20 );
+				add_filter( 'template_include', __CLASS__ . '::single_product_template', 20 );
 
 				add_filter( 'woocommerce_format_price_range', __CLASS__ . '::price_separator' );
 
@@ -119,6 +118,16 @@ class Single {
 	/**
 	 * Fix for page template assigned onto a product.
 	 *
+	 * NOTE:
+	 * Pre v1.4.2 the condition below contained `&& is_page_template()`
+	 * and the description text below (the "OBSOLETE:" text) applied.
+	 * Since 1.4.2 we are forcing the single product template on all
+	 * products also to fix hybrid theme classic mode.
+	 * Making it work with block themes.
+	 * Testing with classic themes this works too.
+	 * Also, the function was renamed in 1.4.2.
+	 *
+	 * OBSOLETE:
 	 * This will make sure we are actually loading the product post
 	 * content, and not the content defined within the page template.
 	 * Basically, we make sure the page template is used to provide
@@ -127,20 +136,20 @@ class Single {
 	 *
 	 * This is also a fix for WooCommerce 3.2+ version.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.4.2
 	 *
 	 * @param  string $template
 	 *
 	 * @return  string
 	 */
-	public static function product_page_template_load( string $template ): string {
+	public static function single_product_template( string $template ): string {
 
 		// Processing
 
 			if (
-				'product' === get_post_type()
-				&& is_page_template()
-				&& function_exists( 'wc_locate_template' )
+				is_product()
+				&& ! wp_is_block_theme()
 			) {
 				$template = wc_locate_template( 'single-product.php' );
 			}
@@ -150,7 +159,7 @@ class Single {
 
 			return $template;
 
-	} // /product_page_template_load
+	} // /single_product_template
 
 	/**
 	 * Price "from-to" separator.

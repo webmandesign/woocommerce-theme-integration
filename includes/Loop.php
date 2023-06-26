@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.4.2
  */
 
 namespace WebManDesign\WCTI;
@@ -19,7 +19,8 @@ class Loop {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.4.2
 	 *
 	 * @return  void
 	 */
@@ -57,6 +58,8 @@ class Loop {
 				add_filter( 'woocommerce_pagination_args', __CLASS__ . '::pagination_args' );
 
 				add_filter( 'the_title', __CLASS__ . '::search_results_product_title', 10, 2 );
+
+				add_filter( Hook::get_name( 'loop/search_template_hierarchy/condition' ), __CLASS__ . '::search_template_hierarchy', 10, 2 );
 
 	} // /init
 
@@ -293,5 +296,30 @@ class Loop {
 			return $title . ' <span class="price">' . $product->get_price_html() . '</span>';
 
 	} // /search_results_product_title
+
+	/**
+	 * Search template hierarchy modification condition for hybrid theme.
+	 *
+	 * @since  1.4.2
+	 *
+	 * @param  bool   $condition
+	 * @param  string $post_type
+	 *
+	 * @return  bool
+	 */
+	public static function search_template_hierarchy( bool $condition, string $post_type ): bool {
+
+		// Processing
+
+			if ( is_shop() ) {
+				return false;
+			}
+
+
+		// Output
+
+			return $condition;
+
+	} // /search_template_hierarchy
 
 }

@@ -6,12 +6,10 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.4.2
  */
 
 namespace WebManDesign\WCTI;
-
-use WebManDesign\WCTI\Hook;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;

@@ -40,19 +40,28 @@
 	--wcti--spacing--margin--products-sorting: 2rem 0;
 	--wcti--spacing--padding--content: var( --content_padding, var(--white_space, 100px) );
 	--wcti--spacing--white: var( --white_space, 100px );
-	--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };
-	--wcti--width--col--cart-totals: #{ percentage( $ratio_min ) };
-	--wcti--width--col--checkout-1: #{ percentage( $ratio_maj ) };
-	--wcti--width--col--checkout-2: #{ percentage( $ratio_min ) };
+	--wcti--width--col--cart-cross-sells: 50%;
+	--wcti--width--col--cart-totals: 50%;
+	--wcti--width--col--checkout-1: 50%;
+	--wcti--width--col--checkout-2: 50%;
 	--wcti--width--col--product-gallery: 50%;
 	--wcti--width--col--product-summary: 50%;
-	--wcti--width--col--review-1: #{ percentage( $ratio_maj ) };
-	--wcti--width--col--review-2: #{ percentage( $ratio_min ) };
+	--wcti--width--col--review-1: 50%;
+	--wcti--width--col--review-2: 50%;
 	--wcti--width--col-gap: 1rem;
 	--wcti--width--content: var( --layout_width_entry_content, 640px );
 	--wcti--width--page-header-content: 100%;
 	--wcti--width--scrollbar: var( --scrollbar_width, var(--zero) );
 	--wcti--width--wide: var( --layout_width_content, 1280px );
+
+	@include media( map_get( $breakpoint, 'xl' ) ) {
+		--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };
+		--wcti--width--col--cart-totals: #{ percentage( $ratio_min ) };
+		--wcti--width--col--checkout-1: #{ percentage( $ratio_maj ) };
+		--wcti--width--col--checkout-2: #{ percentage( $ratio_min ) };
+		--wcti--width--col--review-1: #{ percentage( $ratio_maj ) };
+		--wcti--width--col--review-2: #{ percentage( $ratio_min ) };
+	}
 }
 
 // Supplemental:
