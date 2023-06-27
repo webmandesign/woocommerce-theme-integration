@@ -1,5 +1,30 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.2, 20230627
+
+### Updated
+- Responsive CSS styles
+- Removing obsolete code
+
+### Fixed
+- Stylesheet enqueuing
+- CSS variables
+- Hybrid theme issues
+- Single product template application
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/custom-properties.scss
+	includes/Assets.php
+	includes/Loop.php
+	includes/Pages.php
+	includes/Setup.php
+	includes/Single.php
+	includes/Site_Editor.php
+
+
 ## 1.4.1, 20230625
 
 ### Updated

@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.4.1
+// @version  1.4.2
 //
 
 @import 'tools/_index';
@@ -20,7 +20,7 @@
 
 	// Unit is required in `calc()`.
 	// A non-zero value is required for minification process not to strip the unit.
-	--zero: var( --zero, 0.001px );
+	--wcti--zero: var( --zero, 0.001px );
 
 	--wcti--border--radius: 0;
 	--wcti--color--accent: var( --color_accent, #f00 );

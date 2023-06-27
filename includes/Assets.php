@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.1
+ * @version  1.4.2
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +20,7 @@ class Assets {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.1
+	 * @version  1.4.2
 	 *
 	 * @return  void
 	 */
@@ -31,7 +31,7 @@ class Assets {
 			// Actions
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue' );
-				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue' );
+				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue_editor' );
 
 				add_action( 'woocommerce_product_after_tabs', __CLASS__ . '::print', 0 );
 
@@ -45,7 +45,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.1
+	 * @version  1.4.2
 	 *
 	 * @return  void
 	 */
@@ -60,62 +60,89 @@ class Assets {
 				'v' . WCTI_VERSION
 			);
 
-			if ( ! doing_action( 'enqueue_block_editor_assets' ) ) {
+			wp_enqueue_style(
+				'wc-theme-integration',
+				WCTI_URL . 'assets/css/woocommerce.css',
+				array(),
+				'v' . WCTI_VERSION
+			);
+			wp_style_add_data(
+				'wc-theme-integration',
+				'rtl',
+				'replace'
+			);
 
-				wp_enqueue_style(
-					'wc-theme-integration',
-					WCTI_URL . 'assets/css/woocommerce.css',
-					array(),
-					'v' . WCTI_VERSION
-				);
-				wp_style_add_data(
-					'wc-theme-integration',
-					'rtl',
-					'replace'
-				);
+			wp_enqueue_style(
+				'wc-theme-integration-blocks',
+				WCTI_URL . 'assets/css/blocks.css',
+				array(),
+				'v' . WCTI_VERSION
+			);
+			wp_style_add_data(
+				'wc-theme-integration-blocks',
+				'rtl',
+				'replace'
+			);
 
-				// Adds class of tabs count on tabs wrapper.
-				wp_add_inline_script(
-					'wc-single-product',
-					"( function() {
-						'use strict';
+			// Adds class of tabs count on tabs wrapper.
+			wp_add_inline_script(
+				'wc-single-product',
+				"( function() {
+					'use strict';
 
+					var
+						wcTabs = document.getElementsByClassName( 'woocommerce-tabs' );
+
+					if ( wcTabs.length ) {
 						var
-							wcTabs = document.getElementsByClassName( 'woocommerce-tabs' );
+							wcTabsCount = wcTabs[0].querySelectorAll( '.tabs li' ).length;
 
-						if ( wcTabs.length ) {
-							var
-								wcTabsCount = wcTabs[0].querySelectorAll( '.tabs li' ).length;
+						wcTabs[0].classList.add( 'tabs-count-' + wcTabsCount );
+					}
 
-							wcTabs[0].classList.add( 'tabs-count-' + wcTabsCount );
-						}
-
-					} )();"
-				);
-			}
-
-			if (
-				doing_action( 'wp_enqueue_scripts' )
-				|| (
-					doing_action( 'enqueue_block_editor_assets' )
-					&& wp_is_block_theme()
-				)
-			) {
-
-				wp_enqueue_style(
-					'wc-theme-integration-blocks',
-					WCTI_URL . 'assets/css/blocks.css',
-					array(),
-					'v' . WCTI_VERSION
-				);
-				wp_style_add_data(
-					'wc-theme-integration-blocks',
-					'rtl',
-					'replace'
-				);
-			}
+				} )();"
+			);
 
 	} // /enqueue
+
+	/**
+	 * Enqueue styles and scripts.
+	 *
+	 * @since  1.4.2
+	 *
+	 * @return  void
+	 */
+	public static function enqueue_editor() {
+
+		// Requirements check
+
+			if ( ! wp_is_block_theme() ) {
+				return;
+			}
+
+
+		// Processing
+
+			wp_enqueue_style(
+				'wc-theme-integration-custom-properties',
+				WCTI_URL . 'assets/css/custom-properties.css',
+				array(),
+				'v' . WCTI_VERSION
+			);
+
+			wp_enqueue_style(
+				'wc-theme-integration-blocks',
+				WCTI_URL . 'assets/css/blocks.css',
+				array(),
+				'v' . WCTI_VERSION
+			);
+			wp_style_add_data(
+				'wc-theme-integration-blocks',
+				'rtl',
+				'replace'
+			);
+
+	} // /enqueue_editor
 
 	/**
 	 * Print styles in page content.

@@ -22,7 +22,7 @@ class Single {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.0
+	 * @version  1.4.2
 	 *
 	 * @return  void
 	 */
