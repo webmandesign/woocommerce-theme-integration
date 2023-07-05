@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.2
+ * @version  1.4.3
  */
 
 namespace WebManDesign\WCTI;
@@ -149,7 +149,7 @@ class Setup {
 	 * Replace theme search.
 	 *
 	 * @since    1.3.0
-	 * @version  1.4.0
+	 * @version  1.4.3
 	 *
 	 * @return  void
 	 */
@@ -159,7 +159,7 @@ class Setup {
 
 			if (
 				get_theme_mod( Options::$id['replace_theme_search'], true )
-				&& ! Site_Editor::$is_enabled
+				&& ! Site_Editor::is_enabled()
 			) {
 				remove_action( Hook::get_name( 'search_form' ), 'get_search_form' );
 				add_action( Hook::get_name( 'search_form' ), 'get_product_search_form' );

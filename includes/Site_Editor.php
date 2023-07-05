@@ -18,7 +18,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.4.0
- * @version  1.4.2
+ * @version  1.4.3
  */
 
 namespace WebManDesign\WCTI;
@@ -40,27 +40,22 @@ class Site_Editor {
 	/**
 	 * Is Site Editor enabled?
 	 *
-	 * @since   1.4.0
-	 * @access  public
-	 * @var     bool
+	 * @since    1.4.0
+	 * @version  1.4.3
+	 * @access   public
+	 * @var      null|bool
 	 */
-	public static $is_enabled = false;
+	public static $is_enabled = null;
 
 	/**
 	 * Initialization.
 	 *
 	 * @since    1.4.0
-	 * @version  1.4.2
+	 * @version  1.4.3
 	 *
 	 * @return  void
 	 */
 	public static function init() {
-
-		// Variables
-
-			// If the theme contains the method, the theme mod is definitely TRUE by default.
-			self::$is_enabled = (bool) get_theme_mod( self::$theme_mod_id, is_callable( WCTI_THEME_NAMESPACE . '\Setup\Site_Editor::is_enabled' ) );
-
 
 		// Processing
 
@@ -76,11 +71,38 @@ class Site_Editor {
 	} // /init
 
 	/**
+	 * Is Site Editor enabled?
+	 *
+	 * @since  1.4.3
+	 *
+	 * @return  boolean
+	 */
+	public static function is_enabled(): bool {
+
+		// Processing
+
+			if ( is_null( self::$is_enabled ) ) {
+				self::$is_enabled = (bool) get_theme_mod(
+					self::$theme_mod_id,
+					// If the theme contains `templates/index.html` file,
+					// the theme mod is definitely TRUE by default.
+					file_exists( get_template_directory() . '/templates/index.html' )
+				);
+			}
+
+
+		// Output
+
+			return (bool) self::$is_enabled;
+
+	} // /is_enabled
+
+	/**
 	 * Disabling block theme functionality (FSE) when needed.
 	 *
 	 * @see  WebManDesign\Theme_Slug\Setup\Site_Editor() theme class for more info.
 	 *
-	 * @since  1.4.0
+	 * @since  1.4.3
 	 *
 	 * @param  string $path
 	 *
@@ -91,8 +113,8 @@ class Site_Editor {
 		// Output
 
 			if (
-				stripos( $path, 'templates/index.html' )
-				&& ! self::$is_enabled
+				! self::is_enabled()
+				&& stripos( $path, 'templates/index.html' )
 			) {
 				return '';
 			} else {

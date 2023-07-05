@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.4.0
+ * @version  1.4.3
  */
 
 namespace WebManDesign\WCTI;
@@ -52,7 +52,7 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.4.0
+	 * @version  1.4.3
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -83,7 +83,7 @@ class Options {
 						'description'     => esc_html__( 'Replaces default search form in the theme with WooCommerce product search form.', 'wc-theme-integration' ),
 						'active_callback' => function( WP_Customize_Control $control ) {
 
-							if ( Site_Editor::$is_enabled ) {
+							if ( Site_Editor::is_enabled() ) {
 								return ! (bool) $control->manager->get_setting( Site_Editor::$theme_mod_id )->value();
 							} else {
 								return true;

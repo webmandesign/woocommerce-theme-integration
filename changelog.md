@@ -1,5 +1,19 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.3, 20230705
+
+### Fixed
+- Improving block theme support
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Options.php
+	includes/Setup.php
+	includes/Site_Editor.php
+
+
 ## 1.4.2, 20230627
 
 ### Updated
