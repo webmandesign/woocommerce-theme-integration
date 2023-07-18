@@ -10,13 +10,21 @@
 		padding-right: 2rem;
 	}
 
+	.wc-block-featured-product__wrapper {
+		flex-direction: column;
+	}
+
 	.wc-block-featured-product__title,
 	.wc-block-featured-product__description,
 	.wc-block-featured-product__price,
 	.wc-block-featured-product__link {
-		max-width: calc( var(--wcti--width--content) * #{ $ratio_maj } );
+		max-width: 22rem;
 		padding: 0;
 		margin: 10px 0;
+	}
+
+	.wc-block-featured-product__title {
+		font-size: var(--wcti--font-size--heading--block--featured-product);
 	}
 
 	.wc-block-featured-product__description {

@@ -30,6 +30,8 @@
 	--wcti--color--content-h: var( --color_content_headings, var(--color_body_headings, #000) );
 	--wcti--font-family--headings: var( --typography_font_secondary, var(--typography_font_headings, sans-serif) );
 	--wcti--font-size--h1: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_1, 2.5em) );
+	--wcti--font-size--heading--block--featured-product: 2em;
+	--wcti--font-size--heading--block--featured-category: 2em;
 	--wcti--font-size--heading--products-product: var( --typography_heading_size_posts, 1.25em );
 	--wcti--font-size--heading--uppercase: 1.25em;
 	--wcti--opacity--pseudo-bg: var( --pseudo_background_opacity, .05 );

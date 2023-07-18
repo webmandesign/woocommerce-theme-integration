@@ -1,5 +1,28 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.4, 20230718
+
+### Added
+- Edit page body admin class for WooCommerce pages
+- CSS variables to control Featured Product/Category heading size
+
+### Updated
+- Mini Cart block styles
+
+### Fixed
+- Single product badge position
+- Order view styles
+- Featured Product and Category block styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/woocommerce.scss
+	includes/Pages.php
+
+
 ## 1.4.3, 20230705
 
 ### Fixed

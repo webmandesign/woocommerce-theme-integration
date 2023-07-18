@@ -34,6 +34,7 @@
 		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: space-between;
+		position: relative; // Required for badge position.
 		width: 100%;
 		max-width: var(--wcti--width--wide);
 		margin: 0 auto;

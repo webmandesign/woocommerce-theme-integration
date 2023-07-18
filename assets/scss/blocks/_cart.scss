@@ -18,6 +18,10 @@
 	&__badge {
 		font-size: .75em;
 	}
+
+	&__drawer .wc-block-components-drawer__close-wrapper .wc-block-components-button {
+		border-color: inherit;
+	}
 }
 
 .wc-block-cart-item__image {

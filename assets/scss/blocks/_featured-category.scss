@@ -10,13 +10,21 @@
 		padding-right: 2rem;
 	}
 
+	.wc-block-featured-category__wrapper {
+		flex-direction: column;
+	}
+
 	.wc-block-featured-category__title,
 	.wc-block-featured-category__description,
 	.wc-block-featured-category__price,
 	.wc-block-featured-category__link {
-		max-width: calc( var(--wcti--width--content) * #{ $ratio_maj } );
+		max-width: 22rem;
 		padding: 0;
 		margin: 10px 0;
+	}
+
+	.wc-block-featured-category__title {
+		font-size: var(--wcti--font-size--heading--block--featured-category);
 	}
 
 	.wc-block-featured-category__description {

@@ -6,11 +6,12 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.2
+ * @version  1.4.4
  */
 
 namespace WebManDesign\WCTI;
 
+use WP_Post;
 use WC;
 
 // Exit if accessed directly.
@@ -22,7 +23,7 @@ class Pages {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.2.5
+	 * @version  1.4.4
 	 *
 	 * @return  void
 	 */
@@ -46,6 +47,8 @@ class Pages {
 
 			// Filters
 
+				add_filter( 'admin_body_class', __CLASS__ . '::body_class_admin' );
+
 				add_filter( 'single_post_title', __CLASS__ . '::page_endpoint_title' );
 					add_action( Hook::get_name( 'page_header/top' ), function() {
 						add_filter( 'the_title', 'wc_page_endpoint_title' );
@@ -61,6 +64,78 @@ class Pages {
 				add_filter( 'woocommerce_show_page_title', __CLASS__ . '::page_header', -10 );
 
 	} // /init
+
+	/**
+	 * HTML body classes in admin area.
+	 *
+	 * NOTE:
+	 * The `post-type--` classes are hacks to fix block editor iframe body classes,
+	 * when block editor is displayed in iframe and inherit only certain specific
+	 * body classes from parent admin screen. This is really tragic...
+	 * @link  https://github.com/WordPress/gutenberg/blob/v16.2.1/packages/block-editor/src/components/iframe/index.js#L123
+	 * @link  https://github.com/WordPress/gutenberg/issues/17854#issuecomment-1638268100
+	 *
+	 * @since  1.4.4
+	 *
+	 * @param  string $classes
+	 *
+	 * @return  string
+	 */
+	public static function body_class_admin( string $classes ): string {
+
+		// Requirements check
+
+			global $post;
+
+			if (
+				! is_admin()
+				|| ! $post instanceof WP_Post
+			) {
+				return $classes;
+			}
+
+
+		// Processing
+
+			switch ( $post->ID ) {
+
+				case wc_get_page_id( 'shop' ):
+					$classes .= ' is-woocommerce-page--shop';
+					$classes .= ' post-type--is-woocommerce-page--shop';
+					$classes .= ' ';
+					break;
+
+				case wc_get_page_id( 'cart' ):
+					$classes .= ' is-woocommerce-page--cart';
+					$classes .= ' post-type--is-woocommerce-page--cart';
+					$classes .= ' ';
+					break;
+
+				case wc_get_page_id( 'checkout' ):
+					$classes .= ' is-woocommerce-page--checkout';
+					$classes .= ' post-type--is-woocommerce-page--checkout';
+					$classes .= ' ';
+					break;
+
+				case wc_get_page_id( 'myaccount' ):
+					$classes .= ' is-woocommerce-page--myaccount';
+					$classes .= ' post-type--is-woocommerce-page--myaccount';
+					$classes .= ' ';
+					break;
+
+				case wc_get_page_id( 'terms' ):
+					$classes .= ' is-woocommerce-page--terms';
+					$classes .= ' post-type--is-woocommerce-page--terms';
+					$classes .= ' ';
+					break;
+			}
+
+
+		// Output
+
+			return $classes;
+
+	} // /body_class_admin
 
 	/**
 	 * Replace a page title with the endpoint title.
