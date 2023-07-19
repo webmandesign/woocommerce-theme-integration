@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.5, 20230719
+
+### Fixed
+- Products list block styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+
+
 ## 1.4.4, 20230718
 
 ### Added

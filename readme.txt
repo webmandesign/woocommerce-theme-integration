@@ -5,7 +5,7 @@ Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
 Tested up to:      6.2
-Stable tag:        1.4.4
+Stable tag:        1.4.5
 License:           GNU General Public License v3
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -46,6 +46,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 
 == Upgrade Notice ==
+
+= 1.4.5 =
+Fixing styling bugs.
 
 = 1.4.4 =
 Updating styles and fixing bugs.
