@@ -1,0 +1,58 @@
+/* FILE: woocommerce/blocks/_filters.scss */
+
+// Common.
+
+	.wc-blocks-filter-wrapper,
+	.wp-block-woocommerce-filter-wrapper .block-editor-block-list__layout {
+
+		> .wp-block-heading {
+			margin-bottom: 1em;
+			font-size: 1em;
+			font-weight: 700;
+			line-height: 1.25;
+			text-transform: uppercase;
+			letter-spacing: var(--wcti--spacing--letters);
+		}
+	}
+
+	.wc-block-attribute-filter__actions,
+	.wc-block-price-filter__actions,
+	.wc-block-rating-filter__actions,
+	.wc-block-stock-filter__actions,
+	.wc-block-components-price-slider__actions {
+
+		&[class] button[type=submit]:not(.wp-block-search__button).wc-block-components-filter-submit-button {
+			padding: .5em 1em;
+			font-size: .75rem;
+		}
+	}
+
+	.wc-block-active-filters,
+	.wc-block-components-price-slider,
+	.wc-block-stock-filter,
+	.wp-block-woocommerce-rating-filter {
+		margin-bottom: 0;
+	}
+
+
+
+// Attribute filter.
+
+	.wc-block-attribute-filter-list-count {
+		margin-#{$left}: .25em;
+	}
+
+// Active filters.
+
+	.wc-block-active-filters {
+
+		.wc-block-active-filters__clear-all {
+			font-size: .8em;
+			text-decoration: none;
+			color: var(--wcti--color--accent);
+
+			&:active {
+				background: none;
+			}
+		}
+	}

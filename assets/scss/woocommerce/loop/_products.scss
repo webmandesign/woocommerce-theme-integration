@@ -24,6 +24,10 @@ ul.products {
 		margin: 0 auto ( $ratio + em );
 		border-radius: var(--wcti--border--radius);
 		vertical-align: top;
+
+		&[width][height] {
+			object-fit: cover;
+		}
 	}
 
 	h3 {

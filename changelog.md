@@ -1,5 +1,18 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.6, 20230725
+
+### Fixed
+- Products list image custom aspect ratio
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+	includes/Loop.php
+
+
 ## 1.4.5, 20230719
 
 ### Fixed

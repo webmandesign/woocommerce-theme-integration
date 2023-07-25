@@ -6,10 +6,12 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.2
+ * @version  1.4.6
  */
 
 namespace WebManDesign\WCTI;
+
+use WP_HTML_Tag_Processor;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -20,7 +22,7 @@ class Loop {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.2
+	 * @version  1.4.6
 	 *
 	 * @return  void
 	 */
@@ -60,6 +62,8 @@ class Loop {
 				add_filter( 'the_title', __CLASS__ . '::search_results_product_title', 10, 2 );
 
 				add_filter( Hook::get_name( 'loop/search_template_hierarchy/condition' ), __CLASS__ . '::search_template_hierarchy', 10, 2 );
+
+				add_filter( 'woocommerce_product_get_image', __CLASS__ . '::product_image', 10, 4 );
 
 	} // /init
 
@@ -321,5 +325,44 @@ class Loop {
 			return $condition;
 
 	} // /search_template_hierarchy
+
+	/**
+	 * Modifying product image HTML.
+	 *
+	 * @since  1.4.6
+	 *
+	 * @param  string     $image    Image HTML.
+	 * @param  WC_Product $product  Product object.
+	 * @param  string     $size     Default: 'woocommerce_thumbnail'.
+	 * @param  array      $attr     Image attributes.
+	 *
+	 * @return  string
+	 */
+	public static function product_image( string $image, $product, string $size, array $attr ): string {
+
+		// Processing
+
+			if ( 'woocommerce_thumbnail' === $size ) {
+
+				$html = new WP_HTML_Tag_Processor( $image );
+
+				$html->next_tag();
+
+				$width  = $html->get_attribute( 'width' );
+				$height = $html->get_attribute( 'height' );
+
+				if ( $width && $height ) {
+					$html->set_attribute( 'style', 'aspect-ratio:' . absint( $width ) . '/' . absint( $height ) . ';' . (string) $html->get_attribute( 'style' ) );
+				}
+
+				$image = $html->get_updated_html();
+			}
+
+
+		// Output
+
+			return $image;
+
+	} // /product_image
 
 }
