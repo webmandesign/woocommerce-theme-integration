@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.6
+ * @version  1.4.7
  */
 
 namespace WebManDesign\WCTI;
@@ -329,16 +329,17 @@ class Loop {
 	/**
 	 * Modifying product image HTML.
 	 *
-	 * @since  1.4.6
+	 * @since    1.4.6
+	 * @version  1.4.7
 	 *
-	 * @param  string     $image    Image HTML.
-	 * @param  WC_Product $product  Product object.
-	 * @param  string     $size     Default: 'woocommerce_thumbnail'.
-	 * @param  array      $attr     Image attributes.
+	 * @param  string       $image    Image HTML.
+	 * @param  WC_Product   $product  Product object.
+	 * @param  string|int[] $size     Accepts any registered image size name, or an array of width and height values in pixels (in that order). Default: 'woocommerce_thumbnail'.
+	 * @param  array        $attr     Image attributes.
 	 *
 	 * @return  string
 	 */
-	public static function product_image( string $image, $product, string $size, array $attr ): string {
+	public static function product_image( string $image, $product, $size, array $attr ): string {
 
 		// Processing
 

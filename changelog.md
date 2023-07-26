@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.4.7, 20230726
+
+### Fixed
+- PHP error
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Loop.php
+
+
 ## 1.4.6, 20230725
 
 ### Fixed
