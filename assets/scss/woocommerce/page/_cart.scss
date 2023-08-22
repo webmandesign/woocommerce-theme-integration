@@ -39,6 +39,7 @@
 	margin-bottom: calc( var(--wcti--spacing--white) / 2 );
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
+		margin-bottom: 0;
 
 		h2 {
 			margin-top: 2rem;
@@ -187,13 +188,29 @@
 				margin-bottom: 1em;
 			}
 		}
+
+		.wc-block-components-notice-banner {
+			justify-content: center;
+		}
+
+		.wc-block-components-notice-banner__content {
+			flex-basis: auto;
+		}
 	}
 }
 
 .return-to-shop {
 	margin-top: 1em;
 
-	.button::before {
-		content: '\21A9\00a0'; // leftwards arrow with hook + &nbsp;
+	.button {
+
+		&::before {
+			content: '\21A9\00a0'; // leftwards arrow with hook + &nbsp;
+		}
+
+		// Needed for WC8.
+		br {
+			display: none;
+		}
 	}
 }

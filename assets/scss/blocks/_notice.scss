@@ -1,0 +1,80 @@
+/* FILE: woocommerce/blocks/_notice.scss */
+
+.wc-block-components-notice-banner[class] {
+	@extend %shaded_background;
+	gap: 1em;
+	position: relative;
+	padding: 1em !important;
+	margin: 0 auto ( $ratio + em );
+	font-size: 1em;
+	line-height: inherit;
+	background: none;
+	color: inherit;
+	border: none;
+	border-radius: var(--wcti--border--radius);
+
+	@include media( map_get( $breakpoint, 'l' ) ) {
+		padding-left: 2em !important;
+		padding-right: 2em !important;
+	}
+
+	&:last-child {
+		margin-bottom: 2em;
+	}
+
+	> .wc-block-components-notice-banner__content {
+		padding-inline: 0;
+
+		li + li {
+			margin-top: $ratio_maj + em;
+		}
+	}
+
+	> svg {
+		fill: currentColor;
+		width: $ratio + em;
+		height: $ratio + em;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+	}
+
+	> .wc-block-components-button,
+	> .wc-block-components-notice-banner__content .wc-forward.wp-element-button {
+		height: auto !important;
+		width: auto !important;
+		margin-inline-start: 1em;
+		line-height: inherit !important;
+		color: inherit !important;
+		border-radius: 0 !important;
+
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: none !important;
+		}
+	}
+
+	&.is-error,
+	&.is-warning,
+	&.is-success,
+	&.is-info {
+		border-color: inherit;
+		background: none;
+
+		> svg {
+			background: none;
+		}
+	}
+
+	&.is-error {
+		background: var(--wcti--color--accent);
+	}
+
+	// Yes, this is needed.
+	// For example in WC8 in coupon notice on Checkout page.
+	p:empty {
+		display: none;
+	}
+}

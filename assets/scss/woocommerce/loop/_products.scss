@@ -32,8 +32,12 @@ ul.products {
 
 	h3 {
 		margin: 0;
-		font-size: var(--wcti--font-size--heading--products-product);
 		font-weight: 700;
+
+		&,
+		&[class] {
+			font-size: var(--wcti--font-size--heading--products-product);
+		}
 	}
 
 	.button,

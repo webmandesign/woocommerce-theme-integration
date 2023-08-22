@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.4.2
+// @version  1.5.0
 //
 
 @import 'tools/_index';
@@ -22,7 +22,7 @@
 	// A non-zero value is required for minification process not to strip the unit.
 	--wcti--zero: var( --zero, 0.001px );
 
-	--wcti--border--radius: 0;
+	--wcti--border--radius: 0px; // Unit is required for clamp() in product gallery.
 	--wcti--color--accent: var( --color_accent, #f00 );
 	--wcti--color--button-bg: var( --color_button_background, #f00 );
 	--wcti--color--button-txt: var( --color_button_text, #fff );
@@ -40,6 +40,7 @@
 	--wcti--spacing--margin--page-header--bottom: 2rem;
 	--wcti--spacing--margin--products-add-to-cart--top: .5rem;
 	--wcti--spacing--margin--products-sorting: 2rem 0;
+	--wcti--spacing--padding--body: var( --body_padding, 6vw );
 	--wcti--spacing--padding--content: var( --content_padding, var(--white_space, 100px) );
 	--wcti--spacing--white: var( --white_space, 100px );
 	--wcti--width--col--cart-cross-sells: 50%;
@@ -78,6 +79,7 @@ body {
 	--wcti--width--col-gap--product: var(--wcti--width--col-gap);
 	--wcti--width--col-gap--checkout: var(--wcti--width--col-gap);
 	--wcti--width--col-gap--review: var(--wcti--width--col-gap);
+	--wcti--width--col-gap--login-register: var(--wcti--width--col-gap);
 	--wcti--width--order: var(--wcti--width--content);
 	--wcti--width--tab-panel: var(--wcti--width--content);
 	--wcti--width--my-account-panel: var(--wcti--width--content);

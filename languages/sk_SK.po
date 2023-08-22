@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Integration for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2023-06-23 05:35+0200\n"
-"PO-Revision-Date: 2023-06-23 05:40+0200\n"
+"POT-Creation-Date: 2023-08-22 16:26+0200\n"
+"PO-Revision-Date: 2023-08-22 16:29+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,7 +19,7 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/Loader.php:64
+#: includes/Loader.php:65
 msgid ""
 "Your theme seems to claim WooCommerce integration already. The Integration "
 "for WooCommerce plugin is not needed."
@@ -27,7 +27,7 @@ msgstr ""
 "Zdá sa, že vaša téma už obsahuje integráciu s pluginom WooCommerce. Plugin "
 "Integrácia pre WooCommerce nie je potrebné použiť."
 
-#: includes/Loader.php:75
+#: includes/Loader.php:76
 msgid ""
 "Sorry, the Integration for WooCommerce plugin will not work with your theme. "
 "Please check WordPress themes by WebManDesign.eu."
@@ -35,47 +35,47 @@ msgstr ""
 "Ospravedlňujeme sa, plugin Integration for WooCommerce nebude fungovať s "
 "vašou témou. Skúste použiť WordPress tému od WebManDesign.eu."
 
-#: includes/Loop.php:74
+#: includes/Loop.php:81
 msgid "Shop category"
 msgstr "Kategória produktov"
 
-#: includes/Loop.php:103
+#: includes/Loop.php:110
 msgid "Shop now &rarr;"
 msgstr "Nakupovať &rarr;"
 
-#: includes/Loop.php:148
+#: includes/Loop.php:155
 msgid "Products Navigation"
 msgstr "Navigácia produktov"
 
-#: includes/Loop.php:176 includes/Single.php:86
+#: includes/Loop.php:183 includes/Single.php:85
 msgctxt "Pagination text (visible): previous."
 msgid "&larr;"
 msgstr "&larr;"
 
-#: includes/Loop.php:178 includes/Single.php:86
+#: includes/Loop.php:185 includes/Single.php:85
 msgctxt "Pagination text (hidden): previous."
 msgid "Previous page"
 msgstr "Predchádzajúca stránka"
 
-#: includes/Loop.php:183 includes/Single.php:87
+#: includes/Loop.php:190 includes/Single.php:86
 msgctxt "Pagination text (hidden): next."
 msgid "Next page"
 msgstr "Nasledujúca stránka"
 
-#: includes/Loop.php:185 includes/Single.php:87
+#: includes/Loop.php:192 includes/Single.php:86
 msgctxt "Pagination text (visible): next."
 msgid "&rarr;"
 msgstr "&rarr;"
 
-#: includes/Loop.php:207
+#: includes/Loop.php:214
 msgid "List of products"
 msgstr "Zoznam produktov"
 
-#: includes/Options.php:82
+#: includes/Options.php:85
 msgid "Replace theme search"
 msgstr "Nahradiť vyhľadávanie témy"
 
-#: includes/Options.php:83
+#: includes/Options.php:86
 msgid ""
 "Replaces default search form in the theme with WooCommerce product search "
 "form."
@@ -83,21 +83,41 @@ msgstr ""
 "Nahrádza pôvodný formulár vyhľadávania v téme formulárom vyhľadávania "
 "produktov WooCommerce."
 
-#: includes/Options.php:109
+#: includes/Options.php:112
 msgid "Small screen products per row"
 msgstr "Produktov v riadku na malých obrazovkách"
 
-#: includes/Options.php:110
+#: includes/Options.php:113
 msgid "How many products should be shown per row on small screen devices?"
 msgstr ""
 "Koľko produktov chcete zobraziť v riadku na zariadeniach s malou obrazovkou?"
 
-#: includes/Pages.php:171
+#: includes/Options.php:136
+msgid "Upsell products columns"
+msgstr "Stĺpce produktov navýšenia predaja"
+
+#: includes/Options.php:137
+msgid ""
+"Number of columns in \"You may also like…\" products list on single product "
+"page."
+msgstr ""
+"Počet stĺpcov v zozname produktov \"Možno by sa Vám páčilo…\" na stránke "
+"produktu."
+
+#: includes/Options.php:160
+msgid "Related products columns"
+msgstr "Stĺpce súvisiacich produktov"
+
+#: includes/Options.php:161
+msgid "Number of columns in \"Related products\" list on single product page."
+msgstr "Počet stĺpcov v zozname \"Súvisiace produkty\" na stránke produktu."
+
+#: includes/Pages.php:245
 msgid "Cart content"
 msgstr "Obsah košíka"
 
 #. translators: %d: number of shopping cart items.
-#: includes/Pages.php:175
+#: includes/Pages.php:249
 #, php-format
 msgctxt "Shopping cart items count."
 msgid "(%d item)"
@@ -106,18 +126,18 @@ msgstr[0] "(%d položka)"
 msgstr[1] "(%d položky)"
 msgstr[2] "(%d položiek)"
 
-#: includes/Pages.php:194
+#: includes/Pages.php:268
 msgid "Use your discount coupon code here"
 msgstr "Použite svoj zľavový kupón"
 
-#: includes/Pages.php:246
+#: includes/Pages.php:320
 msgid "Continue Shopping"
 msgstr "Pokračovať v nákupe"
 
-#: includes/Pages.php:261
+#: includes/Pages.php:335
 msgid "Checkout"
 msgstr "Pokladňa"
 
-#: includes/Single.php:222
+#: includes/Single.php:243
 msgid "More details&hellip;"
 msgstr "Viac informácií&hellip;"

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.4.3
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -22,19 +22,23 @@ class Options {
 	/**
 	 * Plugin option IDs.
 	 *
-	 * @since  1.4.0
+	 * @since    1.4.0
+	 * @version  1.5.0
 	 *
 	 * @var array
 	 */
 	public static $id = array(
-		'replace_theme_search'   => 'wcti_replace_theme_search',
-		'catalog_columns_mobile' => 'wcti_catalog_columns_mobile',
+		'replace_theme_search'     => 'wcti_replace_theme_search',
+		'catalog_columns_mobile'   => 'wcti_catalog_columns_mobile',
+		'related_products_columns' => 'wcti_related_products_columns',
+		'upsell_products_columns'  => 'wcti_upsell_products_columns',
 	);
 
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.3.0
+	 * @since    1.3.0
+	 * @version  1.5.0
 	 *
 	 * @return  void
 	 */
@@ -44,7 +48,8 @@ class Options {
 
 			// Actions
 
-				add_action( 'customize_register', __CLASS__ . '::customize_register', 20 );
+				add_action( 'customize_register', __CLASS__ . '::options', 20 );
+				add_action( 'customize_register', __CLASS__ . '::pointers', 20 );
 
 	} // /init
 
@@ -52,13 +57,13 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.4.3
+	 * @version  1.5.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
 	 * @return  void
 	 */
-	public static function customize_register( WP_Customize_Manager $wp_customize ) {
+	public static function options( WP_Customize_Manager $wp_customize ) {
 
 		// Processing
 
@@ -116,6 +121,79 @@ class Options {
 					)
 				);
 
-	} // /customize_register
+			$wp_customize->add_setting(
+				self::$id['upsell_products_columns'],
+				array(
+					'capability'        => 'manage_woocommerce',
+					'default'           => 3,
+					'sanitize_callback' => 'absint',
+				)
+			);
+
+				$wp_customize->add_control(
+					self::$id['upsell_products_columns'],
+					array(
+						'type'        => 'number',
+						'section'     => 'woocommerce_product_catalog',
+						'label'       => esc_html__( 'Upsell products columns', 'wc-theme-integration' ),
+						'description' => esc_html__( 'Number of columns in "You may also like…" products list on single product page.', 'wc-theme-integration' ),
+						'input_attrs' => array(
+							'min'  => 1,
+							'max'  => 6,
+							'step' => 1,
+						),
+					)
+				);
+
+			$wp_customize->add_setting(
+				self::$id['related_products_columns'],
+				array(
+					'capability'        => 'manage_woocommerce',
+					'default'           => 3,
+					'sanitize_callback' => 'absint',
+				)
+			);
+
+				$wp_customize->add_control(
+					self::$id['related_products_columns'],
+					array(
+						'type'        => 'number',
+						'section'     => 'woocommerce_product_catalog',
+						'label'       => esc_html__( 'Related products columns', 'wc-theme-integration' ),
+						'description' => esc_html__( 'Number of columns in "Related products" list on single product page.', 'wc-theme-integration' ),
+						'input_attrs' => array(
+							'min'  => 1,
+							'max'  => 6,
+							'step' => 1,
+						),
+					)
+				);
+
+	} // /options
+
+	/**
+	 * Setup partial refresh pointers.
+	 *
+	 * @since  1.5.0
+	 *
+	 * @param  WP_Customize_Manager $wp_customize
+	 *
+	 * @return  void
+	 */
+	public static function pointers( WP_Customize_Manager $wp_customize ) {
+
+		// Processing
+
+			// Upsells columns.
+			$wp_customize->selective_refresh->add_partial( self::$id['upsell_products_columns'], array(
+				'selector' => '.single-product .upsells',
+			) );
+
+			// Related products columns.
+			$wp_customize->selective_refresh->add_partial( self::$id['related_products_columns'], array(
+				'selector' => '.single-product .related',
+			) );
+
+	} // /pointers
 
 }

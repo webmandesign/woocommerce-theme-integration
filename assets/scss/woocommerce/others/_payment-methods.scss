@@ -54,3 +54,14 @@
 		}
 	}
 }
+
+.woocommerce-bacs-bank-details {
+
+	h2 + h3 {
+		margin-top: $ratio + rem;
+	}
+
+	h3 {
+		font-size: .9em;
+	}
+}

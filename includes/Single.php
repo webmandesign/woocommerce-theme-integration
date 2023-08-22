@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.2
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -96,7 +96,8 @@ class Single {
 	/**
 	 * Up-sells and related products setup.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.5.0
 	 *
 	 * @param  array $args
 	 *
@@ -104,9 +105,20 @@ class Single {
 	 */
 	public static function products_list_args( array $args ): array {
 
+		// Variables
+
+			$default = wc_get_theme_support( 'product_grid::default_columns', 3 );
+
+			if ( 'woocommerce_upsell_display_args' === current_filter() ) {
+				$columns = get_theme_mod( Options::$id['upsell_products_columns'], $default );
+			} else {
+				$columns = get_theme_mod( Options::$id['related_products_columns'], $default );
+			}
+
+
 		// Processing
 
-			$args['posts_per_page'] = $args['columns'] = absint( get_option( 'woocommerce_catalog_columns', wc_get_theme_support( 'product_grid::default_columns', 3 ) ) );
+			$args['posts_per_page'] = $args['columns'] = absint( $columns );
 
 
 		// Output

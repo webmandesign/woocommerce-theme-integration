@@ -6,8 +6,8 @@
 	&.has-content-layout-no-padding {
 
 		.site-content {
-			padding-left: 6vw;
-			padding-right: 6vw;
+			padding-left: var(--wcti--spacing--padding--body);
+			padding-right: var(--wcti--spacing--padding--body);
 		}
 
 		.content-area {

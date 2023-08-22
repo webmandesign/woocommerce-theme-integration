@@ -10,6 +10,7 @@
 		float: $right;
 	}
 
+	br,
 	.clear {
 		display: none;
 	}
@@ -21,6 +22,15 @@
 		max-width: var(--wcti--width--content);
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	&:not(.customer-registration),
+	.col-1,
+	.col-2 {
+		@extend %shaded_background;
+		position: relative;
+		padding: 2em;
+		border-radius: var(--wcti--border--radius);
 	}
 
 	.col-2 {
@@ -37,7 +47,7 @@
 
 		.col-1,
 		.col-2 {
-			width: calc( 50% - 2em );
+			width: calc( 50% - var(--wcti--width--col-gap--login-register) );
 		}
 
 		.col-2 {

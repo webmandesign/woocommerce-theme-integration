@@ -9,6 +9,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 1em;
 	position: relative;
 	padding: 1em;
 	margin: 0 0 ( $ratio + em );
@@ -72,6 +73,7 @@
 }
 
 .woocommerce-notices-wrapper {
+	z-index: 10;
 
 	&:empty {
 		display: none;

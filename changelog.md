@@ -1,5 +1,22 @@
 # Integration for WooCommerce Changelog
 
+## 1.5.0, 20230822
+
+### Added
+- 
+
+### Updated
+- 
+
+### Fixed
+- 
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+
+
 ## 1.4.7, 20230726
 
 ### Fixed

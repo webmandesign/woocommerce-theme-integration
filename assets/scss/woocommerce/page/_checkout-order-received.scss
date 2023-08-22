@@ -44,3 +44,9 @@
 		}
 	}
 }
+
+[data-template="order-confirmation"] h1 {
+	max-width: var(--wcti--width--order);
+	margin: 0 auto ( $ratio + rem );
+	font-size: 2em;
+}

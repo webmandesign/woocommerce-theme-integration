@@ -16,3 +16,9 @@
 body [class*="wp-block"] > .woocommerce.woocommerce.woocommerce {
 	max-width: none;
 }
+
+// Yes, unfortunately, this is needed.
+// (For example: in WC8 in coupon form on Checkout page.)
+.screen-reader-text + br {
+	display: none;
+}
