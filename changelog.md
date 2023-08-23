@@ -1,20 +1,34 @@
 # Integration for WooCommerce Changelog
 
-## 1.5.0, 20230822
+## 1.5.0, 20230823
 
 ### Added
-- 
+- WooCommerce 8 compatibility
+- Option to set up related products columns number
+- Option to set up upsell products columns number
 
 ### Updated
-- 
+- Improving WooCommerce blocks
+- CSS styles
+- Localization
 
 ### Fixed
-- 
+- CSS styles
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/js/block-mods.js
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	includes/Autoload.php
+	includes/Blocks.php
+	includes/Loader.php
+	includes/Options.php
+	includes/Single.php
+	languages/*.*
 
 
 ## 1.4.7, 20230726

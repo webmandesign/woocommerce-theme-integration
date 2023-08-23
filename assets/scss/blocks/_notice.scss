@@ -2,7 +2,7 @@
 
 .wc-block-components-notice-banner[class] {
 	@extend %shaded_background;
-	gap: 1em;
+	gap: .5em;
 	position: relative;
 	padding: 1em !important;
 	margin: 0 auto ( $ratio + em );
@@ -14,6 +14,7 @@
 	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'l' ) ) {
+		gap: 1em;
 		padding-left: 2em !important;
 		padding-right: 2em !important;
 	}
@@ -32,21 +33,38 @@
 
 	> svg {
 		fill: currentColor;
-		width: $ratio + em;
-		height: $ratio + em;
+		width: $ratio_min + 1em;
+		height: $ratio_min + 1em;
 		padding: 0;
+		margin-#{$left}: -.5em;
 		background: none;
 		border-radius: 0;
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			width: $ratio + em;
+			height: $ratio + em;
+			margin-#{$left}: 0;
+		}
 	}
 
 	> .wc-block-components-button,
 	> .wc-block-components-notice-banner__content .wc-forward.wp-element-button {
 		height: auto !important;
 		width: auto !important;
-		margin-inline-start: 1em;
+		margin-#{$left}: 1em;
+		text-align: inherit;
 		line-height: inherit !important;
 		color: inherit !important;
 		border-radius: 0 !important;
+
+		@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+			float: none;
+			display: block;
+			padding-top: $ratio_min + em !important;
+			padding-bottom: $ratio_min + em !important;
+			margin-top: $ratio_min + em;
+			margin-#{$left}: 0;
+		}
 
 		&,
 		&:hover,

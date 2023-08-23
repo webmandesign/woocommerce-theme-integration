@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.5.0
  */
 
 namespace WebManDesign\WCTI;
@@ -41,7 +41,7 @@ class Loader {
 	 * After setup theme.
 	 *
 	 * @since    1.0.0
-	 * @version  1.3.0
+	 * @version  1.5.0
 	 *
 	 * @return  void
 	 */
@@ -89,6 +89,7 @@ class Loader {
 			Setup::init();
 
 			Assets::init();
+			Blocks::init();
 			Loop::init();
 			Options::init();
 			Pages::init();

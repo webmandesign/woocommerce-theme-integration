@@ -48,4 +48,4 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 == Upgrade Notice ==
 
 = 1.5.0 =
-Added WooCommerce 8 compatibility.
+Added WooCommerce 8 compatibility. Added related products and upsells columns number modification options. Updating, improving and fixing CSS styles.

@@ -1,0 +1,11 @@
+/* FILE: woocommerce/blocks/_product-template.scss */
+// This is actually `<!-- wp:post-template {"className":"products-block-post-template"} -->`.
+
+.products-block-post-template .wp-block-post > * {
+	margin-bottom: .25rem;
+	margin-top: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

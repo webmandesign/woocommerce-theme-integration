@@ -1,0 +1,38 @@
+/* FILE: woocommerce/blocks/_product-image.scss */
+
+.wc-block-components-product-image {
+	margin: 0;
+	border-radius: var(--wcti--border--radius);
+
+	.wp-block-post > &[class] {
+		margin-bottom: $ratio + rem;
+	}
+
+	.wc-block-components-product-sale-badge[class] {
+		margin: var(--wcti--border--radius);
+	}
+}
+
+.wc-block-components-product-sale-badge {
+	top: 0 !important;
+	#{$left}: 50% !important;
+	padding: .5rem 1rem;
+	font-size: .8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: var(--wcti--spacing--letters);
+	background: var(--wcti--color--accent);
+	color: var(--wcti--color--accent-contrast);
+	border: none;
+	border-radius: var(--wcti--border--radius);
+
+	&.wc-block-components-product-sale-badge--align-left {
+		left: 0 !important;
+		right: auto !important;
+	}
+
+	&.wc-block-components-product-sale-badge--align-right {
+		left: auto !important;
+		right: 0 !important;
+	}
+}

@@ -23,7 +23,7 @@
 		display: block;
 		text-align: $right;
 
-		&::before {
+		&[data-title]::before {
 			content: attr( data-title );
 			float: $left;
 			margin-bottom: .5em;

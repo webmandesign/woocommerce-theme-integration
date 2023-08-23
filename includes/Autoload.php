@@ -8,7 +8,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.0
+ * @version  1.5.0
  */
 
 // Exit if accessed directly.
@@ -33,10 +33,14 @@ class WCTI_Autoload {
 	/**
 	 * Array of white-listed, allowed files for improved security.
 	 *
+	 * @since    1.0.0
+	 * @version  1.5.0
+	 *
 	 * @var array
 	 */
 	private static $allowed_files = array(
 		'/Assets.php',
+		'/Blocks.php',
 		'/Hook.php',
 		'/Loader.php',
 		'/Loop.php',
