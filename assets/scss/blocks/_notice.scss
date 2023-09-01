@@ -86,7 +86,7 @@
 		}
 	}
 
-	&.is-error {
+	&.is-error::before {
 		background: var(--wcti--color--accent);
 	}
 
