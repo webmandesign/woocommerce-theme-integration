@@ -1,8 +1,15 @@
 /* FILE: woocommerce/page/_my-account-downloads.scss */
 
-.shop_table .download-file {
+.shop_table {
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
-		text-align: center;
+	.download-product {
+		font-weight: 700;
+	}
+
+	.download-file {
+
+		@include media( map_get( $breakpoint, 'l' ) ) {
+			text-align: center;
+		}
 	}
 }

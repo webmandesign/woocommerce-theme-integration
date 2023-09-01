@@ -1,5 +1,21 @@
 # Integration for WooCommerce Changelog
 
+## 1.5.1, 20230901
+
+### Updated
+- CSS styles
+
+### Fixed
+- Editor CSS styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+	includes/Assets.php
+
+
 ## 1.5.0, 20230823
 
 ### Added

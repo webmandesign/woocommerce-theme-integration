@@ -12,4 +12,12 @@
 			}
 		}
 	}
+
+	&__cell-order-total {
+
+		.amount {
+			font-weight: 700;
+			color: var(--wcti--color--content-h);
+		}
+	}
 }

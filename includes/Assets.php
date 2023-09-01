@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.2
+ * @version  1.5.1
  */
 
 namespace WebManDesign\WCTI;
@@ -108,18 +108,12 @@ class Assets {
 	/**
 	 * Enqueue styles and scripts.
 	 *
-	 * @since  1.4.2
+	 * @since    1.4.2
+	 * @version  1.5.1
 	 *
 	 * @return  void
 	 */
 	public static function enqueue_editor() {
-
-		// Requirements check
-
-			if ( ! wp_is_block_theme() ) {
-				return;
-			}
-
 
 		// Processing
 
