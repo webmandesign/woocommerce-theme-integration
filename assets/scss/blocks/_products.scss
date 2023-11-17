@@ -158,15 +158,19 @@
 }
 
 .wc-block-grid.wc-block-grid .wc-block-grid__products {
-	display: flex;
-	flex-wrap: wrap;
-	margin: calc( var(--wcti--spacing--gap--posts-list) * -1 ) calc( var(--wcti--spacing--gap--posts-list) / 2 * -1 );
 
-	.wc-block-grid__product {
-		flex: 0 1 auto; // Have to override WooCommerce block default styles.
-		max-width: none;
-		margin: var(--wcti--spacing--gap--posts-list) calc( var(--wcti--spacing--gap--posts-list) / 2 );
-		font-size: 1em;
+	&,
+	.editor-styles-wrapper & {
+		display: flex;
+		flex-wrap: wrap;
+		margin: calc( var(--wcti--spacing--gap--posts-list) * -1 ) calc( var(--wcti--spacing--gap--posts-list) / 2 * -1 );
+
+		.wc-block-grid__product {
+			flex: 0 1 auto; // Have to override WooCommerce block default styles.
+			max-width: none;
+			margin: var(--wcti--spacing--gap--posts-list) calc( var(--wcti--spacing--gap--posts-list) / 2 );
+			font-size: 1em;
+		}
 	}
 }
 

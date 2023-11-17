@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.1
+ * @version  1.5.3
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +20,7 @@ class Assets {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.2
+	 * @version  1.5.3
 	 *
 	 * @return  void
 	 */
@@ -31,7 +31,7 @@ class Assets {
 			// Actions
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue' );
-				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue_editor' );
+				add_action( 'enqueue_block_assets', __CLASS__ . '::enqueue_editor' );
 
 				add_action( 'woocommerce_product_after_tabs', __CLASS__ . '::print', 0 );
 
@@ -45,7 +45,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.2
+	 * @version  1.5.3
 	 *
 	 * @return  void
 	 */
@@ -68,18 +68,6 @@ class Assets {
 			);
 			wp_style_add_data(
 				'wc-theme-integration',
-				'rtl',
-				'replace'
-			);
-
-			wp_enqueue_style(
-				'wc-theme-integration-blocks',
-				WCTI_URL . 'assets/css/blocks.css',
-				array(),
-				'v' . WCTI_VERSION
-			);
-			wp_style_add_data(
-				'wc-theme-integration-blocks',
 				'rtl',
 				'replace'
 			);
@@ -109,7 +97,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.4.2
-	 * @version  1.5.1
+	 * @version  1.5.3
 	 *
 	 * @return  void
 	 */
@@ -117,12 +105,14 @@ class Assets {
 
 		// Processing
 
-			wp_enqueue_style(
-				'wc-theme-integration-custom-properties',
-				WCTI_URL . 'assets/css/custom-properties.css',
-				array(),
-				'v' . WCTI_VERSION
-			);
+			if ( is_admin() ) {
+				wp_enqueue_style(
+					'wc-theme-integration-custom-properties',
+					WCTI_URL . 'assets/css/custom-properties.css',
+					array(),
+					'v' . WCTI_VERSION
+				);
+			}
 
 			wp_enqueue_style(
 				'wc-theme-integration-blocks',

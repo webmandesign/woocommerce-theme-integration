@@ -1,5 +1,18 @@
 # Integration for WooCommerce Changelog
 
+## 1.5.3, 20231117
+
+### Fixed
+- Block editor CSS styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	includes/Assets.php
+
+
 ## 1.5.2, 20230901
 
 ### Fixed
