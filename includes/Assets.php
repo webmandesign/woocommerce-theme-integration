@@ -60,6 +60,7 @@ class Assets {
 				'v' . WCTI_VERSION
 			);
 
+			// This has to be loaded globally due to possible shortcode styles.
 			wp_enqueue_style(
 				'wc-theme-integration',
 				WCTI_URL . 'assets/css/woocommerce.css',

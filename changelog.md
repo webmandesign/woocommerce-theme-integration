@@ -1,5 +1,21 @@
 # Integration for WooCommerce Changelog
 
+## 1.5.4, 20231228
+
+### Fixed
+- Notice block styles
+- Targeting heading styles more precisely
+- Address columns styles in order confirmation/details page
+- Form label styles for checkboxes and radio buttons
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/woocommerce.scss
+
+
 ## 1.5.3, 20231117
 
 ### Fixed

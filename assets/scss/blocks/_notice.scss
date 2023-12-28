@@ -47,15 +47,27 @@
 		}
 	}
 
+	> .button,
+	> .wp-element-button,
 	> .wc-block-components-button,
-	> .wc-block-components-notice-banner__content .wc-forward.wp-element-button {
+	> .wc-block-components-notice-banner__content .button,
+	> .wc-block-components-notice-banner__content .wp-element-button {
+		float: $right;
 		height: auto !important;
 		width: auto !important;
+		padding: 0 !important;
 		margin-#{$left}: 1em;
 		text-align: inherit;
 		line-height: inherit !important;
+		background: none !important;
 		color: inherit !important;
+		border: 0 !important;
 		border-radius: 0 !important;
+		opacity: 1 !important;
+
+		&:not(:hover):not(:focus):not(:active) {
+			text-decoration: none;
+		}
 
 		@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
 			float: none;

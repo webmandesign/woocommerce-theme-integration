@@ -45,6 +45,27 @@
 	}
 }
 
+.woocommerce-columns--addresses {
+
+	@include media( map_get( $breakpoint, 'l' ) ) {
+
+		&.col2-set {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.col-1,
+		.col-2 {
+			width: calc( 50% - var(--wcti--width--col-gap--login-register) );
+
+			&[class] {
+				margin-block: 0;
+			}
+		}
+	}
+}
+
 [data-template="order-confirmation"] h1 {
 	max-width: var(--wcti--width--order);
 	margin: 0 auto ( $ratio + rem );
