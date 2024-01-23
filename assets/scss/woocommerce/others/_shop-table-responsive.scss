@@ -28,8 +28,8 @@
 			float: $left;
 			margin-bottom: .5em;
 			margin-#{$right}: 1em;
-			font-size: .8em;
-			font-weight: 700;
+			font-size: var(--wcti--font-size--xs);
+			font-weight: var(--wcti--font-weight--label);
 			text-transform: uppercase;
 			letter-spacing: var(--wcti--spacing--letters);
 		}

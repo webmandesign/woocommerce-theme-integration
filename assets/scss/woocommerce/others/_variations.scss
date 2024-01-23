@@ -23,8 +23,8 @@
 	}
 
 	.label {
-		font-size: .8em;
-		font-weight: 700;
+		font-size: var(--wcti--font-size--xs);
+		font-weight: var(--wcti--font-weight--label);
 		text-transform: uppercase;
 		letter-spacing: var(--wcti--spacing--letters);
 		color: var(--wcti--color--content-h);
@@ -39,8 +39,8 @@
 	position: absolute;
 	#{$right}: 0;
 	bottom: 100%;
-	font-size: .8em;
-	font-weight: 700;
+	font-size: var(--wcti--font-size--xs);
+	font-weight: var(--wcti--font-weight--label);
 	text-transform: uppercase;
 	letter-spacing: var(--wcti--spacing--letters);
 
@@ -61,7 +61,7 @@
 	}
 
 	&-description {
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 	}
 }
 
@@ -72,7 +72,7 @@
 // Shop table:
 dl.variation {
 	margin: 0;
-	font-size: .8em;
+	font-size: var(--wcti--font-size--xs);
 	font-weight: 400;
 
 	dt,

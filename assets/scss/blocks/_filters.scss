@@ -8,7 +8,7 @@
 		> .wp-block-heading {
 			margin-bottom: 1em;
 			font-size: 1em;
-			font-weight: 700;
+			font-weight: var(--wcti--font-weight--headings);
 			line-height: 1.25;
 			text-transform: uppercase;
 			letter-spacing: var(--wcti--spacing--letters);
@@ -23,7 +23,7 @@
 
 		&[class] button[type=submit]:not(.wp-block-search__button).wc-block-components-filter-submit-button {
 			padding: .5em 1em;
-			font-size: .75rem;
+			font-size: var(--wcti--font-size--xs);
 		}
 	}
 
@@ -47,7 +47,7 @@
 	.wc-block-active-filters {
 
 		.wc-block-active-filters__clear-all {
-			font-size: .8em;
+			font-size: var(--wcti--font-size--xs);
 			text-decoration: none;
 			color: var(--wcti--color--accent);
 

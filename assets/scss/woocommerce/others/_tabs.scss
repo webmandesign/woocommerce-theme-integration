@@ -6,7 +6,7 @@
 	justify-content: center;
 	padding-inline: 0;
 	margin: var(--wcti--spacing--white) 0 0;
-	font-weight: 700;
+	font-weight: var(--wcti--font-weight--label--tab);
 	list-style: none;
 	border-bottom-width: .1rem;
 	border-bottom-style: solid;
@@ -19,7 +19,7 @@
 		display: block;
 		padding: 1em 2em;
 		margin-bottom: -.1rem;
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 		text-transform: uppercase;
 		text-decoration: none;
 		text-align: center;
@@ -36,7 +36,7 @@
 	}
 
 	.active {
-		font-weight: 400;
+		font-weight: var(--wcti--font-weight--label--tab--active);
 
 		a {
 			border-color: currentColor;

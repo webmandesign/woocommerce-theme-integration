@@ -53,14 +53,14 @@
 
 		&-description {
 			width: 100%;
-			font-size: .8em;
+			font-size: var(--wcti--font-size--xs);
 		}
 	}
 }
 
 .woocommerce-remove-coupon {
 	margin-#{$left}: .5em;
-	font-size: .8em;
+	font-size: var(--wcti--font-size--xs);
 	font-weight: 400;
 	text-transform: uppercase;
 }

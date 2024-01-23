@@ -49,7 +49,7 @@
 	.meta {
 		margin-top: 0;
 		margin-bottom: .5em;
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 	}
 
 	.comment, // This is for backwards compatibility.
@@ -68,16 +68,12 @@
 
 		&list {
 			max-height: 18em;
-			max-height: 50vh;
+			max-height: max( 640px, 62vh );
 			padding: 0 0 1em;
 			padding-#{$right}: 1em;
 			margin-#{$left}: 0;
 			list-style: none;
 			overflow-y: auto;
-
-			@include media( ( map_get( $breakpoint, 's' ), 'max-height' ) ) {
-				max-height: 75vh;
-			}
 		}
 
 		&-respond {
@@ -90,6 +86,11 @@
 			margin-bottom: 2rem;
 			font-family: var(--wcti--font-family--headings);
 			color: var(--wcti--color--content-h);
+		}
+
+		&-notes {
+			font-size: var(--wcti--font-size--s);
+			margin-bottom: 1em;
 		}
 
 		&-form {

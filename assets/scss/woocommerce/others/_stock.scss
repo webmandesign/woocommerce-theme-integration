@@ -4,7 +4,7 @@
 
 	&.out-of-stock,
 	&.available-on-backorder {
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--label);
 	}
 
 	&.out-of-stock {

@@ -2,8 +2,8 @@
 
 .onsale {
 	padding: .5rem 1rem;
-	font-size: .8em;
-	font-weight: 600;
+	font-size: var(--wcti--font-size--xs);
+	font-weight: var(--wcti--font-weight--badge);
 	text-transform: uppercase;
 	letter-spacing: var(--wcti--spacing--letters);
 	background: var(--wcti--color--accent);

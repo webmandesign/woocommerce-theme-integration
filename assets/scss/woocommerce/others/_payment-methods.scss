@@ -19,7 +19,7 @@
 
 	.about_paypal {
 		margin-#{$left}: .5em;
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 		font-weight: 400;
 	}
 }
@@ -34,7 +34,7 @@
 		display: block;
 		padding: .8em 1em;
 		margin: 0;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--label);
 		color: var(--wcti--color--content-h);
 		border: 2px solid;
 		border-radius: var(--wcti--border--radius);
@@ -62,6 +62,6 @@
 	}
 
 	h3 {
-		font-size: .9em;
+		font-size: var(--wcti--font-size--s);
 	}
 }

@@ -63,6 +63,13 @@
 			}
 		}
 
+			%posts_list_columns_2_mobile {
+
+				@include media( ( map_get( $breakpoint, 's' ), 'max-width' ) ) {
+					width: calc( #{ percentage( math.div( 1, 2 ) ) } - var(--wcti--spacing--gap--posts-list) );
+				}
+			}
+
 		%posts_list_columns_3 {
 
 			@include media( map_get( $breakpoint, 'm' ) ) {
@@ -196,7 +203,7 @@
 	}
 
 	%widget_list_items_menu {
-		font-size: .8rem;
+		font-size: var(--wcti--font-size--xs);
 		overflow-x: hidden;
 
 		li {
@@ -265,7 +272,7 @@
 
 		.product-title {
 			display: block;
-			font-weight: 700;
+			font-weight: var(--wcti--font-weight--headings);
 		}
 
 		ins {

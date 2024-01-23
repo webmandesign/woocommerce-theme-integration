@@ -5,7 +5,7 @@
 
 	> span {
 		display: block;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--label);
 
 		&::before {
 			content: '\2014'; // &mdash;

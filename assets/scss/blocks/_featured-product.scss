@@ -37,7 +37,7 @@
 
 	&__price {
 		font-size: $ratio + em;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--price);
 
 		del {
 			font-size: $ratio_maj + em;

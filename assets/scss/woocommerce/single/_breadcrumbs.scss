@@ -3,7 +3,7 @@
 .summary-content .woocommerce-breadcrumb {
 	width: 100%;
 	margin-bottom: 1rem;
-	font-size: .8em;
+	font-size: var(--wcti--font-size--xs);
 	text-transform: uppercase;
 
 	&-item:last-child {

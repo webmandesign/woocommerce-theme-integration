@@ -3,7 +3,7 @@
  * Plugin Name:  Integration for WooCommerce
  * Plugin URI:   https://www.webmandesign.eu/portfolio/woocommerce-theme-integration-wordpress-plugin/
  * Description:  Provides deeper integration for WooCommerce in WebMan Design accessibility ready themes.
- * Version:      1.5.4
+ * Version:      1.5.5
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
  * License:      GNU General Public License v3
@@ -29,7 +29,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Constants.
-define( 'WCTI_VERSION', '1.5.4' );
+define( 'WCTI_VERSION', '1.5.5' );
 define( 'WCTI_FILE', __FILE__ );
 define( 'WCTI_PATH', plugin_dir_path( WCTI_FILE ) ); // Trailing slashed.
 define( 'WCTI_URL', plugin_dir_url( WCTI_FILE ) ); // Trailing slashed.

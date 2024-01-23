@@ -15,7 +15,7 @@
 	.products & {
 		display: block;
 		margin: .25rem 0 0;
-		font-size: .9em;
+		font-size: var(--wcti--font-size--s);
 		line-height: 1.25;
 	}
 
@@ -25,7 +25,7 @@
 		color: var(--wcti--color--content-h);
 
 		del {
-			font-size: .8em;
+			font-size: var(--wcti--font-size--xs);
 		}
 
 		&-range {

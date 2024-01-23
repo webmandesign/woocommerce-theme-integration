@@ -14,7 +14,7 @@
 		height: 1.5em;
 		#{$left}: 0;
 		top: .25em;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--label);
 		line-height: calc( 1.5em - 2px );
 		text-align: center;
 		text-decoration: none;
@@ -30,7 +30,7 @@
 	// Product title.
 	a:nth-child(2) {
 		display: block;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--headings);
 	}
 
 	&__total {

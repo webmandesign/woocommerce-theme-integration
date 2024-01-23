@@ -19,8 +19,8 @@
 			display: block;
 			padding: 1em 2em;
 			margin-bottom: -.1rem;
-			font-size: .8em;
-			font-weight: 700;
+			font-size: var(--wcti--font-size--xs);
+			font-weight: var(--wcti--font-weight--label--tab);
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
@@ -37,7 +37,7 @@
 		}
 
 		.is-active a {
-			font-weight: 400;
+			font-weight: var(--wcti--font-weight--label--tab--active);
 			border-color: currentColor;
 		}
 

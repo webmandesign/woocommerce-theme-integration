@@ -7,7 +7,7 @@ ul.products {
 
 		.category-label {
 			margin-bottom: 0;
-			font-size: .8em;
+			font-size: var(--wcti--font-size--xs);
 			text-transform: uppercase;
 			letter-spacing: var(--wcti--spacing--letters);
 		}

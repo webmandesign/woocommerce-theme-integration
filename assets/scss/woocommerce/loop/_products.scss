@@ -32,7 +32,7 @@ ul.products {
 
 	h3 {
 		margin: 0;
-		font-weight: 700;
+		font-weight: var(--wcti--font-weight--headings);
 
 		&,
 		&[class] {
@@ -45,7 +45,7 @@ ul.products {
 		display: block;
 		padding: .25em 0;
 		margin: 0;
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 		text-align: inherit;
 		text-decoration: none;
 		white-space: nowrap;
@@ -81,7 +81,7 @@ ul.products {
 	}
 
 	.added_to_cart {
-		font-size: .8em;
+		font-size: var(--wcti--font-size--xs);
 		font-style: italic;
 
 		&::after {

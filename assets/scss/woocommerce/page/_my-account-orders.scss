@@ -16,7 +16,7 @@
 	&__cell-order-total {
 
 		.amount {
-			font-weight: 700;
+			font-weight: var(--wcti--font-weight--price);
 			color: var(--wcti--color--content-h);
 		}
 	}

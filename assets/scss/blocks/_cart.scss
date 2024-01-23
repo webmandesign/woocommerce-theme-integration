@@ -3,7 +3,7 @@
 .wc-block-mini-cart {
 
 	&__template-part {
-		font-size: .9em;
+		font-size: var(--wcti--font-size--s);
 	}
 
 	&__template-part &__title {
@@ -16,7 +16,7 @@
 	}
 
 	&__badge {
-		font-size: .75em;
+		font-size: var(--wcti--font-size--xs);
 	}
 
 	&__drawer .wc-block-components-drawer__close-wrapper .wc-block-components-button {
