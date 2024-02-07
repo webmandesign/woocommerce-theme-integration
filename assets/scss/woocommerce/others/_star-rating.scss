@@ -1,20 +1,18 @@
 /* FILE: woocommerce/others/_star-rating.scss */
 
-.star-rating {
+.star-rating,
+.wc-block-components-product-rating__stars {
 	@extend %star_rating;
 }
 
 // In product summary.
-.summary-content .woocommerce-product-rating {
+.summary-content .woocommerce-product-rating,
+.wc-block-components-product-rating__container {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	flex-wrap: wrap;
-	margin: ( -$ratio + rem ) 0 ( $ratio + rem );
+	gap: 1rem;
 	font-size: 1.25em;
-
-	.star-rating {
-		margin-#{$right}: .5em;
-	}
 
 	.woocommerce-review-link {
 		font-size: var(--wcti--font-size--xs);
@@ -29,6 +27,10 @@
 		opacity: 1;
 	}
 }
+
+	.summary-content .woocommerce-product-rating {
+		margin: ( -$ratio + rem ) 0 ( $ratio + rem );
+	}
 
 // In review form.
 p.stars {

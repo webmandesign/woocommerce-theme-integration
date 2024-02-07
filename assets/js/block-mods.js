@@ -4,7 +4,8 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.5.0
+ * @since    1.5.0
+ * @version  1.6.0
  */
 
 ( () => {
@@ -19,6 +20,19 @@
 			// Processing
 
 				switch( name ) {
+
+					case 'woocommerce/breadcrumbs':
+						settings = lodash.merge( settings, {
+							supports: {
+								spacing: {
+									margin: [
+										'top',
+										'bottom',
+									],
+								},
+							},
+						} );
+						break;
 
 					case 'woocommerce/mini-cart':
 						settings.supports.color = lodash.merge( settings.supports.color, {

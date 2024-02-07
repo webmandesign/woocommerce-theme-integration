@@ -1,0 +1,8 @@
+/* FILE: tools/__index.scss */
+/* FILE: setup/__index.scss */
+.wc-block-add-to-cart-form .quantity .qty {
+  width: auto;
+  max-width: 4em;
+  padding: var(--wcti--spacing--input-vertical) 0.25em;
+  font-size: 1em;
+}

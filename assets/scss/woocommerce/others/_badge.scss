@@ -9,9 +9,11 @@
 	background: var(--wcti--color--accent);
 	color: var(--wcti--color--accent-contrast);
 
-	.summary-content & {
+	.summary-content &,
+	.woocommerce[class] .wp-block-woocommerce-product-image-gallery & {
 		position: absolute;
 		#{$left}: 0;
+		#{$right}: unset; // Required for `product-image-gallery` block.
 		bottom: 100%;
 		border-radius: var(--wcti--border--radius) var(--wcti--border--radius) 0 0;
 	}

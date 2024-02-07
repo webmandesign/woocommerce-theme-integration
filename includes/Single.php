@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.0
+ * @version  1.6.0
  */
 
 namespace WebManDesign\WCTI;
@@ -21,8 +21,10 @@ class Single {
 	/**
 	 * Initialization.
 	 *
+	 * //* = Affects (FSE) blocks.
+	 *
 	 * @since    1.0.0
-	 * @version  1.4.2
+	 * @version  1.6.0
 	 *
 	 * @return  void
 	 */
@@ -40,10 +42,12 @@ class Single {
 
 			// Actions
 
-				add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', -5 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_all_notices', -5 ); //*
 
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 18 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 0 ); //*
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 18 ); //*
 
 			// Filters
 
@@ -211,7 +215,13 @@ class Single {
 	 * check we need to hook the method before `wptexturize()`
 	 * is applied.
 	 *
-	 * @since  1.0.0
+	 * //* = Affects (FSE) blocks.
+	 *
+	 * For blocks version check:
+	 * @see  Blocks::render__single_product_more_details_link()
+	 *
+	 * @since    1.0.0
+	 * @version  1.6.0
 	 *
 	 * @param  string $excerpt
 	 *
@@ -242,9 +252,8 @@ class Single {
 			) {
 				$excerpt .= '<div class="product-description-link-container"><a class="product-description-link" href="#product-more-info">' . esc_html__( 'More details&hellip;', 'wc-theme-integration' ) . '</a></div>';
 
-				add_action( 'woocommerce_after_single_product_summary', function() {
-					echo PHP_EOL . '<a name="product-more-info"></a>' . PHP_EOL;
-				}, 9 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_after_single_product_summary', __CLASS__ . '::anchor_more_info', 9 ); //*
 			}
 
 
@@ -376,5 +385,31 @@ class Single {
 				return $classes;
 
 	} // /content_wrapper_classes
+
+	/**
+	 * Product more info anchor.
+	 *
+	 * @since  1.6.0
+	 *
+	 * @param  bool $echo
+	 *
+	 * @return  void|string
+	 */
+	public static function anchor_more_info( bool $echo = true ) {
+
+			// Variables
+
+				$output = PHP_EOL . '<a name="product-more-info"></a>' . PHP_EOL;
+
+
+			// Output
+
+				if ( $echo ) {
+					echo $output;
+				} else {
+					return $output;
+				}
+
+	} // /anchor_more_info
 
 }

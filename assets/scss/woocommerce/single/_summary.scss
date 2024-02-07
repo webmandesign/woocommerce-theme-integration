@@ -57,7 +57,8 @@
 	}
 }
 
-.woocommerce-product-details__short-description {
+.woocommerce-product-details__short-description,
+.single-product .wp-block-post-excerpt {
 	margin-top: 2em;
 	margin-bottom: 2em;
 

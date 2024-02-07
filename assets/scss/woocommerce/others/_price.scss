@@ -42,11 +42,12 @@
 
 .woocommerce-price-suffix {
 	display: block;
+	font-size: .9rem;
 	font-weight: 400;
 	font-style: italic;
 	line-height: 1 + $ratio_min;
 
-	.summary & {
-		font-size: .9rem;
+	li & {
+		font-size: var(--wp--preset--font-size--s);
 	}
 }

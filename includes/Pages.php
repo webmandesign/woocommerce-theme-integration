@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.4
+ * @version  1.6.0
  */
 
 namespace WebManDesign\WCTI;
@@ -22,8 +22,10 @@ class Pages {
 	/**
 	 * Initialization.
 	 *
+	 * //* = Affects (FSE) blocks.
+	 *
 	 * @since    1.0.0
-	 * @version  1.4.4
+	 * @version  1.6.0
 	 *
 	 * @return  void
 	 */
@@ -43,7 +45,8 @@ class Pages {
 
 				add_action( 'woocommerce_before_shipping_calculator', __CLASS__ . '::shipping_calculator_wrapper' );
 
-				add_action( 'woocommerce_archive_description', __CLASS__ . '::page_header', 999 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_archive_description', __CLASS__ . '::page_header', 999 ); //*
 
 			// Filters
 

@@ -160,7 +160,10 @@ class Options {
 						'type'        => 'number',
 						'section'     => 'woocommerce_product_catalog',
 						'label'       => esc_html__( 'Related products columns', 'wc-theme-integration' ),
-						'description' => esc_html__( 'Number of columns in "Related products" list on single product page.', 'wc-theme-integration' ),
+						'description' =>
+							esc_html__( 'Number of columns in "Related products" list on single product page.', 'wc-theme-integration' )
+							. '<br>'
+							. esc_html__( '(This option does not affect "Related Products" block settings.)', 'wc-theme-integration' ),
 						'input_attrs' => array(
 							'min'  => 1,
 							'max'  => 6,

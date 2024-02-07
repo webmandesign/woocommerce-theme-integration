@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.7
+ * @version  1.6.0
  */
 
 namespace WebManDesign\WCTI;
@@ -21,8 +21,10 @@ class Loop {
 	/**
 	 * Initialization.
 	 *
+	 * //* = Affects (FSE) blocks.
+	 *
 	 * @since    1.0.0
-	 * @version  1.4.6
+	 * @version  1.6.0
 	 *
 	 * @return  void
 	 */
@@ -42,18 +44,21 @@ class Loop {
 
 			// Actions
 
-				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::products_sorting' );
-				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::shop_loop_title', 100 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::products_sorting' ); //*
+				add_action( 'woocommerce_before_shop_loop', __CLASS__ . '::shop_loop_title', 100 ); //*
 
-				add_action( 'woocommerce_shop_loop_item_title', __CLASS__ . '::loop_product_title' );
-				add_action( 'woocommerce_shop_loop_subcategory_title', __CLASS__ . '::loop_category_title' );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_shop_loop_item_title', __CLASS__ . '::loop_product_title' ); //*
+				add_action( 'woocommerce_shop_loop_subcategory_title', __CLASS__ . '::loop_category_title' ); //*
 
 				add_action( 'woocommerce_before_subcategory_title', __CLASS__ . '::category_label', 95 );
 
 				add_action( 'woocommerce_after_subcategory', __CLASS__ . '::category_button', 20 );
 
-				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::products_sorting', 5 );
-				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::pagination' );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::products_sorting', 5 ); //*
+				add_action( 'woocommerce_after_shop_loop', __CLASS__ . '::pagination' ); //*
 
 			// Filters
 

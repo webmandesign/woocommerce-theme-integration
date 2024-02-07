@@ -1,0 +1,9 @@
+// woocommerce/product-image-gallery
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.woocommerce .wp-block-woocommerce-product-image-gallery,
+.wc-block-editor-product-gallery[class] img {
+	max-width: 100%;
+}

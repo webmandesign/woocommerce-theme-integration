@@ -1,7 +1,11 @@
 /* FILE: woocommerce/single/_meta.scss */
 
-.product_meta {
+.product_meta,
+.wp-block-woocommerce-product-meta {
 	margin-top: 2rem;
+}
+
+.product_meta {
 
 	> span {
 		display: block;

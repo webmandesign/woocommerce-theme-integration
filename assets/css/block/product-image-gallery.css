@@ -1,0 +1,6 @@
+/* FILE: tools/__index.scss */
+/* FILE: setup/__index.scss */
+.woocommerce .wp-block-woocommerce-product-image-gallery,
+.wc-block-editor-product-gallery[class] img {
+  max-width: 100%;
+}

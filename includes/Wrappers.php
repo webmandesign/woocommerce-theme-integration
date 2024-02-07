@@ -5,7 +5,8 @@
  * @package    Integration for WooCommerce
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.6.0
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +21,10 @@ class Wrappers {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * //* = Affects (FSE) blocks.
+	 *
+	 * @since    1.0.0
+	 * @version  1.6.0
 	 *
 	 * @return  void
 	 */
@@ -38,8 +42,9 @@ class Wrappers {
 				add_action( 'woocommerce_before_template_part', __CLASS__ . '::template_part_wrapper' );
 				add_action( 'woocommerce_after_template_part',  __CLASS__ . '::template_part_wrapper' );
 
-				add_action( 'woocommerce_before_single_product_summary', __CLASS__ . '::product_summary', 0 );
-				add_action( 'woocommerce_after_single_product_summary',  __CLASS__ . '::product_summary', 0 );
+				// See `Blocks::hooks_in_blocks()` for removal in FSE blocks.
+				add_action( 'woocommerce_before_single_product_summary', __CLASS__ . '::product_summary', 0 ); //*
+				add_action( 'woocommerce_after_single_product_summary',  __CLASS__ . '::product_summary', 0 ); //*
 
 				add_action( 'woocommerce_before_customer_login_form', __CLASS__ . '::login_form_wrapper' );
 				add_action( 'woocommerce_after_customer_login_form',  __CLASS__ . '::close_div' );
@@ -85,7 +90,7 @@ class Wrappers {
 	 *
 	 * @return  void
 	 */
-	public static function product_summary() {
+	public static function product_summary( string $block_content = '', array $block = array() ) {
 
 		// Output
 

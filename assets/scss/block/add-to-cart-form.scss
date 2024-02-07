@@ -1,10 +1,12 @@
-/* FILE: woocommerce/form/_quantity.scss */
+// woocommerce/add-to-cart-form
 
-.qty,
+@import '../tools/_index';
+@import '../setup/_index';
+
+// For editor only, basically...
 .wc-block-add-to-cart-form .quantity .qty {
 	width: auto;
 	max-width: 4em;
 	padding: var(--wcti--spacing--input-vertical) .25em;
 	font-size: 1em;
-	text-align: center;
 }

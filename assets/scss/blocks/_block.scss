@@ -1,5 +1,19 @@
 /* FILE: woocommerce/blocks/_block.scss */
 
+// Wrapper for single product FSE blocks.
+// @see   Automattic\WooCommerce\Blocks\Templates\SingleProductTemplateCompatibility::create_wrap_block_group()
+// @link  https://github.com/woocommerce/woocommerce/blob/8.5.2/plugins/woocommerce/src/Blocks/Templates/SingleProductTemplateCompatibility.php#L365
+.wp-block-group.woocommerce {
+	margin-block: 0;
+}
+
+// Fixing block editor styling issue.
+[style*="font-size"] > [style*="font-size"],
+[data-type^="woocommerce"][style*="font-size"] [style*="font-size"]:not([data-type]) {
+	font-size: 1em !important;
+}
+
+// Checkboxes.
 .wc-block-components-checkbox {
 
 	.wc-block-components-checkbox__input[type=checkbox] {
@@ -18,6 +32,11 @@
 	.wc-block-components-checkbox__mark {
 		fill: var(--wcti--color--accent-contrast);
 	}
+}
+
+// Radio buttons.
+.wc-block-components-radio-control .wc-block-components-radio-control__input {
+	padding: 0;
 }
 
 // Star ratings in various blocks.

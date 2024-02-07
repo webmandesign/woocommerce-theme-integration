@@ -30,3 +30,34 @@
 		border-radius: var(--wcti--border--radius);
 	}
 }
+
+.wp-block-woocommerce-cart-order-summary-block,
+.wp-block-woocommerce-checkout-order-summary-block {
+	@extend %shaded_background;
+	position: relative;
+	border-radius: var(--wcti--border--radius);
+
+	> div {
+
+		&:first-child {
+			border-top-left-radius: var(--wcti--border--radius);
+			border-top-right-radius: var(--wcti--border--radius);
+		}
+
+		&:not(:empty) {
+			padding-block: 1rem;
+
+			> div[class] {
+				padding-inline: $ratio + rem;
+			}
+		}
+	}
+}
+
+	.wp-block-woocommerce-cart-order-summary-block {
+		margin-block-end: 1rem;
+
+		.wc-block-cart__totals-title[class] {
+			padding: 1rem ( $ratio + rem );
+		}
+	}

@@ -13,7 +13,7 @@
 	}
 }
 
-body [class*="wp-block"] > .woocommerce.woocommerce.woocommerce {
+body [class*="wp-block"] > .woocommerce.woocommerce:not([data-block-name]) {
 	max-width: none;
 }
 
