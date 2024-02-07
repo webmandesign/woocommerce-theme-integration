@@ -5,7 +5,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: 1em;
+	gap: 2em;
 	position: relative;
 	width: 100%;
 	padding: 1rem 6%;
@@ -16,7 +16,6 @@
 	z-index: 100;
 
 	&__dismiss-link {
-		margin-#{$left}: 1rem;
 		font-size: var(--wcti--font-size--xs);
 		font-weight: 600;
 		text-decoration: none;

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.5.3
+ * @version  1.6.0
  */
 
 namespace WebManDesign\WCTI;
@@ -45,7 +45,7 @@ class Assets {
 	 * Enqueue styles and scripts.
 	 *
 	 * @since    1.0.0
-	 * @version  1.5.3
+	 * @version  1.6.0
 	 *
 	 * @return  void
 	 */
@@ -64,7 +64,7 @@ class Assets {
 			wp_enqueue_style(
 				'wc-theme-integration',
 				WCTI_URL . 'assets/css/woocommerce.css',
-				array(),
+				array( 'wc-theme-integration-custom-properties' ),
 				'v' . WCTI_VERSION
 			);
 			wp_style_add_data(

@@ -8,7 +8,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.4.1
-// @version  1.5.5
+// @version  1.6.0
 //
 
 $left: left;
@@ -17,5 +17,12 @@ $right: right;
 @import 'tools/_index';
 @import 'setup/_index';
 
-@import 'blocks/_index';
+// Need to rise specificity to override WooCommerce
+// block styles in classic/hybrid themes, when the
+// block CSS is outputted in `wp_footer`, while this
+// stylesheet is in `wp_head`.
+html {
+	@import 'blocks/_index';
+}
+
 @import 'extend';

@@ -1,6 +1,6 @@
 # Integration for WooCommerce Changelog
 
-## 1.5.5, 20240110
+## 1.6.0, 20240207
 
 ### Update
 - Improving CSS styles introducing more CSS variables

@@ -80,30 +80,26 @@
 
 		.wp-block-button {
 
-			&,
-			.editor-styles-wrapper & {
+			.wp-block-button__link,
+			.added_to_cart {
+				display: block;
+				width: 100%;
+				padding: .25em 0;
+				margin: 0;
+				font-size: var(--wcti--font-size--xs);
+				text-align: inherit;
+				text-decoration: none;
 
-				.wp-block-button__link,
-				.added_to_cart {
-					display: block;
-					width: 100%;
-					padding: .25em 0;
-					margin: 0;
-					font-size: var(--wcti--font-size--xs);
-					text-align: inherit;
-					text-decoration: none;
-
-					&,
-					&:hover,
-					&:focus,
-					&:active,
-					&:visited {
-						background: none;
-						color: var(--wcti--color--accent);
-						border: 0;
-						box-shadow: none;
-						animation: none;
-					}
+				&,
+				&:hover,
+				&:focus,
+				&:active,
+				&:visited {
+					background: none;
+					color: var(--wcti--color--accent);
+					border: 0;
+					box-shadow: none;
+					animation: none;
 				}
 			}
 

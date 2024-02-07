@@ -4,14 +4,14 @@
 	margin: 0;
 	border-radius: var(--wcti--border--radius);
 
-	.wp-block-post > &[class] {
-		margin-bottom: $ratio + rem;
-	}
-
 	.wc-block-components-product-sale-badge[class] {
 		margin: var(--wcti--border--radius);
 	}
 }
+
+	.wp-block-post > .wc-block-components-product-image[class] {
+		margin-bottom: $ratio + rem;
+	}
 
 .wc-block-components-product-sale-badge {
 	top: 0 !important;
