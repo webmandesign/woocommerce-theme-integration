@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.0
+ * @version  1.6.1
  */
 
 namespace WebManDesign\WCTI;
@@ -389,13 +389,14 @@ class Single {
 	/**
 	 * Product more info anchor.
 	 *
-	 * @since  1.6.0
+	 * @since    1.6.0
+	 * @version  1.6.1
 	 *
-	 * @param  bool $echo
+	 * @param  mixed $method
 	 *
 	 * @return  void|string
 	 */
-	public static function anchor_more_info( bool $echo = true ) {
+	public static function anchor_more_info( $method = 'echo' ) {
 
 			// Variables
 
@@ -404,10 +405,10 @@ class Single {
 
 			// Output
 
-				if ( $echo ) {
-					echo $output;
-				} else {
+				if ( 'return' === $method ) {
 					return $output;
+				} else {
+					echo $output;
 				}
 
 	} // /anchor_more_info

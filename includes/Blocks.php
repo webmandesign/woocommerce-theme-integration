@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.0
+ * @version  1.6.1
  */
 
 namespace WebManDesign\WCTI;
@@ -131,7 +131,8 @@ class Blocks {
 	/**
 	 * Block output modification: Add single product "More details" link functionality.
 	 *
-	 * @since  1.6.0
+	 * @since    1.6.0
+	 * @version  1.6.1
 	 *
 	 * @param  string $block_content  The rendered content. Default null.
 	 * @param  array  $block          The block being rendered.
@@ -164,7 +165,7 @@ class Blocks {
 
 				$block_content = str_replace(
 					'<div class="woocommerce-tabs',
-					trim( Single::anchor_more_info( false ) ) . PHP_EOL . '<div class="woocommerce-tabs',
+					trim( Single::anchor_more_info( 'return' ) ) . PHP_EOL . '<div class="woocommerce-tabs',
 					$block_content
 				);
 			}

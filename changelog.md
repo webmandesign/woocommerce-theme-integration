@@ -1,5 +1,18 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.1, 20240208
+
+### Fixed
+- "More details..." link functionality in classic WC layouts
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Blocks.php
+	includes/Single.php
+
+
 ## 1.6.0, 20240208
 
 ### Added

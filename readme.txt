@@ -5,7 +5,7 @@ Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
 Tested up to:      6.4
-Stable tag:        1.6.0
+Stable tag:        1.6.1
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -46,6 +46,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 
 == Upgrade Notice ==
+
+= 1.6.1 =
+Fixing "More details..." link on single product pages.
 
 = 1.6.0 =
 Adding support for WooCommerce template blocks (FSE), improving CSS styles, fixing bugs.
