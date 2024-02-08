@@ -1,0 +1,45 @@
+// woocommerce/cart-cross-sells-products-block
+//
+// @since  1.6.0
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wp-block-woocommerce-cart-cross-sells-block {
+
+	.cross-sells-product {
+		position: relative;
+
+		.wp-block-button .wp-block-button__link[class] {
+			padding: 0;
+			margin-top: .5rem;
+			font-size: var(--wcti--font-size--button);
+			line-height: 1.25;
+			background: none;
+			color: var(--wcti--color--accent);
+			border: 0;
+			border-radius: 0;
+			box-shadow: none;
+		}
+	}
+
+	.wc-block-components-product-title {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+
+		&[class] .wc-block-components-product-name[class] {
+			font-weight: inherit;
+		}
+	}
+
+	.wc-block-components-product-sale-badge {
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
+	}
+
+	.wc-block-components-product-rating__container {
+		justify-content: center;
+		margin-bottom: .25rem;
+	}
+}

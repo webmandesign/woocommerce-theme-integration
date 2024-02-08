@@ -140,6 +140,13 @@ class Blocks {
 	 */
 	public static function render__single_product_more_details_link( string $block_content, array $block ): string {
 
+		// Requirements check
+
+			if ( ! is_product() ) {
+				return $block_content;
+			}
+
+
 		// Processing
 
 			if (
@@ -192,9 +199,9 @@ class Blocks {
 	 */
 	public static function hooks_in_blocks( array $data ): array {
 
-		// Output
+		// Variables
 
-			return array_merge( $data, array(
+			$hooks = array(
 
 				// From `Loop::init()`:
 
@@ -204,12 +211,14 @@ class Blocks {
 						'priority' => 10,
 					),
 
+					// Need to remove this on single product page so it does not affect up-sells list.
 					'WebManDesign\WCTI\Loop::loop_product_title' => array(
 						'hook'     => 'woocommerce_shop_loop_item_title',
 						'function' => __NAMESPACE__ . '\Loop::loop_product_title',
 						'priority' => 10,
 					),
 
+					// Need to remove this on single product page so it does not affect up-sells list.
 					'WebManDesign\WCTI\Loop::loop_category_title' => array(
 						'hook'     => 'woocommerce_shop_loop_subcategory_title',
 						'function' => __NAMESPACE__ . '\Loop::loop_category_title',
@@ -279,7 +288,22 @@ class Blocks {
 						'function' => __NAMESPACE__ . '\Wrappers::product_summary',
 						'priority' => 0,
 					),
-			) );
+			);
+
+
+		// Processing
+
+			if ( is_product() ) {
+				unset(
+					$hooks['WebManDesign\WCTI\Loop::loop_product_title'],
+					$hooks['WebManDesign\WCTI\Loop::loop_category_title']
+				);
+			}
+
+
+		// Output
+
+			return array_merge( $data, $hooks );
 
 	} // /hooks_in_blocks
 

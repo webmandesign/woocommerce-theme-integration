@@ -48,4 +48,4 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 == Upgrade Notice ==
 
 = 1.6.0 =
-@todo
+Adding support for WooCommerce template blocks (FSE), improving CSS styles, fixing bugs.

@@ -12,7 +12,7 @@
 	text-transform: uppercase;
 
 	&-item:last-child {
-		display: none;
+		@extend %screen_reader_hiding;
 	}
 
 	&-delimiter {

@@ -39,25 +39,12 @@
 	padding: 0;
 }
 
-// Star ratings in various blocks.
-.wc-block-review-list-item__rating > .wc-block-review-list-item__rating__stars,
-.wc-block-grid__product-rating .star-rating {
-	width: auto;
-	height: 1em;
-	font-family: inherit;
-	line-height: 1;
-	color: var(--wcti--color--accent);
-	vertical-align: baseline;
-	overflow: hidden;
-
-	&::before {
-		content: '\2606\2606\2606\2606\2606'; // WHITE STAR
-		position: relative;
-		opacity: 1;
-	}
-
-	span::before {
-		content: '\2605\2605\2605\2605\2605'; // BLACK STAR
-		color: inherit;
-	}
+// Product name in block shop tables, for example.
+.wc-block-components-product-name {
+	margin-block-end: $ratio_min + em;
+	font-family: var(--wcti--font-family--headings);
+	font-size: 1.2em;
+	font-weight: var(--wcti--font-weight--headings);
+	line-height: 1 + $ratio_min;
 }
+

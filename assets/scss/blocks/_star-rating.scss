@@ -18,3 +18,25 @@ body .wc-block-components-product-rating__stars[class] {
 		}
 	}
 }
+
+.wc-block-review-list-item__rating > .wc-block-review-list-item__rating__stars,
+.wc-block-grid__product-rating .star-rating {
+	width: auto;
+	height: 1em;
+	font-family: inherit;
+	line-height: 1;
+	color: var(--wcti--color--accent);
+	vertical-align: baseline;
+	overflow: hidden;
+
+	&::before {
+		content: '\2606\2606\2606\2606\2606'; // WHITE STAR
+		position: relative;
+		opacity: 1;
+	}
+
+	span::before {
+		content: '\2605\2605\2605\2605\2605'; // BLACK STAR
+		color: inherit;
+	}
+}

@@ -45,12 +45,6 @@
 					case 'woocommerce/product-image':
 						settings = lodash.merge( settings, {
 							supports: {
-								spacing: {
-									margin: [
-										'top',
-										'bottom',
-									],
-								},
 								__experimentalBorder: {
 									color: true,
 									style: true,

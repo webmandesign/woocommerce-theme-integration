@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Integration for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2023-08-22 16:26+0200\n"
+"POT-Creation-Date: 2024-02-08 15:16+0100\n"
 "PO-Revision-Date: 2015-05-12 20:39+0100\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
@@ -12,13 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: includes/Blocks.php:153 includes/Single.php:253
+msgid "More details&hellip;"
+msgstr ""
 
 #: includes/Loader.php:65
 msgid ""
@@ -32,85 +36,89 @@ msgid ""
 "theme. Please check WordPress themes by WebManDesign.eu."
 msgstr ""
 
-#: includes/Loop.php:81
+#: includes/Loop.php:86
 msgid "Shop category"
 msgstr ""
 
-#: includes/Loop.php:110
+#: includes/Loop.php:115
 msgid "Shop now &rarr;"
 msgstr ""
 
-#: includes/Loop.php:155
+#: includes/Loop.php:160
 msgid "Products Navigation"
 msgstr ""
 
-#: includes/Loop.php:183 includes/Single.php:85
+#: includes/Loop.php:188 includes/Single.php:89
 msgctxt "Pagination text (visible): previous."
 msgid "&larr;"
 msgstr ""
 
-#: includes/Loop.php:185 includes/Single.php:85
+#: includes/Loop.php:190 includes/Single.php:89
 msgctxt "Pagination text (hidden): previous."
 msgid "Previous page"
 msgstr ""
 
-#: includes/Loop.php:190 includes/Single.php:86
+#: includes/Loop.php:195 includes/Single.php:90
 msgctxt "Pagination text (hidden): next."
 msgid "Next page"
 msgstr ""
 
-#: includes/Loop.php:192 includes/Single.php:86
+#: includes/Loop.php:197 includes/Single.php:90
 msgctxt "Pagination text (visible): next."
 msgid "&rarr;"
 msgstr ""
 
-#: includes/Loop.php:214
+#: includes/Loop.php:219
 msgid "List of products"
 msgstr ""
 
-#: includes/Options.php:85
+#: includes/Options.php:87
 msgid "Replace theme search"
 msgstr ""
 
-#: includes/Options.php:86
+#: includes/Options.php:88
 msgid ""
 "Replaces default search form in the theme with WooCommerce product search "
 "form."
 msgstr ""
 
-#: includes/Options.php:112
+#: includes/Options.php:114
 msgid "Small screen products per row"
 msgstr ""
 
-#: includes/Options.php:113
+#: includes/Options.php:115
 msgid "How many products should be shown per row on small screen devices?"
 msgstr ""
 
-#: includes/Options.php:136
+#: includes/Options.php:138
 msgid "Upsell products columns"
 msgstr ""
 
-#: includes/Options.php:137
+#: includes/Options.php:139
 msgid ""
 "Number of columns in \"You may also like…\" products list on single "
 "product page."
 msgstr ""
 
-#: includes/Options.php:160
+#: includes/Options.php:162
 msgid "Related products columns"
 msgstr ""
 
-#: includes/Options.php:161
+#: includes/Options.php:164
 msgid ""
 "Number of columns in \"Related products\" list on single product page."
 msgstr ""
 
-#: includes/Pages.php:245
+#: includes/Options.php:166
+msgid "(This option does not affect \"Related Products\" block settings.)"
+msgstr ""
+
+#: includes/Pages.php:248
 msgid "Cart content"
 msgstr ""
 
 #. translators: %d: number of shopping cart items.
-#: includes/Pages.php:249
+#: includes/Pages.php:252
 #, php-format
 msgctxt "Shopping cart items count."
 msgid "(%d item)"
@@ -118,18 +126,14 @@ msgid_plural "(%d items)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Pages.php:268
+#: includes/Pages.php:271
 msgid "Use your discount coupon code here"
 msgstr ""
 
-#: includes/Pages.php:320
+#: includes/Pages.php:323
 msgid "Continue Shopping"
 msgstr ""
 
-#: includes/Pages.php:335
+#: includes/Pages.php:338
 msgid "Checkout"
-msgstr ""
-
-#: includes/Single.php:243
-msgid "More details&hellip;"
 msgstr ""

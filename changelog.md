@@ -1,17 +1,41 @@
 # Integration for WooCommerce Changelog
 
-## 1.6.0, 20240207
+## 1.6.0, 20240208
+
+### Added
+- Support for WooCommerce template blocks (FSE)
 
 ### Update
 - Improving CSS styles introducing more CSS variables
+- Customizer options
+- Localization
+
+### Fixed
+- Reviews section CSS styles
+- Demo notice CSS styles
+- Products list block CSS styles
+- Application of block styles in classic/hybrid themes
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/js/block-mods.js
 	assets/scss/blocks.scss
 	assets/scss/custom-properties.scss
 	assets/scss/woocommerce.scss
+	assets/scss/block/add-to-cart-form.scss
+	assets/scss/block/cart-cross-sells-products-block.scss
+	assets/scss/block/customer-account.scss
+	assets/scss/block/product-details.scss
+	assets/scss/block/product-image-gallery.scss
+	includes/Assets.php
+	includes/Blocks.php
+	includes/Loop.php
+	includes/Pages.php
+	includes/Single.php
+	includes/Wrappers.php
+	languages/*.*
 
 
 ## 1.5.4, 20231228
