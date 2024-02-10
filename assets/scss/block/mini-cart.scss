@@ -1,0 +1,91 @@
+// woocommerce/mini-cart
+//
+// @since  1.6.2
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-components-drawer {
+
+	&__close {
+		inset: auto;
+		inset-inline-end: 1rem;
+		inset-block-start: 1rem;
+		margin: 0;
+	}
+
+	// Accessibility fix.
+	&__screen-overlay--is-hidden {
+		background: #fff;
+		color: #000;
+	}
+}
+
+.wc-block-mini-cart {
+
+	&.has-background[class] {
+
+		&,
+		.editor-styles-wrapper & {
+			padding: .25em;
+		}
+
+		// Fix for badge color.
+		[style="background:"],
+		.wc-block-mini-cart__badge:not([style]) {
+			background: transparent !important;
+		}
+	}
+
+	&.has-text-color,
+	&.has-background {
+
+		.wc-block-mini-cart__badge {
+			color: inherit;
+		}
+	}
+
+	&__template-part {
+		font-size: var(--wcti--font-size--s);
+	}
+
+	&__badge {
+		font-size: var(--wcti--font-size--xs);
+	}
+
+	&__title[class] {
+		margin-block: 1rem;
+	}
+
+	&__button {
+		padding: $ratio_min + em;
+	}
+
+	&__icon[class] {
+		width: $ratio + em;
+		height: $ratio + em;
+	}
+
+	&__empty-cart-wrapper {
+
+		> * + * {
+			margin-block-start: 1rem;
+		}
+	}
+
+	&__drawer .wc-block-components-drawer__close {
+		border-color: currentColor !important;
+	}
+
+	&__footer-cart.outlined.outlined {
+
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			background: none;
+			color: inherit;
+			border: 2px solid;
+		}
+	}
+}

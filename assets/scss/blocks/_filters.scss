@@ -34,25 +34,25 @@
 		margin-bottom: 0;
 	}
 
+// Specific:
 
+	// Attribute filter.
 
-// Attribute filter.
+		.wc-block-attribute-filter-list-count {
+			margin-#{$left}: .25em;
+		}
 
-	.wc-block-attribute-filter-list-count {
-		margin-#{$left}: .25em;
-	}
+	// Active filters.
 
-// Active filters.
+		.wc-block-active-filters {
 
-	.wc-block-active-filters {
+			.wc-block-active-filters__clear-all {
+				font-size: var(--wcti--font-size--xs);
+				text-decoration: none;
+				color: var(--wcti--color--accent);
 
-		.wc-block-active-filters__clear-all {
-			font-size: var(--wcti--font-size--xs);
-			text-decoration: none;
-			color: var(--wcti--color--accent);
-
-			&:active {
-				background: none;
+				&:active {
+					background: none;
+				}
 			}
 		}
-	}

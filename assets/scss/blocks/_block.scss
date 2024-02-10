@@ -3,48 +3,52 @@
 // Wrapper for single product FSE blocks.
 // @see   Automattic\WooCommerce\Blocks\Templates\SingleProductTemplateCompatibility::create_wrap_block_group()
 // @link  https://github.com/woocommerce/woocommerce/blob/8.5.2/plugins/woocommerce/src/Blocks/Templates/SingleProductTemplateCompatibility.php#L365
-.wp-block-group.woocommerce {
-	margin-block: 0;
-}
+
+	.wp-block-group.woocommerce {
+		margin-block: 0;
+	}
 
 // Fixing block editor styling issue.
-[style*="font-size"] > [style*="font-size"],
-[data-type^="woocommerce"][style*="font-size"] [style*="font-size"]:not([data-type]) {
-	font-size: 1em !important;
-}
+
+	[style*="font-size"] > [style*="font-size"],
+	[data-type^="woocommerce"][style*="font-size"] [style*="font-size"]:not([data-type]) {
+		font-size: 1em !important;
+	}
 
 // Checkboxes.
-.wc-block-components-checkbox {
 
-	.wc-block-components-checkbox__input[type=checkbox] {
-		padding: 0;
-		background: transparent;
-		border: 2px solid;
-		border-radius: var(--wcti--border--radius);
+	.wc-block-components-checkbox {
 
-		&:checked {
-			background: var(--wcti--color--accent);
-			color: var(--wcti--color--accent-contrast);
-			border-color: var(--wcti--color--accent);
+		.wc-block-components-checkbox__input[type=checkbox] {
+			padding: 0;
+			background: transparent;
+			border: 2px solid;
+			border-radius: var(--wcti--border--radius);
+
+			&:checked {
+				background: var(--wcti--color--accent);
+				color: var(--wcti--color--accent-contrast);
+				border-color: var(--wcti--color--accent);
+			}
+		}
+
+		.wc-block-components-checkbox__mark {
+			fill: var(--wcti--color--accent-contrast);
 		}
 	}
 
-	.wc-block-components-checkbox__mark {
-		fill: var(--wcti--color--accent-contrast);
-	}
-}
-
 // Radio buttons.
-.wc-block-components-radio-control .wc-block-components-radio-control__input {
-	padding: 0;
-}
+
+	.wc-block-components-radio-control .wc-block-components-radio-control__input {
+		padding: 0;
+	}
 
 // Product name in block shop tables, for example.
-.wc-block-components-product-name {
-	margin-block-end: $ratio_min + em;
-	font-family: var(--wcti--font-family--headings);
-	font-size: 1.2em;
-	font-weight: var(--wcti--font-weight--headings);
-	line-height: 1 + $ratio_min;
-}
 
+	.wc-block-components-product-name {
+		margin-block-end: $ratio_min + em;
+		font-family: var(--wcti--font-family--headings);
+		font-size: 1.2em;
+		font-weight: var(--wcti--font-weight--headings);
+		line-height: 1 + $ratio_min;
+	}

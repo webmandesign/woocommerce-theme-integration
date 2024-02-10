@@ -12,7 +12,7 @@
 
 		.wp-block-button .wp-block-button__link[class] {
 			padding: 0;
-			margin-top: .5rem;
+			margin-block-start: .5rem;
 			font-size: var(--wcti--font-size--button);
 			line-height: 1.25;
 			background: none;
@@ -24,8 +24,8 @@
 	}
 
 	.wc-block-components-product-title {
-		margin-top: 1rem;
-		margin-bottom: .5rem;
+		margin-block-start: 1rem;
+		margin-block-end: .5rem;
 
 		&[class] .wc-block-components-product-name[class] {
 			font-weight: inherit;
@@ -40,6 +40,6 @@
 
 	.wc-block-components-product-rating__container {
 		justify-content: center;
-		margin-bottom: .25rem;
+		margin-block-end: .25rem;
 	}
 }

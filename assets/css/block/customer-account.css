@@ -1,15 +1,1 @@
-/* FILE: tools/__index.scss */
-/* FILE: setup/__index.scss */
-.wp-block-woocommerce-customer-account {
-  padding: 0;
-}
-.wp-block-woocommerce-customer-account a {
-  padding: 0.382em;
-}
-.wp-block-woocommerce-customer-account a .wc-block-customer-account__account-icon {
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
-  height: 1em;
-  padding: 0;
-  width: 1em;
-}
+.wp-block-woocommerce-customer-account{padding:0}.wp-block-woocommerce-customer-account a{gap:0.382em;padding:0.382em}.wp-block-woocommerce-customer-account a .wc-block-customer-account__account-icon{-webkit-box-sizing:border-box!important;box-sizing:border-box!important;height:1em;padding:0;width:1em}[data-display-style=icon_only] .label{display:none}

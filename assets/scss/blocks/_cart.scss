@@ -1,28 +1,5 @@
 /* FILE: woocommerce/blocks/_cart.scss */
-
-.wc-block-mini-cart {
-
-	&__template-part {
-		font-size: var(--wcti--font-size--s);
-	}
-
-	&__template-part &__title {
-		margin-top: 1rem;
-	}
-
-	&__icon {
-		width: $ratio_min + 1em;
-		height: $ratio_min + 1em;
-	}
-
-	&__badge {
-		font-size: var(--wcti--font-size--xs);
-	}
-
-	&__drawer .wc-block-components-drawer__close-wrapper .wc-block-components-button {
-		border-color: inherit;
-	}
-}
+// Cart and Checkout styles.
 
 .wc-block-cart-item__image {
 

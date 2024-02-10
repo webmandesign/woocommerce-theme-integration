@@ -1,6 +1,7 @@
 // woocommerce/customer-account
 //
-// @since  1.6.0
+// @since    1.6.0
+// @version  1.6.2
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -9,13 +10,18 @@
 	padding: 0;
 
 	a {
+		gap: $ratio_min + em;
 		padding: $ratio_min + em;
 
 		.wc-block-customer-account__account-icon {
-			box-sizing: border-box!important;
+			box-sizing: border-box !important;
+			width: 1em
 			height: 1em;
 			padding: 0;
-			width: 1em
 		}
 	}
+}
+
+[data-display-style="icon_only"] .label {
+	display: none;
 }

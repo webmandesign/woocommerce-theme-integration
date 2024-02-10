@@ -1,5 +1,28 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.2, 20240210
+
+### Added
+- Mini Cart block stylesheet
+
+### Update
+- Moving specific block styles from generic blocks stylesheet to dedicated stylesheets
+
+### Fixed
+- Preventing My Account login forms width issue
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/woocommerce.scss
+	assets/scss/block/customer-account.scss
+	assets/scss/block/featured-category.scss
+	assets/scss/block/featured-product.scss
+	assets/scss/block/mini-cart.scss
+	assets/scss/block/product-categories.scss
+
+
 ## 1.6.1, 20240208
 
 ### Fixed

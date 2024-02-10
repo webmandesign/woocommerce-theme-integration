@@ -1,4 +1,9 @@
-/* FILE: woocommerce/blocks/_featured-category.scss */
+// woocommerce/featured-category
+//
+// @since  1.6.2
+
+@import '../tools/_index';
+@import '../setup/_index';
 
 .wc-block-featured-category {
 	position: relative;
@@ -6,8 +11,7 @@
 	border-radius: var(--wcti--border--radius);
 
 	@include media( map_get( $breakpoint, 'm' ) ) {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-inline: 2rem;
 	}
 
 	.wc-block-featured-category__wrapper {

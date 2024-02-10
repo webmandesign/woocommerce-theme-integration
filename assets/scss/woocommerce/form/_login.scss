@@ -17,11 +17,12 @@
 }
 
 .customer-login {
+	max-width: var(--wcti--width--wide);
+	margin-left: auto;
+	margin-right: auto;
 
 	&:not(.customer-registration) {
 		max-width: var(--wcti--width--content);
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	&:not(.customer-registration),
