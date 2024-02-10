@@ -1,4 +1,4 @@
-/* FILE: woocommerce/blocks/_product-image.scss */
+/* FILE: blocks/_product-image.scss */
 
 .wc-block-components-product-image {
 	margin: 0;
@@ -25,7 +25,10 @@
 	top: 0 !important;
 	left: 50% !important;
 	right: auto !important;
-	border-radius: var(--wcti--border--radius);
+
+	&[class] {
+		border-radius: var(--wcti--border--radius);
+	}
 
 	&:not(.wc-block-components-product-sale-badge--align-left):not(.wc-block-components-product-sale-badge--align-right) {
 		border-top-left-radius: 0;

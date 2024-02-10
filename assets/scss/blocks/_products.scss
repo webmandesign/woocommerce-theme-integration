@@ -1,4 +1,4 @@
-/* FILE: woocommerce/blocks/_products.scss */
+/* FILE: blocks/_products.scss */
 
 .wc-block-grid {
 	text-align: inherit;
@@ -164,7 +164,7 @@
 		flex-wrap: wrap;
 		margin: calc( var(--wcti--spacing--gap--posts-list) * -1 ) calc( var(--wcti--spacing--gap--posts-list) / 2 * -1 );
 
-		.wc-block-grid__product {
+		.wc-block-grid__product[class] {
 			flex: 0 1 auto; // Have to override WooCommerce block default styles.
 			max-width: none;
 			padding-inline: 0;

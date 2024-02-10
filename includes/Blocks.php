@@ -41,7 +41,7 @@ class Blocks {
 				add_filter( 'render_block_core/post-excerpt',           __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
 				add_filter( 'render_block_woocommerce/product-details', __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
 
-				add_action( 'woocommerce_blocks_hook_compatibility_additional_data', __CLASS__ . '::hooks_in_blocks' );
+				add_filter( 'woocommerce_blocks_hook_compatibility_additional_data', __CLASS__ . '::hooks_in_blocks' );
 
 	} // /init
 

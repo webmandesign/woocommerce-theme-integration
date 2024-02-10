@@ -1,0 +1,10 @@
+// woocommerce/order-confirmation-summary
+//
+// @since  1.6.3
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-order-confirmation-summary.has-background {
+	border-radius: var(--wcti--border--radius);
+}

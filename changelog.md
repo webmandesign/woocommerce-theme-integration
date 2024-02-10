@@ -1,5 +1,16 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.3, 20240210
+
+### Fixed
+- 
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+
+
 ## 1.6.2, 20240210
 
 ### Added

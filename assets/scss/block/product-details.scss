@@ -1,6 +1,7 @@
 // woocommerce/product-details
 //
-// @since  1.6.0
+// @since    1.6.0
+// @version  1.6.3
 //
 // @see  woocommerce/others/_tabs.scss
 
@@ -11,7 +12,7 @@
 	margin-block: 0;
 
 	ul.wc-tabs {
-		padding-block: 0;
+		padding: 0;
 		margin-block: 0;
 		border-bottom: .1rem solid;
 		border-bottom-color: inherit;
