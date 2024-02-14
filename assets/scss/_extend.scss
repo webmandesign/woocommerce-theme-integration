@@ -25,10 +25,7 @@
 		&::before {
 			content: '';
 			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
+			inset: 0;
 			background-color: currentColor;
 			border-radius: inherit;
 			opacity: var(--wcti--opacity--pseudo-bg);
@@ -82,8 +79,7 @@
 			) {
 
 				&:nth-last-child( 1 ):nth-child( 2n - 1 ) {
-					margin-left: auto;
-					margin-right: auto;
+					margin-inline: auto;
 				}
 			}
 
@@ -115,8 +111,7 @@
 			) {
 
 				&:nth-last-child( 1 ):nth-child( 2n - 1 ) {
-					margin-left: auto;
-					margin-right: auto;
+					margin-inline: auto;
 				}
 			}
 
@@ -131,16 +126,15 @@
 
 				// @link  https://jsfiddle.net/Lbjwqo38/
 				&:nth-last-child( 2 ):nth-child( 5n - 1 ):nth-child( 3n + 1 ) {
-					margin-#{$left}: auto;
+					margin-inline-start: auto;
 				}
 
 				&:nth-last-child( 1 ):nth-child( 5n ):nth-child( 3n + 2 ) {
-					margin-#{$right}: auto;
+					margin-inline-end: auto;
 				}
 
 				&:nth-last-child( 1 ):nth-child( 5n ):nth-child( 3n ) {
-					margin-left: auto;
-					margin-right: auto;
+					margin-inline: auto;
 				}
 			}
 
@@ -171,9 +165,9 @@
 		list-style: none;
 
 		ul {
-			margin-#{$left}: .5rem;
-			margin-top: .25rem;
-			margin-bottom: -.25rem;
+			margin-inline-start: .5rem;
+			margin-block-start: .25rem;
+			margin-block-end: -.25rem;
 			list-style: inherit; // This is required in case the parent was set with a class (such as categories block).
 		}
 
@@ -182,7 +176,7 @@
 
 			&::before {
 				content: '\2014'; // &mdash;
-				margin-#{$right}: .25rem;
+				margin-inline-end: .25rem;
 				speak: none;
 			}
 		}
@@ -208,8 +202,7 @@
 
 		li {
 			position: relative;
-			padding-top: .5rem;
-			padding-bottom: .5rem;
+			padding-block: .5rem;
 
 			&::before {
 				display: none;
@@ -219,16 +212,16 @@
 				content: '';
 				position: absolute;
 				width: 200%;
-				#{$right}: 0;
-				top: 0;
+				inset-inline-end: 0;
+				inset-block-start: 0;
 				border-bottom: 1px solid;
 				border-color: inherit;
 			}
 		}
 
 		ul {
-			margin-top: .5rem;
-			margin-bottom: -.5rem;
+			margin-block-start: .5rem;
+			margin-block-end: -.5rem;
 			overflow-x: visible;
 		}
 
@@ -248,8 +241,8 @@
 			overflow: hidden;
 
 			&:not(:last-child) {
-				padding-bottom: .5em;
-				margin-bottom: .5em;
+				padding-block-end: .5em;
+				margin-block-end: .5em;
 				border-bottom-width: 1px;
 				border-bottom-style: dotted;
 			}
@@ -265,9 +258,13 @@
 		}
 
 		img {
-			float: $right;
+			float: right;
 			width: 3em;
-			margin-#{$left}: 1em;
+			margin-inline-start: 1em;
+
+			.rtl & {
+				float: left;
+			}
 		}
 
 		.product-title {
@@ -292,25 +289,31 @@
 		font-size: 1em;
 		font-weight: 400;
 		line-height: 1;
-		text-align: $left;
+		text-align: inherit;
 		overflow: hidden;
 
 		span,
 		span::before {
-			float: $left;
+			float: left;
 			position: absolute;
-			#{$left}: 0;
-			top: 0;
+			inset-inline-start: 0;
+			inset-block-start: 0;
+			line-height: inherit;
+
+			.rtl & {
+				float: right;
+			}
 		}
 
 		&::before {
 			content: '\2606\2606\2606\2606\2606'; // WHITE STAR
+			line-height: inherit;
 			color: currentColor;
 		}
 
 		span {
 			height: 1em;
-			padding-top: 1.5em; // Move the text away accessibly.
+			padding-block-start: 1.5em; // Move the text away accessibly.
 			overflow: hidden;
 
 			&::before {

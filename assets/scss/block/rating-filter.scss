@@ -1,0 +1,14 @@
+// woocommerce/rating-filter
+//
+// @since  1.6.3
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-rating-filter label {
+	font-size: 1em;
+
+	.wc-block-components-product-rating {
+		font-size: 1.125em;
+	}
+}
