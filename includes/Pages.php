@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.0
+ * @version  1.6.3
  */
 
 namespace WebManDesign\WCTI;
@@ -25,7 +25,7 @@ class Pages {
 	 * //* = Affects (FSE) blocks.
 	 *
 	 * @since    1.0.0
-	 * @version  1.6.0
+	 * @version  1.6.3
 	 *
 	 * @return  void
 	 */
@@ -51,6 +51,8 @@ class Pages {
 			// Filters
 
 				add_filter( 'admin_body_class', __CLASS__ . '::body_class_admin' );
+
+				add_filter( 'body_class', __CLASS__ . '::body_class' );
 
 				add_filter( 'single_post_title', __CLASS__ . '::page_endpoint_title' );
 					add_action( Hook::get_name( 'page_header/top' ), function() {
@@ -377,7 +379,6 @@ class Pages {
 					$class .= ' has-page-summary';
 				}
 
-
 				// Page header markup opening:
 				echo '<div id="page-header" class="page-header' . esc_attr( $class ) . '">';
 				echo '<div class="page-header-content">';
@@ -398,5 +399,40 @@ class Pages {
 			}
 
 	} // /page_header
+
+	/**
+	 * HTML body classes.
+	 *
+	 * @since  1.6.3
+	 *
+	 * @param  array $classes
+	 *
+	 * @return  array
+	 */
+	public static function body_class( array $classes ): array {
+
+		// Processing
+
+			if (
+				! is_search()
+				&& is_post_type_archive( 'product' )
+			) {
+
+				$shop_page = get_post( wc_get_page_id( 'shop' ) );
+
+				if (
+					$shop_page
+					&& wc_format_content( wp_kses_post( $shop_page->post_content ) )
+				) {
+					$classes[] = ' has-shop-page-content';
+				}
+			}
+
+
+		// Output
+
+			return $classes;
+
+	} // /body_class
 
 }
