@@ -1,14 +1,25 @@
 # Integration for WooCommerce Changelog
 
-## 1.6.3, 20240210
+## 1.6.3, 20240223
+
+### Added
+- Body class if shop page has content
 
 ### Fixed
-- 
+- Block styles
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/mini-cart.scss
+	assets/scss/block/order-confirmation-summary.scss
+	assets/scss/block/product-categories.scss
+	assets/scss/block/product-details.scss
+	assets/scss/block/rating-filter.scss
+	includes/Pages.php
 
 
 ## 1.6.2, 20240210
