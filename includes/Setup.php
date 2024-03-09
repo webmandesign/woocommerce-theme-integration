@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.4.3
+ * @version  1.6.4
  */
 
 namespace WebManDesign\WCTI;
@@ -170,7 +170,8 @@ class Setup {
 	/**
 	 * HTML body classes.
 	 *
-	 * @since  1.4.0
+	 * @since    1.4.0
+	 * @version  1.6.4
 	 *
 	 * @param  array $classes
 	 *
@@ -181,6 +182,11 @@ class Setup {
 		// Processing
 
 			$classes[] = 'has-catalog-columns-mobile-' . absint( get_theme_mod( Options::$id['catalog_columns_mobile'], 1 ) );
+
+			if ( ! get_theme_mod( Options::$id['catalog_button_custom_style'], true ) ) {
+				// Custom styles have to be default (with no body class) for block editor styles.
+				$classes[] = 'no-custom-loop-add-to-cart';
+			}
 
 
 		// Output

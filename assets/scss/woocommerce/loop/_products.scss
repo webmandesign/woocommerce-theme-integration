@@ -40,43 +40,46 @@ ul.products {
 		}
 	}
 
-	.button,
-	.added_to_cart {
-		display: block;
-		padding: .25em 0;
-		margin: 0;
-		font-size: var(--wcti--font-size--xs);
-		text-align: inherit;
-		text-decoration: none;
-		white-space: nowrap;
+	:where(body:not(.no-custom-loop-add-to-cart)) & {
 
-		&,
-		&:hover,
-		&:focus,
-		&:active,
-		&:visited {
-			background: none;
-			color: var(--wcti--color--accent);
-			border: 0;
-			box-shadow: none;
-			animation: none;
-		}
-	}
+		.button,
+		.added_to_cart {
+			display: block;
+			padding: .25em 0;
+			margin: 0;
+			font-size: var(--wcti--font-size--xs);
+			text-align: inherit;
+			text-decoration: none;
+			white-space: nowrap;
 
-	.button {
-		margin-top: var(--wcti--spacing--margin--products-add-to-cart--top);
-
-		&::before {
-			content: '+ ';
-			speak: none;
+			&,
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited {
+				background: none;
+				color: var(--wcti--color--accent);
+				border: 0;
+				box-shadow: none;
+				animation: none;
+			}
 		}
 
-		&.loading::after {
-			content: '\2026'; // &hellip;
-		}
+		.button {
+			margin-top: var(--wcti--spacing--margin--products-add-to-cart--top);
 
-		&.added::after {
-			content: ' \002713'; // check mark
+			&::before {
+				content: '+ ';
+				speak: none;
+			}
+
+			&.loading::after {
+				content: '\2026'; // &hellip;
+			}
+
+			&.added::after {
+				content: ' \002713'; // check mark
+			}
 		}
 	}
 

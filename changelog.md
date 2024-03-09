@@ -1,5 +1,16 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.4, 20240311
+
+### Updated
+- Improving add to cart button styles application
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+
+
 ## 1.6.3, 20240223
 
 ### Added

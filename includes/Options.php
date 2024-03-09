@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.5.0
+ * @version  1.6.4
  */
 
 namespace WebManDesign\WCTI;
@@ -23,15 +23,16 @@ class Options {
 	 * Plugin option IDs.
 	 *
 	 * @since    1.4.0
-	 * @version  1.5.0
+	 * @version  1.6.4
 	 *
 	 * @var array
 	 */
 	public static $id = array(
-		'replace_theme_search'     => 'wcti_replace_theme_search',
-		'catalog_columns_mobile'   => 'wcti_catalog_columns_mobile',
-		'related_products_columns' => 'wcti_related_products_columns',
-		'upsell_products_columns'  => 'wcti_upsell_products_columns',
+		'replace_theme_search'        => 'wcti_replace_theme_search',
+		'catalog_button_custom_style' => 'wcti_catalog_button_custom_style', // This is "silent" option.
+		'catalog_columns_mobile'      => 'wcti_catalog_columns_mobile',
+		'related_products_columns'    => 'wcti_related_products_columns',
+		'upsell_products_columns'     => 'wcti_upsell_products_columns',
 	);
 
 	/**

@@ -78,61 +78,6 @@
 			margin: var(--wcti--spacing--margin--products-add-to-cart--top) 0 0;
 		}
 
-		.wp-block-button {
-
-			.wp-block-button__link,
-			.added_to_cart {
-				display: block;
-				width: 100%;
-				padding: .25em 0;
-				margin: 0;
-				font-size: var(--wcti--font-size--xs);
-				text-align: inherit;
-				text-decoration: none;
-
-				&,
-				&:hover,
-				&:focus,
-				&:active,
-				&:visited {
-					background: none;
-					color: var(--wcti--color--accent);
-					border: 0;
-					box-shadow: none;
-					animation: none;
-				}
-			}
-
-			.wp-block-button__link.loading::after,
-			.wp-block-button__link.added::after {
-				position: static;
-				left: auto;
-				right: auto;
-				top: auto;
-				margin: 0;
-				font-family: inherit;
-				vertical-align: baseline;
-				animation: none;
-			}
-
-			.wp-block-button__link.loading::after {
-				content: '\2026'; // &hellip;
-			}
-
-			.wp-block-button__link.added::after {
-				content: ' \002713'; // check mark
-			}
-
-			&__link {
-				font-weight: var(--wcti--font-weight--add-to-cart--block);
-
-				&::before {
-					content: '+ ';
-					speak: none;
-				}
-			}
-		}
-
 		.added_to_cart {
 
 			&::before {
@@ -153,6 +98,61 @@
 	&.has-aligned-buttons .wc-block-grid__product > :last-child {
 		padding-top: var(--wcti--spacing--margin--products-add-to-cart--top);
 		padding-bottom: 0;
+	}
+}
+
+:where(body:not(.no-custom-loop-add-to-cart)) .wc-block-grid__product .wp-block-button {
+
+	.wp-block-button__link,
+	.added_to_cart {
+		display: block;
+		width: 100%;
+		padding: .25em 0;
+		margin: 0;
+		font-size: var(--wcti--font-size--xs);
+		text-align: inherit;
+		text-decoration: none;
+
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			background: none;
+			color: var(--wcti--color--accent);
+			border: 0;
+			box-shadow: none;
+			animation: none;
+		}
+	}
+
+	.wp-block-button__link.loading::after,
+	.wp-block-button__link.added::after {
+		position: static;
+		left: auto;
+		right: auto;
+		top: auto;
+		margin: 0;
+		font-family: inherit;
+		vertical-align: baseline;
+		animation: none;
+	}
+
+	.wp-block-button__link.loading::after {
+		content: '\2026'; // &hellip;
+	}
+
+	.wp-block-button__link.added::after {
+		content: ' \002713'; // check mark
+	}
+
+	&__link {
+		font-weight: var(--wcti--font-weight--add-to-cart--block);
+
+		&::before {
+			content: '+ ';
+			speak: none;
+		}
 	}
 }
 
