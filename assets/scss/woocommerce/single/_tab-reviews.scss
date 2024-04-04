@@ -30,7 +30,8 @@
 		margin-bottom: 2rem;
 
 		span {
-			font-weight: 400;
+			font-weight: var(--wcti--font-weight--headings-span);
+			font-style: italic;
 		}
 	}
 

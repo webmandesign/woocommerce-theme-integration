@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.0
+ * @version  1.6.4
  */
 
 namespace WebManDesign\WCTI;
@@ -86,7 +86,8 @@ class Wrappers {
 	/**
 	 * Product summary container.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.6.4
 	 *
 	 * @return  void
 	 */
@@ -97,7 +98,7 @@ class Wrappers {
 			if ( doing_action( 'woocommerce_before_single_product_summary' ) ) {
 				echo '<div class="summary-section"><div class="summary-content">';
 			} else {
-				echo '</div></div><!-- /.summary-section -->';
+				echo '</div></div>';
 			}
 
 	} // /product_summary

@@ -12,6 +12,10 @@
 		position: relative;
 		margin-bottom: var(--wcti--spacing--white);
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		.quantity {
 			display: inline-block;
 			vertical-align: top;

@@ -5,7 +5,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.0
+ * @version  1.6.4
  */
 
 ( () => {
@@ -40,6 +40,9 @@
 							background: true,
 							gradients: true,
 						} );
+						// Allow multiple instances of Mini Cart for multiple headers (mobile, desktop).
+						// @link  https://github.com/woocommerce/woocommerce/issues/46166
+						settings.supports.multiple = true;
 						break;
 
 					case 'woocommerce/product-image':
