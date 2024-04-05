@@ -72,14 +72,6 @@ ul.products {
 				content: '+ ';
 				speak: none;
 			}
-
-			&.loading::after {
-				content: '\2026'; // &hellip;
-			}
-
-			&.added::after {
-				content: ' \002713'; // check mark
-			}
 		}
 	}
 
@@ -96,3 +88,39 @@ ul.products {
 		}
 	}
 }
+
+@keyframes loadingAddToCart {
+	from {
+		transform: scale( 1 );
+	}
+	to {
+		transform: scale( .75 );
+	}
+}
+
+$important: !important;
+
+.ajax_add_to_cart {
+
+	&::after {
+		display: inline-block $important;
+		margin: 0 $important;
+		margin-inline-start: $ratio_min + em $important;
+		font-family: inherit $important;
+	}
+
+	&.loading {
+		opacity: 1 $important;
+
+		&::after {
+			animation: loadingAddToCart .6s linear infinite alternate $important;
+			content: '⋯' $important;
+		}
+	}
+
+	&.added::after {
+		content: '✓' $important;
+	}
+}
+
+$important: null;
