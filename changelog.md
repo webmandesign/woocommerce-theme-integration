@@ -1,14 +1,27 @@
 # Integration for WooCommerce Changelog
 
-## 1.6.4, 20240311
+## 1.6.4, 20240406
 
 ### Updated
-- Improving add to cart button styles application
+- Improving styles, introducing more CSS variables
+- Removing obsolete HTML comments to prevent styling issues
+- Allowing multiple instances of Mini Cart block
+- Allowing themes to opt out of custom add to cart button styles
+
+### Fixed
+- AJAX add to cart button status indicators
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/js/block-mods.js
+	assets/scss/blocks.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/mini-cart.scss
+	includes/Options.php
+	includes/Setup.php
+	includes/Wrappers.php
 
 
 ## 1.6.3, 20240223

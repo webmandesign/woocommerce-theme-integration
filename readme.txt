@@ -4,7 +4,7 @@ Donate link:       https://www.webmandesign.eu
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
-Tested up to:      6.4
+Tested up to:      6.5
 Stable tag:        1.6.4
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
@@ -48,7 +48,7 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 == Upgrade Notice ==
 
 = 1.6.4 =
-Improving add to cart styles.
+Improving and fixing styles, allowing multiple instances of Mini Cart block, allowing themes to opt out of custom add to cart button styles.
 
 = 1.6.3 =
 Fixing block CSS styles.
