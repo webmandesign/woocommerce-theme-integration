@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Integration for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
-"POT-Creation-Date: 2024-02-08 15:16+0100\n"
-"PO-Revision-Date: 2024-02-08 15:17+0100\n"
+"POT-Creation-Date: 2024-09-21 15:12+0200\n"
+"PO-Revision-Date: 2024-09-21 15:12+0200\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
 "Language: sk_SK\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,7 +19,7 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/Blocks.php:153 includes/Single.php:253
+#: includes/Blocks.php:219 includes/Single.php:253
 msgid "More details&hellip;"
 msgstr "Viac informácií&hellip;"
 
@@ -75,11 +75,11 @@ msgstr "&rarr;"
 msgid "List of products"
 msgstr "Zoznam produktov"
 
-#: includes/Options.php:87
+#: includes/Options.php:88
 msgid "Replace theme search"
 msgstr "Nahradiť vyhľadávanie témy"
 
-#: includes/Options.php:88
+#: includes/Options.php:89
 msgid ""
 "Replaces default search form in the theme with WooCommerce product search "
 "form."
@@ -87,20 +87,20 @@ msgstr ""
 "Nahrádza pôvodný formulár vyhľadávania v téme formulárom vyhľadávania "
 "produktov WooCommerce."
 
-#: includes/Options.php:114
+#: includes/Options.php:115
 msgid "Small screen products per row"
 msgstr "Produktov v riadku na malých obrazovkách"
 
-#: includes/Options.php:115
+#: includes/Options.php:116
 msgid "How many products should be shown per row on small screen devices?"
 msgstr ""
 "Koľko produktov chcete zobraziť v riadku na zariadeniach s malou obrazovkou?"
 
-#: includes/Options.php:138
+#: includes/Options.php:139
 msgid "Upsell products columns"
 msgstr "Stĺpce produktov navýšenia predaja"
 
-#: includes/Options.php:139
+#: includes/Options.php:140
 msgid ""
 "Number of columns in \"You may also like…\" products list on single product "
 "page."
@@ -108,24 +108,40 @@ msgstr ""
 "Počet stĺpcov v zozname produktov \"Možno by sa Vám páčilo…\" na stránke "
 "produktu."
 
-#: includes/Options.php:162
+#: includes/Options.php:163
 msgid "Related products columns"
 msgstr "Stĺpce súvisiacich produktov"
 
-#: includes/Options.php:164
+#: includes/Options.php:165
 msgid "Number of columns in \"Related products\" list on single product page."
 msgstr "Počet stĺpcov v zozname \"Súvisiace produkty\" na stránke produktu."
 
-#: includes/Options.php:166
+#: includes/Options.php:167
 msgid "(This option does not affect \"Related Products\" block settings.)"
 msgstr "(Táto možnosť nemá vplyv na nastavenia bloku \"Súvisiace produkty\".)"
 
-#: includes/Pages.php:248
+#: includes/Options.php:181
+msgid "Blocks & Patterns"
+msgstr "Bloky a vzory"
+
+#: includes/Options.php:204
+msgid "Simplify block pattern categories"
+msgstr "Zjednodušiť kategórie vzorov blokov"
+
+#: includes/Options.php:205
+msgid ""
+"Remove additional block pattern categories, keep only \"WooCommerce\" "
+"category."
+msgstr ""
+"Odstráni dodatočné kategórie vzorov blokov, ponechajte iba kategóriu "
+"\"WooCommerce\"."
+
+#: includes/Pages.php:250
 msgid "Cart content"
 msgstr "Obsah košíka"
 
 #. translators: %d: number of shopping cart items.
-#: includes/Pages.php:252
+#: includes/Pages.php:254
 #, php-format
 msgctxt "Shopping cart items count."
 msgid "(%d item)"
@@ -134,14 +150,14 @@ msgstr[0] "(%d položka)"
 msgstr[1] "(%d položky)"
 msgstr[2] "(%d položiek)"
 
-#: includes/Pages.php:271
+#: includes/Pages.php:273
 msgid "Use your discount coupon code here"
 msgstr "Použite svoj zľavový kupón"
 
-#: includes/Pages.php:323
+#: includes/Pages.php:325
 msgid "Continue Shopping"
 msgstr "Pokračovať v nákupe"
 
-#: includes/Pages.php:338
+#: includes/Pages.php:340
 msgid "Checkout"
 msgstr "Pokladňa"

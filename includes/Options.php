@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.6.4
+ * @version  1.6.5
  */
 
 namespace WebManDesign\WCTI;
@@ -23,16 +23,16 @@ class Options {
 	 * Plugin option IDs.
 	 *
 	 * @since    1.4.0
-	 * @version  1.6.4
-	 *
-	 * @var array
+	 * @version  1.6.5
+	 * @var      array
 	 */
 	public static $id = array(
-		'replace_theme_search'        => 'wcti_replace_theme_search',
-		'catalog_button_custom_style' => 'wcti_catalog_button_custom_style', // This is "silent" option.
-		'catalog_columns_mobile'      => 'wcti_catalog_columns_mobile',
-		'related_products_columns'    => 'wcti_related_products_columns',
-		'upsell_products_columns'     => 'wcti_upsell_products_columns',
+		'replace_theme_search'          => 'wcti_replace_theme_search',
+		'catalog_button_custom_style'   => 'wcti_catalog_button_custom_style', // This is "silent" option.
+		'catalog_columns_mobile'        => 'wcti_catalog_columns_mobile',
+		'related_products_columns'      => 'wcti_related_products_columns',
+		'upsell_products_columns'       => 'wcti_upsell_products_columns',
+		'pattern_categories_simplified' => 'wcti_pattern_categories_simplified',
 	);
 
 	/**
@@ -58,7 +58,7 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.5.0
+	 * @version  1.6.5
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -172,6 +172,40 @@ class Options {
 						),
 					)
 				);
+
+			if ( class_exists( 'Automattic\WooCommerce\Blocks\Patterns\PatternRegistry' ) ) {
+
+				$wp_customize->add_section(
+					'wcti_section_blocks',
+					array(
+						'title'      => esc_html__( 'Blocks & Patterns', 'wc-theme-integration' ),
+						'panel'      => 'woocommerce',
+						'capability' => 'manage_woocommerce',
+						'priority'   => 499,
+					)
+				);
+
+					$wp_customize->add_setting(
+						self::$id['pattern_categories_simplified'],
+						array(
+							'capability'        => 'manage_woocommerce',
+							'default'           => true,
+							'sanitize_callback' => function( $value ) {
+								return (bool) $value;
+							},
+						)
+					);
+
+						$wp_customize->add_control(
+							self::$id['pattern_categories_simplified'],
+							array(
+								'type'        => 'checkbox',
+								'section'     => 'wcti_section_blocks',
+								'label'       => esc_html__( 'Simplify block pattern categories', 'wc-theme-integration' ),
+								'description' => esc_html__( 'Remove additional block pattern categories, keep only "WooCommerce" category.', 'wc-theme-integration' ),
+							)
+						);
+			}
 
 	} // /options
 

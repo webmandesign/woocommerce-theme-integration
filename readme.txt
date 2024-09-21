@@ -4,8 +4,8 @@ Donate link:       https://www.webmandesign.eu
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
 Requires at least: 5.2
-Tested up to:      6.5
-Stable tag:        1.6.4
+Tested up to:      6.6
+Stable tag:        1.6.5
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -46,6 +46,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 
 == Upgrade Notice ==
+
+= 1.6.5 =
+Adding option to simplify WooCommerce pattern categories.
 
 = 1.6.4 =
 Improving and fixing styles, allowing multiple instances of Mini Cart block, allowing themes to opt out of custom add to cart button styles.

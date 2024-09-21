@@ -6,10 +6,12 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.1
+ * @version  1.6.5
  */
 
 namespace WebManDesign\WCTI;
+
+use WP_Block_Patterns_Registry;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -17,10 +19,18 @@ defined( 'ABSPATH' ) || exit;
 class Blocks {
 
 	/**
+	 * Registered WooCommerce patterns.
+	 *
+	 * @since  1.6.5
+	 * @var    null|array
+	 */
+	private static $patterns = null;
+
+	/**
 	 * Initialization.
 	 *
 	 * @since    1.5.0
-	 * @version  1.6.0
+	 * @version  1.6.5
 	 *
 	 * @return  void
 	 */
@@ -33,6 +43,7 @@ class Blocks {
 				add_action( 'enqueue_block_editor_assets', __CLASS__ . '::enqueue_editor_mods' );
 
 				add_action( 'init', __CLASS__ . '::styles' );
+				add_action( 'init', __CLASS__ . '::pattern_categories', 99 );
 
 			// Filters
 
@@ -93,6 +104,53 @@ class Blocks {
 			}
 
 	} // /styles
+
+	/**
+	 * Modify WooCommerce pattern categories.
+	 *
+	 * @since  1.6.5
+	 *
+	 * @return  void
+	 */
+	public static function pattern_categories() {
+
+		// Processing
+
+			// Modify WooCommerce patterns to only use `woo-commerce` pattern category.
+			if ( get_theme_mod( Options::$id['pattern_categories_simplified'], true ) ) {
+
+				// Get all WooCommerce registered patterns.
+				if ( null === self::$patterns ) {
+
+					self::$patterns = array_filter(
+						WP_Block_Patterns_Registry::get_instance()->get_all_registered(),
+						function( $args ) {
+
+							if ( empty( $args['name'] ) ) {
+								$args['name'] = '';
+							}
+
+							return 0 === stripos( $args['name'], 'woocommerce' );
+						}
+					);
+				}
+
+				// Unregister, modify and re-register WooCommerce patterns with correct category.
+				foreach ( (array) self::$patterns as $pattern ) {
+
+					if ( array( 'woo-commerce' ) === $pattern['categories'] ) {
+						continue;
+					}
+
+					unregister_block_pattern( $pattern['name'] );
+
+					$pattern['categories'] = array( 'woo-commerce' );
+
+					register_block_pattern( $pattern['name'], $pattern );
+				}
+			}
+
+	} // /pattern_categories
 
 	/**
 	 * Block (block type) settings modification.

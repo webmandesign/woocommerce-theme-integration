@@ -1,5 +1,22 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.5, 20240921
+
+### Added
+- Option to simplify WooCommerce pattern categories
+
+### Updated
+- Localization
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Blocks.php
+	includes/Options.php
+	languages/*.*
+
+
 ## 1.6.4, 20240406
 
 ### Updated
