@@ -1,5 +1,17 @@
 # Integration for WooCommerce Changelog
 
+## 1.6.6, 20241011
+
+### Fixed
+- Index content in universal theme's classic mode
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Site_Editor.php
+
+
 ## 1.6.5, 20240921
 
 ### Added

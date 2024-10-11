@@ -7,7 +7,7 @@ Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wo
 Requires at least: 6.0
 Tested up to:      6.7
 Requires PHP:      7.0
-Stable tag:        1.6.5
+Stable tag:        1.6.6
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -48,6 +48,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 
 == Upgrade Notice ==
+
+= 1.6.6 =
+Fixing classic/hybrid mode in universal themes.
 
 = 1.6.5 =
 Adding option to simplify WooCommerce pattern categories.

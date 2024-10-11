@@ -18,7 +18,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.4.0
- * @version  1.4.3
+ * @version  1.6.6
  */
 
 namespace WebManDesign\WCTI;
@@ -51,7 +51,7 @@ class Site_Editor {
 	 * Initialization.
 	 *
 	 * @since    1.4.0
-	 * @version  1.4.3
+	 * @version  1.6.6
 	 *
 	 * @return  void
 	 */
@@ -64,7 +64,7 @@ class Site_Editor {
 				// Using late priority here, after the theme modifications.
 				add_filter( 'theme_file_path', __CLASS__ . '::bypass_is_block_theme', 99 );
 
-				add_filter( Hook::get_name( 'index/content' ), __CLASS__ . '::content_index', 10, 2 );
+				add_filter( Hook::get_name( 'content/block_template_part/the_content/slug' ), __CLASS__ . '::block_template_part_index_slug' );
 
 				add_filter( Hook::get_name( 'content/block_template_part/get_content' ), __CLASS__ . '::content_block_template_part', 10, 2 );
 
@@ -124,7 +124,7 @@ class Site_Editor {
 	} // /bypass_is_block_theme
 
 	/**
-	 * Render index page content in classic mode of a hybrid theme.
+	 * Set index page content in classic mode of a hybrid theme.
 	 *
 	 * Block/hybrid theme can define these template parts:
 	 * - 'woocommerce-archive-product'
@@ -134,48 +134,40 @@ class Site_Editor {
 	 *
 	 * Otherwise fallback content is used -> @see self::content_block_template_part().
 	 *
-	 * @since  1.4.2
+	 * @since  1.6.6
 	 *
-	 * @param  array $block_template_parts
+	 * @param  string|array $slug  Template part slug/name.
 	 *
-	 * @return  array
+	 * @return  string|array
 	 */
-	public static function content_index( array $block_template_parts ): array {
+	public static function block_template_part_index_slug( $slug ) {
 
-		// Variables
+		// Requirements check
 
-			$query = '';
+			// Target index page content only.
+			if ( ! in_array( $slug, array( 'template-archive', 'template-search' ) ) ) {
+				return $slug;
+			}
 
 
 		// Processing
 
 			if ( is_shop() ) {
-				$query = ( is_search() ) ? ( 'woocommerce-product-search-results' ) : ( 'woocommerce-archive-product' );
+				$slug = ( is_search() ) ? ( 'woocommerce-product-search-results' ) : ( 'woocommerce-archive-product' );
 			} elseif ( is_product_category() ) {
-				$query = 'woocommerce-taxonomy-product-cat';
+				$slug = 'woocommerce-taxonomy-product-cat';
 			} elseif ( is_product_tag() ) {
-				$query = 'woocommerce-taxonomy-product-tag';
+				$slug = 'woocommerce-taxonomy-product-tag';
 			} elseif ( is_product_taxonomy() ) {
-				$query = 'woocommerce-taxonomy-product-attribute';
-			}
-
-			if ( ! empty( $query ) ) {
-				$block_template_parts = array(
-					'intro' => '',
-					'query' => $query,
-					'query-args' => array(
-						'tag'   => 'div',
-						'class' => 'wcti-block-template-part-content',
-					),
-				);
+				$slug = 'woocommerce-taxonomy-product-attribute';
 			}
 
 
 		// Output
 
-			return $block_template_parts;
+			return $slug;
 
-	} // /content_index
+	} // /block_template_part_index_slug
 
 	/**
 	 * Render WooCommerce block content in classic mode of a hybrid theme.
