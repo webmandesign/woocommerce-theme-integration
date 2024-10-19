@@ -1,0 +1,12 @@
+// woocommerce/order-confirmation-billing-wrapper
+//
+// @since  1.6.7
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-order-confirmation-billing-address[class] {
+	border-width: var(--wcti--border--width);
+	border-color: inherit;
+	border-radius: var(--wcti--border--radius);
+}

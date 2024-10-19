@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.1
+ * @version  1.6.7
  */
 
 namespace WebManDesign\WCTI;
@@ -153,13 +153,13 @@ class Single {
 	 * This is also a fix for WooCommerce 3.2+ version.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.2
+	 * @version  1.6.7
 	 *
-	 * @param  string $template
+	 * @param  null|string $template
 	 *
-	 * @return  string
+	 * @return  null|string
 	 */
-	public static function single_product_template( string $template ): string {
+	public static function single_product_template( $template ) {
 
 		// Processing
 

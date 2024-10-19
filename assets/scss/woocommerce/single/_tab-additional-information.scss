@@ -4,7 +4,7 @@
 	border-width: 0;
 
 	tr:not(:last-child) {
-		border-bottom-width: 1px;
+		border-bottom-width: var(--wcti--border--width--item-separator);
 		border-bottom-style: solid;
 	}
 

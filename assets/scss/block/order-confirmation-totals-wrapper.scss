@@ -1,0 +1,103 @@
+// woocommerce/order-confirmation-totals-wrapper
+//
+// @since  1.6.7
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-order-confirmation-totals {
+	border-color: inherit !important;
+
+	--wcti--table--padding: 1em;
+	@include media( map_get( $breakpoint, 'xl' ) ) {
+		--wcti--table--padding: 2em;
+	}
+
+	table {
+		@extend %shaded_background;
+		position: relative;
+		padding: 1em;
+		border-radius: var(--wcti--border--radius);
+
+		&,
+		th,
+		td {
+			border: 0 solid;
+			border-color: inherit;
+		}
+
+		th,
+		td {
+			padding: #{ $ratio_maj + em } 1em;
+
+			&:first-child {
+				padding-inline-start: var(--wcti--table--padding);
+			}
+
+			&:last-child {
+				padding-inline-end: var(--wcti--table--padding);
+			}
+		}
+
+		.product-purchase-note {
+			font-size: var(--wcti--font-size--s);
+		}
+	}
+
+	thead {
+
+		tr:first-child th {
+			padding-block-start: var(--wcti--table--padding);
+		}
+
+		th {
+			border-bottom: 5px double;
+			border-color: inherit;
+		}
+	}
+
+	tbody {
+
+		tr:not(:first-child) td {
+			border-top: var(--wcti--border--width--item-separator) solid;
+			border-color: inherit;
+		}
+	}
+
+	tfoot {
+
+		th,
+		td {
+			border-top: var(--wcti--border--width--item-separator) solid;
+			border-color: inherit;
+		}
+
+		tr {
+
+			&:first-child {
+
+				th,
+				td {
+					border-top: 5px double;
+					border-color: inherit;
+				}
+			}
+
+			&:last-child {
+
+				th,
+				td {
+					padding-block-end: var(--wcti--table--padding);
+				}
+			}
+		}
+	}
+}
+
+.wc-block-order-confirmation-order-note[class] {
+	border-width: var(--wcti--border--width);
+	border-color: inherit;
+	border-radius: var(--wcti--border--radius);
+}
+
+@import '../_extend';

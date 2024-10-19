@@ -52,7 +52,7 @@
 		}
 
 		tr:not(:first-child) {
-			border-top-width: 1px;
+			border-top-width: var(--wcti--border--width--item-separator);
 			border-top-style: solid;
 		}
 	}

@@ -1,0 +1,105 @@
+/* FILE: blocks/_form.scss */
+
+// Input fields.
+
+	%form_input {
+		width: 100%;
+		height: auto;
+		padding-block: 1em var(--wcti--spacing--input-vertical);
+		line-height: inherit;
+		background: none;
+		color: inherit;
+		border-color: inherit;
+		border-width: var(--wcti--border--width);
+		border-radius: var(--wcti--border--radius);
+
+		&:focus,
+		&:focus-within {
+			border-color: currentColor;
+		}
+	}
+
+	.wc-block-components-text-input[class] {
+
+		&,
+		.wc-block-components-form & {
+
+			input {
+
+				&[type="email"],
+				&[type="number"],
+				&[type="password"],
+				&[type="tel"],
+				&[type="text"],
+				&[type="url"] {
+					@extend %form_input;
+				}
+			}
+		}
+	}
+
+	.wc-block-components-textarea {
+		@extend %form_input;
+		min-height: calc( 3.5 * #{ $ratio + em } );
+	}
+
+	.wc-blocks-components-select {
+
+		.wc-blocks-components-select__container {
+			@extend %form_input;
+			padding-block: var(--wcti--spacing--input-vertical);
+		}
+
+		.wc-blocks-components-select__select {
+			color: inherit;
+		}
+	}
+
+	.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill + label,
+	.wc-block-components-text-input input:-webkit-autofill + label,
+	.wc-block-components-form .wc-block-components-text-input.is-active label,
+	.wc-block-components-text-input.is-active label {
+		transform: translateY( #{ $ratio_min + em } ) scale( .75 );
+	}
+
+// Checkboxes.
+
+	.wc-block-components-checkbox {
+
+		.wc-block-components-checkbox__input[type=checkbox] {
+			padding: 0;
+			background: transparent;
+			border: var(--wcti--border--width) solid;
+			border-radius: var(--wcti--border--radius);
+
+			&:checked {
+				background: var(--wcti--color--accent);
+				color: var(--wcti--color--accent-contrast);
+				border-color: var(--wcti--color--accent);
+			}
+		}
+
+		.wc-block-components-checkbox__mark {
+			fill: var(--wcti--color--accent-contrast);
+		}
+	}
+
+// Radio buttons.
+
+	.wc-block-components-radio-control .wc-block-components-radio-control__input {
+		padding: 0;
+
+		&[class] {
+			border-width: var(--wcti--border--width--button);
+			border-color: inherit;
+			background: none;
+		}
+
+		&:checked {
+			border-color: currentColor;
+
+			&::before {
+				background: var(--wcti--color--accent);
+			}
+		}
+	}

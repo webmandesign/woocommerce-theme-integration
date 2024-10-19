@@ -15,7 +15,7 @@
 		#{$left}: 0;
 		top: .25em;
 		font-weight: var(--wcti--font-weight--label);
-		line-height: calc( 1.5em - 2px );
+		line-height: calc( 1.5em - 2 * 1px );
 		text-align: center;
 		text-decoration: none;
 		border: 1px solid;
@@ -54,7 +54,7 @@
 			&:not(.checkout) {
 				background: none;
 				color: inherit;
-				border: 1px solid;
+				border: var(--wcti--border--width--button) solid;
 			}
 		}
 	}

@@ -39,6 +39,15 @@
 		}
 	}
 
-.wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__button {
-	height: auto;
+.wc-block-components-totals-coupon__form {
+
+	&[class] [type="text"] {
+		border-color: currentColor;
+	}
+
+	.wc-block-components-totals-coupon__button {
+		height: auto;
+		padding: .5em !important;
+		font-size: var(--wcti--font-size--s);
+	}
 }

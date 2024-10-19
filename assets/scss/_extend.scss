@@ -1,4 +1,5 @@
 /* FILE: woocommerce/_extend.scss */
+@use 'sass:math';
 
 //
 // Extenders.
@@ -214,7 +215,7 @@
 				width: 200%;
 				inset-inline-end: 0;
 				inset-block-start: 0;
-				border-bottom: 1px solid;
+				border-bottom: var(--wcti--border--width--item-separator) solid;
 				border-color: inherit;
 			}
 		}
@@ -243,7 +244,7 @@
 			&:not(:last-child) {
 				padding-block-end: .5em;
 				margin-block-end: .5em;
-				border-bottom-width: 1px;
+				border-bottom-width: var(--wcti--border--width--item-separator);
 				border-bottom-style: dotted;
 			}
 		}

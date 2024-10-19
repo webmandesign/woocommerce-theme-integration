@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.6.0
+// @version  1.6.7
 //
 
 @import 'tools/_index';
@@ -23,6 +23,9 @@
 	--wcti--zero: var( --zero, 0.001px );
 
 	--wcti--border--radius: 0px; // Unit is required for clamp() in product gallery.
+	--wcti--border--width:  1px;
+	--wcti--border--width--button: var(--wcti--border--width);
+	--wcti--border--width--item-separator: var(--wcti--border--width);
 
 	--wcti--color--accent: var( --color_accent, #f00 );
 
@@ -80,6 +83,8 @@
 	--wcti--width--page-header-content: 100%;
 	--wcti--width--scrollbar: var( --scrollbar_width, var(--zero) );
 	--wcti--width--wide: var( --layout_width_content, 1280px );
+
+	--wcti--min-width--product: 100px;
 
 	@include media( map_get( $breakpoint, 'xl' ) ) {
 		--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };

@@ -1,0 +1,27 @@
+// woocommerce/product-template
+//
+// @since  1.6.7
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-product-template__responsive {
+	grid-gap: var(--wcti--spacing--gap--posts-list);
+
+	// @see  `woocommerce/product-template` block `style.scss`
+	@for $i from 2 through 6 {
+		$gap-count: calc( #{$i} - 1 );
+		$total-gap-width: calc( #{$gap-count} * var(--wcti--spacing--gap--posts-list) );
+		$max-product-width: calc( ( 100% - #{$total-gap-width} ) / #{$i} );
+
+		&.columns-#{ $i } {
+			grid-template-columns: repeat(
+				auto-fill,
+				minmax(
+					max( var(--wcti--min-width--product), #{$max-product-width} ),
+					1fr
+				)
+			);
+		}
+	}
+}

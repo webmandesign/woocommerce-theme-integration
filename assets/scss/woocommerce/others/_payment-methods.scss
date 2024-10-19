@@ -42,7 +42,7 @@
 		margin: 0;
 		font-weight: var(--wcti--font-weight--label);
 		color: var(--wcti--color--content-h);
-		border: 2px solid;
+		border: var(--wcti--border--width--button) solid;
 		border-radius: var(--wcti--border--radius);
 
 		.has-text-color &,

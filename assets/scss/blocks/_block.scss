@@ -15,34 +15,6 @@
 		font-size: 1em !important;
 	}
 
-// Checkboxes.
-
-	.wc-block-components-checkbox {
-
-		.wc-block-components-checkbox__input[type=checkbox] {
-			padding: 0;
-			background: transparent;
-			border: 2px solid;
-			border-radius: var(--wcti--border--radius);
-
-			&:checked {
-				background: var(--wcti--color--accent);
-				color: var(--wcti--color--accent-contrast);
-				border-color: var(--wcti--color--accent);
-			}
-		}
-
-		.wc-block-components-checkbox__mark {
-			fill: var(--wcti--color--accent-contrast);
-		}
-	}
-
-// Radio buttons.
-
-	.wc-block-components-radio-control .wc-block-components-radio-control__input {
-		padding: 0;
-	}
-
 // Product name in block shop tables, for example.
 
 	.wc-block-components-product-name {
@@ -51,4 +23,18 @@
 		font-size: 1.2em;
 		font-weight: var(--wcti--font-weight--headings);
 		line-height: 1 + $ratio_min;
+	}
+
+// Border color.
+
+	.wc-block-components-sidebar {
+
+		&,
+		> * {
+			border-color: inherit;
+		}
+	}
+
+	.wc-block-components-quantity-selector::after {
+		border-color: inherit;
 	}
