@@ -10,4 +10,8 @@
 	+ .products {
 		margin-top: var(--wcti--spacing--white);
 	}
+
+	.is-layout-constrained > & {
+		max-width: var(--wcti--width--wide);
+	}
 }

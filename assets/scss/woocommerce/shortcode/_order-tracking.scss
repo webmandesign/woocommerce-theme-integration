@@ -1,0 +1,8 @@
+/* FILE: woocommerce/shortcode/_order-tracking.scss */
+
+.woocommerce-form-track-order {
+
+	> p:not([class]) {
+		max-width: var(--wcti--width--content);
+	}
+}

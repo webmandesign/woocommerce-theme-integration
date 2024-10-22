@@ -35,3 +35,15 @@
 		line-height: inherit;
 	}
 }
+
+.is-vertical[class*="is-content-justification-"] {
+
+	.wc-block-featured-category {
+		flex-direction: column;
+
+		&,
+		&__wrapper {
+			justify-content: inherit;
+		}
+	}
+}

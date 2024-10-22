@@ -15,6 +15,7 @@
 .woocommerce-view-order .woocommerce-MyAccount-content h2,
 .woocommerce-customer-details h2,
 .woocommerce-Address-title h3,
+.woocommerce-edit-address .woocommerce-MyAccount-content h2,
 .woocommerce-edit-address .woocommerce-MyAccount-content h3,
 .woocommerce-Reviews-title,
 .woocommerce-Reviews .comment-reply-title,
@@ -26,5 +27,5 @@
 	font-weight: var(--wcti--font-weight--headings);
 	line-height: 1.25;
 	text-transform: uppercase;
-	letter-spacing: var(--wcti--spacing--letters);
+	letter-spacing: var(--wcti--spacing--letters--heading);
 }

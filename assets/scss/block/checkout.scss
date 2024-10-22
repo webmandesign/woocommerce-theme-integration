@@ -26,6 +26,10 @@
 		}
 	}
 
+	&__add-note[class] {
+		line-height: inherit;
+	}
+
 	// Main buttons.
 	.wc-block-checkout__actions {
 		padding-block-end: 0;
@@ -57,8 +61,9 @@
 
 		.wc-block-components-radio-control {
 
-			.wc-block-components-radio-control__input {
-				top: .75em;
+			.wc-block-components-radio-control__input[class] {
+				inset-block: auto;
+				inset-block-start: .75em;
 			}
 		}
 	}
@@ -88,7 +93,7 @@
 		}
 	}
 
-	&--highlight-checked {
+	&--highlight-checked[class] {
 
 		.wc-block-components-radio-control-accordion-option--checked-option-highlighted,
 		label.wc-block-components-radio-control__option--checked-option-highlighted {

@@ -11,5 +11,10 @@
 		@include media( map_get( $breakpoint, 'l' ) ) {
 			text-align: center;
 		}
+
+		.button {
+			margin-block: 0;
+			font-size: var(--wcti--font-size--s);
+		}
 	}
 }

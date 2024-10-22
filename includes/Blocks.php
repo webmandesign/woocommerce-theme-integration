@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.5
+ * @version  1.6.7
  */
 
 namespace WebManDesign\WCTI;
@@ -30,7 +30,7 @@ class Blocks {
 	 * Initialization.
 	 *
 	 * @since    1.5.0
-	 * @version  1.6.5
+	 * @version  1.6.7
 	 *
 	 * @return  void
 	 */
@@ -48,6 +48,8 @@ class Blocks {
 			// Filters
 
 				add_filter( 'block_type_metadata_settings', __CLASS__ . '::block_settings', 10, 2 );
+
+				add_filter( 'render_block_data', __CLASS__ . '::page_endpoint_title' );
 
 				add_filter( 'render_block_core/post-excerpt',           __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
 				add_filter( 'render_block_woocommerce/product-details', __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
@@ -185,6 +187,42 @@ class Blocks {
 			return $settings;
 
 	} // /block_settings
+
+	/**
+	 * Page/post title block modification.
+	 *
+	 * @since  1.6.7
+	 *
+	 * @param  array $block
+	 *
+	 * @return  array
+	 */
+	public static function page_endpoint_title( array $block ): array {
+
+		// Variables
+
+			$heading_blocks = array(
+				'core/post-title',
+			);
+
+
+		// Processing
+
+			if (
+				in_array( $block['blockName'], $heading_blocks )
+				&& ! empty( $block['attrs']['level'] )
+				&& 1 == $block['attrs']['level']
+			) {
+
+				add_filter( 'the_title', 'wc_page_endpoint_title' );
+			}
+
+
+		// Output
+
+			return $block;
+
+	} // /page_endpoint_title
 
 	/**
 	 * Block output modification: Add single product "More details" link functionality.

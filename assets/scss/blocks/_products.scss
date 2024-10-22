@@ -185,8 +185,22 @@
 		@extend %posts_list_columns_1;
 	}
 
-	.has-catalog-columns-mobile-2 .wc-block-grid.wc-block-grid .wc-block-grid__product {
-		@extend %posts_list_columns_2_mobile;
+	.has-catalog-columns-mobile-2 {
+
+		.wp-block-woocommerce-related-products {
+
+			.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
+
+				@media (max-width: 600px) {
+					grid-template-columns: 1fr 1fr;
+					gap: var(--wcti--spacing--gap--posts-list);
+				}
+			}
+		}
+
+		.wc-block-grid.wc-block-grid .wc-block-grid__product {
+			@extend %posts_list_columns_2_mobile;
+		}
 	}
 
 	@for $i from 2 through 6 {

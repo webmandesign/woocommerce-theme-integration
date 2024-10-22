@@ -2,6 +2,10 @@
 
 body .wc-block-components-product-rating__stars[class] {
 	@extend %star_rating;
+
+	&::before {
+		position: relative;
+	}
 }
 
 .wc-block-components-checkbox,

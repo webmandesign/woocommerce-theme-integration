@@ -55,3 +55,15 @@
 		}
 	}
 }
+
+.is-vertical[class*="is-content-justification-"] {
+
+	.wc-block-featured-product {
+		flex-direction: column;
+
+		&,
+		&__wrapper {
+			justify-content: inherit;
+		}
+	}
+}
