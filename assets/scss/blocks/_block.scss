@@ -10,7 +10,8 @@
 
 // Fixing block editor styling issue.
 
-	[style*="font-size"] > [style*="font-size"],
+	// [style*="font-size"] > [style*="font-size"], // @todo  Test this and add more precise code comment.
+	// [style*="font-size"] > [style*="font-size"]:not(.has-custom-font-size),
 	[data-type^="woocommerce"][style*="font-size"] [style*="font-size"]:not([data-type]) {
 		font-size: 1em !important;
 	}

@@ -1,7 +1,7 @@
 // woocommerce/product-categories
 //
 // @since    1.6.2
-// @version  1.6.3
+// @version  1.6.7
 @use 'sass:math';
 
 @import '../tools/_index';
@@ -9,8 +9,8 @@
 
 .wc-block-product-categories {
 
-	&:not([class*="is-style-"]),
-	&.is-style-default {
+	&[class]:not([class*="is-style-"]),
+	&[class].is-style-default {
 
 		ul {
 			@extend %widget_list_items;
