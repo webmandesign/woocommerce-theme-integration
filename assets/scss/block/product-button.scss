@@ -1,0 +1,10 @@
+// woocommerce/product-template
+//
+// @since  1.6.7
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
+	border-style: solid;
+}
