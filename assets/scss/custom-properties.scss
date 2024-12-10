@@ -86,7 +86,7 @@
 	--wcti--width--scrollbar: var( --scrollbar_width, var(--zero) );
 	--wcti--width--wide: var( --layout_width_content, 1280px );
 
-	--wcti--min-width--product: 100px;
+	--wcti--min-width--product: 200px;
 
 	@include media( map_get( $breakpoint, 'xl' ) ) {
 		--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };
@@ -138,4 +138,11 @@
 	.has-text-color,
 	.has-background {
 		--wcti--color--content-h: initial;
+	}
+
+	.has-catalog-columns-mobile-2 {
+
+		@media (max-width: 600px) {
+			--wcti--min-width--product: 100px;
+		}
 	}

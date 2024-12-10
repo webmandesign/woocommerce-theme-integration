@@ -5,15 +5,18 @@
 	margin-top: 2rem;
 }
 
-.product_meta {
+.product_meta,
+// Making it work with block layout too.
+.product_meta ~ .wp-block-post-terms {
 
 	> span {
-		display: block;
+		display: inline-block;
+		margin-inline-end: .5em;
 		font-weight: var(--wcti--font-weight--label);
 
 		&::before {
 			content: '\2014'; // &mdash;
-			margin-#{$right}: .25em;
+			margin-inline-end: .25em;
 			font-weight: 400;
 			speak: none;
 		}

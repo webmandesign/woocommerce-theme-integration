@@ -288,7 +288,7 @@ class Single {
 	 * Removing page templates for products.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.0
+	 * @version  1.6.7
 	 *
 	 * @param  array        $post_templates
 	 * @param  WP_Theme     $wp_theme
@@ -308,19 +308,28 @@ class Single {
 					/**
 					 * Filters the array of page/post templates to unset for Product post.
 					 *
-					 * @since  1.4.0
+					 * @since    1.4.0
+					 * @version  1.6.7
 					 *
 					 * @param  array $page_templates
 					 */
 					(array) apply_filters( 'WCTI/Single/page_templates', array(
+
 						'templates/content-only.php',
 						'templates/no-intro.php',
+						'templates/overlaid-header.php',
+
 						'templates/custom-content-only.php',
 						'templates/custom-no-intro.php',
+						'templates/custom-overlaid-header.php',
+
 						'templates/custom-content-only.html',
 						'templates/custom-no-intro.html',
+						'templates/custom-overlaid-header.html',
+
 						'custom-content-only',
 						'custom-no-intro',
+						'custom-overlaid-header',
 					) )
 				);
 
