@@ -15,16 +15,32 @@ body { // Higher priority required for classic/hybrid theme mode.
 			border-color: inherit !important;
 		}
 
-		&__form fieldset {
+		&__form {
 
-			&[class] {
-				border-color: inherit;
+			fieldset {
+
+				&[class] {
+					border-color: inherit;
+				}
+
+				button,
+				.button,
+				.wp-element-button {
+					font-size: var(--wcti--font-size--s);
+				}
 			}
 
-			button,
-			.button,
-			.wp-element-button {
-				font-size: var(--wcti--font-size--s);
+			&--with-step-numbers {
+
+				.wc-block-components-checkout-step--with-step-number {
+
+					.wc-block-components-checkout-step__container {
+
+						&::after {
+							border-color: inherit;
+						}
+					}
+				}
 			}
 		}
 

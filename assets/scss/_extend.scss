@@ -21,7 +21,7 @@
 // Background.
 
 	%shaded_background {
-		background-color: color-mix(
+		background: color-mix(
 			in srgb,
 			currentColor calc( 100% * var(--wcti--opacity--pseudo-bg) ),
 			transparent
@@ -157,6 +157,7 @@
 
 	%widget_list_items {
 		margin: 0;
+		padding-inline: 0;
 		list-style: none;
 
 		ul {

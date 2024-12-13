@@ -8,7 +8,6 @@
 	margin: 0 auto ( $ratio + em );
 	font-size: 1em;
 	line-height: inherit;
-	background: none;
 	color: inherit;
 	border: none;
 	border-radius: var(--wcti--border--radius);
@@ -91,7 +90,6 @@
 	&.is-success,
 	&.is-info {
 		border-color: inherit;
-		background: none;
 
 		> svg {
 			background: none;

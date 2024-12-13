@@ -64,17 +64,52 @@
 }
 
 .wc-block-product-categories-list--has-images {
+	$image_size: 50px; // WooCommerce default size.
 
 	.wc-block-product-categories-list-item {
+		position: relative;
 
 		&__image {
+			margin-inline-end: .5rem;
 			border-color: inherit;
 			border-radius: var(--wcti--border--radius);
 		}
 
-		ul {
-			margin-inline-start: -50px;
+		&__name {
+			display: inline-block;
+			line-height: 1.25;
+			vertical-align: middle;
 		}
+
+		&-count {
+			position: absolute;
+			aspect-ratio: 1;
+			inset-inline-start: calc( -.5rem - #{ $ratio + em } );
+			inset-block-start: calc( #{ $image_size } - #{ $ratio + em } + .25rem );
+			width: $ratio + em;
+			line-height: $ratio + em;
+			text-align: center;
+			background: var(--wcti--color--button-bg);
+			color: var(--wcti--color--button-txt);
+			border-radius: 5em;
+
+			&[class][class] {
+				font-size: min( 12px, var(--wcti--font-size--xs) );
+			}
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		&[class] .wc-block-product-categories-list {
+			margin-inline-start: -$image_size;
+		}
+	}
+
+	.wc-block-product-categories.is-style-inline & .wc-block-product-categories-list-item-count {
+		inset-block-start: calc( #{ $image_size } - #{ $ratio + em } );
 	}
 }
 
