@@ -7,7 +7,7 @@ Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wo
 Requires at least: 6.0
 Tested up to:      6.7
 Requires PHP:      7.0
-Stable tag:        1.6.6
+Stable tag:        1.7.0
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -49,23 +49,5 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
-= 1.6.6 =
-Fixing classic/hybrid mode in universal themes.
-
-= 1.6.5 =
-Adding option to simplify WooCommerce pattern categories.
-
-= 1.6.4 =
-Improving and fixing styles, allowing multiple instances of Mini Cart block, allowing themes to opt out of custom add to cart button styles.
-
-= 1.6.3 =
-Fixing block CSS styles.
-
-= 1.6.2 =
-Improving block CSS styles.
-
-= 1.6.1 =
-Fixing "More details..." link on single product pages.
-
-= 1.6.0 =
-Adding support for WooCommerce template blocks (FSE), improving CSS styles, fixing bugs.
+= 1.7.0 =
+Updating block CSS styles, fixing CSS styles.

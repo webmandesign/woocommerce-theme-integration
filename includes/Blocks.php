@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.7
+ * @version  1.7.0
  */
 
 namespace WebManDesign\WCTI;
@@ -30,7 +30,7 @@ class Blocks {
 	 * Initialization.
 	 *
 	 * @since    1.5.0
-	 * @version  1.6.7
+	 * @version  1.7.0
 	 *
 	 * @return  void
 	 */
@@ -191,7 +191,7 @@ class Blocks {
 	/**
 	 * Page/post title block modification.
 	 *
-	 * @since  1.6.7
+	 * @since  1.7.0
 	 *
 	 * @param  array $block
 	 *

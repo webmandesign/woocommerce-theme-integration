@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.7
+ * @version  1.7.0
  */
 
 namespace WebManDesign\WCTI;
@@ -153,7 +153,7 @@ class Single {
 	 * This is also a fix for WooCommerce 3.2+ version.
 	 *
 	 * @since    1.0.0
-	 * @version  1.6.7
+	 * @version  1.7.0
 	 *
 	 * @param  null|string $template
 	 *
@@ -288,7 +288,7 @@ class Single {
 	 * Removing page templates for products.
 	 *
 	 * @since    1.0.0
-	 * @version  1.6.7
+	 * @version  1.7.0
 	 *
 	 * @param  array        $post_templates
 	 * @param  WP_Theme     $wp_theme
@@ -309,7 +309,7 @@ class Single {
 					 * Filters the array of page/post templates to unset for Product post.
 					 *
 					 * @since    1.4.0
-					 * @version  1.6.7
+					 * @version  1.7.0
 					 *
 					 * @param  array $page_templates
 					 */

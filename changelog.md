@@ -1,5 +1,40 @@
 # Integration for WooCommerce Changelog
 
+## 1.7.0, 20241231
+
+### Added
+- CSS styles for WC block layouts
+
+### Updated
+- Making page endpoint titles work with blocks
+- Fixing and updating CSS styles
+
+### Fixed
+- Preventing PHP errors
+- Removing obsolete page templates from Product
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/cart.scss
+	assets/scss/block/checkout.scss
+	assets/scss/block/mini-cart.scss
+	assets/scss/block/order-confirmation-billing-wrapper.scss
+	assets/scss/block/order-confirmation-downloads-wrapper.scss
+	assets/scss/block/order-confirmation-shipping-wrapper.scss
+	assets/scss/block/order-confirmation-totals-wrapper.scss
+	assets/scss/block/product-button.scss
+	assets/scss/block/product-categories.scss
+	assets/scss/block/product-sku.scss
+	assets/scss/block/product-template.scss
+	includes/Blocks.php
+	includes/Single.php
+
+
 ## 1.6.6, 20241011
 
 ### Fixed

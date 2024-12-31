@@ -47,12 +47,18 @@
 
 		.wc-blocks-components-select__container {
 			@extend %form_input;
-			padding-block: var(--wcti--spacing--input-vertical);
+			padding-block: 0;
 		}
 
 		.wc-blocks-components-select__select {
-			color: inherit;
+			@extend %form_input;
 		}
+	}
+
+	.wc-block-components-form .wc-block-components-text-input label,
+	.wc-block-components-text-input label,
+	.wc-blocks-components-select .wc-blocks-components-select__label {
+		color: inherit;
 	}
 
 	.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill + label,
