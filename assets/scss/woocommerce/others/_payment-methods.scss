@@ -52,8 +52,9 @@
 	}
 
 	:checked + label {
-		background: var(--wcti--color--content-h);
-		color: var(--wcti--color--content-bg);
+		background: var(--wcti--color--payment-method--active-bg);
+		color: var(--wcti--color--payment-method--active-txt);
+		border-color: transparent;
 
 		&::before {
 			content: '\002713\00a0'; // check mark + &nbsp;

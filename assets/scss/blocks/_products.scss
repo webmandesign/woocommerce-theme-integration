@@ -20,9 +20,12 @@
 		}
 
 		.wc-block-grid__product-image {
-			display: block;
-			vertical-align: top;
-			border-radius: var(--wcti--border--radius);
+
+			&[class] {
+				display: block;
+				vertical-align: top;
+				border-radius: var(--wcti--border--radius);
+			}
 
 			&:not(.wc-block-components-product-image) {
 				margin: 0 auto ( $ratio + em );

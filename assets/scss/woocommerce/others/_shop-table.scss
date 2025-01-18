@@ -113,6 +113,12 @@
 	}
 
 	.button {
-		padding: $ratio_maj + rem;
+
+		// "Download" and order "View" buttons.
+		&.alt,
+		&.view {
+			padding: $ratio_maj + rem;
+			font-size: var(--wcti--font-size--s);
+		}
 	}
 }

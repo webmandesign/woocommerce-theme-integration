@@ -39,10 +39,14 @@
 	position: absolute;
 	#{$right}: 0;
 	bottom: 100%;
-	font-size: var(--wcti--font-size--xs);
-	font-weight: var(--wcti--font-weight--label);
-	text-transform: uppercase;
-	letter-spacing: var(--wcti--spacing--letters);
+	padding: 0 !important;
+	font-size: var(--wcti--font-size--xs) !important;
+	font-weight: var(--wcti--font-weight--label) !important;
+	text-transform: uppercase !important;
+	letter-spacing: var(--wcti--spacing--letters) !important;
+	background: none !important;
+	color: inherit !important;
+	box-shadow: none !important;
 
 	&::before {
 		content: '\00d7\00a0'; // &times;&nbsp;

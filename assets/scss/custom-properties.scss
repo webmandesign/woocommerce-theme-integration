@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.7.0
+// @version  1.7.1
 //
 
 @import 'tools/_index';
@@ -34,6 +34,9 @@
 
 	--wcti--color--content-bg: var( --color_content_background, var(--color_body_background, #fff) );
 	--wcti--color--content-h: var( --color_content_headings, var(--color_body_headings, #000) );
+
+	--wcti--color--payment-method--active-bg: var(--wcti--color--content-h);
+	--wcti--color--payment-method--active-txt: var(--wcti--color--content-bg);
 
 	--wcti--font-family--headings: var( --typography_font_secondary, var(--typography_font_headings, sans-serif) );
 
