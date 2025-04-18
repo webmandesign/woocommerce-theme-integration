@@ -1,6 +1,8 @@
 /* FILE: blocks/_star-rating.scss */
 
-body .wc-block-components-product-rating__stars[class] {
+body .wc-block-components-product-rating__stars[class],
+// Also need to target Cart page cross-sells products:
+body .wc-block-components-product-rating-stars__stars[class] { // The class inconsistency is ridiculous...
 	@extend %star_rating;
 
 	&::before {

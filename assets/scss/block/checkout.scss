@@ -1,6 +1,7 @@
 // woocommerce/checkout
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.7.2
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -194,4 +195,8 @@ body { // Higher priority required for classic/hybrid theme mode.
 			opacity: 1;
 		}
 	}
+}
+
+.wc-block-components-checkout-place-order-button__text {
+	justify-content: center;
 }

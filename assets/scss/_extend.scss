@@ -303,7 +303,7 @@
 		}
 
 		&::before {
-			content: '\2606\2606\2606\2606\2606'; // WHITE STAR
+			content: '\2606\2606\2606\2606\2606'; // WHITE STAR "☆☆☆☆☆"
 			line-height: inherit;
 			color: currentColor;
 		}
@@ -314,7 +314,7 @@
 			overflow: hidden;
 
 			&::before {
-				content: '\2605\2605\2605\2605\2605'; // BLACK STAR
+				content: '\2605\2605\2605\2605\2605'; // BLACK STAR "★★★★★"
 				float: none;
 				color: var(--wcti--color--accent);
 			}
