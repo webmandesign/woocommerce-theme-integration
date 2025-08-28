@@ -164,7 +164,7 @@ class Loop {
 
 		// Output
 
-			echo $pagination;
+			echo $pagination; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	} // /pagination
 

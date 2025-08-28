@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.7.1
+// @version  1.7.3
 //
 
 @import 'tools/_index';
@@ -60,6 +60,8 @@
 	--wcti--font-weight--label--tab: 700;
 	--wcti--font-weight--label: 700;
 	--wcti--font-weight--price: 700;
+
+	--wcti-icon-size: 1em;
 
 	--wcti--opacity--pseudo-bg: var( --pseudo_background_opacity, .05 );
 

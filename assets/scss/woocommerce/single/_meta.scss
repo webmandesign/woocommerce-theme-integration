@@ -9,7 +9,7 @@
 // Making it work with block layout too.
 .product_meta ~ .wp-block-post-terms {
 
-	> span {
+	> span:not( .wp-block-post-terms__separator, .sku ) {
 		display: inline-block;
 		margin-inline-end: .5em;
 		font-weight: var(--wcti--font-weight--label);

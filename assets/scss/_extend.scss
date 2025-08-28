@@ -28,6 +28,21 @@
 		);
 	}
 
+	%icon_background {
+
+		:where( & )::before {
+			content: '';
+			display: inline-block;
+			width: var(--wcti-icon-size);
+			height: var(--wcti-icon-size);
+			background-color: currentColor;
+			vertical-align: middle;
+			mask-image: var( --wcti-icon, none );
+			mask-repeat: no-repeat;
+			mask-size: 100% 100%;
+		}
+	}
+
 // Clearing.
 
 	%clearfix {
