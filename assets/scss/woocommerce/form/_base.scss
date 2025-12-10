@@ -4,6 +4,8 @@
 
 	fieldset {
 		margin: 2em 0;
+		border-color: inherit;
+		border-radius: var(--wcti--border--radius);
 
 		+ .clear + * {
 			margin-top: 0;
@@ -49,10 +51,12 @@
 			}
 		}
 
-		[type="text"],
-		[type="tel"],
-		[type="email"],
-		[type="password"],
+		input:where(
+			[type="text"],
+			[type="tel"],
+			[type="email"],
+			[type="password"]
+		),
 		textarea,
 		select {
 			width: 100%;
@@ -60,6 +64,7 @@
 			+ span {
 				display: inline-block;
 				margin-top: .5em;
+				font-size: var(--wcti--font-size--s);
 				line-height: 1.25;
 			}
 

@@ -9,7 +9,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.7.3
+// @version  1.7.4
 //
 
 @import 'tools/_index';
@@ -138,6 +138,10 @@
 	.woocommerce-downloads,
 	.woocommerce-orders {
 		--wcti--width--my-account-panel: var(--wcti--width--wide);
+	}
+
+	.woocommerce-view-order {
+		--wcti--width--my-account-panel: min( 54rem, var(--wcti--width--wide) );
 	}
 
 	.has-text-color,

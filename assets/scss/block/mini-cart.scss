@@ -1,7 +1,7 @@
 // woocommerce/mini-cart
 //
 // @since    1.6.2
-// @version  1.7.0
+// @version  1.7.4
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -31,7 +31,7 @@
 
 		&,
 		.editor-styles-wrapper & {
-			padding: .25em;
+			padding: 0;
 		}
 
 		// Fix for badge color.

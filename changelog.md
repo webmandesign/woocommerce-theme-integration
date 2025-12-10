@@ -1,5 +1,21 @@
 # Integration for WooCommerce Changelog
 
+## 1.7.4, 20251210
+
+### Fixed
+- CSS styles (accommodating for WC 10.3)
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/mini-cart.scss
+	assets/scss/block/order-confirmation-totals-wrapper.scss
+
+
 ## 1.7.3, 20250828
 
 ### Fixed

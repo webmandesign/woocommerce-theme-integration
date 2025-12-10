@@ -24,16 +24,15 @@
 		&,
 		.wc-block-components-form & {
 
-			input {
-
-				&[type="email"],
-				&[type="number"],
-				&[type="password"],
-				&[type="tel"],
-				&[type="text"],
-				&[type="url"] {
-					@extend %form_input;
-				}
+			input:where(
+				[type="email"],
+				[type="number"],
+				[type="password"],
+				[type="tel"],
+				[type="text"],
+				[type="url"]
+			) {
+				@extend %form_input;
 			}
 		}
 	}

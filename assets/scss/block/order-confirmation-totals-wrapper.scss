@@ -1,6 +1,7 @@
 // woocommerce/order-confirmation-totals-wrapper
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.7.4
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -94,10 +95,21 @@
 	}
 }
 
-.wc-block-order-confirmation-order-note[class] {
-	border-width: var(--wcti--border--width);
+.wc-block-order-confirmation-order-note {
+	--wp--style--block-gap: $ratio_maj + em;
+
+	padding: #{ $ratio + em };
+	margin-top: 1em;
+	border: var(--wcti--border--width) solid;
 	border-color: inherit;
 	border-radius: var(--wcti--border--radius);
+
+	&__label {
+		font-family: var(--wcti--font-family--headings);
+		font-size: var(--wcti--font-size--heading--uppercase);
+		font-weight: var(--wcti--font-weight--headings);
+		text-transform: uppercase;
+	}
 }
 
 @import '../_extend';
