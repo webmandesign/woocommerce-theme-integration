@@ -7,7 +7,7 @@ Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wo
 Requires at least: 6.0
 Tested up to:      6.9
 Requires PHP:      7.0
-Stable tag:        1.7.4
+Stable tag:        1.8.0
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -49,17 +49,5 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
-= 1.7.4 =
-Fixing CSS styles.
-
-= 1.7.3 =
-Fixing CSS styles.
-
-= 1.7.2 =
-Fixing CSS styles.
-
-= 1.7.1 =
-Fixing CSS styles.
-
-= 1.7.0 =
-Updating block CSS styles, fixing CSS styles.
+= 1.8.0 =
+Adding option to reposition WooCommerce store notice.

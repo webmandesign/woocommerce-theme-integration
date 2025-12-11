@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.6.5
+ * @version  1.8.0
  */
 
 namespace WebManDesign\WCTI;
@@ -23,10 +23,11 @@ class Options {
 	 * Plugin option IDs.
 	 *
 	 * @since    1.4.0
-	 * @version  1.6.5
+	 * @version  1.8.0
 	 * @var      array
 	 */
 	public static $id = array(
+		'demo_store_position'           => 'wcti_demo_store_position',
 		'replace_theme_search'          => 'wcti_replace_theme_search',
 		'catalog_button_custom_style'   => 'wcti_catalog_button_custom_style', // This is "silent" option.
 		'catalog_columns_mobile'        => 'wcti_catalog_columns_mobile',
@@ -58,7 +59,7 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.6.5
+	 * @version  1.8.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -67,6 +68,29 @@ class Options {
 	public static function options( WP_Customize_Manager $wp_customize ) {
 
 		// Processing
+
+			$wp_customize->add_setting(
+				self::$id['demo_store_position'],
+				array(
+					'capability'        => 'manage_woocommerce',
+					'default'           => 'header-after',
+					'sanitize_callback' => 'sanitize_text_field',
+				)
+			);
+
+				$wp_customize->add_control(
+					self::$id['demo_store_position'],
+					array(
+						'type'     => 'radio',
+						'section'  => 'woocommerce_store_notice',
+						'label'    => esc_html__( 'Store notice position', 'wc-theme-integration' ),
+						'choices'  => array(
+							'body-top'     => esc_html__( 'Top of the page' ),
+							'header-after' => esc_html__( 'After site header' ),
+							'body-bottom'  => esc_html__( 'Bottom of the page' ),
+						),
+					)
+				);
 
 			$wp_customize->add_setting(
 				self::$id['replace_theme_search'],

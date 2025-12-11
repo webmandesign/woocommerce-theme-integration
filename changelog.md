@@ -1,5 +1,18 @@
 # Integration for WooCommerce Changelog
 
+## 1.8.0, 20251211
+
+### Added
+- Option to set position of WooCommerce store notice
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	includes/Options.php
+	includes/Setup.php
+
+
 ## 1.7.4, 20251210
 
 ### Fixed

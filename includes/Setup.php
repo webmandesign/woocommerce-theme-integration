@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.4
+ * @version  1.8.0
  */
 
 namespace WebManDesign\WCTI;
@@ -20,7 +20,7 @@ class Setup {
 	 * Initialization.
 	 *
 	 * @since    1.0.0
-	 * @version  1.4.0
+	 * @version  1.8.0
 	 *
 	 * @return  void
 	 */
@@ -31,6 +31,7 @@ class Setup {
 			// Actions
 
 				add_action( 'after_setup_theme', __CLASS__ . '::after_setup_theme', 30 );
+				add_action( 'after_setup_theme', __CLASS__ . '::demo_notice_position', 99 );
 
 				add_action( 'wp', __CLASS__ . '::replace_theme_search' );
 
@@ -80,6 +81,91 @@ class Setup {
 			add_theme_support( 'wc-product-gallery-zoom' );
 
 	} // /after_setup_theme
+
+	/**
+	 * Store (demo) notice position setup.
+	 *
+	 * @since  1.8.0
+	 *
+	 * @return  void
+	 */
+	public static function demo_notice_position() {
+
+		// Variables
+
+			$renderer = 'woocommerce_demo_store';
+			$position = get_theme_mod( Options::$id['demo_store_position'], 'header-after' );
+			$hooks    = array(
+				// 'option-value' => 'theme-hook'
+				'body-top'     => 'wp_body_open',
+				'header-after' => 'tha_header_after',
+				'body-bottom'  => 'wp_footer',
+			);
+
+
+		// Processing
+
+			// Remove any WooCommerce or a theme setup first.
+			remove_action( 'wp_body_open', $renderer );
+			remove_action( 'wp_footer',    $renderer );
+
+			// Add the store notice to set up position.
+			if (
+				'tha_header_after' === $hooks[ $position ]
+				&& Site_Editor::is_enabled()
+			) {
+				add_filter( 'render_block_core/template-part', __CLASS__ . '::demo_notice_header', 99, 2 );
+			} else {
+				add_action( $hooks[ $position ], $renderer );
+			}
+
+	} // /demo_notice_position
+
+		/**
+		 * Store (demo) notice position: bottom of header Template Part block.
+		 *
+		 * @since  1.8.0
+		 *
+		 * @param  string $block_content  The rendered content. Default null.
+		 * @param  array  $block          The block being rendered.
+		 *
+		 * @return  string
+		 */
+		public static function demo_notice_header( string $block_content, array $block ): string {
+
+			// Processing
+
+				if (
+					is_callable( 'woocommerce_demo_store' )
+					&& isset( $block['attrs'] )
+				) {
+
+					$block['attrs'] = wp_parse_args(
+						$block['attrs'],
+						array(
+							'className' => '',
+							'anchor'    => '',
+						)
+					);
+
+					if (
+						false !== strpos( $block['attrs']['className'], 'site-header' )
+						|| 'masthead' === $block['attrs']['anchor']
+					) {
+
+						ob_start();
+						woocommerce_demo_store();
+
+						$block_content .= ob_get_clean();
+					}
+				}
+
+
+			// Output
+
+				return $block_content;
+
+		} // /demo_notice_header
 
 	/**
 	 * Breadcrumbs setup.
