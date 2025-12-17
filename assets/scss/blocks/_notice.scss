@@ -12,7 +12,7 @@
 	border: none;
 	border-radius: var(--wcti--border--radius);
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 		gap: 1em;
 		padding-left: 2em !important;
 		padding-right: 2em !important;
@@ -35,14 +35,14 @@
 		width: $ratio_min + 1em;
 		height: $ratio_min + 1em;
 		padding: 0;
-		margin-#{$left}: -.5em;
+		margin-inline-start: -.5em;
 		background: none;
 		border-radius: 0;
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			width: $ratio + em;
 			height: $ratio + em;
-			margin-#{$left}: 0;
+			margin-inline-start: 0;
 		}
 	}
 
@@ -51,11 +51,11 @@
 	> .wc-block-components-button,
 	> .wc-block-components-notice-banner__content .button,
 	> .wc-block-components-notice-banner__content .wp-element-button {
-		float: $right;
+		float: inline-end;
 		height: auto !important;
 		width: auto !important;
 		padding: 0 !important;
-		margin-#{$left}: 1em;
+		margin-inline-start: 1em;
 		text-align: inherit;
 		line-height: inherit !important;
 		background: none !important;
@@ -68,13 +68,13 @@
 			text-decoration: none;
 		}
 
-		@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+		@include media( ( map.get( $breakpoint, 'm' ), 'max-width' ) ) {
 			float: none;
 			display: block;
 			padding-top: $ratio_min + em !important;
 			padding-bottom: $ratio_min + em !important;
 			margin-top: $ratio_min + em;
-			margin-#{$left}: 0;
+			margin-inline-start: 0;
 		}
 
 		&,

@@ -4,7 +4,7 @@
 	position: relative;
 	max-width: 100%;
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		width: calc( var(--wcti--width--col--product-gallery) - var(--wcti--width--col-gap--product) );
 	}
 
@@ -23,11 +23,11 @@
 
 	&__trigger {
 		position: absolute;
-		#{$right}: 0;
+		inline-end: 0;
 		bottom: 100%;
 		width: 2em;
 		height: 2em;
-		text-align: $left;
+		text-align: start;
 		text-indent: -999em;
 		overflow: hidden;
 		z-index: 1;
@@ -38,7 +38,7 @@
 			position: absolute;
 			width: 2em;
 			height: .15rem;
-			#{$left}: 0;
+			inline-start: 0;
 			top: 50%;
 			margin: math.div( -.15rem, 2 );
 			background: currentColor;

@@ -1,3 +1,8 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
+
 //
 // Universal Responsive media query.
 //
@@ -18,7 +23,8 @@
 // 		$content;
 // 	}
 //
-// @since  1.0.0
+// @since    1.0.0
+// @version  1.8.1
 //
 // @param  lists $queries  Media query condition lists (arrays).
 //
@@ -30,15 +36,15 @@
 		@if (
 			$query
 			and (
-				list == type-of( $query )
-				or number == type-of( $query )
+				list == meta.type-of( $query )
+				or number == meta.type-of( $query )
 			)
 		) {
 
 			// Default query rule (the 2nd value in list) if not set otherwise
 
-				@if ( 1 == length( $query ) ) {
-					$query : append( $query, 'min-width' );
+				@if ( 1 == list.length( $query ) ) {
+					$query : list.append( $query, 'min-width' );
 				}
 
 			// Query value (the 1st value in list) in ems, or display it unchanged
@@ -49,36 +55,36 @@
 				//
 				// @link  http://sass-lang.com/documentation/Sass/Script/Functions.html#unit-instance_method
 				//
-				$query_value : nth( $query, 1 );
+				$query_value : list.nth( $query, 1 );
 
 				@if (
-					number == type-of( $query_value )
-					and '' == unit( $query_value )
+					number == meta.type-of( $query_value )
+					and '' == math.unit( $query_value )
 				) {
 
 					// If the query is `max`, deduct a single pixel from unit-less query value.
 					// (We do not do this if the query value contains a unit!)
-					@if ( str-index( nth( $query, 2 ), 'max' ) ) {
+					@if ( string.index( list.nth( $query, 2 ), 'max' ) ) {
 						$query_value : $query_value - 1;
 					}
 
 					$query_value : $query_value * 1px;
 
-					$query : set-nth( $query, 1, $query_value );
+					$query : list.set-nth( $query, 1, $query_value );
 
 				}
 
 			// Add to output
 
-				@if ( 0 < str-length( $output ) ) {
+				@if ( 0 < string.length( $output ) ) {
 					$output : $output + ' and ';
 				}
-				$output : $output + '(' + nth( $query, 2 ) + ': ' + nth( $query, 1 ) + ')';
+				$output : $output + '(' + list.nth( $query, 2 ) + ': ' + list.nth( $query, 1 ) + ')';
 
 		}
 	}
 
-	@if ( 0 < str-length( $output ) ) {
+	@if ( 0 < string.length( $output ) ) {
 		@media #{ $output } {
 			@content
 		}

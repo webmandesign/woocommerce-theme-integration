@@ -1,7 +1,8 @@
 // woocommerce/order-confirmation-totals-wrapper
 //
 // @since    1.7.0
-// @version  1.7.4
+// @version  1.8.1
+@use 'sass:map';
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -10,7 +11,7 @@
 	border-color: inherit !important;
 
 	--wcti--table--padding: 1em;
-	@include media( map_get( $breakpoint, 'xl' ) ) {
+	@include media( map.get( $breakpoint, 'xl' ) ) {
 		--wcti--table--padding: 2em;
 	}
 

@@ -5,14 +5,14 @@
 
 	li {
 		position: relative;
-		padding-#{$left}: 2em;
+		padding-inline-start: 2em;
 	}
 
 	.remove {
 		position: absolute;
 		width: 1.5em;
 		height: 1.5em;
-		#{$left}: 0;
+		inline-start: 0;
 		top: .25em;
 		font-weight: var(--wcti--font-weight--label);
 		line-height: calc( 1.5em - 2 * 1px );

@@ -32,7 +32,7 @@
 		.woocommerce-Tabs-panel--description {
 			width: calc( 100vw - var(--wcti--width--scrollbar) );
 			max-width: calc( 100vw - var(--wcti--width--scrollbar) );
-			margin-#{$left}: calc( 50% - 50vw + ( var(--wcti--width--scrollbar) / 2 ) );
+			margin-inline-start: calc( 50% - 50vw + ( var(--wcti--width--scrollbar) / 2 ) );
 
 			> h2 {
 				max-width: var(--wcti--width--wide);

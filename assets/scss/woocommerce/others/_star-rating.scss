@@ -34,7 +34,7 @@
 
 // In review form.
 p.stars {
-	float: $right;
+	float: inline-end;
 	display: inline-block;
 	margin: 0;
 	line-height: 1;
@@ -46,21 +46,21 @@ p.stars {
 	}
 
 	a {
-		float: $left;
+		float: inline-start;
 		position: relative;
 		display: block;
 		width: 1em;
 		height: 1em;
 		font-weight: 400;
 		text-decoration: none;
-		text-align: $left;
+		text-align: start;
 		text-indent: -999em;
 
 		&::before {
 			content: '\2606'; // WHITE STAR
 			position: absolute;
 			width: 100%;
-			#{$left}: 0;
+			inline-start: 0;
 			top: 0;
 			line-height: 1;
 			text-align: center;

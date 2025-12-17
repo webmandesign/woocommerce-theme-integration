@@ -1,6 +1,8 @@
 // woocommerce/featured-category
 //
-// @since  1.6.2
+// @since    1.6.2
+// @version  1.8.1
+@use 'sass:map';
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -10,7 +12,7 @@
 	padding: 2rem 1rem;
 	border-radius: var(--wcti--border--radius);
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		padding-inline: 2rem;
 	}
 
@@ -33,6 +35,22 @@
 
 	.wc-block-featured-category__description {
 		line-height: inherit;
+	}
+
+	&__inner-blocks {
+
+		&,
+		> .block-editor-inner-blocks > .block-editor-block-list__layout {
+			display: flex;
+			flex-direction: column;
+			gap: var(--wp--style--block-gap);
+			max-width: 22rem;
+			padding: 0;
+		}
+
+		p {
+			margin-block: 0;
+		}
 	}
 }
 

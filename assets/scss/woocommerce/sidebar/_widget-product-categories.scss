@@ -21,7 +21,7 @@
 
 			&::before {
 				content: '\2014'; // &mdash;
-				margin-#{$right}: .25em;
+				margin-inline-end: .25em;
 				speak: none;
 			}
 		}

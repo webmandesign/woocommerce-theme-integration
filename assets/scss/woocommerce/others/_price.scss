@@ -9,7 +9,7 @@
 	}
 
 	del + ins {
-		margin-#{$left}: $ratio_min + em;
+		margin-inline-start: $ratio_min + em;
 	}
 
 	.products & {

@@ -11,7 +11,7 @@
 			margin-top: 2rem;
 		}
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			width: calc( var(--wcti--width--col--review-1) - var(--wcti--width--col-gap--review) );
 
 			&:not(:first-child) {
@@ -36,10 +36,10 @@
 	}
 
 	.avatar {
-		float: $left;
+		float: inline-start;
 		width: 2.5em;
 		margin-bottom: .5em;
-		margin-#{$right}: 1em;
+		margin-inline-end: 1em;
 		border-radius: 2.5em;
 	}
 
@@ -71,8 +71,8 @@
 			max-height: 18em;
 			max-height: max( 640px, 62vh );
 			padding: 0 0 1em;
-			padding-#{$right}: 1em;
-			margin-#{$left}: 0;
+			padding-inline-end: 1em;
+			margin-inline-start: 0;
 			list-style: none;
 			overflow-y: auto;
 		}
@@ -126,10 +126,10 @@
 				overflow: hidden;
 
 				label:first-child {
-					float: $left;
+					float: inline-start;
 					padding: 0;
 					margin: 0;
-					margin-#{$right}: 1em;
+					margin-inline-end: 1em;
 				}
 
 				.stars {

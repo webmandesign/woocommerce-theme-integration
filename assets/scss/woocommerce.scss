@@ -1,5 +1,7 @@
 /* FILE: woocommerce.scss */
+@use 'sass:map';
 @use 'sass:math';
+@use 'sass:meta';
 
 //
 // WooCommerce plugin styles.
@@ -8,11 +10,8 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.7.4
+// @version  1.8.1
 //
-
-$left: left;
-$right: right;
 
 @import 'tools/_index';
 @import 'setup/_index';

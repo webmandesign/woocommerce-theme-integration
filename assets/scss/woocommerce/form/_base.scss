@@ -34,20 +34,20 @@
 		&-first,
 		&-last {
 
-			@include media( map_get( $breakpoint, 'm' ) ) {
+			@include media( map.get( $breakpoint, 'm' ) ) {
 				clear: none;
 				width: 47%;
 			}
 		}
 
-		@include media( map_get( $breakpoint, 'm' ) ) {
+		@include media( map.get( $breakpoint, 'm' ) ) {
 
 			&-first {
-				float: $left;
+				float: inline-start;
 			}
 
 			&-last {
-				float: $right;
+				float: inline-end;
 			}
 		}
 

@@ -13,7 +13,7 @@ ul.products {
 // Columns.
 @for $i from 1 through 2 {
 	.has-catalog-columns-mobile-#{$i} .products .product {
-		width: calc( #{ percentage( math.div( 1, $i ) ) } - var(--wcti--spacing--gap--posts-list) );
+		width: calc( #{ math.percentage( math.div( 1, $i ) ) } - var(--wcti--spacing--gap--posts-list) );
 	}
 }
 @for $i from 2 through 6 {

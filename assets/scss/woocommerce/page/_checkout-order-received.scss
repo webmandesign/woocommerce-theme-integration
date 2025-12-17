@@ -48,7 +48,7 @@
 	padding: 2em 1em;
 	border-radius: var(--wcti--border--radius);
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
@@ -73,7 +73,7 @@
 
 .woocommerce-columns--addresses {
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 
 		&.col2-set {
 			display: flex;

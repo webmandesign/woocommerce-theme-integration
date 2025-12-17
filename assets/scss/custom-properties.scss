@@ -1,4 +1,6 @@
 /* FILE: woocommerce/custom-properties.scss */
+@use 'sass:map';
+@use 'sass:math';
 
 //
 // Custom properties (CSS variables).
@@ -9,7 +11,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.7.4
+// @version  1.8.1
 //
 
 @import 'tools/_index';
@@ -42,6 +44,7 @@
 
 	--wcti--font-size--s: .9em;
 	--wcti--font-size--xs: .8em;
+	--wcti--font-size--wp--small: var(--wcti--font-size--s); // See "Font size fixes" below.
 
 	--wcti--font-size--button: var( --wp--custom--font-size--button, var(--wcti--font-size--s) );
 	--wcti--font-size--h1: calc( var(--typography_heading_size_multiplier, 1) * var(--typography_heading_size_1, 2.5em) );
@@ -93,13 +96,13 @@
 
 	--wcti--min-width--product: 200px;
 
-	@include media( map_get( $breakpoint, 'xl' ) ) {
-		--wcti--width--col--cart-cross-sells: #{ percentage( $ratio_maj ) };
-		--wcti--width--col--cart-totals: #{ percentage( $ratio_min ) };
-		--wcti--width--col--checkout-1: #{ percentage( $ratio_maj ) };
-		--wcti--width--col--checkout-2: #{ percentage( $ratio_min ) };
-		--wcti--width--col--review-1: #{ percentage( $ratio_maj ) };
-		--wcti--width--col--review-2: #{ percentage( $ratio_min ) };
+	@include media( map.get( $breakpoint, 'xl' ) ) {
+		--wcti--width--col--cart-cross-sells: #{ math.percentage( $ratio_maj ) };
+		--wcti--width--col--cart-totals: #{ math.percentage( $ratio_min ) };
+		--wcti--width--col--checkout-1: #{ math.percentage( $ratio_maj ) };
+		--wcti--width--col--checkout-2: #{ math.percentage( $ratio_min ) };
+		--wcti--width--col--review-1: #{ math.percentage( $ratio_maj ) };
+		--wcti--width--col--review-2: #{ math.percentage( $ratio_min ) };
 	}
 }
 
@@ -123,7 +126,7 @@
 	--wcti--width--my-account-panel: var(--wcti--width--content);
 
 	&[class] {
-		@include media( ( map_get( $breakpoint, 'm' ), 'max-width' ) ) {
+		@include media( ( map.get( $breakpoint, 'm' ), 'max-width' ) ) {
 			--wcti--spacing--gap--posts-list: 1em;
 		}
 	}
@@ -155,3 +158,10 @@
 			--wcti--min-width--product: 100px;
 		}
 	}
+
+// Font size fixes:
+:where( :not( [class*="wc-block-"] ):has( > [class*="wc-block-"] ) ) {
+	--wp--preset--font-size--medium: 1em;
+	--wp--preset--font-size--small: var(--wcti--font-size--wp--small);
+}
+

@@ -1,5 +1,28 @@
 # Integration for WooCommerce Changelog
 
+## 1.8.1, 20251217
+
+### Updated
+- CSS styles for WC10.4
+- Removing RTL stylesheets in favor of modern CSS
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/featured-category.scss
+	assets/scss/block/featured-product.scss
+	assets/scss/block/order-confirmation-downloads-wrapper.scss
+	assets/scss/block/order-confirmation-totals-wrapper.scss
+	assets/scss/block/product-button.scss
+	assets/scss/block/product-categories.scss
+	assets/scss/tools/_mixin-media.scss
+	includes/Assets.php
+
+
 ## 1.8.0, 20251211
 
 ### Added

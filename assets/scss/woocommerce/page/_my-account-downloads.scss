@@ -8,7 +8,7 @@
 
 	.download-file {
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			text-align: center;
 		}
 

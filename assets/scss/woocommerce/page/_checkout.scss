@@ -2,7 +2,7 @@
 
 .woocommerce .woocommerce-checkout {
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 
 		&::after {
 			content: '';
@@ -12,13 +12,13 @@
 		}
 
 		> * {
-			float: $right;
+			float: inline-end;
 			clear: right;
 			width: calc( var(--wcti--width--col--checkout-2) - var(--wcti--width--col-gap--checkout) );
 		}
 
 		> .col2-set {
-			float: $left;
+			float: inline-start;
 			width: calc( var(--wcti--width--col--checkout-1) - var(--wcti--width--col-gap--checkout) );
 		}
 
@@ -38,7 +38,7 @@
 		border-style: dashed;
 		border-radius: var(--wcti--border--radius);
 
-		@include media( map_get( $breakpoint, 'm' ) ) {
+		@include media( map.get( $breakpoint, 'm' ) ) {
 			padding-left: 2em;
 			padding-right: 2em;
 		}
@@ -74,7 +74,7 @@
 	padding: 2em 1em;
 	border-radius: var(--wcti--border--radius);
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
 		padding-right: 2em;
 	}

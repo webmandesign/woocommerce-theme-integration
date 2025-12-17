@@ -41,17 +41,17 @@
 
 	.ui-slider {
 		position: relative;
-		text-align: $left;
+		text-align: start;
 
 		&-range {
 			z-index: 1;
 
 			&-min {
-				#{$left}: -1px;
+				inline-start: -1px;
 			}
 
 			&-max {
-				#{$right}: -1px;
+				inline-end: -1px;
 			}
 		}
 
@@ -69,7 +69,7 @@
 			transform: translateY( -50% );
 
 			&:last-child {
-				margin-#{$left}: -$slider_hangle_size + em;
+				margin-inline-start: -$slider_hangle_size + em;
 			}
 
 			&:hover,

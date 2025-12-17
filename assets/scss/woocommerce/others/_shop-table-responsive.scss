@@ -21,13 +21,13 @@
 	td {
 		clear: both;
 		display: block;
-		text-align: $right;
+		text-align: end;
 
 		&[data-title]::before {
 			content: attr( data-title );
-			float: $left;
+			float: inline-start;
 			margin-bottom: .5em;
-			margin-#{$right}: 1em;
+			margin-inline-end: 1em;
 			font-size: var(--wcti--font-size--xs);
 			font-weight: var(--wcti--font-weight--label);
 			text-transform: uppercase;
@@ -44,7 +44,7 @@
 		}
 	}
 
-	@include media( ( map_get( $breakpoint, 'l' ), 'max-width' ) ) {
+	@include media( ( map.get( $breakpoint, 'l' ), 'max-width' ) ) {
 
 		td,
 		th {
@@ -57,7 +57,7 @@
 		}
 	}
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 
 		thead {
 			display: table-header-group;

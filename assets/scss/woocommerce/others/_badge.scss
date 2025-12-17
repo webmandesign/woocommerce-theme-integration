@@ -12,17 +12,17 @@
 	.summary-content &,
 	.woocommerce[class] .wp-block-woocommerce-product-image-gallery & {
 		position: absolute;
-		#{$left}: 0;
-		#{$right}: unset; // Required for `product-image-gallery` block.
+		inline-start: 0;
+		inline-end: unset; // Required for `product-image-gallery` block.
 		bottom: 100%;
 		border-radius: var(--wcti--border--radius) var(--wcti--border--radius) 0 0;
 	}
 
 	.products & {
 		position: absolute;
-		#{$left}: 0;
+		inline-start: 0;
 		top: 0;
-		border-top-#{$left}-radius: var(--wcti--border--radius);
-		border-bottom-#{$right}-radius: var(--wcti--border--radius);
+		border-top-inline-start-radius: var(--wcti--border--radius);
+		border-bottom-inline-end-radius: var(--wcti--border--radius);
 	}
 }

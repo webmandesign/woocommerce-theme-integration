@@ -13,11 +13,11 @@
 	td {
 		padding: .25rem;
 
-		@include media( map_get( $breakpoint, 'm' ) ) {
+		@include media( map.get( $breakpoint, 'm' ) ) {
 			padding: .5rem;
 		}
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
+		@include media( map.get( $breakpoint, 'l' ) ) {
 			padding-top: .75rem;
 			padding-bottom: .75rem;
 		}
@@ -99,7 +99,7 @@
 		}
 
 		[type="submit"] {
-			float: $right;
+			float: inline-end;
 		}
 	}
 

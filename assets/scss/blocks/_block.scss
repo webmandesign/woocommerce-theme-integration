@@ -18,10 +18,10 @@
 
 // Product name in block shop tables, for example.
 
-	.wc-block-components-product-name {
+	.wc-block-components-product-name[class][class] {
 		margin-block-end: $ratio_min + em;
 		font-family: var(--wcti--font-family--headings);
-		font-size: 1.2em;
+		font-size: 1em;
 		font-weight: var(--wcti--font-weight--headings);
 		line-height: 1 + $ratio_min;
 	}

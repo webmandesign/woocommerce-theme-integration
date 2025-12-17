@@ -7,7 +7,7 @@
 	}
 
 	.button {
-		float: $right;
+		float: inline-end;
 	}
 
 	br,
@@ -38,7 +38,7 @@
 		margin-top: 2em;
 	}
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 
 		.col2-set {
 			display: flex;

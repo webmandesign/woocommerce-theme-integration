@@ -3,7 +3,7 @@
 .summary {
 	margin-top: 2em;
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		width: calc( var(--wcti--width--col--product-summary) - var(--wcti--width--col-gap--product) );
 		margin-top: 0;
 	}
@@ -28,7 +28,7 @@
 			}
 
 			.qty:not([type="hidden"]) {
-				margin-#{$right}: .5em;
+				margin-inline-end: .5em;
 			}
 		}
 	}

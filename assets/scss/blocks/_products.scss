@@ -43,7 +43,7 @@
 		.wc-block-grid__product-title {
 			display: inline;
 			margin: 0;
-			margin-#{$right}: .5rem;
+			margin-inline-end: .5rem;
 			font-family: var(--wcti--font-family--headings);
 			font-size: var(--wcti--font-size--heading--products-product);
 			font-weight: var(--wcti--font-weight--headings);
@@ -56,8 +56,8 @@
 
 		.wc-block-grid__product-onsale {
 			position: absolute;
-			#{$left}: 0;
-			#{$right}: auto;
+			inline-start: 0;
+			inline-end: auto;
 			top: 0;
 			bottom: auto;
 			padding: math.div( .5em, .8 ) math.div( 1em, .8 );

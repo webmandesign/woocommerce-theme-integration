@@ -23,8 +23,8 @@
 	.shop_table & {
 		margin-bottom: 1em;
 
-		@include media( map_get( $breakpoint, 'l' ) ) {
-			float: $left;
+		@include media( map.get( $breakpoint, 'l' ) ) {
+			float: inline-start;
 			margin-bottom: 0;
 		}
 
@@ -35,7 +35,7 @@
 		.input-text {
 			width: 100%;
 
-			@include media( map_get( $breakpoint, 'm' ) ) {
+			@include media( map.get( $breakpoint, 'm' ) ) {
 				width: auto;
 			}
 		}
@@ -44,10 +44,10 @@
 			float: none;
 			width: 100%;
 
-			@include media( map_get( $breakpoint, 'm' ) ) {
-				float: $right;
+			@include media( map.get( $breakpoint, 'm' ) ) {
+				float: inline-end;
 				width: auto;
-				margin-#{$left}: .25em;
+				margin-inline-start: .25em;
 			}
 		}
 
@@ -59,7 +59,7 @@
 }
 
 .woocommerce-remove-coupon {
-	margin-#{$left}: .5em;
+	margin-inline-start: .5em;
 	font-size: var(--wcti--font-size--xs);
 	font-weight: 400;
 	text-transform: uppercase;

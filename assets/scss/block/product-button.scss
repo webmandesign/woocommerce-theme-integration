@@ -1,10 +1,19 @@
 // woocommerce/product-template
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.8.1
 
 @import '../tools/_index';
 @import '../setup/_index';
 
-.wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
-	border-style: solid;
+.wp-block-button.wc-block-components-product-button {
+	gap: 0;
+
+	.wc-block-components-product-button__button {
+		border-style: solid;
+	}
+
+	.added_to_cart {
+		margin-block-start: $ratio_maj + em;
+	}
 }

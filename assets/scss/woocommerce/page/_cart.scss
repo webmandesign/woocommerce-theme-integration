@@ -3,7 +3,7 @@
 .cart-collaterals {
 	margin-top: 2em;
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 
 		&::after {
 			content: '';
@@ -13,12 +13,12 @@
 		}
 
 		.cross-sells {
-			float: $left;
+			float: inline-start;
 			width: calc( var(--wcti--width--col--cart-cross-sells) - var(--wcti--width--col-gap--cart) );
 		}
 
 		.cart_totals {
-			float: $right;
+			float: inline-end;
 			width: calc( var(--wcti--width--col--cart-totals) - var(--wcti--width--col-gap--cart) );
 
 			&:only-child {
@@ -38,7 +38,7 @@
 .cross-sells {
 	margin-bottom: calc( var(--wcti--spacing--white) / 2 );
 
-	@include media( map_get( $breakpoint, 'l' ) ) {
+	@include media( map.get( $breakpoint, 'l' ) ) {
 		margin-bottom: 0;
 
 		h2 {
@@ -58,7 +58,7 @@
 	padding: 2em 1em;
 	border-radius: var(--wcti--border--radius);
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
@@ -133,11 +133,11 @@
 
 		label {
 			padding: 0;
-			margin-#{$left}: .25em;
+			margin-inline-start: .25em;
 		}
 
 		[type="hidden"] + label {
-			margin-#{$left}: 0;
+			margin-inline-start: 0;
 		}
 	}
 }
@@ -146,7 +146,7 @@
 	padding: 1em 0;
 	margin: 0;
 
-	@include media( map_get( $breakpoint, 'm' ) ) {
+	@include media( map.get( $breakpoint, 'm' ) ) {
 		padding-left: 1em;
 		padding-right: 1em;
 	}

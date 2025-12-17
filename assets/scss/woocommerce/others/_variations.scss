@@ -37,7 +37,7 @@
 
 .reset_variations {
 	position: absolute;
-	#{$right}: 0;
+	inline-end: 0;
 	bottom: 100%;
 	padding: 0 !important;
 	font-size: var(--wcti--font-size--xs) !important;
