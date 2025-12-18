@@ -11,7 +11,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.8.1
+// @version  1.8.2
 //
 
 @import 'tools/_index';
@@ -155,7 +155,11 @@
 	.has-catalog-columns-mobile-2 {
 
 		@media (max-width: 600px) {
-			--wcti--min-width--product: 100px;
+			--wcti--min-width--product: 150px;
+		}
+
+		@media (max-width: 420px) {
+			--wcti--min-width--product: 125px;
 		}
 	}
 

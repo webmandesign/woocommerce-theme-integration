@@ -1,5 +1,19 @@
 # Integration for WooCommerce Changelog
 
+## 1.8.2, 20251218
+
+### Fixed
+- Responsive styles for products list
+- Sales badge text is breaking into 2 lines
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+
+
 ## 1.8.1, 20251217
 
 ### Updated
