@@ -1,27 +1,54 @@
 // woocommerce/product-template
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.8.3
 
 @import '../tools/_index';
 @import '../setup/_index';
 
-.wc-block-product-template__responsive[class] {
-	grid-gap: var(--wcti--spacing--gap--posts-list);
+.wc-block-product-template {
+	$gap: var(--wcti--spacing--gap--posts-list);
+	$i: var(--wcti--i, 1);
 
 	// @see  `woocommerce/product-template` block `style.scss`
-	@for $i from 2 through 6 {
-		$gap-count: calc( #{$i} - 1 );
-		$total-gap-width: calc( #{$gap-count} * var(--wcti--spacing--gap--posts-list) );
-		$max-product-width: calc( ( 100% - #{$total-gap-width} ) / #{$i} );
+	&__responsive {
+		grid-gap: $gap;
 
-		&.columns-#{ $i } {
+		&[class*="columns-"] {
 			grid-template-columns: repeat(
 				auto-fill,
 				minmax(
-					max( var(--wcti--min-width--product), #{$max-product-width} ),
+					max(
+						var(--wcti--min-width--product),
+						calc( ( 100% - ( ( #{$i} - 1 ) * #{$gap} ) ) / #{$i} )
+					),
 					1fr
 				)
 			);
+		}
+
+		@for $i from 2 through 6 {
+			:where( &.columns-#{$i} ) {
+				--wcti--i: #{$i};
+			}
+		}
+	}
+
+	// @see  `woocommerce/product-template` block `style.scss`
+	&.is-flex-container {
+		gap: $gap;
+
+		&.is-flex-container[class*="columns-"] > li {
+			// width: calc( ( 100% / #{$i} ) - #{$gap} + ( #{$gap} / #{$i} ) );
+			width: calc( ( 100% - ( ( #{$i} - 1 ) * #{$gap} ) ) / #{$i} );
+		}
+
+		@include media( 600px ) {
+			@for $i from 2 through 6 {
+				:where( &.columns-#{$i} ) {
+					--wcti--i: #{$i};
+				}
+			}
 		}
 	}
 }

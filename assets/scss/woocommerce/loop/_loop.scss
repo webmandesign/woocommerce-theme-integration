@@ -11,7 +11,7 @@ ul.products {
 }
 
 // Columns.
-@for $i from 1 through 2 {
+@for $i from 1 through 2 { // @todo  Rethink, optimize this. (Parent <ul> has stretched horizontal margin!)
 	.has-catalog-columns-mobile-#{$i} .products .product {
 		width: calc( #{ math.percentage( math.div( 1, $i ) ) } - var(--wcti--spacing--gap--posts-list) );
 	}

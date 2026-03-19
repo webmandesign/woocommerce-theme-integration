@@ -23,8 +23,8 @@
 
 	&__trigger {
 		position: absolute;
-		inline-end: 0;
-		bottom: 100%;
+		inset-inline-end: 0;
+		inset-block-end: 100%;
 		width: 2em;
 		height: 2em;
 		text-align: start;
@@ -38,8 +38,8 @@
 			position: absolute;
 			width: 2em;
 			height: .15rem;
-			inline-start: 0;
-			top: 50%;
+			inset-inline-start: 0;
+			inset-block-start: 50%;
 			margin: math.div( -.15rem, 2 );
 			background: currentColor;
 		}

@@ -4,10 +4,10 @@ Contributors:      webmandesign
 Donate link:       https://www.webmandesign.eu/contact/#donation
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wordpress-plugin/
-Requires at least: 6.0
-Tested up to:      6.9
-Requires PHP:      7.0
-Stable tag:        1.8.2
+Requires at least: 6.8
+Tested up to:      7.0
+Requires PHP:      8.0
+Stable tag:        1.8.3
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -48,6 +48,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 
 == Upgrade Notice ==
+
+= 1.8.3 =
+...
 
 = 1.8.2 =
 Fixing responsive styles for products list.

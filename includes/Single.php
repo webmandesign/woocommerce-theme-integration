@@ -100,6 +100,9 @@ class Single {
 	/**
 	 * Up-sells and related products setup.
 	 *
+	 * Also:
+	 * @see  Blocks::product_colletion()
+	 *
 	 * @since    1.0.0
 	 * @version  1.5.0
 	 *

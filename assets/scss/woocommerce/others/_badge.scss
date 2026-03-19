@@ -1,6 +1,10 @@
 /* FILE: woocommerce/main/_badge.scss */
 
 .onsale {
+	// This is required to override WC default colors (which use higher specificity selector).
+	--wp--preset--color--foreground: var(--wcti--color--accent);
+	--wp--preset--color--background: var(--wcti--color--accent-contrast);
+
 	padding: .5rem 1rem;
 	font-size: var(--wcti--font-size--xs);
 	font-weight: var(--wcti--font-weight--badge);
@@ -12,17 +16,17 @@
 	.summary-content &,
 	.woocommerce[class] .wp-block-woocommerce-product-image-gallery & {
 		position: absolute;
-		inline-start: 0;
-		inline-end: unset; // Required for `product-image-gallery` block.
+		inset-inline-start: 0;
+		inset-inline-end: unset; // Required for `product-image-gallery` block.
 		bottom: 100%;
 		border-radius: var(--wcti--border--radius) var(--wcti--border--radius) 0 0;
 	}
 
 	.products & {
 		position: absolute;
-		inline-start: 0;
+		inset-inline-start: 0;
 		top: 0;
-		border-top-inline-start-radius: var(--wcti--border--radius);
-		border-bottom-inline-end-radius: var(--wcti--border--radius);
+		border-start-start-radius: var(--wcti--border--radius);
+		border-end-end-radius: var(--wcti--border--radius);
 	}
 }

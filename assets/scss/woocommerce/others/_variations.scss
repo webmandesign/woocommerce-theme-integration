@@ -37,8 +37,8 @@
 
 .reset_variations {
 	position: absolute;
-	inline-end: 0;
-	bottom: 100%;
+	inset-inline-end: 0;
+	inset-block-end: 100%;
 	padding: 0 !important;
 	font-size: var(--wcti--font-size--xs) !important;
 	font-weight: var(--wcti--font-weight--label) !important;

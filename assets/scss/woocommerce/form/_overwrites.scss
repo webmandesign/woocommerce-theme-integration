@@ -1,0 +1,79 @@
+/* FILE: woocommerce/form/_overwrites.scss */
+// WooCommerce fixes...
+
+// @link  https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/legacy/css/woocommerce-blocktheme.scss
+
+	.woocommerce-page {
+
+		form .form-row {
+
+			select,
+			textarea.input-text,
+			input.input-text {
+				padding: var(--wcti--spacing--input-vertical) 1em;
+				font-size: var(--wcti--font-size--s);
+			}
+
+			.select2-container {
+
+				.select2-selection--single .select2-selection__rendered {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.woocommerce {
+
+		table.variations {
+
+			tr {
+
+				td select {
+					height: auto;
+					padding: var(--wcti--spacing--input-vertical) 1em;
+					font-size: var(--wcti--font-size--s);
+				}
+			}
+		}
+	}
+
+// @link  https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/blocks/assets/js/blocks/classic-template/style.scss
+
+	.woocommerce :where(div[data-block-name="woocommerce/legacy-template"]) div.product form.cart div.quantity {
+
+		.input-text {
+			padding: var(--wcti--spacing--input-vertical) 1em;
+		}
+	}
+
+// @link  https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/blocks/assets/js/blocks/add-to-cart-form/style.scss
+
+	.wc-block-add-to-cart-form {
+
+		.input-text {
+			padding: var(--wcti--spacing--input-vertical) 1em;
+			font-size: var(--wcti--font-size--s);
+		}
+	}
+
+	.wp-block-woocommerce-add-to-cart-form {
+
+		.wc-block-components-quantity-selector {
+
+			input[type="number"].input-text.qty.text {
+				padding-block: var(--wcti--spacing--input-vertical);
+				font-size: var(--wcti--font-size--s);
+			}
+		}
+	}
+
+// @link  https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/blocks/assets/js/blocks/add-to-cart-with-options/style.scss
+
+	:where(.wc-block-add-to-cart-with-options) {
+
+		:where(.quantity .input-text) {
+			padding-block: var(--wcti--spacing--input-vertical);
+			font-size: var(--wcti--font-size--s);
+		}
+	}

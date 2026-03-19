@@ -5,7 +5,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.6.4
+ * @version  1.8.3
  */
 
 ( () => {
@@ -22,6 +22,7 @@
 				switch( name ) {
 
 					case 'woocommerce/breadcrumbs':
+					case 'woocommerce/product-collection':
 						settings = lodash.merge( settings, {
 							supports: {
 								spacing: {

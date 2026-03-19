@@ -1,0 +1,34 @@
+// woocommerce/order-confirmation-status
+//
+// @since  1.8.3
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wc-block-order-confirmation-status {
+
+	h1 {
+		font-size: min( var(--wcti--font-size--h1), 3em );
+	}
+
+	// Access denied, login needed.
+	&-description {
+
+		p .button {
+			padding: ( $ratio_min + em ) 1em;
+		}
+
+		form {
+			@extend %shaded_background;
+			padding: $ratio + em;
+			text-align: center;
+			border-radius: var(--wcti--border--radius);
+		}
+
+		label {
+			display: block;
+		}
+	}
+}
+
+@import '../extend';

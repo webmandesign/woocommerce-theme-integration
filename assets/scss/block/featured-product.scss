@@ -1,7 +1,7 @@
 // woocommerce/featured-product
 //
 // @since    1.6.2
-// @version  1.8.1
+// @version  1.8.3
 @use 'sass:map';
 
 @import '../tools/_index';
@@ -21,10 +21,11 @@
 		padding-inline: 2rem;
 	}
 
-	.wc-block-featured-product__wrapper {
+	.wc-block-featured-product__wrapper:not(:has(.wc-block-featured-product__inner-blocks)) {
 		flex-direction: column;
 	}
 
+	.wc-block-featured-product__inner-blocks,
 	.wc-block-featured-product__title,
 	.wc-block-featured-product__description,
 	.wc-block-featured-product__price,
@@ -34,10 +35,13 @@
 		margin: 10px 0;
 	}
 
+	.wp-block-post-title,
+	.wp-block-woocommerce-product-title,
 	.wc-block-featured-product__title {
 		font-size: var(--wcti--font-size--heading--block--featured-product);
 	}
 
+	.wp-block-woocommerce-product-summary,
 	.wc-block-featured-product__description {
 
 		&,
@@ -46,6 +50,7 @@
 		}
 	}
 
+	.wp-block-woocommerce-product-price,
 	&__price {
 		font-size: $ratio + em;
 		font-weight: var(--wcti--font-weight--price);

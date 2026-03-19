@@ -47,11 +47,11 @@
 			z-index: 1;
 
 			&-min {
-				inline-start: -1px;
+				inset-inline-start: -1px;
 			}
 
 			&-max {
-				inline-end: -1px;
+				inset-inline-end: -1px;
 			}
 		}
 

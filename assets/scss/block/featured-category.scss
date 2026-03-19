@@ -1,7 +1,7 @@
 // woocommerce/featured-category
 //
 // @since    1.6.2
-// @version  1.8.1
+// @version  1.8.3
 @use 'sass:map';
 
 @import '../tools/_index';
@@ -16,10 +16,11 @@
 		padding-inline: 2rem;
 	}
 
-	.wc-block-featured-category__wrapper {
+	.wc-block-featured-category__wrapper:not(:has(.wc-block-featured-category__inner-blocks)) {
 		flex-direction: column;
 	}
 
+	.wc-block-featured-category__inner-blocks,
 	.wc-block-featured-category__title,
 	.wc-block-featured-category__description,
 	.wc-block-featured-category__price,
@@ -29,10 +30,12 @@
 		margin: 10px 0;
 	}
 
+	.wp-block-woocommerce-category-title,
 	.wc-block-featured-category__title {
 		font-size: var(--wcti--font-size--heading--block--featured-category);
 	}
 
+	.wp-block-woocommerce-category-description,
 	.wc-block-featured-category__description {
 		line-height: inherit;
 	}

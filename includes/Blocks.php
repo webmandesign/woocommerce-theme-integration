@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.7.0
+ * @version  1.8.3
  */
 
 namespace WebManDesign\WCTI;
@@ -30,7 +30,7 @@ class Blocks {
 	 * Initialization.
 	 *
 	 * @since    1.5.0
-	 * @version  1.7.0
+	 * @version  1.8.3
 	 *
 	 * @return  void
 	 */
@@ -50,6 +50,8 @@ class Blocks {
 				add_filter( 'block_type_metadata_settings', __CLASS__ . '::block_settings', 10, 2 );
 
 				add_filter( 'render_block_data', __CLASS__ . '::page_endpoint_title' );
+
+				add_filter( 'render_block_context', __CLASS__ . '::product_template', 10, 2 );
 
 				add_filter( 'render_block_core/post-excerpt',           __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
 				add_filter( 'render_block_woocommerce/product-details', __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
@@ -160,7 +162,8 @@ class Blocks {
 	 * No need to enable specific options,
 	 * simply enabling whole groups of options.
 	 *
-	 * @since  1.6.0
+	 * @since    1.6.0
+	 * @version  1.8.3
 	 *
 	 * @param  array $settings  Array of determined settings for registering a block type.
 	 * @param  array $metadata  Metadata provided for registering a block type.
@@ -177,6 +180,7 @@ class Blocks {
 				 * Margin.
 				 */
 				case 'woocommerce/breadcrumbs':
+				case 'woocommerce/product-collection':
 					$settings['supports']['spacing']['margin'] = true;
 					break;
 			}
@@ -223,6 +227,51 @@ class Blocks {
 			return $block;
 
 	} // /page_endpoint_title
+
+	/**
+	 * Up-sells and related products (collection) setup.
+	 *
+	 * Also:
+	 * @see  Single::products_list_args()
+	 *
+	 * @since  1.8.3
+	 *
+	 * @param  array $context
+	 * @param  array $block
+	 *
+	 * @return  array
+	 */
+	public static function product_template( array $context, array $block ): array {
+
+		// Processing
+
+			if (
+				'woocommerce/product-template' === $block['blockName']
+				&& ! empty( $context['query']['perPage'] )
+				&& ! empty( $context['displayLayout']['columns'] )
+				&& ! empty( $context['collection'] )
+			) {
+
+				$cols = false;
+
+				if ( false !== stripos( $context['collection'], 'upsell' ) ) {
+					$cols = get_theme_mod( Options::$id['upsell_products_columns'] );
+				} elseif ( false !== stripos( $context['collection'], 'related' ) ) {
+					$cols = get_theme_mod( Options::$id['related_products_columns'] );
+				}
+
+				if ( is_int( $cols ) ) {
+					$context['query']['perPage']         =
+					$context['displayLayout']['columns'] = $cols;
+				}
+			}
+
+
+		// Output
+
+			return $context;
+
+	} // /product_template
 
 	/**
 	 * Block output modification: Add single product "More details" link functionality.

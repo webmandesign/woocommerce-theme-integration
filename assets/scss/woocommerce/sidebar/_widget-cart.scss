@@ -12,8 +12,8 @@
 		position: absolute;
 		width: 1.5em;
 		height: 1.5em;
-		inline-start: 0;
-		top: .25em;
+		inset-inline-start: 0;
+		inset-block-start: .25em;
 		font-weight: var(--wcti--font-weight--label);
 		line-height: calc( 1.5em - 2 * 1px );
 		text-align: center;

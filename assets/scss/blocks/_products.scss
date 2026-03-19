@@ -56,8 +56,8 @@
 
 		.wc-block-grid__product-onsale {
 			position: absolute;
-			inline-start: 0;
-			inline-end: auto;
+			inset-inline-start: 0;
+			inset-inline-end: auto;
 			top: 0;
 			bottom: auto;
 			padding: math.div( .5em, .8 ) math.div( 1em, .8 );

@@ -58,7 +58,7 @@
 
 // Loop.
 
-	// Post list columns.
+	// Post list columns. // @todo  Rethink, optimize this. (Parent <ul> has stretched horizontal margin!)
 
 		%posts_list_columns_1 {
 			width: calc( #{ math.percentage( math.div( 1, 1 ) ) } - var(--wcti--spacing--gap--posts-list) );

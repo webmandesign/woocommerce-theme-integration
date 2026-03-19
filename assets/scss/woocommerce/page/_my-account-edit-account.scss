@@ -1,0 +1,9 @@
+/* FILE: woocommerce/page/_my-account-edit-address.scss */
+
+.woocommerce-EditAccountForm {
+
+	// Password change.
+	fieldset {
+		@extend %shaded_background;
+	}
+}
