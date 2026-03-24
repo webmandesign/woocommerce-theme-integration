@@ -22,7 +22,7 @@
 		}
 
 		&:not(:empty) {
-			padding-block: 1rem;
+			// padding-block: 1rem;
 
 			> div[class] {
 				padding-inline: $ratio + rem;

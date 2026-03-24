@@ -25,7 +25,14 @@
 		color: inherit;
 
 		&::before {
-			content: '\00a0\00d7\00a0'; // &nbsp;&times;&nbsp;
+			content: '\00a0×\00a0' / ''; // &nbsp;&times;&nbsp;
 		}
 	}
+}
+
+.woocommerce-store-notice,
+p.demo_store {
+	// This is required to override WC default colors (which use higher specificity selector).
+	--wp--preset--color--foreground: var(--wcti--color--accent);
+	--wp--preset--color--background: var(--wcti--color--accent-contrast);
 }

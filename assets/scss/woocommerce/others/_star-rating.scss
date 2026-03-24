@@ -57,7 +57,7 @@ p.stars {
 		text-indent: -999em;
 
 		&::before {
-			content: '\2606'; // WHITE STAR
+			content: '☆' / ''; // WHITE STAR
 			position: absolute;
 			width: 100%;
 			inset-inline-start: 0;
@@ -68,12 +68,12 @@ p.stars {
 		}
 
 		&:hover ~ a::before {
-			content: '\2606'; // WHITE STAR
+			content: '☆' / ''; // WHITE STAR
 		}
 	}
 
 	&:hover a::before {
-		content: '\2605'; // BLACK STAR
+		content: '★' / ''; // BLACK STAR
 	}
 
 	&.selected {
@@ -81,16 +81,16 @@ p.stars {
 		a.active {
 
 			&::before {
-				content: '\2605'; // BLACK STAR
+				content: '★' / ''; // BLACK STAR
 			}
 
 			~ a::before {
-				content: '\2606'; // WHITE STAR
+				content: '☆' / ''; // WHITE STAR
 			}
 		}
 
 		a:not(.active)::before {
-			content: '\2605'; // BLACK STAR
+			content: '★' / ''; // BLACK STAR
 		}
 	}
 }

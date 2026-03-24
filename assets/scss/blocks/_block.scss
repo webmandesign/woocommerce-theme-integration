@@ -26,16 +26,8 @@
 		line-height: 1 + $ratio_min;
 	}
 
-// Border color.
+// Fixing buttons.
 
-	.wc-block-components-sidebar {
-
-		&,
-		> * {
-			border-color: inherit;
-		}
-	}
-
-	.wc-block-components-quantity-selector::after {
-		border-color: inherit;
+	[class*="wc-block-"] .wp-block-button__link {
+		height: auto;
 	}

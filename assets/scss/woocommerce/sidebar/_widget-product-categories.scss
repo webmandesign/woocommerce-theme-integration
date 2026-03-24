@@ -20,7 +20,7 @@
 			font-weight: 400;
 
 			&::before {
-				content: '\2014'; // &mdash;
+				content: '—' / ''; // &mdash;
 				margin-inline-end: .25em;
 				speak: none;
 			}

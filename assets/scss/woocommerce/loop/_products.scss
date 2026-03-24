@@ -69,7 +69,7 @@ ul.products {
 			margin-top: var(--wcti--spacing--margin--products-add-to-cart--top);
 
 			&::before {
-				content: '+ ';
+				content: '+ ' / '';
 				speak: none;
 			}
 		}
@@ -80,11 +80,7 @@ ul.products {
 		font-style: italic;
 
 		&::after {
-			content: ' \2192'; // &rarr;
-
-			.rtl & {
-				content: ' \2190'; // &larr;
-			}
+			content: ' ' var(--wcti--content--arrow-inline-end) / '';
 		}
 	}
 }
@@ -114,12 +110,12 @@ $important: !important;
 
 		&::after {
 			animation: loadingAddToCart .6s linear infinite alternate $important;
-			content: '⋯' $important;
+			content: '⋯' / '' $important;
 		}
 	}
 
 	&.added::after {
-		content: '✓' $important;
+		content: '✓' / '' $important;
 	}
 }
 

@@ -36,13 +36,13 @@ body .wc-block-components-product-rating-stars__stars[class] { // The class inco
 	overflow: hidden;
 
 	&::before {
-		content: '\2606\2606\2606\2606\2606'; // WHITE STAR
+		content: '☆☆☆☆☆' / ''; // WHITE STAR
 		position: relative;
 		opacity: 1;
 	}
 
 	span::before {
-		content: '\2605\2605\2605\2605\2605'; // BLACK STAR
+		content: '★★★★★' / ''; // BLACK STAR
 		color: inherit;
 	}
 }

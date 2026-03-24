@@ -5,24 +5,38 @@
 	%form_input {
 		width: 100%;
 		height: auto;
-		padding-block: 1em var(--wcti--spacing--input-vertical);
+		padding-block: var(--wcti--spacing--input-vertical);
 		line-height: inherit;
 		background: none;
 		color: inherit;
-		border-color: inherit;
 		border-width: var(--wcti--border--width);
+		border-color: inherit;
 		border-radius: var(--wcti--border--radius);
 
 		&:focus,
 		&:focus-within {
+			background: none;
+			color: inherit;
+			border-width: var(--wcti--border--width);
 			border-color: currentColor;
 		}
 	}
 
-	.wc-block-components-text-input[class] {
+	// IMPORTANT: Selectors have to be written this way as we are nesting everything withing `html` in `blocks.scss`.
+	.wc-block-components-text-input[class][class] {
 
-		&,
-		.wc-block-components-form & {
+		input:where(
+			[type="email"],
+			[type="number"],
+			[type="password"],
+			[type="tel"],
+			[type="text"],
+			[type="url"]
+		) {
+			@extend %form_input;
+		}
+
+		&.is-active {
 
 			input:where(
 				[type="email"],
@@ -32,7 +46,7 @@
 				[type="text"],
 				[type="url"]
 			) {
-				@extend %form_input;
+				padding-block-start: $ratio + em;
 			}
 		}
 	}
@@ -51,20 +65,34 @@
 
 		.wc-blocks-components-select__select {
 			@extend %form_input;
+			line-height: 1;
+
+			&,
+			&:focus {
+				padding-block: 1.5em calc( var(--wcti--spacing--input-vertical) / 2 );
+			}
 		}
 	}
 
 	.wc-block-components-form .wc-block-components-text-input label,
 	.wc-block-components-text-input label,
 	.wc-blocks-components-select .wc-blocks-components-select__label {
+		font-size: 1em;
 		color: inherit;
+	}
+
+	.wc-blocks-components-select .wc-blocks-components-select__label {
+		top: $ratio_min + em;
+		font-size: $ratio_maj + em; // This is the same as scale transform below.
+		text-transform: uppercase;
 	}
 
 	.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill + label,
 	.wc-block-components-text-input input:-webkit-autofill + label,
 	.wc-block-components-form .wc-block-components-text-input.is-active label,
 	.wc-block-components-text-input.is-active label {
-		transform: translateY( #{ $ratio_min + em } ) scale( .75 );
+		text-transform: uppercase;
+		transform: translateY(0) scale( #{ $ratio_maj } ); // The scale is the same as font-size above.
 	}
 
 // Checkboxes.

@@ -169,3 +169,13 @@
 	--wp--preset--font-size--small: var(--wcti--font-size--wp--small);
 }
 
+// LTR/RTL:
+
+	:root {
+		--wcti--content--arrow-inline-end: '→';
+
+		&:dir(rtl) {
+			--wcti--content--arrow-inline-end: '←';
+		}
+	}
+

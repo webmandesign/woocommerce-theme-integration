@@ -1,0 +1,25 @@
+/* FILE: blocks/_borders.scss */
+
+.wc-block-components-sidebar {
+
+	&,
+	> * {
+		border-color: inherit;
+	}
+}
+
+.wc-block-components-quantity-selector::after {
+	border-color: inherit;
+}
+
+.wc-block-components-totals-wrapper,
+.wp-block-woocommerce-checkout-order-summary-totals-block {
+	border-top-width: var(--wcti--border--width--item-separator);
+	border-color: inherit;
+}
+
+.wc-block-checkout__form--with-step-numbers .wc-block-components-checkout-step--with-step-number .wc-block-components-checkout-step__content::before,
+.wc-block-checkout__form--with-step-numbers .wc-block-components-checkout-step--with-step-number .wc-block-components-checkout-step__description::before {
+	border-left-width: var(--wcti--border--width--item-separator);
+	border-color: inherit;
+}
