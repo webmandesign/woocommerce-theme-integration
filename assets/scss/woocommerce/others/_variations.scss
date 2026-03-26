@@ -1,7 +1,7 @@
 /* FILE: woocommerce/others/_variations.scss */
 
 // Single product page:
-.variations {
+.woocommerce table.variations[class] {
 	position: relative;
 	border-width: 0;
 	margin-bottom: 2em;
@@ -36,10 +36,9 @@
 }
 
 .reset_variations {
-	position: absolute;
-	inset-inline-end: 0;
-	inset-block-end: 100%;
+	display: block;
 	padding: 0 !important;
+	margin-block-start: 1em;
 	font-size: var(--wcti--font-size--xs) !important;
 	font-weight: var(--wcti--font-weight--label) !important;
 	text-transform: uppercase !important;
@@ -50,6 +49,10 @@
 
 	&::before {
 		content: '×\00a0' / ''; // &times;&nbsp;
+	}
+
+	&:where([style*="hidden"]) {
+		@extend %screen_reader_hiding;
 	}
 }
 
@@ -71,6 +74,10 @@
 
 .single_variation_wrap {
 	width: 100%;
+
+	.single_variation:where(:not([style*="none"])) {
+		margin-block-start: -1em;
+	}
 }
 
 // Shop table:

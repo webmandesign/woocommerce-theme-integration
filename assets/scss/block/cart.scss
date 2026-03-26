@@ -1,6 +1,7 @@
 // woocommerce/cart
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.8.3
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -52,3 +53,9 @@
 		}
 	}
 }
+
+	.wp-block-woocommerce-proceed-to-checkout-block {
+		position: sticky;
+		inset-block-start: calc( #{ $ratio + rem } + var( --wp-admin--admin-bar--height, 0 ) );
+		z-index: 99;
+	}

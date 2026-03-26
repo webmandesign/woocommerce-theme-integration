@@ -58,6 +58,8 @@ class Blocks {
 
 				add_filter( 'woocommerce_blocks_hook_compatibility_additional_data', __CLASS__ . '::hooks_in_blocks' );
 
+				add_filter( 'woocommerce_get_price_suffix', __CLASS__ . '::price_suffix' );
+
 	} // /init
 
 	/**
@@ -452,5 +454,34 @@ class Blocks {
 			return array_merge( $data, $hooks );
 
 	} // /hooks_in_blocks
+
+	/**
+	 * Price suffix fix (hack) in Product Price block.
+	 *
+	 * For some reason Product Price block on single product page removes
+	 * `<small class="woocommerce-price-suffix"></small>` tags while keeping
+	 * the text between tags (it strips the tags, most likely via JavaScript).
+	 * However, it keeps `<span>` tags, so we simply change the `<small>` to
+	 * `<span>` to trick WC not to remove price suffix HTML tags (and class).
+	 *
+	 * This seems to affect variable products only.
+	 *
+	 * @since  1.8.3
+	 *
+	 * @param  string $html
+	 *
+	 * @return  string
+	 */
+	public static function price_suffix( string $html ): string {
+
+		// Output
+
+			return str_replace(
+				[ '<small', '</small>' ],
+				[ '<span', '</span>' ],
+				$html
+			);
+
+	} // /price_suffix
 
 }

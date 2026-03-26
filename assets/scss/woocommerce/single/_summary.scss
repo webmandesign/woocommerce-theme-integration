@@ -74,3 +74,7 @@
 .product-description-link {
 	font-weight: var(--wcti--font-weight--label);
 }
+
+.woocommerce div.product div.summary > * {
+	margin-bottom: unset;
+}

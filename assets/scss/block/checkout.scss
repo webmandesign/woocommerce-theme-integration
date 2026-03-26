@@ -119,6 +119,7 @@ body { // Higher priority required for classic/hybrid theme mode.
 			.wc-block-components-radio-control-accordion-option--checked-option-highlighted,
 			label.wc-block-components-radio-control__option--checked-option-highlighted {
 				box-shadow: inset 0 0 0 2px var(--wcti--color--accent);
+				z-index: 1;
 			}
 		}
 	}
@@ -143,6 +144,16 @@ body { // Higher priority required for classic/hybrid theme mode.
 	.wc-block-checkout__terms.wc-block-checkout__terms--with-separator {
 		border-width: var(--wcti--border--width--item-separator);
 		border-color: inherit;
+	}
+
+	// Place the order button.
+	.wc-block-checkout__actions .wc-block-checkout__actions_row {
+		flex-wrap: wrap;
+		gap: 2em;
+
+		> .wc-block-components-button {
+			flex: 1;
+		}
 	}
 
 	// Sidebar.
@@ -214,5 +225,16 @@ body { // Higher priority required for classic/hybrid theme mode.
 
 	&__text {
 		justify-content: center;
+	}
+
+	.wc-block-components-checkout-place-order-button__separator {
+		margin-inline: $ratio_min + em;
+	}
+
+	&__price {
+		padding: $ratio_min + em;
+		font-weight: 400;
+		border: 1px dashed;
+		border-radius: var(--wcti--border--radius);
 	}
 }

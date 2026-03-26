@@ -1,7 +1,7 @@
 // woocommerce/product-details
 //
 // @since    1.6.0
-// @version  1.6.3
+// @version  1.8.3
 //
 // @see  woocommerce/others/_tabs.scss
 
@@ -17,6 +17,7 @@
 		border-bottom: .1rem solid;
 		border-bottom-color: inherit;
 		overflow: visible;
+		z-index: 1; // Above block content so the active tab state is visible.
 
 		li {
 			padding: 0;

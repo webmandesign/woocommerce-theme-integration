@@ -7,7 +7,7 @@
 
 // In product summary.
 .summary-content .woocommerce-product-rating,
-.wc-block-components-product-rating__container {
+:where(.wc-block-components-product-rating[data-is-descendent-of-single-product-template="true"]) .wc-block-components-product-rating__container {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;

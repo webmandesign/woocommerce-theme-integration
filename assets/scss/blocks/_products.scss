@@ -100,6 +100,13 @@
 	}
 }
 
+	.woocommerce ul.products li.product .woocommerce-loop-product__title {
+		font-family: var(--wcti--font-family--headings);
+		font-size: var(--wcti--font-size--heading--products-product);
+		font-weight: var(--wcti--font-weight--headings);
+		color: var(--wcti--color--content-h);
+	}
+
 :where(body:not(.no-custom-loop-add-to-cart)) .wc-block-grid__product .wp-block-button {
 
 	.wp-block-button__link,

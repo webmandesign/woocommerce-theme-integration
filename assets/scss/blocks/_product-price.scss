@@ -1,0 +1,13 @@
+/* FILE: blocks/_product-price.scss */
+
+// @see  woocommerce/others/_price.scss
+.wp-block-woocommerce-product-price[data-is-descendent-of-single-product-template="true"] {
+
+	del {
+		font-size: var(--wcti--font-size--xs);
+	}
+
+	.price-range {
+		font-size: var(--wcti--font-size--xs);
+	}
+}
