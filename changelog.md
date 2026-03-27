@@ -2,13 +2,45 @@
 
 ## 1.8.3, 20260327
 
+### Added
+- Styles for Order Confirmation Status block
+- Styles for Product Rating block
+- Styles for Price Filter block
+
+### Updated
+- Improving styles
+- Making block layout work with Customizer options
+- Tested with WordPress 7.0
+- Rising PHP compatibility to 8.0 and WordPress to 6.8
+- Improving accessibility
+- Improving RTL styles
+
 ### Fixed
-- @todo
+- WooCommerce CSS compatibility issue
+- Colors
+- Form styles
+- CSS issues
+- WooCommerce price suffix HTML in blocks
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/js/block-mods.js
+	assets/scss/blocks.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/cart.scss
+	assets/scss/block/checkout.scss
+	assets/scss/block/featured-category.scss
+	assets/scss/block/featured-product.scss
+	assets/scss/block/order-confirmation-status.scss
+	assets/scss/block/order-confirmation-totals-wrapper.scss
+	assets/scss/block/price-filter.scss
+	assets/scss/block/product-categories.scss
+	assets/scss/block/product-details.scss
+	assets/scss/block/product-rating.scss
+	assets/scss/block/product-template.scss
+	includes/Blocks.php
 
 
 ## 1.8.2, 20251218
