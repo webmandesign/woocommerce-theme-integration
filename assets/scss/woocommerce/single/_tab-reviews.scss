@@ -122,8 +122,9 @@
 			}
 
 			&-rating {
+				display: flex;
+				justify-content: space-between;
 				margin-bottom: $ratio + em;
-				overflow: hidden;
 
 				label:first-child {
 					float: inline-start;
