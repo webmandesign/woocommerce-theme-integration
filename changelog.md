@@ -1,6 +1,6 @@
 # Integration for WooCommerce Changelog
 
-## 1.8.3, 20260318
+## 1.8.3, 20260327
 
 ### Fixed
 - @todo

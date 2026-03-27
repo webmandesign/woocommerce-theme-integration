@@ -1,0 +1,48 @@
+// woocommerce/price-filter
+//
+// @since  1.8.3
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+@mixin thumb {
+	background: currentColor;
+	border-color: transparent;
+
+	&:hover {
+		@include thumbFocus;
+	}
+}
+
+@mixin thumbFocus {
+	outline: 2px solid;
+	outline-offset: 3px;
+}
+
+.wc-block-components-price-slider__range-input[class] {
+
+	// These have to be separate, otherwise browser doesn't style them!
+
+		&::-webkit-slider-thumb {
+			@include thumb;
+		}
+		&::-moz-range-thumb {
+			@include thumb;
+		}
+		&::-ms-thumb {
+			@include thumb;
+		}
+
+		&:focus {
+
+			&::-webkit-slider-thumb {
+				@include thumbFocus;
+			}
+			&::-moz-range-thumb {
+				@include thumbFocus;
+			}
+			&::-ms-thumb {
+				@include thumbFocus;
+			}
+		}
+}

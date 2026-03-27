@@ -48,7 +48,7 @@
 		}
 	}
 
-	.product_title {
+	.product_title[class][class] { // @see [**]
 		margin: 0 0 2rem;
 		font-size: var(--wcti--font-size--heading--product-title);
 	}
@@ -75,6 +75,9 @@
 	font-weight: var(--wcti--font-weight--label);
 }
 
+// This is ridiculous style from
+// @see  woocommerce/assets/css/woocommerce-blocktheme.min.css
+// [**] - flag for reference.
 .woocommerce div.product div.summary > * {
 	margin-bottom: unset;
 }

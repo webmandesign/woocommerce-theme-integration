@@ -28,7 +28,7 @@
 	}
 }
 
-	.summary-content .woocommerce-product-rating {
+	.summary-content .woocommerce-product-rating[class][class] { // @see [**]
 		margin: ( -$ratio + rem ) 0 ( $ratio + rem );
 	}
 

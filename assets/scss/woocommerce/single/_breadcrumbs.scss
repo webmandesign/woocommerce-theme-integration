@@ -1,8 +1,8 @@
 /* FILE: woocommerce/single/_breadcrumbs.scss */
 
-.summary-content .woocommerce-breadcrumb,
+.summary-content .woocommerce-breadcrumb[class][class], // @see [**]
 .wc-block-breadcrumbs {
-	margin-bottom: 1rem;
+	margin-bottom: $ratio_min + em;
 	font-size: var(--wcti--font-size--xs);
 }
 

@@ -1,7 +1,7 @@
 // woocommerce/product-categories
 //
 // @since    1.6.2
-// @version  1.8.1
+// @version  1.8.3
 @use 'sass:map';
 @use 'sass:math';
 
@@ -56,10 +56,11 @@
 		}
 	}
 
-	img {
+	&-list--has-images .wc-block-product-categories-list-item__image img {
 		aspect-ratio: 1;
 		object-fit: cover;
 		max-width: $ratio + 1em;
+		max-height: $ratio + 1em;
 		border-radius: inherit;
 	}
 }
