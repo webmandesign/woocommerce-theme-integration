@@ -1,7 +1,7 @@
 // woocommerce/checkout
 //
 // @since    1.7.0
-// @version  1.8.3
+// @version  1.8.4
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -160,6 +160,7 @@ body { // Higher priority required for classic/hybrid theme mode.
 	.wc-block-checkout__sidebar {
 
 		.wp-block-woocommerce-checkout-order-summary-block {
+			line-height: inherit;
 			border-width: 0;
 
 			&,
@@ -185,18 +186,26 @@ body { // Higher priority required for classic/hybrid theme mode.
 			}
 		}
 
-		.wc-block-components-order-summary-item {
+		.wc-block-components-order-summary {
+			padding-inline: 0;
 
-			.wc-block-components-product-metadata {
-				font-size: var(--wcti--font-size--s);
-			}
+			&-item {
 
-			&__quantity {
-				font-size: var(--wcti--font-size--xs);
-				background: var(--wcti--color--button-bg);
-				color: var(--wcti--color--button-txt);
-				border: 1px solid;
-				box-shadow: 0 .15em .5em rgba( #000, .15 );
+				.wc-block-components-product-metadata {
+					font-size: var(--wcti--font-size--s);
+				}
+
+				&__quantity {
+					font-size: var(--wcti--font-size--xs);
+					background: var(--wcti--color--button-bg);
+					color: var(--wcti--color--button-txt);
+					border: 1px solid;
+					box-shadow: 0 .15em .5em rgba( #000, .15 );
+
+					span {
+						color: inherit;
+					}
+				}
 			}
 		}
 	}

@@ -1,12 +1,23 @@
 // woocommerce/order-confirmation-billing-wrapper
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.8.4
 
 @import '../tools/_index';
 @import '../setup/_index';
 
-.wc-block-order-confirmation-billing-address[class] {
-	border-width: var(--wcti--border--width);
-	border-color: inherit;
-	border-radius: var(--wcti--border--radius);
+.wc-block-order-confirmation-billing {
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&-address[class] {
+		flex: 1;
+		border-width: var(--wcti--border--width);
+		border-color: inherit;
+		border-radius: var(--wcti--border--radius);
+	}
 }

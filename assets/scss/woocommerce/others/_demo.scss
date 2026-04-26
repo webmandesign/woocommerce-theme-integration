@@ -6,7 +6,6 @@
 	justify-content: center;
 	align-items: center;
 	gap: 2em;
-	position: relative;
 	width: 100%;
 	padding: 1rem 6%;
 	margin: 0;
@@ -35,4 +34,8 @@ p.demo_store {
 	// This is required to override WC default colors (which use higher specificity selector).
 	--wp--preset--color--foreground: var(--wcti--color--accent);
 	--wp--preset--color--background: var(--wcti--color--accent-contrast);
+
+	&[class] {
+		position: relative;
+	}
 }

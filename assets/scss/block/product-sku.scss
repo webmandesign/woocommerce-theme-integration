@@ -1,10 +1,15 @@
 // woocommerce/product-sku
 //
-// @since  1.7.0
+// @since    1.7.0
+// @version  1.8.4
 
 @import '../tools/_index';
 @import '../setup/_index';
 
-.wc-block-components-product-sku[class] strong {
-	font-weight: bolder;
+.wc-block-components-product-sku {
+	--wp--preset--color--contrast-2: inherit;
+
+	&[class] strong {
+		font-weight: bolder;
+	}
 }

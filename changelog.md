@@ -1,5 +1,19 @@
 # Integration for WooCommerce Changelog
 
+## 1.8.4, 20260408
+
+### Updated
+- Changing default min height for Featured Category/Product block
+
+### Fixed
+- CSS styles
+
+### File updates
+	changelog.md
+	readme.txt
+	wc-theme-integration.php
+
+
 ## 1.8.3, 20260327
 
 ### Added

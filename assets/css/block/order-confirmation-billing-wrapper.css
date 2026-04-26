@@ -1,1 +1,1 @@
-.wc-block-order-confirmation-billing-address[class]{border-width:var(--wcti--border--width);border-color:inherit;border-radius:var(--wcti--border--radius)}
+.wc-block-order-confirmation-billing-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%}.wc-block-order-confirmation-billing-address[class]{-webkit-box-flex:1;-ms-flex:1;flex:1;border-width:var(--wcti--border--width);border-color:inherit;border-radius:var(--wcti--border--radius)}

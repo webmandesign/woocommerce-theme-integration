@@ -1,7 +1,7 @@
 // woocommerce/cart
 //
 // @since    1.7.0
-// @version  1.8.3
+// @version  1.8.4
 
 @import '../tools/_index';
 @import '../setup/_index';
@@ -29,7 +29,15 @@
 				border-color: inherit !important;
 			}
 		}
+
+		.wp-block-woocommerce-cart-order-summary-block {
+			line-height: inherit;
+		}
 	}
+}
+
+body table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
+	line-height: inherit;
 }
 
 // Sidebar.

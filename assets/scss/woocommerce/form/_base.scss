@@ -80,3 +80,10 @@
 		}
 	}
 }
+
+label {
+
+	&:has( [type="checkbox"], [type="radio"] ) {
+		letter-spacing: 0;
+	}
+}

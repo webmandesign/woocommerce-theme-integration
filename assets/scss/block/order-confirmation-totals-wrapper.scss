@@ -1,7 +1,7 @@
 // woocommerce/order-confirmation-totals-wrapper
 //
 // @since    1.7.0
-// @version  1.8.3
+// @version  1.8.4
 @use 'sass:map';
 
 @import '../tools/_index';
@@ -110,6 +110,14 @@ body .wc-block-order-confirmation-order-note {
 		font-size: var(--wcti--font-size--heading--uppercase);
 		font-weight: var(--wcti--font-weight--headings);
 		text-transform: uppercase;
+	}
+
+	p {
+		margin: 1em 0 0;
+
+		&.wc-block-order-confirmation-order-note__label {
+			margin-top: 0;
+		}
 	}
 }
 

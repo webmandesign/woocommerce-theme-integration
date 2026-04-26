@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.6.0
+ * @version  1.8.4
  */
 
 namespace WebManDesign\WCTI;
@@ -24,7 +24,7 @@ class Loop {
 	 * //* = Affects (FSE) blocks.
 	 *
 	 * @since    1.0.0
-	 * @version  1.6.0
+	 * @version  1.8.4
 	 *
 	 * @return  void
 	 */
@@ -69,6 +69,10 @@ class Loop {
 				add_filter( Hook::get_name( 'loop/search_template_hierarchy/condition' ), __CLASS__ . '::search_template_hierarchy', 10, 2 );
 
 				add_filter( 'woocommerce_product_get_image', __CLASS__ . '::product_image', 10, 4 );
+
+				// Fix for Shop page description when using blocks.
+				remove_filter( 'woocommerce_short_description', 'wpautop' );
+				   add_filter( 'woocommerce_short_description', __CLASS__ . '::wpauto_if_no_blocks', 8 ); // Priority 9 is `do_blocks`.
 
 	} // /init
 
@@ -370,5 +374,31 @@ class Loop {
 			return $image;
 
 	} // /product_image
+
+	/**
+	 * When no blocks in description, apply `wpautop`.
+	 *
+	 * We presume the `wpautop` is already removed from the description filtering.
+	 *
+	 * @since  1.8.4
+	 *
+	 * @param  string $description
+	 *
+	 * @return  string
+	 */
+	public static function wpauto_if_no_blocks( string $description ): string {
+
+		// Processing
+
+			if ( ! has_blocks( $description ) ) {
+				$description = wpautop( $description );
+			}
+
+
+		// Output
+
+			return $description;
+
+	} // /wpauto_if_no_blocks
 
 }

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.8.3
+ * @version  1.8.4
  */
 
 namespace WebManDesign\WCTI;
@@ -30,7 +30,7 @@ class Blocks {
 	 * Initialization.
 	 *
 	 * @since    1.5.0
-	 * @version  1.8.3
+	 * @version  1.8.4
 	 *
 	 * @return  void
 	 */
@@ -55,6 +55,9 @@ class Blocks {
 
 				add_filter( 'render_block_core/post-excerpt',           __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
 				add_filter( 'render_block_woocommerce/product-details', __CLASS__ . '::render__single_product_more_details_link', 10, 2 );
+
+				add_filter( 'render_block_woocommerce/featured-category', __CLASS__ . '::render__featured_minheight', 10, 2 );
+				add_filter( 'render_block_woocommerce/featured-product',  __CLASS__ . '::render__featured_minheight', 10, 2 );
 
 				add_filter( 'woocommerce_blocks_hook_compatibility_additional_data', __CLASS__ . '::hooks_in_blocks' );
 
@@ -323,6 +326,33 @@ class Blocks {
 			return $block_content;
 
 	} // /render__single_product_more_details_link
+
+	/**
+	 * Block output modification: Featured Category/Product default min height.
+	 *
+	 * @see  assets/js/block-mods.js
+	 *
+	 * @since  1.8.4
+	 *
+	 * @param  string $block_content  The rendered content. Default null.
+	 * @param  array  $block          The block being rendered.
+	 *
+	 * @return  string
+	 */
+	public static function render__featured_minheight( string $block_content, array $block ): string {
+
+		// Processing
+
+			if ( empty( $block['attrs']['minHeight'] ) ) {
+				$block_content = str_replace( 'min-height:500px', 'min-height:300px', $block_content );
+			}
+
+
+		// Output
+
+			return $block_content;
+
+	} // /render__featured_minheight
 
 	/**
 	 * Removes custom functionality in WooCommerce FSE blocks.

@@ -11,7 +11,7 @@
 // @copyright  WebMan Design, Oliver Juhas
 //
 // @since    1.0.0
-// @version  1.8.2
+// @version  1.8.4
 //
 
 @import 'tools/_index';
@@ -63,6 +63,8 @@
 	--wcti--font-weight--label--tab: 700;
 	--wcti--font-weight--label: 700;
 	--wcti--font-weight--price: 700;
+
+	--wcti--line-height: #{ $ratio }; // Needed for Checkout block form fields height calculations.
 
 	--wcti-icon-size: 1em;
 

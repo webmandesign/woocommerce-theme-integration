@@ -7,7 +7,7 @@ Plugin URI:        https://www.webmandesign.eu/portfolio/wc-theme-integration-wo
 Requires at least: 6.8
 Tested up to:      7.0
 Requires PHP:      8.0
-Stable tag:        1.8.3
+Stable tag:        1.8.4
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              webman, webman design, woocommerce, themes
@@ -49,8 +49,11 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 
 == Upgrade Notice ==
 
+= 1.8.4 =
+Improving styles, updating Featured Category/Product block default min height.
+
 = 1.8.3 =
-...
+Added new block styles, improving and fixing styles and bugs, rising min PHP version to 8.0.
 
 = 1.8.2 =
 Fixing responsive styles for products list.

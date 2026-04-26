@@ -1,0 +1,13 @@
+// woocommerce/product-collection
+//
+// @since  1.8.4
+
+@import '../tools/_index';
+@import '../setup/_index';
+
+.wp-block-woocommerce-product-collection {
+
+	h2.wp-block-heading {
+		font-size: revert;
+	}
+}

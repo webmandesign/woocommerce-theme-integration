@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.8.0
+ * @version  1.8.4
  */
 
 namespace WebManDesign\WCTI;
@@ -257,7 +257,7 @@ class Setup {
 	 * HTML body classes.
 	 *
 	 * @since    1.4.0
-	 * @version  1.6.4
+	 * @version  1.8.4
 	 *
 	 * @param  array $classes
 	 *
@@ -267,6 +267,7 @@ class Setup {
 
 		// Processing
 
+			$classes[] = 'has-store-notice-position--' . sanitize_title( get_theme_mod( Options::$id['demo_store_position'], 'header-after' ) );
 			$classes[] = 'has-catalog-columns-mobile-' . absint( get_theme_mod( Options::$id['catalog_columns_mobile'], 1 ) );
 
 			if ( ! get_theme_mod( Options::$id['catalog_button_custom_style'], true ) ) {

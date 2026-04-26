@@ -5,7 +5,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.5.0
- * @version  1.8.3
+ * @version  1.8.4
  */
 
 ( () => {
@@ -33,6 +33,15 @@
 								},
 							},
 						} );
+						break;
+
+					// @see  Blocks::render__featured_minheight()
+					case 'woocommerce/featured-category':
+					case 'woocommerce/featured-product':
+
+						if ( undefined !== settings.attributes.minHeight.default ) {
+							settings.attributes.minHeight.default = 300;
+						}
 						break;
 
 					case 'woocommerce/mini-cart':

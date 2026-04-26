@@ -6,6 +6,7 @@
 		width: 100%;
 		height: auto;
 		padding-block: var(--wcti--spacing--input-vertical);
+		font-size: 1em;
 		line-height: inherit;
 		background: none;
 		color: inherit;
@@ -24,6 +25,7 @@
 
 	// IMPORTANT: Selectors have to be written this way as we are nesting everything withing `html` in `blocks.scss`.
 	.wc-block-components-text-input[class][class] {
+		line-height: inherit;
 
 		input:where(
 			[type="email"],
@@ -77,6 +79,7 @@
 	.wc-block-components-form .wc-block-components-text-input label,
 	.wc-block-components-text-input label,
 	.wc-blocks-components-select .wc-blocks-components-select__label {
+		top: calc( var(--wcti--border--width) + var(--wcti--spacing--input-vertical) + .5em * var(--wcti--line-height) );
 		font-size: 1em;
 		color: inherit;
 	}

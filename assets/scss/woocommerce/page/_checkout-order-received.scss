@@ -42,6 +42,12 @@
 		}
 	}
 
+	.woocommerce-page .woocommerce-customer-details address {
+		border: var(--wcti--border--width) solid;
+		border-color: inherit;
+		border-radius: var(--wcti--border--radius);
+	}
+
 .woocommerce-order-details {
 	@extend %shaded_background;
 	position: relative;
