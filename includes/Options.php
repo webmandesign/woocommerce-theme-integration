@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.3.0
- * @version  1.8.0
+ * @version  1.8.4
  */
 
 namespace WebManDesign\WCTI;
@@ -59,7 +59,7 @@ class Options {
 	 * Customizer options.
 	 *
 	 * @since    1.3.0
-	 * @version  1.8.0
+	 * @version  1.8.4
 	 *
 	 * @param  WP_Customize_Manager $wp_customize
 	 *
@@ -85,9 +85,9 @@ class Options {
 						'section'  => 'woocommerce_store_notice',
 						'label'    => esc_html__( 'Store notice position', 'wc-theme-integration' ),
 						'choices'  => array(
-							'body-top'     => esc_html__( 'Top of the page' ),
-							'header-after' => esc_html__( 'After site header' ),
-							'body-bottom'  => esc_html__( 'Bottom of the page' ),
+							'body-top'     => esc_html__( 'Top of the page', 'wc-theme-integration' ),
+							'header-after' => esc_html__( 'After site header', 'wc-theme-integration' ),
+							'body-bottom'  => esc_html__( 'Bottom of the page', 'wc-theme-integration' ),
 						),
 					)
 				);

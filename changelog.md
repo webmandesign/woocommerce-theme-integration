@@ -1,17 +1,39 @@
 # Integration for WooCommerce Changelog
 
-## 1.8.4, 20260408
+## 1.8.4, 20260429
+
+### Added
+- Styles for Product Collection block
+- Helper body CSS class for demo notice position
 
 ### Updated
 - Changing default min height for Featured Category/Product block
 
 ### Fixed
-- CSS styles
+- Improving and fixing CSS styles (for WooCommerce 10.7+)
+- Shop page content `wpautop` application
+- Localization
 
 ### File updates
 	changelog.md
 	readme.txt
 	wc-theme-integration.php
+	assets/js/block-mods.js
+	assets/scss/blocks.scss
+	assets/scss/custom-properties.scss
+	assets/scss/woocommerce.scss
+	assets/scss/block/cart.scss
+	assets/scss/block/checkout.scss
+	assets/scss/block/order-confirmation-billing-wrapper.scss
+	assets/scss/block/order-confirmation-shipping-wrapper.scss
+	assets/scss/block/order-confirmation-status.scss
+	assets/scss/block/order-confirmation-totals-wrapper.scss
+	assets/scss/block/product-collection.scss
+	assets/scss/block/product-sku.scss
+	includes/Blocks.php
+	includes/Loop.php
+	includes/Options.php
+	includes/Setup.php
 
 
 ## 1.8.3, 20260327

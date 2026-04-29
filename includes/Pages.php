@@ -382,7 +382,7 @@ class Pages {
 				// Page header markup opening:
 				echo '<div id="page-header" class="page-header' . esc_attr( $class ) . '">';
 				echo '<div class="page-header-content">';
-				do_action( Hook::get_name( 'page_header/top' ) );
+				do_action( Hook::get_name( 'page_header/top' ) ); // phpcs:ignore  WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound
 				echo '<div class="page-header-text' . esc_attr( $class ) . '">' . PHP_EOL;
 
 				// This has to be here due to filter hook.
@@ -392,7 +392,7 @@ class Pages {
 
 				// Page header markup closing:
 				echo PHP_EOL . '</div>'; // /.page-header-text
-				do_action( Hook::get_name( 'page_header/bottom' ) );
+				do_action( Hook::get_name( 'page_header/bottom' ) ); // phpcs:ignore  WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound
 				echo '</div>'; // /.page-header-content
 				echo '</div>' . PHP_EOL; // /#page-header
 

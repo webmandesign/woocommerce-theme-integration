@@ -50,7 +50,7 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/wc-theme-in
 == Upgrade Notice ==
 
 = 1.8.4 =
-Improving styles, updating Featured Category/Product block default min height.
+Updating and fixing styles (for WooCommerce 10.7 compatibility), updating Featured Category/Product block default min height, preventing shop page content HTML issue.
 
 = 1.8.3 =
 Added new block styles, improving and fixing styles and bugs, rising min PHP version to 8.0.
